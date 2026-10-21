@@ -1,0 +1,10 @@
+# Preface {.unnumbered}
+
+Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston Informaatioteknologian tiedekunnan kurssille Liiketoimintaprosessien hallinta.
+
+Kiitokset seuraaville henkilöille aakkosjärjestyksessä sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
+
+Löydät tekstin seasta tehtäviä, jotka on merkitty seuraavalla tavalla. Kurssin suorittaminen ei edellytä tehtävien tekemistä, mutta niistä on toivottavasti hyötyä esimerkiksi tenttiin valmistautuessasi.
+
+Orivedellä 21.10.2026
+Ville Seppänen

@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "Liiketoimintaprosessien hallinta"
+  author: "Ville Seppänen"
+  date: "10/21/2026"
+  chapters:
+    - index.qmd
+    - johdanto.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
