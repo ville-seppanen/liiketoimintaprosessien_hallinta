@@ -1,1 +1,0 @@
-# liiketoimintaprosessien_hallinta
