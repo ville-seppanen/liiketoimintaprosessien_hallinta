@@ -8,16 +8,42 @@ book:
   chapters:
     - index.qmd
     - johdanto.qmd
+    - prosessit_ja_liiketoimintaprosessit.qmd
+    - prosessitiedon_keraaminen.qmd
+    - tehtavat.qmd
+    - tyovalineita.qmd
     - summary.qmd
     - references.qmd
 
 bibliography: references.bib
 
+# Kieli ja viittaukset
+lang: fi
+
+reference-location: margin      # alaviitteet sivun reunaan
+crossref:
+  fig-title: Kuvio              # "Kuvio 1.1" (oletus olisi "Kuva")
+  fig-prefix: kuvio
+  tbl-title: Taulukko
+  lof-title: Kuvioluettelo
+
+# format:
+#  html:
+#    theme:
+#      - cosmo
+#      - brand
+
 format:
+  # Selainkirja
   html:
     theme:
-      - cosmo
-      - brand
+      light: litera
+      dark: darkly              # tumma tila, vaihtokytkin sivupalkissa
+    lightbox: true              # kuvion saa auki klikkaamalla
+    toc: true
+    toc-title: "Tässä luvussa"
+    number-depth: 3
+
   pdf:
     documentclass: scrreprt
 

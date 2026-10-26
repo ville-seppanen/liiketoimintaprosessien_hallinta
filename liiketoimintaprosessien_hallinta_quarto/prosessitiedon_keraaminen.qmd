@@ -1,0 +1,20 @@
+# Prosessitiedon kerääminen
+
+Foo bar
+
+## Prosessien kypsyystaso ja sen mittaaminen
+
+Foo bar
+
+## Kyvykkyyskartta
+
+**Kerro ensin, mikä on kyvykkyys eli capability.**
+
+Seuraavassa kuviossa (@fig-kyvykkyyskartta) on esimerkki kyvykkyyskartasta, joka voi myös vastavuoroisesti auttaa tunnistamaan kyvykkyyksiä toteuttavat prosessit.
+
+![Esimerkki kyvykkyyskartasta (Eero Hosiaisluoma[^hosiaisluoma])](kuviot/kyvykkyyskartta.svg){#fig-kyvykkyyskartta fig-alt="Esimerkki kyvykkyyskartasta."}
+
+[^hosiaisluoma]: https://www.hosiaisluoma.fi/
+
+
+## Business Model Canvas

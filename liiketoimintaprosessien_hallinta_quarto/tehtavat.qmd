@@ -1,0 +1,13 @@
+# Harjoitustehtävät
+
+### Luku 2
+
+- tehtävä 1
+- tehtävä 2
+
+### Luku 3
+
+- tehtävä 3
+- tehtävä 4
+
+jne.
