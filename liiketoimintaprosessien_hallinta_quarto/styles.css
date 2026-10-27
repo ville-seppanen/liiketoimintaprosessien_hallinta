@@ -1,0 +1,6 @@
+/* Luettelot ja taulukot samalla fontilla kuin leipäteksti */
+main li,
+main td,
+main dd {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}

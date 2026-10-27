@@ -2,9 +2,9 @@
 
 Prosessi on järjestelmällinen tapa suorittaa jokin tehtävä ja saavuttaa jokin tavoite. Jos niin halutaan ajatella, on kaikessa, missä jotain tehdään tai jotain tapahtuu, kyse prosesseista. Yritysten ja organisaatioiden toimintaa tarkasteltaessa puhutaan tavallisesti liiketoimintaprosesseista riippumatta siitä, onko toiminta varsinaista liiketoimintaa tai vaikka välitöntä taloudellista arvoa tuottamatonta yleishyödyllistä tai julkista toimintaa.
 
-Medina-Mora ym. [@medina1992action] jakoivat 1990-luvun alussa julkaistussa artikkelissaan organisaatioiden prosessit kolmeen luokkaan. Materiaaliprosessit (*Material Process*) liittyvät fyysisten tuotteiden valmistamiseen, raaka-aineiden hallintaan ja valmiiden tuotteiden toimittamiseen. Ne vaativat fyysistä työtä, joka tapahtuu fyysisessä maailmassa ja vaikuttaa siihen. Tässä mielessä monet perinteisten palveluammattien prosesseistakin voidaan mieltää materiaaliprosesseiksi, vaikka Medina-Mora ym. eivät artikkelissaan näihin suoraan viittaakaan.
+Medina-Mora ym. [-@medina1992action] jakoivat 1990-luvun alussa julkaistussa artikkelissaan organisaatioiden prosessit kolmeen luokkaan. Materiaaliprosessit (*Material Process*) liittyvät fyysisten tuotteiden valmistamiseen, raaka-aineiden hallintaan ja valmiiden tuotteiden toimittamiseen. Ne vaativat fyysistä työtä, joka tapahtuu fyysisessä maailmassa ja vaikuttaa siihen. Tässä mielessä monet perinteisten palveluammattien prosesseistakin voidaan mieltää materiaaliprosesseiksi, vaikka Medina-Mora ym. eivät artikkelissaan näihin suoraan viittaakaan.
 
-Informaatioprosessi (*Information Process*) muodostui käsitteeksi nykyaikaisen tietotyön yleistymisen myötä. Ihmiset puhuvat toisilleen ja naputtelevat näppäimistöä: ”*With computer workstations, all of the physical work becomes indistinguishable – talking to people and tapping keys in front of display screens*.” Informaatioprosesseihin liittyvät siis tietokoneet – tai informaatioteknologia – ja niiden avulla suoritettava tietojenkäsittely, tietokannat, transaktioiden hallinta, data-analytiikka ja niin edelleen. Tietokoneet voivat toteuttaa prosesseja ilman, että niillä on välitöntä vaikutusta ympäröivään fyysiseen todellisuuteen. Informaatioprosessit ovat tehneet mahdolliseksi myös nykyisen ymmärryksemme prosessiautomaatiosta. Informaatioprosessien suhteen Medina-Moran ym. ajatukset ovat hieman dikotomisia. Kaikki tietotyön, tiedon tuottamisen, käsittelyn, tulkinnan ja jalostamisen prosessit eivät tietenkään vaadi tietoteknisiä laitteita tai automaattista tietojenkäsittelyä.
+Informaatioprosessi (*Information Process*) muodostui käsitteeksi nykyaikaisen tietotyön yleistymisen myötä. Ihmiset puhuvat toisilleen ja naputtelevat näppäimistöä: ”*With computer workstations, all of the physical work becomes indistinguishable – talking to people and tapping keys in front of display screens*.” [@medina1992action] Informaatioprosesseihin liittyvät siis tietokoneet – tai informaatioteknologia – ja niiden avulla suoritettava tietojenkäsittely, tietokannat, transaktioiden hallinta, data-analytiikka ja niin edelleen. Tietokoneet voivat toteuttaa prosesseja ilman, että niillä on välitöntä vaikutusta ympäröivään fyysiseen todellisuuteen. Informaatioprosessit ovat tehneet mahdolliseksi myös nykyisen ymmärryksemme prosessiautomaatiosta. Informaatioprosessien suhteen Medina-Moran ym. ajatukset ovat hieman dikotomisia. Kaikki tietotyön, tiedon tuottamisen, käsittelyn, tulkinnan ja jalostamisen prosessit eivät tietenkään vaadi tietoteknisiä laitteita tai automaattista tietojenkäsittelyä.
 
 Organisaatioiden prosessien kolmas luokka Medina-Moran ym. mukaan on liiketoimintaprosessit (*Business Process*). Niissä voivat yhdistyä sekä materiaali- että informaatioprosessit, ja ne lähtökohtaisesti ovat markkinakeskeisiä tai markkinaorientoituneita. Ne on suunniteltu täyttämään jokin sopimus tai tietty asiakastarve. Liiketoimintaprosessit ovat käsiteellisellä tasolla tarkasteluna materiaali- ja informaatioprosessien yläpuolella, ja ne määrittyvät markkinoiden[^markkina] asettaman lopputuleman ja tarkoituksen kautta.
 
@@ -101,4 +101,109 @@ Säätiedotteita seuranneet ovat huomanneet, että niissä usein esitetään my�
 
 Kun prosessi tunnetaan riittävän hyvin, sen kulkua voidaan simuloida. Simulointi tarkoittaa, että jonkin systeemin, kuten vaikkapa ilmakehän, toimintaa mallinnetaan ja jäljitellään ainakin jossain määrin todellisuutta vastaavalla tarkkuudella. Tämä mallinnus auttaa ennustamaan systeemin käyttäytymistä erilaisissa olosuhteissa tai erilaisilla parametreilla. Simulaatio siis esittää, kuinka jokin prosessi etenee tiettyjen reunaehtojen ja parametrien ollessa voimassa tai kuinka niiden muuttuminen vaikuttaa prosessin lopputulemaan. Television sääennusteiden animaatiot pilvimassojen liikkeistä ovat prosessituntemuksen mahdollistamia simulaatioita (@fig-saaennusteanimaatio.png). Sääsimulaatioissa käytettävän tiedon ja laskentakapasiteetin rajoitteiden vuoksi niiden lopputulos on kuitenkin aina enemmän tai vähemmän arvaus -- siis ennuste.
 
-### Toimintaan vaikuttaminen
+Kuten sääilmiöitä, myös liiketoimintaprosesseja voidaan tuntea syvällisellä tasolla. Kun vaikkapa jokin valmistavan teollisuuden tai sairaalan päivystyksen prosessi tunnetaan riittävän hyvin, voidaan myös sen etenemistä simuloida. Emme juurikaan voi vaikuttaa sääilmiöihin, mutta liiketoimintaprosesseihin on mahdollista vaikuttaa.
+
+Liiketoimintaprosessien simulointi onnistuu useilla prosessimallinnusvälineillä ja simulointiin erikoistuneilla ohjelmistoilla. Simulointi mahdollistaa prosessimallien ”koeajamisen”. Prosessin tehtäville, tapahtumille ja vaikkapa niiden aikana tehtäville päätöksille voidaan määritellä kesto tai kestoväli, kustannus tai kustannusväli ja niin edelleen. Jos prosessin aikana kutsutaan jotain ulkoista järjestelmäpalvelua, mikä on palvelun vasteaika arkisin ja viikonloppuisin, keskipäivällä ja yöllä? Paljonko virheistä johtuvaa raaka-ainehukkaa voitaisiin vähentää pidentämällä prosessin jonkin vaiheen kestoa ja maksaisiko se itsensä takaisin suhteessa tuotannon hidastumiseen? Paljonko vuodessa voitaisiin säästää, jos prosessin kutsuman palvelun vasteajasta saataisiin nipistettyä sekunti pois yhtä kutsua kohden tai jos jotain manuaalista tehtävää prosessissa suorittavat työntekijät lähetetään kahdeksi päiväksi kouluttautumaan?
+
+Riittävän monta simulaatioajoa voi paljastaa prosessista pullonkauloja ja kehittämiskohteita, ja kenties jopa aivan ilmeisiä virheitä. Prosessikulkua voidaan mallin tasolla vaivatta muuttaa, parametrien arvoja säätää ja tarkkailla näiden vaikutuksia prosessin keskimääräiseen toteutumaan.
+
+### Toiminnan kehittäminen
+
+Monet yrityksissä ja organisaatioissa suoritettavat tehtävät ovat muodostuneet työntekijöille rutiineiksi. Niitä suoritetaan ilman, että tekemistä ja sen tapaa pysähdyttäisiin koskaan sen tarkemmin miettimään. Tavallista on sekin, että jokaisen samaa tehtävää suorittavan työntekijän rutiinit voivat hieman poiketa toisistaan. Kukaan ei siis välttämättä tee samaa tehtävää tai suorita samaa prosessia täsmälleen samalla tavalla kuin kollegansa.
+
+On ilmeistä, että jotkin tavat suorittaa prosessi ovat nopeampia tai tuottavat vaikkapa vähemmän virheitä kuin toiset. Jokin tapa toteuttaa asiakaspalveluun liittyviä toimintoja koetaan asiakkaiden taholla varmasti paremmaksi kuin jokin toinen. Järkevää tietysti olisi, että jokainen työntekijä toimisi juuri sillä parhaaksi todetulla tavalla. Prosessien tunteminen mahdollistaa niihin liittyvien parhaiden käytänteiden dokumentoinnin ja näkyväksi tekemisen.
+
+Paitsi toiminnan tehokkuuden kannalta, prosessien tuntemisesta ja esimerkiksi dokumentoimalla näkyväksi tekemisestä on myös muita hyötyjä. Yrityksen tavoitellessa laatusertifikaattia, prosessit tulee pystyä esittämään laatuauditoijalle. Laadukas graafinen prosessimalli tai prosessikäsikirja eivät vielä takaa laadukasta toimintaa, vaan toiminnan täytyy myös tapahtua prosessin mukaisesti. Laatuauditoinneissa havainnoidaankin myös toimintaa käytännön tasolla ja henkilöstöä voidaan haastatella, suoraan tai epäsuorasti, prosesseihin liittyen. Kokeesta voi selvitä täysin pistein vain silloin, kun prosessit ovat paitsi kunnossa, ne myös tunnetaan. Lisäksi prosessimallit ovat erinomainen osa uuden henkilöstön perehdytyspakettia, ja konkareidenkin saattaa olla joskus tarpeen tarkistaa, että kuinka jokin asia tulikaan tehdä.
+
+### Tiedonhallinta ja turvallisuus
+
+Prosessien tunteminen on tarpeen myös tietoturvan, -suojan ja tiedonhallinnan kannalta. Tiedon suojaaminen helpottuu -- tai voisi ehkä jopa sanoa, että on mahdollista ainoastaan -- kun tiedetään, mitä tietoa prosesseissa liikkuu ja minne. Suurennuslasin alla tässä ovat prosessit, joissa käsitellään henkilötietoja, liiketoimintakriittistä tai salassa pidettävää tietoa. Suomen tiedonhallintalaki[^tiedonhallintalaki]  edellyttää julkisia toimijoita laatimaan tiedonhallintamallin, jolta vaaditaan muun muassa seuraavaa: ”Toimintaprosessien kuvaaminen tiedonhallintamallissa antaa tiedonhallintayksikölle kokonaiskuvan siitä, missä ja miten viranomaisten tieto muodostuu ja miten sitä käsitellään. Toimintaprosessien osalta kuvataan myös niiden liittymät toisiinsa. Toimintaprosessien osalta kuvataan liittymät myös ulkoisiin toimintaprosesseihin. Näiden kuvaamisessa voi käyttää esimerkkinä toimintaympäristön kuvauksessa käytettyjä esimerkkejä.”[^tiedonhallintamalli] Onpa kentältä usein myös kuulunut, että yritysten, jotka tunsivat ja olivat dokumentoineet liiketoimintaprosessinsa, oli huomattavasti helpompi ryhtyä toteuttamaan Euroopan Unionin yleisen tietosuoja-asetuksen[^gdpr] vaatimuksia ja rekisteröidyin henkilön tietopyyntöön vastaaminen tuottaa vähemmän päänvaivaa.
+
+[^tiedonhallintalaki]: Laki julkisen hallinnon tiedonhallinnasta, https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2019/906
+
+[^tiedonhallintamalli]: Suositus tiedonhallintamallista, Valtiovarainministeriön julkaisuja 2024:22
+
+[^gdpr]: https://eur-lex.europa.eu/legal-content/FI/TXT/HTML/?uri=CELEX:32016R0679
+
+Prosessien tunteminen auttaa parantamaan myös toiminnan fyysistä ja psykologista turvallisuutta erilaisissa tehtävissä ja tilanteissa. Näitä aihepiirejä ei kuitenkaan tässä käsitellä.
+
+### Toiminnan ja informaatioteknologian yhteensovittaminen
+
+Tietojärjestelmien ja informaatioteknologian kytkeytyminen liiketoimintapro-sesseihin on oman lukunsa ansaitseva asia. Hyvin harva prosessi nykyisin on täysin manuaalinen ja useimpien tukena käytetään joitain tietojärjestelmiä ja teknologioita. Kehitettäessä tai hankittaessa uusia järjestelmiä, liiketoimintaprosessit ovat merkittävä osa vaatimusmäärittelydokumentaatiota [@cardoso2009requirements; @panayiotou2015business]. Toisaalta jos järjestelmän käyttöönotto edellyttää nykyisten prosessien mukauttamista, mikä usein onkin tarpeen [@finney2007erp], sitä luonnollisesti helpottaa, jos prosessit tunnetaan. Tällaisessa tapauksessa prosessituntemus mahdollistaa myös hyvin perusteltujen päätösten tekemisen siitä, mitkä nykyisistä prosesseista ovat sellaisia, että ne halutaan säilyttää, vaikka sitten järjestelmän räätälöinnin kalliilla kustannuksilla, ja toisaalta mitkä ovat sellaisia, että ne voidaan muuttaa vastaamaan järjestelmään ohjelmoituja käytänteitä.  Lukuisissa tutkimuksissa on todettu, että epäonnistuneiden järjestelmäkäyttöönottojen taustalta usein löytyy heikko prosessituntemus, epäonnistunut prosessivaatimusten viestintä järjestelmän toimittajalle, tai haluttomuus tai kyvyttömyys (kumpi onkaan syy ja kumpi seuraus) mukauttaa liiketoimintaprosesseja[^lidl] järjestelmän käyttöönoton yhteydessä.
+
+[^lidl]: https://www.panorama-consulting.com/lidl-erp-failure/
+
+Vaikka digitaalisen transformaation voidaan katsoa käynnistyneen jo 1960- ja 1970-lukujen vaihteessa, on muutoksen vauhti edelleen jatkuvasti kiihtyvä. Teknologiset disruptiot -- kuten vielä hyvin muistissa oleva suuriin kielimalleihin nojaavien ja muiden generatiivisten tekoälyjen ilmaantuminen suuren yleisön tietoisuuteen lähes kirjaimellisesti yhdessä yössä -- edellyttävät organisaatioilta, ja erityisesti johtamisen prosesseilta, jatkuvaa varpaillaan pysyttelyä. Prosessit ja niiden tuottamat palvelut digitalisoituvat, halusivatpa asiakkaat sitä tai eivät. Uudet teknologiat toisaalta tarjoavat liiketoiminnan ja prosessien toteuttamiselle täysin uudenlaisia mahdollisuuksia, toisaalta teknologinen kehitys useissa tapauksissa myös pakottaa prosesseja muuttumaan. Toiminnan täytyy pysyä kiinni kehityksessä, ja mikäpä siinä helpottaisi enemmän kuin se, että nykyinen toiminta tunnetaan ja on siten valmis johdettavaksi kohti muutoksia.
+
+Davenport ja Short esittivät jo vuonna 1990 [@davenport1990new], että informaatioteknologian ja prosessien suunnittelun suhteen tulisi olla rekursiivinen. Prosessien tarpeet toimivat lähtökohtana IT-kyvykkyyksien kehittämiselle, ja samaan aikaan IT:n tarjoamien mahdollisuuksien tulisi samalla toimia syötteenä prossien suunnittelulle ja jopa radikaalin kokonaisvaltaiselle uudelleensuunnittelulle. Tähän aiheeseen palataan vielä myöhemmin.
+
+## Tilanteita, joissa asioita kannattaa tarkastella prosesseina
+
+Edellä todettiin, ettei ole tarkoituksenmukaista yrittää hahmottaa kaikkia ympärillämme tapahtuvia asioita prosesseina. Tästä luonnollisesti seuraa kysymys, että minkä asioiden ajattelu prosesseina sitten on hyödyllistä. Edellinen luku antoikin joitain vastauksia tähän kysymykseen. Toimintaa kannattaa tarkastella prosessina ainakin silloin, kun toiminnan tunteminen mahdollistaa sen tehostamisen, kustannusten karsimisen, toiminnan laadun tai turvallisuuden parantamisen prosessin systemaattisen kehittämisen avulla.
+
+Vastaus on kuitenkin melko ympäripyöreä. Kaikki toiminta, ihmisen suorittama tai täysin automatisoitu, kuluttaa joitain resursseja, olipa kyse sitten valmistavan teollisuuden käyttämistä raaka-aineista tai tietotyöläisen työajasta ja istumalihaksista. Aina kun jotain resurssia käytetään, on mahdollista miettiä, voidaanko tätä resurssia hyödyntää nykyistä tehokkaammin. Vastaavasti voidaan miettiä, voisiko jonkin asian tehdä laadukkaammin. Kun tällaisia kysymyksiä nousee mieleen, ollaan todennäköisesti tekemisissä prosessien kanssa. Ja jos tällaisia kysymyksiä nousee mieleesi usein, olet todennäköisesti prosessiorientoitunut henkilö.
+
+### Kustannussäästöt ja toiminnan kehittäminen
+
+Kustannussäästöt mahdollistuvat pääasiassa tarkastelemalla prosessiin liittyvää hukkaa, liittyi se sitten ajan tai muiden resurssien kulutukseen. Karkeasti yleistäen kaikki sellainen toiminta, joka ei tuota arvoa asiakkaalle, olipa asiakas sisäinen tai ulkoinen, tulisi karsia pois.
+
+Radikaaleimpia toimenpiteitä hukan karsimiseksi ovat kokonaisten toiminta- tai prosessialueiden alasajot. Kevyempi, joskin käytännössä lähes yhtä radikaali toimenpide, on prosessialueiden yhdistäminen. Mikäli esimerkiksi jokin toiminto tai toimintojen kokonaisuus on välttämätön ydintoiminnan kannalta, mutta sen ei katsota oikeuttavan olemassaoloaan erillisenä yksikkönä tai osastona, saatetaan toimintokokonaisuus ja siihen liittyvät prosessit yhdistää jonkin toisen yksikön toimintojen kanssa.
+
+Vastaavasti usein on myös niin, että samoja prosesseja toteutetaan päällekkäin useammassa yksikössä. Hieman kärjistettynä esimerkkinä voidaan ajatella vaikkapa yritystä, jossa kirjanpitoa toteutetaan jokaisessa yksikössä ja vieläpä erillisiä ohjelmistoja käyttäen. Joskus tällainen voi olla perusteltua, mutta usein toiminto olisi järkevämpää keskittää. Palvelukeskukseen keskitetty kirjanpito mahdollistaa kustannussääntöjä skaalaetujen, yhtenäisen ohjelmistoratkaisun ja pienempien henkilöstökulujen kautta. Palvelukeskuksen suuret datamäärät voivat mahdollistaa ohjelmistorobotiikan ja tekoälyratkaisujen tehokkaamman käytön. Keskitetty kirjanpito mahdollistaa myös prosessien standardoinnin ja niihin liittyvä erikoistunut osaaminen pienentää virheriskiä.
+
+Keskittämisen seurauksena palvelun laadun saatetaan kuitenkin kokea laskevan. Laatu toki saattaakin laskea, esimerkiksi suhteellisesti niukempien resurssien vuoksi. Tavallisesti prosessiasiantuntijuuden keskittäminen kuitenkin tosi asiassa parantaa palvelujen laatua ja tukee toiminnan jatkuvaa kehittämistä.
+
+Ongelma johtuu siitä, että keskitetty palvelukeskus tuottaa palvelut vakioiduilla tavoilla; parhaiksi tunnistettuja käytänteitä soveltaen. Voi tapahtua kulttuurien ja prosessien törmäys. Keskitetyt prosessit eivät välttämättä olekaan yhteensopivia niiden oletusten tai toimintatapojen kanssa, joita palveluja käyttävissä asiakasyksiköissä on totuttu noudattamaan. Mikäli prosessitarkastelua ei ole tehty, eikä prosessien uudistamista suunnitella koko organisaatiota leikkaavasti, on epäonnistumisen mahdollisuus olemassa. Haaste kasvaa, mikäli organisaation sisäisten toimintojen uudelleenjärjestelyn sijaan kyse onkin esimerkiksi kokonaisesta yritysfuusiosta.
+
+Schönreiterin [-@schonreiter2018methodologies] julkaisemassa kirjallisuuskatsauksessa todetaan, että tutkimuskirjallisuudessa ei juurikaan käsitellä yritysfuusiota seuraavan integraation ja liiketoimintaprosessien harmonisoinnin välistä yhteyttä. Tämä on huomionarvoista ja yllättävääkin, koska esimerkiksi tietojärjestelmien ja teknologioiden integraatiosta post mergers -tapauksissa on kirjoitettu paljonkin. Onnistunut yritysfuusio vaatii kuitenkin juuri onnistunutta prosessien yhteensovittamista, mikä luonnollisesti edellyttää prosessien tuntemista.
+
+Potentiaalisia kohteita kustannussääntöjen tavoittelemiselle voidaan etsiä paitsi prosessisimuloinnilla, myös prosessien seurannalla ja mittaamisella. Tätä aihetta käsitellään myöhemmin.
+
+### Toistuvuus vastaan kriittisyys
+
+Edellä prosessin todettiin olevan toistuvaa tekemistä. Jos toiminnan tehokkuutta ja tuloksellisuutta halutaan parantaa prosesseja kehittämällä, ei tässä tunnu mielekkäältä keskittyä sellaiseen toimintaan tai tehtäväsarjoihin, jotka toteutuvat vain harvoin.
+
+Prosessitarkastelussa ja prosessien kehittämisessä tavallisesti kannattaakin ensisijaisesti keskittyä niihin prosesseihin, jotka toistuvat usein. Ne todennäköisesti liittyvät organisaation ydintoimintaan ja toistuvuudesta seuraa vähintään se, että niihin liittyy kumulatiivista säästöpotentiaalia.
+
+Prosessitarkastelu kannattaa kuitenkin kohdistaa myös sellaisiin toimintoihin, jotka ovat jollain tavalla kriittisiä. Harva yritys tai organisaatio joutuu toistuvasti vaikkapa vakavan kyberhyökkäyksen kohteeksi. Koska tällainen tapahtuma ei ole toistuva, pikemminkin harvinainen, ei toistuvuusvaatimuksen mukaan olisi tarpeen tarkastella prosessina sitä, kuinka kyberhyökkäyksestä seuraava tilanne saadaan hallintaan. Sama koskee yleisemminkin kriisitilanteiden hallintaa ja esimerkiksi kriisiviestintää. Kriititilanteet ovat harvinaisia, eivätkä monet organisaatiot välttämättä koskaan sellaiseen joudu. Tämä ei kuitenkaan tarkoita sitä, etteikö tilanteisiin olisi syytä varautua.
+
+Kyberpuolustautumisen strategiat seikkaperäisillä tilanne- ja toimintasuunnitelmilla tarkennettuina, samoin kuin jatkuvuussuunnittelu yleisimmin, ovat nykyisin arkipäivää lähes kaikkialla. Nämä suunnitelmat usein sisältävät myös jonkinlaisia prosessimuotoisia toimenpidesarjoja. Herbane ym. -@herbane2004business kirjoittavat (käännetty), että ”liiketoiminnan jatkuvuuden hallinta (Business Continuity Management, BCM) on noussut monilla toimialoilla järjestelmälliseksi prosessiksi [ja] sen onnistumisen kannalta oleellista on [...] työntekijöiden toiminta palautumisprosessin (business recovery process) aikana. [...] Liiketoimintaprosessien asiantuntijoiden tulisi ottaa omistajuus ja vastuu jatkuvuuden hallinnan tehtävistä keskitetyn BCM-tiimin koordinoivassa ohjauksessa.”
+
+Edellisestä voidaan tehdä johtopäätös, että vaikka prosessi asiantuntijoiden mukaan tavallisesti määritellään usein toistuvaksi tapahtumasarjaksi, prosessiksi kannattaa mieltää myös harvemmin -- tai ei välttämättä edes koskaan -- tapahtuvat tapahtumasarjat, mikäli ne ovat kriittisyydeltään merkittäviä. Tämä ajatus lähestyy riskien hallinnan perustyökalua eli riskimatriisia, jonka tiettävästi ensimmäisinä esittelivät 1990-luvulla Yhdysvaltain ilmavoimissa työskennelleet Garvey ja Lansdowne. Ristimatriisissa riskit luokitellaan tapahtuman todennäköisyyden ja tapahtuman seurausten vakavuuden perusteella (@tbl-riskimatriisi).
+
+::: {.column-page-right}
+
++------------------+--------------------+--------------------+----------------------+
+| Todennäköisyys   | Vähäinen seuraus   | Haitallinen seuraus| Vakava seuraus       |
++==================+====================+====================+======================+
+| Epätodennäköinen | Merkityksetön riski| Vähäinen riski     | Kohtalainen riski    |
++------------------+--------------------+--------------------+----------------------+
+| Mahdollinen      | Vähäinen riski     | Kohtalainen riski  | Merkittävä riski     |
++------------------+--------------------+--------------------+----------------------+
+| Todennäköinen    | Kohtalainen riski  | Merkittävä riski   | Sietämätön riski     |
++------------------+--------------------+--------------------+----------------------+
+
+: Riskimatriisi {#tbl-riskimatriisi}
+
+:::
+
+Jätettäköön kontekstissa harkittavaksi, onko toiminto syytä määritellä prosessiksi silloin, kun siihen liittyy vähäinen riski tai jos toiminto itsessään on merkitykseltään vähäinen, vai vasta silloin kun riski on kohtalainen. Riskin pienuudesta huolimatta yllättäviin tilanteisiin, jotka voivat esimerkiksi vaurioittaa organisaation julkisuuskuvaa, on kuitenkin syytä varautua huolellisella prosessisuunnittelulla ja sen mahdollistamalla nopealla toimintakyvyllä. Toimintojen kriittisyyttä, tai vaikkapa jatkuvuuteen liittyviä vaatimuksia, voidaan arvioida monesta näkökulmasta. Joitain sovellettavia arviointikriteereitä ovat esimerkiksi seuraavat (@tbl-kriittisyys).
+
+| Vaikutus liiketoimintaan | Kuinka merkittävä on vaikutus liiketoimintaan? |
+|----------|------------------|
+| Taloudelliset seuraukset | Kuinka suuria taloudellisia tappioita seuraa? |
+| Asiakasvaikutukset | Kuinka vakavasti asiakkaat kärsivät? |
+| Sääntely ja lakisääteiset vaatimukset | Liittyykö velvoitteita lainsäädännön tai sääntelyn näkökulmasta? |
+| Mainevaikutukset | Kuinka suuri mainehaitta syntyy? |
+| Toipumisaika | Kuinka nopeasti toiminnon on oltava palautettavissa normaaliksi? (esim. alle viikko, alle vuorokausi, alle tunti) |
+| Tiedonmenetyksen sietokyky | Kuinka paljon toimintoon liittyvää tietoa voidaan menettää ilman vakavia seurauksia? (esim. päivien ajalta, tuntien ajalta, ei lainkaan) |
+
+: Esimerkkejä toiminnon kriittisyyden arvioinnissa sovellettavista kriteereistä {#tbl-kriittisyys}
+
+### Monimutkaisuus
+
+Prosessiajattelu ja toimintojen mallintaminen prosesseiksi, tarjoavat useita apuvälineitä monimutkaisten toimintojen hallintaan. Monimutkaisia toimintoja luonnehtivat esimerkiksi tehtävien väliset epäselvät riippuvuudet, toiminnan ennakoimattomuus, korkea virhealttius sekä hallinnan vaikeus.
+
+Monimutkaisiin toimintoihin liittyy tavallisesti myös useita rooleja, vaiheita, päätöksentekopisteitä ja riippuvuuksia. Prosessimallinnus tekee näkyväksi mitä toiminnossa tapahtuu, missä järjestyksessä ja miksi. Samoin se paljastaa, kuka tekee mitä ja kuinka tieto ja materiaalit liikkuvat. Harmon -@harmon2019business on todennut, että minä kompleksisempi toiminto on, sitä suurempi hyöty prosessimallinnuksella ja -analyysilla voidaan saavuttaa, koska ne vähentävät monitulkintaisuutta ja paljastavat riippuvuuksia. Riippuvuuksia voidaan tarkastella esimerkiksi resurssi- ja aikariippuvuuksina, vaikkapa kriittisen polun menetelmän avulla.
+
+Prosessimallit toimivat yhteisenä viitekehyksenä ja organisaation jaettuna muistina. Ne tukevat oppimista ja perehdytystä, pienentävät muistikuormaa, vähentävät virheitä ja helpottavat päätöksentekoa. Mitä monimutkaisemmasta toiminnosta on kyse, sitä tärkeämpää kognitiivisen kuormituksen vähentämisen kannalta on tehdä prosessit näkyviksi. Prosessivisualisoinnit tarjoavat lisäksi puolueettoman ja esitysteknisesti neutraalin apuvälineen kehittämiselle ja yhteiskehittämiselle.

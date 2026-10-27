@@ -10,6 +10,9 @@ book:
     - johdanto.qmd
     - prosessit_ja_liiketoimintaprosessit.qmd
     - prosessitiedon_keraaminen.qmd
+    - prosessiorganisaatio_ja_prosessien_kehittaminen.qmd
+    - mallit_ja_mallintaminen.qmd
+    - bpmn_ja_prosessien_kuvaaminen.qmd
     - tehtavat.qmd
     - tyovalineita.qmd
     - summary.qmd
@@ -39,6 +42,7 @@ format:
     theme:
       light: litera
       dark: darkly              # tumma tila, vaihtokytkin sivupalkissa
+    css: styles.css
     lightbox: true              # kuvion saa auki klikkaamalla
     toc: true
     toc-title: "Tässä luvussa"
