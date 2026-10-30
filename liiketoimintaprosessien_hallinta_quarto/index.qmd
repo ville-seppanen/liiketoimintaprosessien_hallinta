@@ -4,6 +4,8 @@ Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston Informaati
 
 Kiitokset aakkosjärjestyksessä seuraaville henkilöille sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
 
+Kirjan loppuun on koottu harjoitustehtäviä. Osaan tehtävistä on annettu myös malliratkaisut. Huomaa kuitenkin, että hyvin harvaan tehtävistä on olemassa ainoastaan yksi oikea vastaus, joten malliratkaisut esittävät niistä vain yhden.
+
 Kurssin suorittaminen ei edellytä tehtävien tekemistä, mutta niistä on toivottavasti hyötyä esimerkiksi tenttiin valmistautuessasi.
 
 Orivedellä 21.10.2026

@@ -1,0 +1,7 @@
+# Prosessiarkkitehtuuri
+
+Prosessiarkkitehtuuri määritellään kirjallisuudessa tavallisesti liiketoimintaprosessien ja niiden keskinäisten riippuvuuksien kokonaisuudeksi [@dijkman2011road; @eid2012business], joka tarjoaa prosessiorganisaatioille välineen suurien prosessikokonaisuuksien hallitsemiseksi [@gonzalez2019business]. Organisaatioissa kehitettävien ja ylläpidettävien prosessien määrä voi helposti liikkua sadoissa tai jopa tuhansissa.
+
+Prosessiarkkitehtuurin voidaan katsoa olevan prosessiorganisaatiomuotoisen toiminnan mahdollistaja ja välttämätön perusta prosessijohtamiselle. Prosessiarkkitehtuurin laadinta alkaa prosessien tunnistamisella ja ymmärtämisellä. Tässä ansaintamalli tai toimintalogiikka jäsennellään prosesseiksi ja niiden muodostamaksi verkostoksi[^prosark] vaikkapa prosessihierarkian muotoon. Apuvälineenä voidaan käyttää esimerkiksi edellä esiteltyä Business Model Canvasia.
+
+[^prosark]: https://www.innotiimi-icg.fi/prosessiarkkitehtuurin-kehittaminen/ 

@@ -11,6 +11,9 @@ book:
     - prosessit_ja_liiketoimintaprosessit.qmd
     - prosessitiedon_keraaminen.qmd
     - prosessiorganisaatio_ja_prosessien_kehittaminen.qmd
+    - prosessiarkkitehtuuri.qmd
+    - prosessiautomaatio.qmd
+    - tekoaly_ja_prosessit.qmd
     - mallit_ja_mallintaminen.qmd
     - bpmn_ja_prosessien_kuvaaminen.qmd
     - tehtavat.qmd
@@ -25,10 +28,10 @@ lang: fi
 
 reference-location: margin      # alaviitteet sivun reunaan
 crossref:
-  fig-title: Kuvio              # "Kuvio 1.1" (oletus olisi "Kuva")
+  fig-title: Kuva              
   fig-prefix: kuvio
   tbl-title: Taulukko
-  lof-title: Kuvioluettelo
+  lof-title: Kuvaluettelo
 
 # format:
 #  html:
@@ -43,13 +46,15 @@ format:
       light: litera
       dark: darkly              # tumma tila, vaihtokytkin sivupalkissa
     css: styles.css
-    lightbox: true              # kuvion saa auki klikkaamalla
+    lightbox: true              # kuvan saa auki klikkaamalla
     toc: true
     toc-title: "Tässä luvussa"
     number-depth: 3
 
   pdf:
     documentclass: scrreprt
+  
+  docx: default
 
 
 

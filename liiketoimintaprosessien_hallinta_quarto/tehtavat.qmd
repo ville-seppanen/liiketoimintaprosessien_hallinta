@@ -183,3 +183,100 @@ Mallinna prosessi, johon osallistuvat verkkokauppa ja logistiikkayritys. Prosess
 10. Päivitä tilaus.
 11. Lähetä noutovahvistus.
 12. Vastaanota muutospyyntö.
+
+## Luku 6: Tehtävä 10
+
+Muuta seuraavaa tilauskäsittelyprosessia niin, että kanta-asiakkaat saavat tilauksistaan 10 % alennuksen.
+
+![Tilauksen käsittely](kuviot/tilauksen-kasittely-valiyhtveto.svg){#fig-tilauskäsittely}
+
+## Luku 6: Tehtävä 11
+
+Toteuta seuraava päätöstaulu valintaporteilla.
+
+![Päätöstaulu hakemuksesta päättämiseksi](kuviot/dmn-paatostaulu.png){#fig-dmn-paatostaulu}
+
+## Luku 6: Tehtävä 12
+
+Jaa seuraavat tehtävät aliprosesseiksi. Nimeä aliprosessit loogisella tavalla ja yhdistä ne toisiinsa järjestysvirroilla. Huomaa, että tehtävät on esitetty alla aakkosjärjestyksessä, ei välttämättä niiden suoritusjärjestyksessä.
+
+- Hyvitä maksu
+- Kerää ja pakkaa
+- Kuittaa maksu
+- Käsittele maksun epäonnistuminen
+- Käsittele palautus
+- Käsittele tilauksen peruutus
+- Laske hinta ja verot
+- Lähetä lasku
+- Lähetä vahvistus asiakkaalle
+- Luo lasku
+- Luo rahtitarra
+- Luo tilausvahvistus
+- Luovuta kuljetusyhtiölle
+- Päivitä CRM-tilausstatus
+- Seuraa lähetystä
+- Sovella alennukset
+- Sulje tapaus
+- Tarkasta petosindikaattorit
+- Tarkasta varastotilanne
+- Varaa varasto
+- Vastaanota tilaus
+- Validioi asiakastiedot
+- Validioi tilausrivit
+
+## Luku 6: Tehtävä 13
+
+Mallinna vastaava prosessikulku ilman Loop-tehtävää.
+
+![](kuviot/loop.png){#fig-loop}
+
+## Luku 6: Tehtävä 14
+
+Laadi Parallel ja Sequential Multi-instance -tehtäviä käyttävä prosessimalli, joka pystyy käsittelemään samaan tilaukseen sisältyviä fyysisiä tuotteita sekä digitaalisten palvelujen käyttöoikeuksia.
+
+## Luku 6: Tehtävä 15
+
+## Luku 6: Tehtävä 16
+
+Lisää seuraavaan prosessiin ei-keskeyttävä Message Boundary Event, joka ottaa vastaan asiakkaan tilaukseensa tekemän muutoksen, sekä sen käynnistämä polku.
+
+![Message Start Event, Message Intermediate Boundary Event ja Message End Event](kuviot/eventteja3.png){#fig-eventteja3}
+
+## Luku 6: Tehtävä 17
+
+Piirrä seuraavasta tapahtumakulusta prosessimalli, jossa hyödynnät Message Boundary Eventejä.
+
+Prosessi alkaa, kun asiakas lähettää tukipyynnön sähköistä lomaketta käyttäen. Järjestelmä luo yhteydenoton perusteella tukipyynnön ja lähettää asiakkaalle vahvistusviestin. Tukihenkilö valmistelee vastauksen. Jos asiakas vastaa vahvistusviestiin lisätiedoilla kesken valmistelun, viesti keskeyttää tehtävän ja ohjaa polun “Lisätietojen tarkistus” -aliprosessiin. Jos vastausta ei tule, valmistelu jatkuu normaalisti ja tukihenkilö lähettää vastauksen. Vastauksen lähetyksen jälkeen prosessi päättyy.
+
+## Luku 6: Tehtävä 18
+
+Piirrä seuraavasta tapahtumakulusta prosessimalli, jossa hyödynnät ehdollisia tapahtumia.
+
+Kun lasku saapuu, prosessi käynnistyy Message Start Eventillä. Seuraavaksi lasku tarkistetaan. Jos laskun summa on yli 5 000 € ja toimittaja ei ole hyväksyttyjen toimittajien listalla, siirrytään tehtävään ”Hanki lisähyväksyntä”. Muutoin edetään suoraan tehtävään ”Kirjaa lasku”. Jos laskusta puuttuu joitain pakollisten kenttien tietoja, lasku palautetaan.
+
+## Luku 6: Tehtävä 19
+
+Miten seuraavat prosessimallit tulkitaan?
+
+![](kuviot/timer_esim.svg)
+## Luku 6: Tehtävä 20
+
+1. Ilmaise vuoden viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
+2. Muunna tapahtuma, joka alkaa 2025-12-06 klo 09:00 Europe/Helsinki, ISO 8601 -muotoon sisältäen aikavyöhykkeen offseting ja UTC-vastineen.
+3. Esitä 2 tuntia 30 minuuttia ISO 8601 -keston merkintänä ja lisää siihen 15 minuutin tauko erillisenä kesto-osana.
+4. Kirjoita jakso maanantaista torstaihin klo 09:00-16:00 yhtenä ISO 8601 -aikavälinä, joka sisältää päivämäärät ja kellonajat.
+5. Esitä viikoittainen luento, joka pidetään joka keskiviikko klo 12:15-13:45 tammi-maaliskuussa 2026, ISO 8601 -aikavälinä ja liitä mukaan toistuvuutta kuvaava sääntö käyttäen standardin mukaisia rakenteita.
+
+## Luku 6: Tehtävä 21
+
+Ajatellaan jotain systeemiä, jolla on useita samanaikaisia käyttäjiä. Yksi käyttäjistä käynnistää prosessin, jossa prosessimuuttujan `luku1` numeroarvosta siirretään puolet muuttujan `luku2` arvoon. Jokin tehtävä lukee ensin `luku1`:n lähtöarvon ja vähentää siitä puolet. Mikäli `luku2`:n arvon kasvattaminen `luku1`:n puolikkaalla jostain teknisestä tai vaikka liiketoimintasääntöön perustuvasta syystä kuitenkin epäonnistuu, transaktiomuotoisessa suorituksessa prosessi keskeytetään (*Abort*) ja systeemi palautetaan sen alkuperäiseen tilaan (*Rollback*). On kuitenkin mahdollista, että systeemin toinen käyttäjä on tällä välin päivittänyt `luku1`:n arvoa, jolloin alkuperäisen tilan palauttaminen rollback-operaatiolla hävittää myös toisen käyttäjän tekemän muutoksen.
+
+Suunnittele kompensoiva rakenne, joka pitää systeemin tietojen arvot oikeina kaikissa tapauksissa.
+
+Toimiiko suunnittelemasi kompensaatio, mikäli `luku1`:n arvo ei saa koskaan mennä alle nollan?
+
+## Luku 6: PALJON PIENIÄ BPMN-TEHTÄVIÄ
+
+Pikkutehtäviin mallivastaukset. Käytä Claudea.
+
+Jaa tehtävät bpmn-tehtäviin ja muihin?
