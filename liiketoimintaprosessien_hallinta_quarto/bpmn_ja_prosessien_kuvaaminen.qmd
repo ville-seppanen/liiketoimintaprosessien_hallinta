@@ -435,15 +435,3 @@ None Eventit pystyvät myös asettamaan muuttujia, joten niitä voidaan hyödynt
 ![Reklamaatio käsitelty -None Event](kuviot/reklamaation-kasittely.png){#fig-none-esim}
 
  Vaikka None Event ei varsinaisesti tee mitään, se voi kertoa prosessista ja sen tilasta paljonkin. Sen avulla (*Reklamaatio ratkaistu*) edellinen prosessi jaettiin kahteen konkreettiseen vaiheeseen: ongelman selvittämiseen ja reklamaation käsittelyn jälkitoimiin. Yrityksen palvelulupaus voi olla, että reklamaatio ratkaistaan viidessä arkipäivässä. Tässä voidaan prosessin kokonaiskeston sijaan mitataan aikaa aloituksesta välitavoitteeseen, koska korvaavan tuotteen toimituksen kesto ei ole reklamaatioiden käsittelijöiden hallinnassa. Lisäksi asiakaspalvelija näkee käynnissä olevasta prosessi-instanssista, onko reklamaatio jo ratkaistu, vaikka prosessi ei olisi vielä päättynyt.
-
- ## Portit
-
- Porttien (*Gateway*) avulla voidaan ohjata prosessin etenemistä tietyissä päätöspisteissä prosessin aikana. Portit voivat myös haarauttaa (*Split*) prosessivirran useaan suuntaan ja yhdistää (*Join*) useita virtoja taas yhdeksi. Portin symbolina käytetään vinoneliötä, jonka sisällä on portin tyyppiä ilmaiseva tunnus.
-
- ### Parallel Port
-
- *Parallel Port* eli rinnakkainen portti jakaa prosessivirran useaan rinnakkain suoritettavaan haaraan. Rinnakkaisen portin tunnisteena käytetään ✚-merkkiä. Rinnakkaiset virrat tulisi taas yhdistää, kun se on mahdollista.
-
- Seuraavassa esimerkissä (@fig-tilauksen-toimitus) prosessin kulku haarautuun kolmeen rinnakkaiseen virtaan, jotka aktivoituvat samanaikaisesti.
-
- ![Tilaus toimitukseen kolmella rinnakkain suoritettavalla tehtävällä](kuviot/tilauksen-toimitus.png){#fig-tilauksen-toimitus}
