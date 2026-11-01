@@ -406,7 +406,7 @@ Seuraavassa prosessissa (@fig-link-esim) puuttuvan tuotteen tilaamisen jälkeen 
 
 ### Signal Event
 
-Siinä missä Message-tehtävät ja -tapahtumat on aina tarkoitettu tarkoin koordinoituun kahden osapuolen väliseen viestinvaihtoon, *Signal Event* mahdollistaa samanaikaisen *broadcast*-tyyppisen viestinnän useille signaalia kuunteleville. Signaalin lähettäjän ei tarvitse tietää, kuinka monta vastaanottajaa sillä on, eikä se odota vastaanottajilta vastausta.
+Siinä missä Message-tehtävät ja -tapahtumat on aina tarkoitettu tarkoin koordinoituun kahden osapuolen väliseen viestinvaihtoon, *Signal Event* mahdollistaa samanaikaisen *broadcast*-tyyppisen viestinnän useille signaalia kuunteleville. Signaalin lähettäjän ei tarvitse tietää, kuinka monta vastaanottajaa sillä on, eikä se odota vastaanottajilta vastausta (@fig-signal-token-esim).
 
 Signal Event -tapahtuman tyypit ovat heittävä (*Throw*) ja vastaanottava (*Catch*). Sitä sitä voidaan käyttää *Boundary*, *Intermediate*-, *Start*- ja *End*-tapahtumissa.
 
@@ -414,7 +414,10 @@ Seuraavassa esimerkissä tehtävää *1* seuraa Intermediate Signal Event *A*. K
 
 Teknisesti ottaen -- ja automaattisia prosessikulkuja simuloitaessa -- tehtävien *2* ja *3* suorittaminen alkaa samaan aikaan kuin tehtävän *4*. Mikäli tehtävillä ei ole määriteltyä suoritusaikaa, ne kaikki myös valmistuvat samaan aikaan. Käytännössä ja todellisissa prosesseissa tätä ei tietenkään voida taata.
 
-![Signal Eventin suorittaminen prosessisimulaatiossa](kuviot/signal-token-esim.png)
+![Signal Eventin suorittaminen prosessisimulaatiossa[^signal-token-esim]](kuviot/signal-token-esim.png)
+
+[^signal-token-esim]: Kuviossa näkyvä Token Simulator esitetään Työvälineitä-luvussa. 
+
 Käytäntöä lähempänä olevassa esimerkissa laadunvarmistus huomaa ongelman jossain myytävässä tuotteessa ja prosessi signaloi siitä (@fig-signal-ongelma).
 
 ![Myytävässä tuotteessa on havaittu ongelma](kuviot/signal-ongelma.png){#fig-signal-ongelma}
@@ -435,4 +438,12 @@ None Eventit pystyvät myös asettamaan muuttujia, joten niitä voidaan hyödynt
 
  ## Portit
 
- Portti eli *Gateway* on prosessimallinnuksessa käytettävä elementti, jonka avulla voidaan ohjata työnkulun haarautumista tai yhdistymistä. Ne siis vaikuttavat prosessivirran kulkuun saavuttaessa tiettyyn kohtaa prosessia. Ne voivat haarauttaa (*Split*) prosessivirran useaan suuntaan tai yhdistää (*Join*) useita virtoja yhdeksi. Portin symbolina käytetään vinoneliötä, jonka sisällä on portin tyyppiä ilmaiseva tunnus.
+ Porttien (*Gateway*) avulla voidaan ohjata prosessin etenemistä tietyissä päätöspisteissä prosessin aikana. Portit voivat myös haarauttaa (*Split*) prosessivirran useaan suuntaan ja yhdistää (*Join*) useita virtoja taas yhdeksi. Portin symbolina käytetään vinoneliötä, jonka sisällä on portin tyyppiä ilmaiseva tunnus.
+
+ ### Parallel Port
+
+ *Parallel Port* eli rinnakkainen portti jakaa prosessivirran useaan rinnakkain suoritettavaan haaraan. Rinnakkaisen portin tunnisteena käytetään ✚-merkkiä. Rinnakkaiset virrat tulisi taas yhdistää, kun se on mahdollista.
+
+ Seuraavassa esimerkissä (@fig-tilauksen-toimitus) prosessin kulku haarautuun kolmeen rinnakkaiseen virtaan, jotka aktivoituvat samanaikaisesti.
+
+ ![Tilaus toimitukseen kolmella rinnakkain suoritettavalla tehtävällä](kuviot/tilauksen-toimitus.png){#fig-tilauksen-toimitus}

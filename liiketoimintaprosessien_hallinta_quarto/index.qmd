@@ -8,5 +8,12 @@ Kirjan loppuun on koottu harjoitustehtäviä. Osaan tehtävistä on annettu myö
 
 Kurssin suorittaminen ei edellytä tehtävien tekemistä, mutta niistä on toivottavasti hyötyä esimerkiksi tenttiin valmistautuessasi.
 
+TODO
+
+- Läpikäynti Claudella luku kerrallaan: etsi kirjoitusvirheet ja epäloogisuudet. Löytyykö jotain, mikä tulisi esittää selkeämmin? Olisiko jotain osuutta tiivistettävä?
+- Tekstin kokonaisrakenteen loogisuus?
+- Lisää pieniä BPMN-tehtäviä: Anna Claudelle koko BPMN-osuus ja pyydä sitä laatimaan pieniä mallinnustehtäviä mallivastauksineen.
+    - Tehtävien vaikeuden luokittelu esim. kolmeen tasoon?
+
 Orivedellä 21.10.2026
 Ville Seppänen
