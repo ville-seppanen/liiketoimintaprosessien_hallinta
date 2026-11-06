@@ -13,7 +13,6 @@ book:
     - prosessiorganisaatio_ja_prosessien_kehittaminen.qmd
     - prosessiarkkitehtuuri.qmd
     - prosessiautomaatio.qmd
-    - tekoaly_ja_prosessit.qmd
     - mallit_ja_mallintaminen.qmd
     - bpmn_ja_prosessien_kuvaaminen.qmd
     - tehtavat.qmd
@@ -29,7 +28,7 @@ lang: fi
 reference-location: margin      # alaviitteet sivun reunaan
 crossref:
   fig-title: Kuva              
-  fig-prefix: kuvio
+  fig-prefix: kuva
   tbl-title: Taulukko
   lof-title: Kuvaluettelo
 

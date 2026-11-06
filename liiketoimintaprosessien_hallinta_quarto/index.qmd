@@ -2,18 +2,19 @@
 
 Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston Informaatioteknologian tiedekunnan kurssille Liiketoimintaprosessien hallinta.
 
-Kiitokset aakkosjärjestyksessä seuraaville henkilöille sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
+Asioiden esitysjärjestys on pyritty laatimaan sellaiseksi, että asiat rakentuvat jokseenkin loogisesti aiemmin esitetyn varaan. Aivan kaikkialla tämä ei kuitenkaan onnistu ja joissain kohdin voi olla tarpeen hieman hyppiä lukujen välillä.
 
-Kirjan loppuun on koottu harjoitustehtäviä. Osaan tehtävistä on annettu myös malliratkaisut. Huomaa kuitenkin, että hyvin harvaan tehtävistä on olemassa ainoastaan yksi oikea vastaus, joten malliratkaisut esittävät niistä vain yhden.
+Kirjan lopusta löytyy harjoitustehtäviä. Osaan tehtävistä on annettu myös malliratkaisut. Huomaa kuitenkin, että hyvin harvaan tehtävään on olemassa vain yksi oikea vastaus.
 
-Kurssin suorittaminen ei edellytä tehtävien tekemistä, mutta niistä on toivottavasti hyötyä esimerkiksi tenttiin valmistautuessasi.
+Kiitokset seuraaville henkilöille sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
 
 TODO
 
+- **Kuvio -> Kuva; seuraavassa kuviossa -> kuvassa jne.**
 - Läpikäynti Claudella luku kerrallaan: etsi kirjoitusvirheet ja epäloogisuudet. Löytyykö jotain, mikä tulisi esittää selkeämmin? Olisiko jotain osuutta tiivistettävä?
 - Tekstin kokonaisrakenteen loogisuus?
 - Lisää pieniä BPMN-tehtäviä: Anna Claudelle koko BPMN-osuus ja pyydä sitä laatimaan pieniä mallinnustehtäviä mallivastauksineen.
     - Tehtävien vaikeuden luokittelu esim. kolmeen tasoon?
 
-Orivedellä 21.10.2026
+Orivedellä XX.XX.2026
 Ville Seppänen

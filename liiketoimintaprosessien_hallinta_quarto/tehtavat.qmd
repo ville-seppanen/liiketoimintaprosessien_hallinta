@@ -258,7 +258,8 @@ Kun lasku saapuu, prosessi käynnistyy Message Start Eventillä. Seuraavaksi las
 
 Miten seuraavat prosessimallit tulkitaan?
 
-![](kuviot/timer_esim.svg)
+![](kuviot/timer_esim.svg){#fig-timer_esim}
+
 ## Luku 6: Tehtävä 20
 
 1. Ilmaise vuoden viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
@@ -274,6 +275,85 @@ Ajatellaan jotain systeemiä, jolla on useita samanaikaisia käyttäjiä. Yksi k
 Suunnittele kompensoiva rakenne, joka pitää systeemin tietojen arvot oikeina kaikissa tapauksissa.
 
 Toimiiko suunnittelemasi kompensaatio, mikäli `luku1`:n arvo ei saa koskaan mennä alle nollan?
+
+## Luku 6: Tehtävä 22
+
+Piirrä prosessimalli seuraavasta tapauksesta: Prosessi käynnistyy tuotetilauksen vastaanottamisella. Jos tilattua tuotetta löytyy valmiina, se toimitetaan asiakkaalle lähetysvahvistuksen saattelemana. Mikäli tilattua tuotetta ei ole varastossa, tarkastetaan ensin, onko kaikki sen kokoamiseen tarvittavat komponentit yrityksen pajalla. Tarvittaessa komponentteja tilataan toimittajalta. Mikäli tarvittavia osia ei ole saatavilla, tilaus perutaan ja siitä ilmoitetaan asiakkaalle. Kun tuote on saatu valmistettua, se lähetetään asiakkaalle pikatoimituksena. Lisäksi asiakkaalle lähetetään lähetysvahvistus.
+
+## Luku 6: Tehtävä 23
+
+Piirrä prosessimalli vuoden 2025 itsenäisyyspäivän linnanjuhlistakin tuttujen lappeenrantalaisten herkkujen, Vetyn ja Atomin, valmistuksesta. Tee ensin Vetylle ja Atomille omat prosessimallinsa. Tämän jälkeen yhdistä ne yhdeksi prosessimalliksi, jolla onnistuu molempien piirakoiden valmistaminen.
+
+Lihapiirakka leikataan auki taskuksi ja väliin lisätään nokare voita. Piirakkaa lämmitetään höyrykattilassa, kunnes voi sulaa. Höyrytyksen aikana kuoritaan ja viipaloidaan kovaksi keitetty (13 min.) kananmuna. Seuraavaksi lisätään piirakan väliin täytteet tilauksen mukaisesti. Vety-piirakkaan tulee viipaloitu kananmuna sekä neljä viipaletta savukinkkua. Atomiin asiakas voi valita joko kananmunan tai kinkun. Lisukkeiksi molempiin on valittavissa kurkkusalaatti, ketsuppi ja sinappi. Mikäli piirakka syödään heti, se kääräistään voipaperiin. Jos piirakka on tarkoitus ottaa mukaan, se pakataan lisäksi pahvirasiaan.
+
+## Luku 6: Tehtävä 24
+
+Missä kohdissa seuraavassa prosessimallissa käyttäisit Parallel Port-, Inclusive Gateway- ja Exclusive Gateway -portteja?
+
+![](kuviot/porttitehtava.png){#fig-porttitehtava}
+
+## Luku 6: Tehtävä 25
+
+Piirrä seuraava prosessikulku. Asiakas lähettää palvelupisteelle tukipyynnön. Ensimmäiseksi tarkastetaan, sisältääkö tukipyyntö kaikki tarvittavat tiedot asian käsittelemiseksi. Mikäli lisätietoja ei tarvita, tukipyyntö ohjataan ratkaistavaksi ja prosessi lopetetaan. Jos lisätietoja tarvitaan, näitä pyydetään asiakkaalta. Kun asiakas toimittaa lisätiedot, tukipyyntö ohjataan ratkaistavaksi ja prosessi lopetetaan. Mikäli asiakas ei ole toimittanut lisätietoja 48 tunnin kuluessa, tukipyyntö hylätään ja prosessi lopetetaan.
+
+Tee edellisestä prosessista versio, jossa asiakasta muistutetaan, ellei hän ole toimittanut tarvittavia lisätietoja 48 tunnin kuluessa. Tämän jälkeen lisätietoja odotetaan toiset 48 tuntia ennen tukipyynnön hylkäämistä.
+
+Tee edellisestä prosessista versio, jossa asiakasta muistutetaan lisätiedoista 48 tunnin kuluttua. Sitten asiakasta muistutetaan tarvittaessa uudelleen 96 tunnin kuluttua. Ellei asiakas ole toimittanut lisätietoja 270 tunnin kuluttua, tukipyyntö hylätään ja prosessi lopetetaan.
+
+## Luku 6: Tehtävä 26
+
+Mallinna seuraava tarjouspyyntöprosessi (@fig-complex-esim) käyttämättä Complex Gateway -porttia.
+
+![Complex Gateway -portti tarjouspyyntöprosessissa](kuviot/complex-esim.png){#fig-complex-esim}
+
+## Luku 6: Tehtävä 27
+
+Tee verkkokaupan tilauskäsittelyn prosessikortista versio, joka soveltuisi käytettäväksi henkilöstön työpajassa. Käytä visuaalisia tunnuksia, kuten emojeita sekä värikoodausta, jotka helpottavat kortin hahmottamista. Pyri infografiikkamaiseen ilmeeseen: kortin tulisi mahtua yhdelle dialle.
+
+| Kohta | Kuvaus |
+|-------|--------|
+| **Prosessin nimi** | Verkkokaupan tilauskäsittely |
+| **Tavoite** | Varmistaa tilauksen oikea ja ajantasainen käsittely ja toimitus sekä asiakastyytyväisyys. |
+| **Prosessin alku** | Asiakas tekee tilauksen verkkokaupassa. |
+| **Prosessin loppu** | Tilaus on toimitettu asiakkaalle ja tilaus suljettu järjestelmässä. |
+| **Keskeiset vaiheet** | 1. Tilauksen vastaanotto järjestelmään.<br>2. Maksun varmistus.<br>3. Tuotteiden keräys ja pakkaus.<br>4. Toimituksen organisointi.<br>5. Lähetyksen seuranta ja viestintä asiakkaalle. |
+| **Prosessin omistaja** | Verkkokaupan tilausvastaava. |
+| **Osallistujat** | Tilausvastaava, varastotyöntekijät, logistiikkakumppanit, asiakaspalvelu. |
+| **KPI-mittarit** | 1. Tilausten käsittelyaika.<br>2. Toimitusten oikeellisuus.<br>3. Asiakaspalautteet.<br>4. Palautusprosentti. |
+| **Liittyvät prosessit** | Asiakaspalvelu, palautusten käsittely, varastonhallinta, maksuliikenne. |
+| **IT-järjestelmät** | Verkkokauppa-alusta, maksupalvelut, varastonhallintajärjestelmä, kuljetusjärjestelmät. |
+
+## Luku 6: Tehtävä 28
+
+Yritä piirtää pizzan tilaaminen (@fig-pizzatilaus.svg) tai Complex Gateway -esimerkkiprosessi (@fig-complex-esim) vuokaaviotekniikkaa käyttäen. Vuokaavion piirtämiseen voi käyttää esimerkiksi Draw.io -välinettä: https://draw.io.
+
+## Luku 6: Tehtävä 29
+
+Etsi ja laske kriittinen polku uuden työntekijän rekrytoinnin prosessille.
+
+| Tunnus | Uuden työntekijän rekrytointi | Kesto (pv) | Edeltävät tehtävät |
+|:------:|-------------------------------|:----------:|:------------------:|
+| A | Luo työsopimus | 1 | – |
+| B | Tilaa työvälineet | 4 | A |
+| C | Luo käyttäjätunnukset | 1 | A |
+| D | Tilaa kulkulupa ja avaimet | 2 | A |
+| E | Valmistele työpiste | 2 | B, C, D |
+| F | Laadi perehdytyssuunnitelma | 2 | B, C, D |
+| G | Aikatauluta tapaamiset | 2 | E |
+| H | Tiimiperehdytys | 2 | F |
+| I | Perehdytä teknisiin työvälineisiin | 4 | F |
+| J | Mentoritapaaminen | 2 | G |
+| K | Sidosryhmätapaamiset | 5 | G |
+| L | Rekrytoinnin palautekeskustelu | 1 | H, I, J, K |
+
+: Uuden työntekijän rekrytoinnin tehtävät, kestot ja riippuvuudet {#tbl-rekrytointi}
+
+![Työntekijän rekrytoinnin prosessi projektiverkkona kriittisen polun laskentaa varten](kuviot/cpm.png){#fig-cpm}
+
+# Luku 6: Tehtävä 30
+
+Keksi muutama hyödyllinen prosessien hallintaa tai analysointia tukeva näkymä, jotka voitaisiin rakentaa kokonaisarkkitehtuuri-informaation perusteella. Näkymät voivat olla esimerkiksi lämpökartta- tai liikennevalotyylisiä, kojetaulutyyppisiä mittaristoja, numeerisia yhteenvetoja, eri arkkitehtuurinäkökulmia yhdistäviä graafisia malleja tai muita vastaavia.
+
 
 ## Luku 6: PALJON PIENIÄ BPMN-TEHTÄVIÄ
 
