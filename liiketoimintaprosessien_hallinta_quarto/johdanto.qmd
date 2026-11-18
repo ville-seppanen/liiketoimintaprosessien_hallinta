@@ -16,13 +16,13 @@ BPMN-notaatiossa prosessiin osallistuvat toimijat esitetään tavallisesti uima-
 
 Prosessin tehtävät osoitetaan tietyn roolin suoritettavaksi sijoittamalla ne kyseisen roolin uimaradalle, kuten seuraavassa kuviossa on tehty (@fig-tehtavat_radoilla.svg).
 
-![Tehtäviä rooleille osoitettuina](kuviot/tehtavat_radoilla.svg){#fig-tehtavat_radoilla.svg fig-alt="foobar"}
+![Tehtäviä rooleille osoitettuina](kuviot/tehtavat_radoilla.svg){#fig-tehtavat_radoilla.svg fig-alt="Kahvilan prosessin tehtävät sijoitettuina asiakkaan, tarjoilijan ja baristan uimaradoille."}
 
 Maksua varten valitsit, haluatko maksaa käteisellä, kortilla vai mobiilimaksulla. Valintasi vaikuttaa siihen, kuinka prosessi seuraavaksi etenee. Jos käytät muuta maksutapaa kuin käteistä, mukaan liittyy roolina myös maksupalvelun tarjoaja. Valintatilanteet esitetään BPMN-malleissa päätöspisteinä tai -portteina, kuten seuraavan kuvion XOR-portti (@fig-maksutapahtuma.svg).
 
-![Maksutavan valinta XOR-portilla](kuviot/maksutapahtuma.svg){#fig-maksutapahtuma.svg fig-alt="foobar"}
+![Maksutavan valinta XOR-portilla](kuviot/maksutapahtuma.svg){#fig-maksutapahtuma.svg fig-alt="Maksutavan valinta XOR-portilla: käteinen, kortti tai mobiilimaksu."}
 
-Mutta se siitä tällä erää. Palataan BPMN-mallintamiseen myöhemmin. Mennään sitä ennen ajassa hieman taakse päin: mistä, miten ja milloin liiketoimintaprosessien tarkastelu, hallinta ja systemaattinen kehittäminen ovat alkaneet?
+Mutta se siitä tällä erää. Palataan BPMN-mallintamiseen myöhemmin. Mennään sitä ennen ajassa hieman taaksepäin: mistä, miten ja milloin liiketoimintaprosessien tarkastelu, hallinta ja systemaattinen kehittäminen ovat alkaneet?
 
 ## Prosessit eilen
 
@@ -50,7 +50,7 @@ Aineettomat palvelutuotteet eivät varsinaisesti jää niistä maksaneiden asiak
 
 Palveluyhteiskunnassa entistä useampi työskentelee tietotyön tehtävissä ja erilaisissa asiantuntijarooleissa. Tietotyöläiset edustavat tietyssä mielessä palveluyhteiskunnallistumisen pitkälle edennyttä muotoa. He eivät tuota palveluja ympäröivän todellisuuden kanssa välittömästi ja konkreettisesti vuorovaikuttaen, lunta auraten tai lihaksia vetreyttäen. Sen sijaan he käsittelevät tietoa: siirtelevät, prosessoivat ja jalostavat sitä, ja tuottavat tietoperustaisia palveluja analyysien, raporttien, ohjeiden tai muiden tietotuotteiden muodossa.
 
-Huolimatta yhteiskunnan rakenteiden, toimintatapojen ja työelämän muutoksista – digitalisaatiota unohtamatta – prosessit ja prosessiajattelu pysyvät edelleen sitkeästi menossa mukana. Kuluttamamme tuotteet, palvelut ja tieto ovat edelleen saatu aikaiseksi prosesseja toteuttamalla. Tuotantotalouden prosessit ovat valmistaneet tuotteet, jotka verkkokaupoista tilaamme. Tuotteiden tilaamisen verkkokaupasta toiselta puolen maapalloa on tehnyt mahdolliseksi tiedon käsittelyyn ja siirtelyyn keskittyvät prosessit, joista monet ovat sitä hartioita jumittavaa asiantuntijatyötä. Lopuksi vielä perinteisiä palveluprosesseja toteuttavat yritykset, kuten Posti tai FedEx, toimittavat tuotteet kotiovillemme tai lähimpään noutopisteeseen poimittaviksi. Raaka-ainaiden siirtyminen niiden alkulähteiltä piirongin laatikkoon loppusijoitettavaksi tuotteeksi vaatii pitkän ketjun toisiinsa kytkeytyviä prosesseja.
+Huolimatta yhteiskunnan rakenteiden, toimintatapojen ja työelämän muutoksista – digitalisaatiota unohtamatta – prosessit ja prosessiajattelu pysyvät edelleen sitkeästi menossa mukana. Kuluttamamme tuotteet, palvelut ja tieto on edelleen saatu aikaiseksi prosesseja toteuttamalla. Tuotantotalouden prosessit ovat valmistaneet tuotteet, jotka verkkokaupoista tilaamme. Tuotteiden tilaamisen verkkokaupasta toiselta puolen maapalloa ovat tehneet mahdolliseksi tiedon käsittelyyn ja siirtelyyn keskittyvät prosessit, joista monet ovat sitä hartioita jumittavaa asiantuntijatyötä. Lopuksi vielä perinteisiä palveluprosesseja toteuttavat yritykset, kuten Posti tai FedEx, toimittavat tuotteet kotiovillemme tai lähimpään noutopisteeseen poimittaviksi. Raaka-aineiden siirtyminen niiden alkulähteiltä piirongin laatikkoon loppusijoitettavaksi tuotteeksi vaatii pitkän ketjun toisiinsa kytkeytyviä prosesseja.
 
 ## Prosessit lähitulevaisuudessa
 

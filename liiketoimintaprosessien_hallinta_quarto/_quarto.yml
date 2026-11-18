@@ -16,7 +16,6 @@ book:
     - bpmn_ja_prosessien_kuvaaminen.qmd
     - tehtavat.qmd
     - tyovalineita.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

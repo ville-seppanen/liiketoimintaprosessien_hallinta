@@ -24,7 +24,7 @@ Camundasta on myös selainpohjainen Web Modeler (Camunda 8 SaaS). Web Modelerill
 
 ## Token Simulation
 
-Prosessimallin toimintaa on usein vaikea hahmottaa pelkästään kuvaa katsomalla, etenkin kun mallissa on rinnakkaisia polkuja, tapahtumia tai monimutkaisia portteja. *Token Simulation* on bpmn.io-projektin kehittämä apuväline, jolla prosessin kulkua voi seurata animaationa: prosessin käynnistävästä tapahtumasta lähtee liikkeelle merkki (*token*), joka kulkee prosessin läpi sekvenssivuoita pitkin. Porteissa voit itse valita, mihin suuntaan merkki jatkaa, ja rinnakkaisissa haaroissa näet, miten merkki jakautuu ja yhdistyy uudelleen. Näin pääset testaamaan, toimiiko mallisi niin kuin olit ajatellut -- jääkö prosessi esimerkiksi jumiin jonkin portin kohdalle tai päättyykö se oikein kaikissa vaihtoehtoisissa kuluissa.
+Prosessimallin toimintaa on usein vaikea hahmottaa pelkästään kuvaa katsomalla, etenkin kun mallissa on rinnakkaisia polkuja, tapahtumia tai monimutkaisia portteja. *Token Simulation* on bpmn.io-projektin kehittämä apuväline, jolla prosessin kulkua voi seurata animaationa: prosessin käynnistävästä tapahtumasta lähtee liikkeelle merkki (*token*), joka kulkee prosessin läpi järjestysvirtoja (*Sequence Flow*) pitkin. Porteissa voit itse valita, mihin suuntaan merkki jatkaa, ja rinnakkaisissa haaroissa näet, miten merkki jakautuu ja yhdistyy uudelleen. Näin pääset testaamaan, toimiiko mallisi niin kuin olit ajatellut -- jääkö prosessi esimerkiksi jumiin jonkin portin kohdalle tai päättyykö se oikein kaikissa vaihtoehtoisissa kuluissa.
 
 Token Simulationia voi käyttää kolmella tavalla:
 
@@ -49,7 +49,7 @@ Lisäosa (*plugin*) asennetaan kopioimalla se Camunda Modelerin `plugins`-kansio
 
 Draw.io on maksuton yleiskäyttöinen kaaviotyökalu. Se toimii selaimella osoitteessa <https://app.diagrams.net> sekä työpöytäsovelluksena. Draw.io sisältää BPMN- ja ArchiMate-symbolikirjastot (More Shapes -> BPMN / ArchiMate 3). Väline sopii nopeisiin luonnoksiin, prosessikarttoihin, vuokaavioihin ja muihin kuin BPMN-kuvauksiin.
 
-Huomaa, että Draw.io piirtää ainoastaan kuvia. Sen avulla ei voi tehdä  suoritettavia malleja: BPMN-sääntöjä ei tarkisteta eikä mallia voi simuloida tai suorittaa.
+Huomaa, että Draw.io piirtää ainoastaan kuvia. Sen avulla ei voi tehdä suoritettavia malleja: BPMN-sääntöjä ei tarkisteta eikä mallia voi simuloida tai suorittaa.
 
 ## Archi
 
