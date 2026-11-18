@@ -1,7 +1,56 @@
 # Työvälineitä
 
-- Camunda
-- Online Camunda
-- Token animatorin asennus
-- draw.io
-- Archi
+<!-- RUNKO 9.11.2026 (Claude). Teksti luonnosta, muokkaa omaksesi. -->
+
+Tässä luvussa esitellään lyhyesti työvälineitä, joita kirjan esimerkeissä on käytetty ja joita voit hyödyntää myös harjoitustehtäviä tehdessäsi. Kaikki esitellyt välineet ovat maksuttomia tai niistä on saatavilla maksuton versio. Välineet kehittyvät jatkuvasti, joten käyttöliittymät ja ominaisuudet saattavat poiketa jonkin verran kirjan kuvista.
+
+<!-- Tähän voisi lisätä pienen taulukon: väline | mihin käytetään | hinta | verkossa/asennettava | missä luvussa käytetty. -->
+
+## Camunda
+
+Camunda on BPMN-, DMN- ja työnkulkualusta, jolla prosessimalleja voi paitsi piirtää myös suorittaa. Kirjan BPMN-esimerkit on tehty Camundalla.
+
+### Camunda Modeler
+
+Camunda Modeler on maksuton avointa lähdekoodia oleva työpöytäsovellus, joka on saatavilla Windows-, macOS- ja Linux-ympäristöihin. 
+
+Sen avulla voidaan laatia BPMN- ja DMN-malleja sekä määritellä tehtävien ominaisuuksia (esim. FEEL-lausekkeet, Service Task -määrittelyt, ajastimet). Mallit tallentuvat .bpmn-tiedostoina (BPMN XML), jotka voidaan avata myös muissa BPMN-välineissä.
+
+Camunda Modeler on ladattavissa osoitteesta <https://camunda.com/download/modeler/>.
+
+### Camundan verkkoversio
+
+Camundasta on myös selainpohjainen Web Modeler (Camunda 8 SaaS). Web Modelerilla tehdyt mallit tallentuvat pilveen ja niitä voi jakaa ryhmän kesken.
+
+## Token Simulation
+
+Prosessimallin toimintaa on usein vaikea hahmottaa pelkästään kuvaa katsomalla, etenkin kun mallissa on rinnakkaisia polkuja, tapahtumia tai monimutkaisia portteja. *Token Simulation* on bpmn.io-projektin kehittämä apuväline, jolla prosessin kulkua voi seurata animaationa: prosessin käynnistävästä tapahtumasta lähtee liikkeelle merkki (*token*), joka kulkee prosessin läpi sekvenssivuoita pitkin. Porteissa voit itse valita, mihin suuntaan merkki jatkaa, ja rinnakkaisissa haaroissa näet, miten merkki jakautuu ja yhdistyy uudelleen. Näin pääset testaamaan, toimiiko mallisi niin kuin olit ajatellut -- jääkö prosessi esimerkiksi jumiin jonkin portin kohdalle tai päättyykö se oikein kaikissa vaihtoehtoisissa kuluissa.
+
+Token Simulationia voi käyttää kolmella tavalla:
+
+1. **Selaimessa ilman asennusta** osoitteessa <https://bpmn-io.github.io/bpmn-js-token-simulation/>. Voit avata sivulla oman .bpmn-tiedostosi esimerkiksi raahaamalla sen selainikkunaan.
+2. **Camundan verkkoversiossa**, johon simulaatio on valmiiksi sisäänrakennettu.
+3. **Camunda Modelerin lisäosana**, jonka asennus on ohjeistettu seuraavassa.
+
+### Token Simulation -lisäosan asentaminen Camunda Modeleriin
+
+Lisäosa (*plugin*) asennetaan kopioimalla se Camunda Modelerin `plugins`-kansioon.
+
+1. **Tarkista Camunda Modelerin versio** (macOS: *Camunda Modeler → About*, Windows: *Help → About*). Lisäosan uusimmat versiot edellyttävät Camunda Modelerin versiota 5.50 tai uudempaa. Jos käytössäsi on vanhempi versio, päivitä Modeler ennen lisäosan asentamista.
+2. **Lataa lisäosa** GitHubista osoitteesta <https://github.com/camunda/camunda-modeler-token-simulation-plugin>. Valitse sivulta *Code → Download ZIP* ja pura ladattu zip-tiedosto. Purkamisen jälkeen saat kansion, jonka nimi on esimerkiksi `camunda-modeler-token-simulation-plugin-main`.
+3. **Kopioi kansio Camunda Modelerin `plugins`-kansioon:**
+   - **macOS:** `~/Library/Application Support/camunda-modeler/resources/plugins`. Kansio `Library` on Finderissa oletuksena piilotettu: valitse Finderin valikosta *Siirry → Siirry kansioon…* (*Go → Go to Folder…*) ja kirjoita polku. Jos kansiota `resources/plugins` ei vielä ole, luo se.
+   - **Windows:** Camunda Modelerin asennuskansion `resources\plugins`-kansio, eli se kansio, jossa myös `Camunda Modeler.exe` sijaitsee. Jos kansiota `plugins` ei ole, luo se.
+4. **Käynnistä Camunda Modeler uudelleen.** Kun avaat BPMN-mallin, näet mallin vasemmassa yläkulmassa *Token Simulation* -kytkimen. Kytke simulaatio päälle ja käynnistä prosessi napsauttamalla aloitustapahtuman päälle ilmestyvää käynnistyspainiketta.
+
+<!-- TARKISTA: Windows-polku omalla koneella (vaihtoehtona %APPDATA%\camunda-modeler\resources\plugins). Kytkimen sijainti/ulkoasu Modelerin nykyversiossa -> kuvakaappaus tähän? Lisäksi ongelmatilanteet: kytkin ei näy -> versioyhteensopivuus tai kansio väärässä paikassa (zipin sisällä ylimääräinen kansiotaso). -->
+
+## Draw.io
+
+Draw.io on maksuton yleiskäyttöinen kaaviotyökalu. Se toimii selaimella osoitteessa <https://app.diagrams.net> sekä työpöytäsovelluksena. Draw.io sisältää BPMN- ja ArchiMate-symbolikirjastot (More Shapes -> BPMN / ArchiMate 3). Väline sopii nopeisiin luonnoksiin, prosessikarttoihin, vuokaavioihin ja muihin kuin BPMN-kuvauksiin.
+
+Huomaa, että Draw.io piirtää ainoastaan kuvia. Sen avulla ei voi tehdä  suoritettavia malleja: BPMN-sääntöjä ei tarkisteta eikä mallia voi simuloida tai suorittaa.
+
+## Archi
+
+Archi on maksuton, avoimen lähdekoodin ArchiMate-mallinnusväline <https://www.archimatetool.com>, joka on saatavilla Windows-, macOS- ja Linux-ympäristöihin.

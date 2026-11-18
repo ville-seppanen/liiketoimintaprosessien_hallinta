@@ -2,13 +2,13 @@
 
 Tässä luvussa käsitellään liiketoimintaprosessien automaatiota[^hint_bpmn]. Tarkastelu keskittyy asiantuntija- ja tietotyön tehtäviin liittyviin automaatiomahdollisuuksiin, eikä esimerkiksi teollisuus- tai tuotantoautomaatioon, joilla tarkoitetaan valmistus- ja tuotantoprosessien sekä niihin liittyvien koneiden ohjaamista ja valvontaa teknologian avulla (@fig-manufacturing_line).
 
-[^hint_bpmn]: Tässä luvussa tarvitaan hieman BPMN-kielen tuntemista, joten harkitse luetko tarvittaessa ensin osan *Business Process Model and Notation ja prosessien mallintaminen*.
+[^hint_bpmn]: Tässä luvussa tarvitaan jonkin verran BPMN-kielen tuntemista, joten harkitse luetko tarvittaessa ensin osan *Business Process Model and Notation ja prosessien mallintaminen*.
 
 ![Tuotantoteollisuuden prosessiautomaatiota (CC BY 4.0, Steve Jurvetson)](kuviot/manufacturing_line.png){#fig-manufacturing_line}
 
 Lisäksi tarkastellaan tekoälyn mahdollisuuksia prosessien kehittämisessä ja automaatiossa. Koska tekoälyratkaisujen kehitysvauhti on tällä hetkellä valtavan nopea, tarkastelu pidetään melko yleisellä tasolla.
 
-Kun prosessi on kuvattu ja analysoitu riittävän tarkasti, voidaan arvioida automatisoinnin mahdollisuuksia ja kannavuutta. Seuraavissa luvuissa käsitellään kolmea liiketoimintaprosessien automaation toteuttamisen muotoa: ohjelmistorobotiikkaa, työnkulkuautomaatiota sekä tekoälypohjaisia ratkaisuja.
+Kun prosessi on kuvattu ja analysoitu riittävän tarkasti, voidaan arvioida automatisoinnin mahdollisuuksia ja kannavuutta. Seuraavissa luvuissa käsitellään kolmea liiketoimintaprosessien automaation toteuttamisen muotoa: työnkulkuautomaatiota, ohjelmistorobotiikkaa sekä tekoälypohjaisia ratkaisuja.
 
 Edellisten rinnalla ei kannata myöskään unohtaa ohjelmistojen ja järjestelmien omia mahdollisuuksia, jotka usein voivat olla kevyin ja edullisin tapa prosessien tehostamiseksi. Tällaisia ovat esimerkiksi taulukkolaskennan makrot, valmiit raporttipohjat, tallennetut tietokantakyselyt ja toiminnanohjausjärjestelmän automaattinen täsmäytys tai hälytykset. Ennen kuin uutta automaatioratkaisua lähdetään hankkimaan, kannattaa selvittää, onnistuisiko se jo nykyisillä välineillä.
 
@@ -26,7 +26,7 @@ Työnkulkumallia (@fig-pros-workflow) voidaan ajatella automaattiseen toimintaan
 
 Osa automatisoitavista tehtävistä saattaa nousta esille välittömästi, kun taas osa voi muodostua vasta työnkulkuspesifikaation ideoinnin, rakentamisen ja iteroinnin kautta. Oleellista on, ettei työnkulkuja suunniteltaessa takerruta nykyisiin toimintatapoihin ja niiden automatisointiin, vaan mietitään, mitä uusia mahdollisuuksia ja uudenlaisia toimintatapoja teknologiat ja automaatio mahdollistavat. Tulee myös muistaa, ettei työnkulkujen automatisoinnissa ole useinkaan mahdollista -- tai edes järkevää -- pyrkiä täysin automatisoituun toteutukseen. Osa tehtävistä voidaan jättää ihmistoimijoiden suoritettaviksi *Manual Task*- ja *User Task* -tyyppisinä.
 
-Seuraavassa luvussa käsiteltävän BPMN-kielen (*Business Process Model and Notation*) ominaisuudet riittävät erinomaisesti työnkulkumallien laadintaan. BPMN XML -spesifikaatio mahdollistaa myös prosessimallien automaattisen suorittamisen, joten BPMN toimii paitsi määrittelykielenä työnkulkumallia luotaessa, myös runtime-ajoympäristössä suoritettavana työnkulkusovelluksena. Ohjelmistokokonaisuuksia, jotka mahdollistavat prosessien ja päätöslogiikan mallintamisen, testaamisen, käyttöönoton (*Deployment*) ja lopulta niiden automaattisen suorittamisen, kutsutaan nimellä *Workflow Engine*.
+Seuraavassa luvussa käsiteltävän BPMN-kielen (*Business Process Model and Notation*) ominaisuudet riittävät erinomaisesti työnkulkumallien laadintaan. BPMN XML -spesifikaatio mahdollistaa myös prosessimallien automaattisen suorittamisen, joten BPMN toimii paitsi määrittelykielenä työnkulkumallia luotaessa, myös runtime-ajoympäristössä suoritettavana työnkulkusovelluksena. Ohjelmistokokonaisuuksia, jotka mahdollistavat prosessien ja päätöslogiikan mallintamisen, testaamisen, käyttöönoton ja lopulta niiden automaattisen suorittamisen, kutsutaan nimellä *Workflow Engine* tai työnkulkumoottori.
 
 ## Ohjelmistorobotiikka
 
@@ -36,15 +36,15 @@ Ohjelmistorobotiikka saatetaan joskus sekoittaa tekoälyyn, mutta RPA-ratkaisuil
 
 Seuraavassa kuvassa (@fig-mulesoft) näkyy MuleSoftin *RPA Builder*[^mule]  -välineen käyttöliittymä. Prosessikulku esitetään BPMN-kielellä ja RPA:n suorittamat tehtävät ovat mallissa *Service Task* -tyyppiä. Niillä kullekin tehtävälle voidaan määritellä tarkempi tehtävänkulku, jonka aikana edelleen voidaan hyödyntää RPA Builderin toiminnallisuuksia, kuten vaikkapa tekstin tunnistaminen dokumentista OCR:n avulla tai muuttujien käsittely.
 
-[^mule]: https://docs.mulesoft.com/rpa-builder/latest/ui-overview
+[^mule]: https://www.mulesoft.com/platform/rpa
 
 ![MuleSoft RPA Builder on edistynyt kaupallinen RPA-ympäristö](kuviot/mulesoft-rpa-builder.png){#fig-mulesoft}
 
-Alla olevassa kuvassa (@fig-powerautomate) on yksityiskohta *Microsoft Power Automate* -välineellä toteutetusta prosessikulusta, jossa ohjelmistorobotti hakee työntekijän työmatkan pituuden lähtöpaikasta työmaalle *Google Maps* -palvelun avulla ja liittää sen työseurannan *Excel*-taulukkoon. Esimerkki osoittaa, kuinka tarkasti ohjelmistorobotin toimintaa voidaan -- ja toisaalta täytyy -- ohjeistaa, kun se operoi graafisen käyttöliittymän päällä ilman API-rajapintojen käyttöä. Esimerkissä pyydetään RPA:ta ensin aktivoimaan selaimen Google Maps -ikkuna ja sen jälkeen kaksoisnapauttamaan näyttöä määritellyssä koordinaattipisteessä. Sen jälkeen suoritetaan näppäinkomento *Control+C*, joka kopio kaksoisnapautuksella valitun tekstin leikepöydälle. Kopioitu teksti liitetään tämän jälkeen Excel-taulukon oikeaan soluun *Control+V* -komennolla.
+Alla olevassa kuvassa (@fig-powerautomate) on yksityiskohta *Microsoft Power Automate* -välineellä toteutetusta prosessikulusta, jossa ohjelmistorobotti hakee työntekijän työmatkan pituuden lähtöpaikasta työmaalle *Google Maps* -palvelun avulla ja liittää sen työseurannan *Excel*-taulukkoon. Esimerkki [@kemppainen2024prosessien] osoittaa, kuinka tarkasti ohjelmistorobotin toimintaa voidaan -- ja toisaalta täytyy -- ohjeistaa, kun se operoi graafisen käyttöliittymän päällä ilman API-rajapintojen käyttöä. Esimerkissä pyydetään RPA:ta ensin aktivoimaan selaimen Google Maps -ikkuna ja sen jälkeen kaksoisnapauttamaan näyttöä määritellyssä koordinaattipisteessä. Sen jälkeen suoritetaan näppäinkomento *Control+C*, joka kopio kaksoisnapautuksella valitun tekstin leikepöydälle. Kopioitu teksti liitetään tämän jälkeen Excel-taulukon oikeaan soluun *Control+V* -komennolla.
 
 Useat RPA-ratkaisut osaavat myös kutsua ohjelmistorajapintoja. Tällöin ohjelmistorobotti lukee ja kirjoittaa tietoja sekä käynnistää ohjelmistojen toimintoja esimerkiksi REST-kutsujen avulla sen sijaan, että vuorovaikuttaisi niiden kanssa graafisen käyttöliittymän kautta.
 
-![Esimerkki Microsoft Power Automatella laaditusta työnkulusta [@kemppainen2018]](kuviot/powerautomate.png){#fig-powerautomate}
+![Esimerkki Microsoft Power Automatella laaditusta työnkulusta [@kemppainen2024prosessien]](kuviot/powerautomate.png){#fig-powerautomate}
 
 RPA-ratkaisut ovat erittäin tiukkakytkentäisiä. Tämä tarkoittaa, että  niiden rakentaminen edellyttää prosessin suorittamisessa käytettävien ohjelmistojen ja niiden käyttöliittymien tarkkaa tuntemista. Pienikin muutos ohjelmiston toimintalogiikassa tai graafisessa käyttöliittymässä, kuten esimerkiksi tekstikentän tai painikkeen sijainnin muuttuminen, voi rikkoa työnkulun nykyisen määrittelyn.
 
@@ -79,16 +79,15 @@ Edellä on keskitytty pääasiassa prosessien RPA-potentiaalin arviointiin. Kute
 | Vuorovaikutus useiden ohjelmistojen kanssa | Useita ohjelmistoja käyttävä prosessi on hyvä RPA:n kohde. Manuaalinen siirtyminen järjestelmien välillä kasvattaa virheriskiä ja epäjohdonmukaisuutta. |
 : RPA-potentiaalin osatekijät [@syed2020robotic] {#tbl-rpa-yhtveto}
 
-
 ## Hyperautomaatio ja Intelligent Process Automation
 
-Hyperautomaatiolla (*Hyper Automation*) tarkoitetaan erilaisten automatisoinnin mahdollisuuksien ja niitä tukevien teknologioiden yhdistelemistä siten, että automaatio voidaan toteuttaa mahdollisimman laaja-alaisesti. Edellä mainittujen työnkulkuautomaation ja ohjelmistorobitiikan rinnalla hyperautomaatiossa voidaan soveltaa myös esimerkiksi koneoppimista ja tekoälyä.
+Hyperautomaatiolla (*Hyper Automation*) tarkoitetaan erilaisten automatisoinnin mahdollisuuksien ja niitä tukevien teknologioiden yhdistelemistä siten, että automaatio voidaan toteuttaa mahdollisimman laaja-alaisesti. Edellä mainittujen työnkulkuautomaation ja ohjelmistorobotiikan rinnalla hyperautomaatiossa voidaan käyttää myös esimerkiksi koneoppimista ja tekoälyä.
 
-Erilaisten teknologioiden soveltamisen lisäksi hyperautomaatiolla voidaan tarkoittaa myös eri toiminta-alueita leikkaavaa ja yhdistävää automaatiota. Tämä voi esimerkiksi tarkoittaa, että havainnot markkinoiden muutoksista ohjaavat markkinoinnin prosesseja, joiden toteuma edelleen vaikuttaa tuotannon prosesseihin, joista saatava reaaliaikainen palaute säätää tarpeen mukaan toimitusketjun prosesseja.
+Erilaisten teknologioiden soveltamisen lisäksi hyperautomaatiolla voidaan viitata myös eri toiminta-alueita leikkaavaan ja yhdistävään automaatioon. Tämä voi esimerkiksi tarkoittaa, että havainnot markkinoiden muutoksista ohjaavat markkinoinnin prosesseja, joiden toteuma edelleen vaikuttaa tuotannon prosesseihin, ja joista saatava reaaliaikainen palaute säätää tarpeen mukaan toimitusketjun prosesseja.
 
-Viime aikoina on ryhdytty käyttämään myös käsitettä *Intelligent Process Automation* (*IPA*), älykäs prosessiautomaatio, joka useissa määritelmissä kuulostaa hyvinkin samankaltaiselta hyperautomaation kanssa. IPA voi rikastaa perinteisempiä ohjelmistorobotiikan ratkaisuja esimerkiksi API-automaation, hahmontunnistuksen, suurien kielimallien ja päätösautomaation teknologioilla.
+Viime aikoina on ryhdytty käyttämään myös käsitettä *Intelligent Process Automation* (*IPA*), älykäs prosessiautomaatio, joka useissa määritelmissä kuulostaa hyvin samankaltaiselta hyperautomaation kanssa. IPA rikastaa perinteisempiä ohjelmistorobotiikan ratkaisuja esimerkiksi API-automaation, hahmontunnistuksen, päätösautomaation ja tekoälyn teknologioilla.
 
-Seuraavassa (@fig-ipa-esim1) on esitetty yksinkertaistettu prosessikulku toimittajalaskun tarkastukselle ja käsittelylle. Esimerkistä on jätetty pois mahdollisia poikkeustilanteita ja vaihtoehtoisia kulkuja, joihin tällaisessa prosessissa todellisuudessa olisi varmasti tarpeen varautua. Prosessi alkaa, kun yrityksen tiettyyn sähköpostiosoitteeseen saapuu toimittajalta lasku PDF-muodossa. Ostoassistentti tallentaa laskun verkkolevylle ja sen jälkeen tarkastaa laskun oleelliset tiedot. Sitten hän varmistaa ERP-järjestelmästä, että laskutetut tuotteet on vastaanotettu. Tämän jälkeen hän toimittaa laskun hyväksyttäväksi oikealle henkilölle, esimerkiksi yksikön johtajalle tai hankintavastaavalle. Kun lasku on hyväksytty, ostoassistentti kirjaa sen tiedot talousjärjestelmään maksettaviin laskuihin.
+Seuraavassa (@fig-ipa-esim1) on esitetty yksinkertaistettu prosessikulku toimittajalaskun tarkastukselle ja käsittelylle. Esimerkistä on jätetty pois mahdollisia poikkeustilanteita ja vaihtoehtoisia kulkuja, joihin tällaisessa prosessissa todellisuudessa olisi tarpeen varautua. Prosessi alkaa, kun yrityksen tiettyyn sähköpostiosoitteeseen saapuu toimittajalta lasku PDF-muodossa. Ostoassistentti tallentaa laskun verkkolevylle ja sen jälkeen tarkastaa laskun oleelliset tiedot. Sitten hän varmistaa ERP-järjestelmästä, että laskutetut tuotteet on vastaanotettu. Tämän jälkeen hän toimittaa laskun hyväksyttäväksi oikealle henkilölle, esimerkiksi yksikön johtajalle tai hankintavastaavalle. Kun lasku on hyväksytty, ostoassistentti kirjaa sen tiedot talousjärjestelmään maksettaviin laskuihin.
 
 ![Yksinkertainen toimittajalaskun tarkastuksen ja käsittelyn prosessi](kuviot/ipa-esim1.png){#fig-ipa-esim1}
 
@@ -96,15 +95,77 @@ Seuraavassa (@fig-ipa-esim2) edellinen prosessi on hahmoteltu hyperautomaatiotot
 
 ![Yksinkertaisen toimittajalaskun tarkastuksen ja käsittelyn prosessi hyperautomaationa](kuviot/ipa-esim2.png){#fig-ipa-esim2}
 
-Toimittajalaskun saavuttua sähköpostiin, työnkulkualusta kutsuu ohjelmistorobottia, joka etsii laskun ja tallentaa sen verkkoasemalle. Ohjelmistorobotti kutsuu OCR-toimintoa (*Optical Character Recognition*), joka lukee hahmontunnistusta hyödyntäen laskulta relevantit tiedot ja palauttaa ne takaisin työnkulkualustalle prosessimuuttujina. Työnkulkualusta kysyy ERP-järjestelmältä (*Service Task*) API-rajapinnan yli, ovatko tilaukseen liittyvät tuotteet saapuneet ja lasku siltä osin valmis maksettavaksi. Seuraavaksi työnkulkualusta päättelee päätöstaulun (*Business Rule Task*) avulla, voidaanko lasku hyväksyä automaattisesti. Mikäli voidaan, lasku hyväksytään prosessikulkuun liitetyllä ohjelmakoodilla (*Script Task*). Mikäli lasku jostain syystä – esimerkiksi korkean hinnan vuoksi – tarvitsee manuaalisen hyväksynnän, se hankintaan kutsumalla aliprosessia (*Call Activity*). Lopuksi hyväksytyn laskun tiedot viedään talousjärjestelmään maksettavien laskujen joukkoon.
+Toimittajalaskun saavuttua sähköpostiin, työnkulkualusta kutsuu ohjelmistorobottia, joka etsii laskun ja tallentaa sen verkkoasemalle. Ohjelmistorobotti kutsuu OCR-toimintoa (*Optical Character Recognition*), joka lukee hahmontunnistusta hyödyntäen laskulta relevantit tiedot ja palauttaa ne takaisin työnkulkualustalle prosessimuuttujina. Työnkulkualusta kysyy ERP-järjestelmältä (*Service Task*) API-rajapinnan yli, ovatko tilaukseen liittyvät tuotteet saapuneet ja lasku siltä osin valmis maksettavaksi. Seuraavaksi työnkulkualusta päättelee päätöstaulun (*Business Rule Task*) avulla, voidaanko lasku hyväksyä automaattisesti. Mikäli se on mahdollista, lasku hyväksytään prosessikulkuun liitetyllä ohjelmakoodilla (*Script Task*). Mikäli lasku jostain syystä – esimerkiksi korkean hinnan vuoksi – tarvitsee manuaalisen hyväksynnän, se hankintaan kutsumalla aliprosessia (*Call Activity*). Lopuksi hyväksytyn laskun tiedot viedään automaattisesti (*Service Task*) talousjärjestelmään maksettavien laskujen joukkoon.
 
-Koko prosessi voitiin käsitellä ilman manuaalista työtä, ellei laskun hyväksyntä jostain syystä sitä edellytä. Prosessin läpinäkyvyys ja nopeus paranevat, samoin kuin inhimillisten virheiden ja unohdusten määrä vähenee.
+Koko prosessi voitiin käsitellä ilman manuaalista työtä, ellei laskun hyväksyntä jostain syystä sitä edellytä. Prosessin läpinäkyvyys ja nopeus paranevat, samoin kuin unohdusten ja inhimillisten virheiden määrä vähenee.
 
+## Tekoäly prosessiautomaatiossa {#sec-tekoaly-automaatiossa}
 
-<!-- Se, että prosessin kulku pystytään esittämään tietokoneohjelmistojen ymmärtämässä muodossa, mahdollistaa automaation. Mikäli prosessissa käsitellään ainoastaan digitaalista tietoa, prosessi voi olla automatisoitavissa jopa kokonaan. Ihmisen ei tarvitse osallistua prosessin kulkuun, vaan tietokone voi tehdä myös prosessin vaiheisiin liittyviä päätökset. Tässä voidaan soveltaa esimerkiksi BPMN:n Decision Model and Notation -määritystä. Toistaiseksi -- ehkä onneksikin -- näiden päätöstaulujen määrittelyyn tarvitaan kuitenkin inhimilliseen päätöksentekoon kykeneviä toimijoita. Suomen hallitus teki esityksen julkisen hallinnon automaattista päätöksentekoa koskevaksi lainsäädännöksi vuonna 2022[^autom_esitys] ja nykyinen uudistettu yleislaki tuli voimaan keväällä 2023[^autom_laki].
+Hyperautomaation ratkaisuissa tekoälyä käytettäisiin lähinnä yksittäisten tehtävien suorittamisessa, esimerkiksi hahmontunnistus dokumenttia luettaessa tai päätösautomaatiota täydentävä koneoppiminen. Suurten kielimallien yleistyminen on kuitenkin tuomassa tekoälyn prosessiautomaatioon myös laajamittaisemmin. Se voi tietyissä tilanteissa ottaa vastuulleen kokonaisia prosessikulkuja tai jopa päättää, missä järjestyksessä ja millä keinoin prosessiin kuuluvat tehtävät suoritetaan.
 
-[^autom_esitys]: https://www.finlex.fi/fi/hallituksen-esitykset/2022/145
+Autonomiset tekoälyagentit pystyvät jo nykyisin suorittamaan vaativiakin tehtäviä itsenäisesti ja ilman ohjausta. Useista keskenään vuorovaikuttavista agentista koostuvat järjestelmät pystyvät suorittamaan monimutkaisia tehtäväsarjoja -- eli prosesseja. Lähitulevaisuudessa saatamme olla tilanteessa, jossa prosessimalliksi riittää BPMN:n *Ad-hoc* -prosessin kaltainen sekalainen joukko irrallisia tehtäviä tai jopa ainoastaan halutun lisättyä arvoa tuottavan lopputuloksen ilmoittaminen.
 
-[^autom_laki]: https://api.hankeikkuna.fi/asiakirjat/ff3444f4-24c9-4ee8-8c9d-7bc581c0021a/3e478d6b-3906-4f3b-a5b0-5619b967e9ac/TIEDOTE_20230307080249.pdf
+Vuoden 2026 saatiin lukea useista "välikohtauksista", joissa tekoälyagenttien kerrottiin "karanneen" ja murtautuneen esimerkiksi terveydenhuollon järjestelmiin[^yle_openai]^,^[^yle_ai]. Agentit eivät tietenkään toimi näin ilkeyttään, vaan etsiessään tietoa, jota ne tarvitsevat niille annetun tehtävän ratkaisemiseksi. Joka tapauksessa autonomisen tekoälyn käyttöön prosessiautomaatiossa kannattaa vielä ainakin toistaiseksi suhtautua varauksella ja harkinnalla.
 
-BPMN-prosesseissa voi olla sekä manuaalisia että automaattisesti suoritettavia tehtäviä. Niitä voidaan yhdistellä prosesseja automatisoitaessa siten, että osa prosessin tehtävistä suoritetaan automatisoidusti, mutta prosessikulku kutsuu mukaan ihmisen silloin, kun tehtävä vaatii inhimillistä harkintaa tai vuorovaikutusta fyysisen maailman kanssa. Julkisen sektorin toimintaa koskeva lainsäädäntö kieltää automaattisen päätöksenteon tilanteissa, jotka edellyttävät viranomaisen harkintavaltaa, perustuvat yksilölliseen arviointiin tai olosuhteiden kokonaisvaltaiseen punnintaan, tai niihin liittyy merkittäviä vaikutuksia yksilön oikeuksiin tai velvollisuuksiin. -->
+[^yle_openai]: https://yle.fi/a/74-20237506
+[^yle_ai]: https://yle.fi/a/74-20247954
+
+Kuten edellä todettiin, tekoälyratkaisujen kehitysvauhti on tällä hetkellä niin suuri, että yksittäisiä tuotteita tai teknologioita koskevat havainnot vanhenevat nopeasti. Tarkastelu pidetään seuraavassa siksi periaatteiden tasolla.
+
+### Tekoäly prosessin yksittäisissä tehtävissä
+
+Tekoälyä, kuten kielimalleja, voidaan ajatella yhtenä prosessin tehtävien suorittajana muiden joukossa. Edellä esitetyssä laskunkäsittelyn prosessissa (@fig-ipa-esim2) OCR-toiminto luki laskulta tiedot ja palautti ne työnkulkualustalle prosessimuuttujina. Perinteinen OCR-ratkaisu toimii, kun laskut ovat rakenteeltaan vakioituja ja tiedot löytyvät aina suurin piirtein samoista kohdista. Toimittajia saattaa kuitenkin olla useita, ja jokaisella voi olla omanlaisensa laskupohja. Joskus viitenumero on oikeassa yläkulmassa, joskus alatunnisteessa, ja joskus lasku on liitetty sähköpostiin valokuvana ruttuisesta paperista.
+
+Tekoälyllä on valmiuksia tulkita vaihtelevaa ja puolirakenteista aineistoa huomattavasti sääntöpohjaista tunnistusta joustavammin. Sille voidaan antaa ohjeeksi esimerkiksi ”Poimi laskulta toimittajan nimi, Y-tunnus, laskun summa, eräpäivä ja tilausnumero”, ja se palauttaa tiedot työnkulkualustalle samaan tapaan kuin OCR-toiminto aiemmin. Prosessimallissa tämä voisi olla *Service Task* -tyyppinen tehtävä, jossa kutsutaan kielimallia rajapinnan yli, tai oma uimarata muiden automaatioteknologioiden rinnalla.
+
+Vastaavia tehtäviä löytyy lähes kaikista asiantuntija- ja tietotyön prosesseista: palvelupyyntöjen luokittelu ja ohjaus eteenpäin, pitkien asiasisältöjen tiivistäminen, rakenteettoman tiedon muuttaminen rakenteiseen muotoon, tarvittavat tyyppimuunnokset siirrettäessä tietoja järjestelmien välillä ja niin edelleen.
+
+Tällaisissa ratkaisuissa prosessin kulku on edelleen tarkasti mallinnettu ja työnkulkualustan ohjaama. Tekoäly ainoastaan muuttaa joidenkin tehtävien toteutustapoja. Tämä on varsin hallittava ja turvallinenkin tapa tuoda tekoälyä osaksi prosessien suorittamista. Työnkulku edelleen määrittelee, mitä tehdään ja missä järjestyksessä, ja tekoäly toteuttaa vain sille osoitetun osan.
+
+On syytä kuitenkin muistaa, etteivät kielimallit toimi kuten perinteinen ohjelmakoodi. Ne eivät ole deterministisiä eli sama syöte ei välttämättä tuota joka kerta täsmälleen samaa lopputulosta. Kielimallit saattavat pahimmillaan myös tuottaa uskottavan näköisiä, mutta virheellisiä vastauksia.
+
+Tekoälyn tuottamat tiedot kannattaa mahdollisuuksien mukaan tarkistaa automaattisesti. Esimerkiksi laskun summaa voidaan verrata ERP-järjestelmän tilaustietoihin tai yritystunnuksen oikeellisuus voidaan varmistaa toimittajarekisteristä. Mikäli tiedot eivät täsmää, voi prosessi ohjata laskun ihmisen käsiteltäväksi.
+
+@prucha2025llm vertasivat UiPath RPA[^uipath] -ohjelmistorobotiikkaratkaisua ja kielimalliagenttia kolmessa tehtävässä: tiedonsyötössä, seurannassa ja dokumenttien tietojen poiminnassa. Tutkimuksen mukaan ohjelmistorobotti oli toiminnassaan nopeampi ja luotettavampi. Sen sijaan agenttiratkaisujen kehitysaika oli lyhyempi ja ne selvisivät käyttöliittymän muutoksia huomattavasti RPA-ratkaisuja paremmin.
+
+[^uipath]: https://www.uipath.com/rpa/robotic-process-automation
+
+### Agenttinen tekoäly
+
+Aiemmin todettiin, että kielimalleihin perustuvat järjestelmät saattavat sopivassa kontekstissa pystyä tulkitsemaan ja toteuttamaan geneerisestikin esitettyjä tehtäviä, kuten ”Käsittele saapunut työhakemus”. Tätä voidaan kutsua agenttiseksi tekoälyksi (*Agentic AI*). Tekoälyagentille ei anneta yksityiskohtaista kuvausta prosessin kulusta, vaan prosessin tavoite sekä joukko työkaluja, joita se saa käyttää tavoitteen saavuttamiseksi. Työhakemuksen käsittelyyn liittyviä työkaluja voivat olla hakemusjärjestelmä, kalenteri ja sähköposti. Agentti päättää itsenäisesti, mitä tehtäviä se suorittaa ja missä järjestyksessä, mitä tietoja se hakee ja milloin tavoite on saavutettu. Useampi agentti voi myös toimia yhdessä siten, että kullakin on prosessissa oma erikoistunut roolinsa ja ne välittävät tehtäviä ja tietoja toisilleen.
+
+@ye2023proagent kutsuvat tätä kehitystä siirtymäksi ohjelmistorobotiikasta agenttiseen prosessiautomaatioon (*Agentic Process Automation*). Kielimalliagentit sekä rakentavat työnkulun ihmisen antamista ohjeista että tekevät sen suorittamisen aikana tarvittavat päätökset. Työnkulku koordinoi erikoistuneita agentteja, jotka suorittavat prosessin tehtäviä.
+
+Ero perinteiseen prosessiautomaatioon on merkittävä. Ohjelmistorobotti suorittaa tarkoin määriteltyjä työnkulkuja ja voi rikkoutua, jos käyttöliittymän painike vaihtaa paikkaa. Työnkulkualusta puolestaan seuraa tarkoin määriteltyä ja mallinnettua prosessikulkua. Agentti voi muodostaa oman työnkulkunsa jokaista tapausta varten. Toisaalta tämä tekee agenteista joustavia ja ne pystyvät käsittelemään poikkeustilanteita, joita ei välttämättä olisi osattu etukäteen ennakoita ja mallintaa työnkulkuun. Toisaalta samasta syystä agentin toimintaa on vaikeampi ennakoida, testata ja valvoa.
+
+BPMN-kielen *Ad-hoc*-aliprosessi sopii agenttien kuvaamiseen varsin luontevasti -- vaikka sitä tuskin alunperin tähän tarkoitukseen on suunniltetu. Se on joukko tehtäviä, jotka voidaan suorittaa tai olla suorittamatta, ja joiden suoritusjärjestystä ei ole ennalta määrätty. Agentin toimintaa voidaan siis kuvata prosessimallissa Ad-hoc-aliprosessina, jonka sisällä agentti valitsee käytettävissä olevista tehtävistä ja välineistä tilanteeseen sopivat. Ympäröivä prosessi on kuitenkin tarkasti mallinnettu ja hallittu. Se määrää, milloin agentille annetaan tehtävä, mitä sen tulee tehtävän suoritettuaan palauttaa, ja mihin pääprosessin kulku sen jälkeen etenee. Osa työnkulkualustojen toimittajista onkin jo ryhtynyt tukemaan tekoälyagenttien orkestrointia BPMN-prosessien osana.
+
+Agenttiseen tekoälyyn liittyy kuitenkin periaatteellisempi haaste. Generatiivisten tekoälyjen ja suurten kielimallien toiminta on siis epädeterminististä ja muistuttaa mustaa laatikkoa. Agentille voidaan antaa tavoite ja seurata sen tekemiä toimenpiteitä. Emme kuitenkaan välttämättä tiedä, millaisen päättelyn tuloksena se päätyi juuri näihin toimenpiteisiin tai edes sitä, tuottivatko ne oikeita lopputuloksia.
+
+Tämä palauttaa meidät takaisin alkuun ja ongelmaan, jota liiketoimintaprosessien hallinnalla on pyritty ratkaisemaan:
+
+> Sumean linssin läpi tarkasteluna prosessi voi näyttäytyä mustana laatikkona: jotain menee sisälle, joitain asioita tapahtuu, ja lopuksi laatikosta tulee jotain ulos. Joskus tämä vertaus saattaa valitettavasti vastatakin organisaatioiden kyvykkyyttä ymmärtää omia prosessejaan.
+
+Prosessien johtamisen näkökulmasta tämä on vähintään paradoksaalista -- kenties kestämätöntäkin. Prosesseja mallinnetaan, jotta toiminta olisi läpinäkyvää, toistettavaa ja kehitettävissä. Jos prosessin jokin keskeinen osa suoritetaan tavalla, jota kukaan ei täysin tunne, myös prosessin mittaaminen vaikeutuu ja konkreettiset edellytykset jatkuvalle parantamiselle katoavat.
+
+Työnkulun mahdollisimman tarkka määritteleminen on ainakin toistaiseksi turvallinen valinta silloin, kun prosessi on kriittinen, säännelty tai sen virheillä voi olla merkittäviä seurauksia. Agentit sopivat tilanteisiin, joissa tapaukset vaihtelevat paljon, virheiden seuraukset ovat korjattavissa ja joissa lopputuloksen tarkistaminen on helpompaa kuin itse työn tekeminen.
+
+### Ihminen silmukassa ja tekoälyn hallinta
+
+Kun tekoäly osallistuu prosessin suorittamiseen, voi nousta kysymys siitä, kuka on vastuussa sen mahdollisesti tekemistä virheistä. Tosiasiassa vastuu säilyy aina prosessia suorittavalla organisaatiolla ja viime kädessä prosessin omistajalla. Siksi tekoälyä hyödyntäviin prosesseihin tulee suunnitella kohtia, joissa ihminen tarkastaa, hyväksyy tai korjaa tekoälyn tuotoksen. Tätä kutsutaan *Human in the Loop*- tai ihminen silmukassa -periaatteeksi.
+
+Laadittaessa prosessimallit BPMN-kielellä, on ihminen helppo lisätä silmukkaan: tekoälyn suorittaman tehtävän jälkeen prosessiin lisätään esimerkiksi *User Task*, jossa ihminen tarkastaa tuloksen ennen prosessin jatkumista.
+
+Kaikkea ei kuitenkaan ole järkevää tarkastaa. Jos jokainen tekoälyn käsittelemä lasku käydään vielä ihmisen toimesta läpi, on automaation hyöty jokseenkin kyseenalainen. Tarkastus voidaankin ehtoperusteisesti kohdistaa esimerkiksi suuriin summiin, epätavallisiin tapauksiin tai sellaisiin, joissa tekoäly ilmoittaa olevansa epävarma lopputuloksesta. Lisäksi satunnaisotannalla voidaan seurata, pysyykö tekoälyn toiminnan laatu hyväksyttävällä tasolla.
+
+Ihmisen tekemään tarkastukseen liittyy haasteitakin. Tekoälyn tuottama teksti tai muu tulos on usein uskottavan näköistä, ja virheet voivat jäädä huomaamatta. Mitä harvemmin tekoäly erehtyy, sitä helpommin tarkastaja alkaa luottaa siihen, eikä tarkastus enää ole välttämättä todellinen. Lisäksi tarkastaminen työlästä; useissa tehtävissä työläämpää kuin tehtävän suorittaminen. Ihminen silmukassa -periaate toimii vain, kun tarkastukselle on varattu riittävästi aikaa ja tarkastajalla tehtävää koskevaa asiantuntemusta.
+
+Myös nykyinen lainsäädäntö asettaa reunaehtoja tekoälyn käyttämiselle prosessiautomaatiossa. Suomessa julkisen hallinnon automaattista päätöksentekoa koskeva lainsäädäntö tuli voimaan keväällä 2023[^autom_laki_ai]. Se kieltää automaattisen päätöksenteon tilanteissa, jotka edellyttävät viranomaisen harkintavaltaa, perustuvat yksilölliseen arviointiin tai olosuhteiden kokonaisvaltaiseen punnintaan, tai joihin liittyy merkittäviä vaikutuksia yksilön oikeuksiin tai velvollisuuksiin.
+
+[^autom_laki_ai]: Hallituksen esitys HE 145/2022, https://www.finlex.fi/fi/hallituksen-esitykset/2022/145
+
+Euroopan unionin tekoälysäädös[^ai_act] (*EU AI Act*) puolestaan luokittelee tekoälyjärjestelmiä niiden riskitason perusteella. Esimerkiksi rekrytointiin, koulutukseen tai julkisiin palveluihin liittyvät tekoälysovellukset voivat kuulua korkean riskin luokkaan, jolloin niiden käytölle asetetaan erityisiä vaatimuksia muun muassa ihmisen suorittaman valvonnan, dokumentoinnin ja läpinäkyvyyden osalta. Edellä mainittu ”Käsittele saapunut työhakemus” -agentti ei siis olisi ainoastaan tekninen, vaan myös juridinen kysymys.
+
+[^ai_act]: Euroopan parlamentin ja neuvoston asetus (EU) 2024/1689 tekoälyä koskevista yhdenmukaistetuista säännöistä. https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+
+Tekoälyn tuominen osaksi prosesseja ei siis ole pelkästään teknologioita koskeva kysymys. Kuten Outi Sivonen johdannossa lainatussa kirjoituksessaan totesi, tekoälyn käyttöönotossa eivät muutu vain yksittäiset työtehtävät, vaan myös prosessit ja niiden johtaminen. Automaatio on vasta ensimmäinen askel. On liian helppoa tehdä tekoälyn ja automaation avulla nopeammin sitä, mitä jo nyt tehdään -- myös silloin, kun sitä ei oikeastaan kannattaisi tehdä ollenkaan. Siksi tekoäly ei muuta prosessien kehittämisen perusperiaatteita: ensin tulee miettiä, mitä arvoa prosessi tuottaa ja kenelle, ja vasta sitten sitä, miten prosessi kannattaa toteuttaa.

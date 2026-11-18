@@ -2,9 +2,9 @@ project:
   type: book
 
 book:
-  title: "Liiketoimintaprosessien hallinta"
+  title: "Liiketoimintaprosessit ja tietojärjestelmät -- mallintaminen, arkkitehtuuri ja automaatio"
   author: "Ville Seppänen"
-  date: "10/21/2026"
+  date: "11/18/2026"
   chapters:
     - index.qmd
     - johdanto.qmd
@@ -13,7 +13,6 @@ book:
     - prosessiorganisaatio_ja_prosessien_kehittaminen.qmd
     - prosessiarkkitehtuuri.qmd
     - prosessiautomaatio.qmd
-    - mallit_ja_mallintaminen.qmd
     - bpmn_ja_prosessien_kuvaaminen.qmd
     - tehtavat.qmd
     - tyovalineita.qmd
@@ -48,7 +47,8 @@ format:
     lightbox: true              # kuvan saa auki klikkaamalla
     toc: true
     toc-title: "Tässä luvussa"
-    number-depth: 3
+    toc-depth: 4
+    number-depth: 4
 
   pdf:
     documentclass: scrreprt

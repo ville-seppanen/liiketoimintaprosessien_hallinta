@@ -1,6 +1,6 @@
-# Harjoitustehtävät
+# Harjoitustehtäviä
 
-## Luku 2: Tehtävä 1
+## Tehtävä 1
 
 Jos tunnemme riittävän tarkasti prosessikulun, jolla yritys lähettää vuosittain 3 500 asiakkaalleen toimitusjohtajan käsin kirjaileman joulutervehdyksen postikortilla, tiedämme, että yhdeltä työntekijältä kuluu postimerkkien liimaamiseen noin 35 000 sekuntia eli noin 9 tuntia 45. Sopivan lyhyine taukoineen tämä vas-taa noin puoltatoista työpäivää. Jos postimerkkien liimaamiseen osallistuisikin neljä työntekijää, olisi urakka hoidettu noin 2,5 tunnissa. Säästäisimme aikaa, mutta nyt yksi prosessin vaihe sitoisi neljä työntekijää eli kuluttaisi hetkellisesti neljä kertaa enemmän henkilöstöresurssia. Vaiheen tarvitsemat henkilötyötun-nit säilyisivät kokonaisuudessaan kuitenkin tietysti suurin piirtein ennallaan. 
 
@@ -19,11 +19,11 @@ Pohdi edellisen perusteella seuraavia kysymyksiä:
 - Analysoi, milloin on perusteltua käyttää useampia työntekijöitä verrattuna yhden työntekijän pidempään suoritukseen?
 - Miten mittaisit, tuottaako prosessi yritykselle arvoa?
 
-## Luku 2: Tehtävä 2
+## Tehtävä 2
 
 Selvitä, mitä tarkoittaa digitaalinen kaksonen eli digital twin. Kuinka se liittyy prosessisimulointiin vai liittyykö mitenkään?
 
-## Luku 3: Tehtävä 1
+## Tehtävä 3
 
 Seuraavassa on esimerkki asiakastilauksia käsittelevässä roolissa työskentelevän henkilön haastattelusta. Haastattelu liittyy elektroniikkatuotteita myyvän verkkokaupan tilauskäsittelyprosessiin. Tutustu haastattelun transkriptioon ja laadi vuokaavio tai BPMN-malli prosessin nykytilasta. Nosta esille tunnistettavat kehittämiskohteet ja mieti, miten niihin voitaisiin reagoida.
 
@@ -93,28 +93,28 @@ Osittain kyllä, mutta parannettavaakin löytyy. Tilaustenhallinta- ja ERP-järj
 
 Pääosin kyllä, mutta sesonkiaikoina resurssit ovat tiukoilla. Normaalikuormalla prosessi toimii sujuvasti, mutta kampanja- ja kausisesongeissa tarvitaan lisähenkilöstöä, josta sitten taas seuraa kaikenlaisia ongelmia, kuten äsken jo vähän kerroin. Logistiikkakumppaneiden kapasiteetti on joskus pullonkaula, erityisesti kuljetusten noutojen ja toimitusten osalta. IT-tuki ja järjestelmäkehitysresurssit ovat rajallisia, mikä hidastaa teknologisten parannusten toteutusta, vaikka pistemäiset vikatilanteet kyllä saadaankin tyypillisesti korjattua todella nopeasti.
 
-## Luku 3: Tehtävä 2
+## Tehtävä 4
 
 Piirrä edellisen tapapahtumalokiesimerkin @tbl-tapahtumaloki perusteella hahmotelma sydänpäivystyksen prosessikulusta. Huomaa, että yllä olevassa lokissa on esitetty ainoastaan yksi potilastapaus. Mieti, mitä vaihtoehtoisia kulkuja prosessiin voi liittyä.
 
-## Luku 4: Tehtävä 1
+## Tehtävä 5
 
 Seuraavassa BPMN-mallissa esitetään perunankuorinnan prosessi. Mitä, millä mittareilla tätä prosessia voisi arvioida. Entä liittyykö prosessiin hukkaa ja voisiko prosessia jollain tavalla kehittää?
 
 ![Perunankuorinnan prosessi](kuviot/perunankuorinta.svg)
-## Luku 4: Tehtävä 2
+## Tehtävä 6
 
 Kuvitellaan tilanne, jossa erään kunnan viranomaisen rakennuslupia käsittelevän prosessin tuottamista päätöksistä valitetaan lähes 20 prosentissa tapauksista. Kuinka lähtisit purkamaan tilannetta ja selvittämään, mistä asikkaiden huono tyytyväisyys johtuu?
 
-## Luku 4: Tehtävä 3
+## Tehtävä 7
 
 Tuttavasi on asettanut tavoitteekseen katsoa mahdollisimman lyhyessä ajassa 50 sellaista elokuvaa, jotka hän kokee katselun jälkeen erinomaisiksi. Suunnittele tätä tavoitetta tukevat prosessimittarit, joiden avulla tuttavasi voi seurata edistymistään ja tarvittaessa optimoida suoritustaan projektin edetessä.
 
-## Luku 4: Tehtävä 4
+## Tehtävä 8
 
 Mieti millaisia mittareita voitaisiin käyttää erilaisia tietotyön asiantuntijatehtävien prosesseja mitattaessa?
 
-## Luku 5: Tehtävä 1
+## Tehtävä 9
 
 Mitä muutoksia pizzerian prosessi ([@fig-pizzatilaus-teht]) tarvitsisi, jotta raaka-aineiden loppuminen ei pääsisi aiheuttamaan suurempia ongelmia?
 
@@ -122,39 +122,39 @@ Entä olisiko tilanne korjattavissa jollain IT-ratkaisulla ja miten sellainen va
 
 ![Pizzatilauksen prosessi](kuviot/pizzatilaus.svg){#fig-pizzatilaus-teht}
 
-## Luku 6: Tehtävä 1
+## Tehtävä 10
 
 Jo useamman kerran esiintynyt prosessimalli pizzan tilaamisesta on vakiinnuttanut asemansa osana BPMN:n ohje- ja koulutusmateriaaleja. Kuinka ymmärrettävä malli tässä sinusta tässä vaiheessa on? Onko siinä joitain vähemmän ilmeisiä osia?
 
-## Luku 6: Tehtävä 2
+## Tehtävä 11
 
 Mieti jotain omaan arkeesi liittyvää prosessia, johon kuuluu vähintään kaksi uima-allasta ja joissa molemmissa on vähintään kaksi uimarataa.
 
-## Luku 6: Tehtävä 3
+## Tehtävä 12
 
 Päivitä edellistä pizzan tilaamisen prosessikulkua niin, että tilauksen toimittaa Wolt tai vastaava lähettipalvelu.
 
-## Luku 6: Tehtävä 4
+## Tehtävä 13
 
 Lisää seuraavaan prosessimalliin ([@fig-flow-t]) siitä puuttuvat Sequence Flow-, Message Flow- ja Data Association -yhteydet.
 
 ![Prosessimallista puuttuu yhteydet](kuviot/flow-tehtava_1.svg){#fig-flow-t}
 
-## Luku 6: Tehtävä 5
+## Tehtävä 14
 
 Laadi looginen prosessimalli ostoksilla käynnistä. Käytä mallissa viittä perusmuotoista tehtäväelementtiä ja nimeä tehtävät verbi-objekti-muotoon.
 
-## Luku 6: Tehtävä 6
+## Tehtävä 15
 
 Laadi valitsemastasi aiheesta looginen prosessimalli, jossa käytät seuraavia tehtävätyyppejä tässä järjestyksessä: Manual Task, User Task, Manual Task, User Task, Manual Task.
 
-## Luku 6: Tehtävä 7
+## Tehtävä 16
 
 Toteuta @fig-dmn-hakemus :n valintataulu valintaporttien avulla.
 
 ![Hakemuksen käsittelyyn liittyvä päätöstaulu](kuviot/dmn-hakemus.png){#fig-dmn-hakemus}
 
-## Luku 6: Tehtävä 8
+## Tehtävä 17
 
 Piirrä seuraava tapahtumasarja prosessiksi ja käytä mallissa myös Service Task-, Script Task- ja Business Rule Task -tehtäviä.
 
@@ -167,7 +167,7 @@ Piirrä seuraava tapahtumasarja prosessiksi ja käytä mallissa myös Service Ta
 7. Lähetä tilausvahvistus asiakkaalle.
 8. Päätä prosessi.
 
-## Luku 6: Tehtävä 9
+## Tehtävä 18
 
 Mallinna prosessi, johon osallistuvat verkkokauppa ja logistiikkayritys. Prosessiin kuuluvat tehtävät on lueteltu alla satunnaisessa järjestyksessä. Järjestä tehtävät oikeaan etenemisjärjestykseen ja sijoittele ne verkkokaupan ja logistiikkayrityksen altaisiin. Käytä mallissa Send Task- ja Receive Task -tehtäviä aina, kun se on aiheellista.
 
@@ -184,19 +184,19 @@ Mallinna prosessi, johon osallistuvat verkkokauppa ja logistiikkayritys. Prosess
 11. Lähetä noutovahvistus.
 12. Vastaanota muutospyyntö.
 
-## Luku 6: Tehtävä 10
+## Tehtävä 19
 
 Muuta seuraavaa tilauskäsittelyprosessia niin, että kanta-asiakkaat saavat tilauksistaan 10 % alennuksen.
 
 ![Tilauksen käsittely](kuviot/tilauksen-kasittely-valiyhtveto.svg){#fig-tilauskäsittely}
 
-## Luku 6: Tehtävä 11
+## Tehtävä 20
 
 Toteuta seuraava päätöstaulu valintaporteilla.
 
 ![Päätöstaulu hakemuksesta päättämiseksi](kuviot/dmn-paatostaulu.png){#fig-dmn-paatostaulu}
 
-## Luku 6: Tehtävä 12
+## Tehtävä 21
 
 Jaa seuraavat tehtävät aliprosesseiksi. Nimeä aliprosessit loogisella tavalla ja yhdistä ne toisiinsa järjestysvirroilla. Huomaa, että tehtävät on esitetty alla aakkosjärjestyksessä, ei välttämättä niiden suoritusjärjestyksessä.
 
@@ -224,43 +224,43 @@ Jaa seuraavat tehtävät aliprosesseiksi. Nimeä aliprosessit loogisella tavalla
 - Validioi asiakastiedot
 - Validioi tilausrivit
 
-## Luku 6: Tehtävä 13
+## Tehtävä 22
 
 Mallinna vastaava prosessikulku ilman Loop-tehtävää.
 
 ![](kuviot/loop.png){#fig-loop}
 
-## Luku 6: Tehtävä 14
+## Tehtävä 23
 
 Laadi Parallel ja Sequential Multi-instance -tehtäviä käyttävä prosessimalli, joka pystyy käsittelemään samaan tilaukseen sisältyviä fyysisiä tuotteita sekä digitaalisten palvelujen käyttöoikeuksia.
 
-## Luku 6: Tehtävä 15
+## Tehtävä 24
 
-## Luku 6: Tehtävä 16
+## Tehtävä 25
 
 Lisää seuraavaan prosessiin ei-keskeyttävä Message Boundary Event, joka ottaa vastaan asiakkaan tilaukseensa tekemän muutoksen, sekä sen käynnistämä polku.
 
 ![Message Start Event, Message Intermediate Boundary Event ja Message End Event](kuviot/eventteja3.png){#fig-eventteja3}
 
-## Luku 6: Tehtävä 17
+## Tehtävä 26
 
 Piirrä seuraavasta tapahtumakulusta prosessimalli, jossa hyödynnät Message Boundary Eventejä.
 
 Prosessi alkaa, kun asiakas lähettää tukipyynnön sähköistä lomaketta käyttäen. Järjestelmä luo yhteydenoton perusteella tukipyynnön ja lähettää asiakkaalle vahvistusviestin. Tukihenkilö valmistelee vastauksen. Jos asiakas vastaa vahvistusviestiin lisätiedoilla kesken valmistelun, viesti keskeyttää tehtävän ja ohjaa polun “Lisätietojen tarkistus” -aliprosessiin. Jos vastausta ei tule, valmistelu jatkuu normaalisti ja tukihenkilö lähettää vastauksen. Vastauksen lähetyksen jälkeen prosessi päättyy.
 
-## Luku 6: Tehtävä 18
+## Tehtävä 27
 
 Piirrä seuraavasta tapahtumakulusta prosessimalli, jossa hyödynnät ehdollisia tapahtumia.
 
 Kun lasku saapuu, prosessi käynnistyy Message Start Eventillä. Seuraavaksi lasku tarkistetaan. Jos laskun summa on yli 5 000 € ja toimittaja ei ole hyväksyttyjen toimittajien listalla, siirrytään tehtävään ”Hanki lisähyväksyntä”. Muutoin edetään suoraan tehtävään ”Kirjaa lasku”. Jos laskusta puuttuu joitain pakollisten kenttien tietoja, lasku palautetaan.
 
-## Luku 6: Tehtävä 19
+## Tehtävä 28
 
 Miten seuraavat prosessimallit tulkitaan?
 
 ![](kuviot/timer_esim.svg){#fig-timer_esim}
 
-## Luku 6: Tehtävä 20
+## Tehtävä 29
 
 1. Ilmaise vuoden viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
 2. Muunna tapahtuma, joka alkaa 2025-12-06 klo 09:00 Europe/Helsinki, ISO 8601 -muotoon sisältäen aikavyöhykkeen offseting ja UTC-vastineen.
@@ -268,7 +268,7 @@ Miten seuraavat prosessimallit tulkitaan?
 4. Kirjoita jakso maanantaista torstaihin klo 09:00-16:00 yhtenä ISO 8601 -aikavälinä, joka sisältää päivämäärät ja kellonajat.
 5. Esitä viikoittainen luento, joka pidetään joka keskiviikko klo 12:15-13:45 tammi-maaliskuussa 2026, ISO 8601 -aikavälinä ja liitä mukaan toistuvuutta kuvaava sääntö käyttäen standardin mukaisia rakenteita.
 
-## Luku 6: Tehtävä 21
+## Tehtävä 30
 
 Ajatellaan jotain systeemiä, jolla on useita samanaikaisia käyttäjiä. Yksi käyttäjistä käynnistää prosessin, jossa prosessimuuttujan `luku1` numeroarvosta siirretään puolet muuttujan `luku2` arvoon. Jokin tehtävä lukee ensin `luku1`:n lähtöarvon ja vähentää siitä puolet. Mikäli `luku2`:n arvon kasvattaminen `luku1`:n puolikkaalla jostain teknisestä tai vaikka liiketoimintasääntöön perustuvasta syystä kuitenkin epäonnistuu, transaktiomuotoisessa suorituksessa prosessi keskeytetään (*Abort*) ja systeemi palautetaan sen alkuperäiseen tilaan (*Rollback*). On kuitenkin mahdollista, että systeemin toinen käyttäjä on tällä välin päivittänyt `luku1`:n arvoa, jolloin alkuperäisen tilan palauttaminen rollback-operaatiolla hävittää myös toisen käyttäjän tekemän muutoksen.
 
@@ -276,23 +276,23 @@ Suunnittele kompensoiva rakenne, joka pitää systeemin tietojen arvot oikeina k
 
 Toimiiko suunnittelemasi kompensaatio, mikäli `luku1`:n arvo ei saa koskaan mennä alle nollan?
 
-## Luku 6: Tehtävä 22
+## Tehtävä 31
 
 Piirrä prosessimalli seuraavasta tapauksesta: Prosessi käynnistyy tuotetilauksen vastaanottamisella. Jos tilattua tuotetta löytyy valmiina, se toimitetaan asiakkaalle lähetysvahvistuksen saattelemana. Mikäli tilattua tuotetta ei ole varastossa, tarkastetaan ensin, onko kaikki sen kokoamiseen tarvittavat komponentit yrityksen pajalla. Tarvittaessa komponentteja tilataan toimittajalta. Mikäli tarvittavia osia ei ole saatavilla, tilaus perutaan ja siitä ilmoitetaan asiakkaalle. Kun tuote on saatu valmistettua, se lähetetään asiakkaalle pikatoimituksena. Lisäksi asiakkaalle lähetetään lähetysvahvistus.
 
-## Luku 6: Tehtävä 23
+## Tehtävä 32
 
 Piirrä prosessimalli vuoden 2025 itsenäisyyspäivän linnanjuhlistakin tuttujen lappeenrantalaisten herkkujen, Vetyn ja Atomin, valmistuksesta. Tee ensin Vetylle ja Atomille omat prosessimallinsa. Tämän jälkeen yhdistä ne yhdeksi prosessimalliksi, jolla onnistuu molempien piirakoiden valmistaminen.
 
 Lihapiirakka leikataan auki taskuksi ja väliin lisätään nokare voita. Piirakkaa lämmitetään höyrykattilassa, kunnes voi sulaa. Höyrytyksen aikana kuoritaan ja viipaloidaan kovaksi keitetty (13 min.) kananmuna. Seuraavaksi lisätään piirakan väliin täytteet tilauksen mukaisesti. Vety-piirakkaan tulee viipaloitu kananmuna sekä neljä viipaletta savukinkkua. Atomiin asiakas voi valita joko kananmunan tai kinkun. Lisukkeiksi molempiin on valittavissa kurkkusalaatti, ketsuppi ja sinappi. Mikäli piirakka syödään heti, se kääräistään voipaperiin. Jos piirakka on tarkoitus ottaa mukaan, se pakataan lisäksi pahvirasiaan.
 
-## Luku 6: Tehtävä 24
+## Tehtävä 33
 
 Missä kohdissa seuraavassa prosessimallissa käyttäisit Parallel Port-, Inclusive Gateway- ja Exclusive Gateway -portteja?
 
 ![](kuviot/porttitehtava.png){#fig-porttitehtava}
 
-## Luku 6: Tehtävä 25
+## Tehtävä 34
 
 Piirrä seuraava prosessikulku. Asiakas lähettää palvelupisteelle tukipyynnön. Ensimmäiseksi tarkastetaan, sisältääkö tukipyyntö kaikki tarvittavat tiedot asian käsittelemiseksi. Mikäli lisätietoja ei tarvita, tukipyyntö ohjataan ratkaistavaksi ja prosessi lopetetaan. Jos lisätietoja tarvitaan, näitä pyydetään asiakkaalta. Kun asiakas toimittaa lisätiedot, tukipyyntö ohjataan ratkaistavaksi ja prosessi lopetetaan. Mikäli asiakas ei ole toimittanut lisätietoja 48 tunnin kuluessa, tukipyyntö hylätään ja prosessi lopetetaan.
 
@@ -300,13 +300,13 @@ Tee edellisestä prosessista versio, jossa asiakasta muistutetaan, ellei hän ol
 
 Tee edellisestä prosessista versio, jossa asiakasta muistutetaan lisätiedoista 48 tunnin kuluttua. Sitten asiakasta muistutetaan tarvittaessa uudelleen 96 tunnin kuluttua. Ellei asiakas ole toimittanut lisätietoja 270 tunnin kuluttua, tukipyyntö hylätään ja prosessi lopetetaan.
 
-## Luku 6: Tehtävä 26
+## Tehtävä 35
 
 Mallinna seuraava tarjouspyyntöprosessi (@fig-complex-esim) käyttämättä Complex Gateway -porttia.
 
 ![Complex Gateway -portti tarjouspyyntöprosessissa](kuviot/complex-esim.png){#fig-complex-esim}
 
-## Luku 6: Tehtävä 27
+## Tehtävä 36
 
 Tee verkkokaupan tilauskäsittelyn prosessikortista versio, joka soveltuisi käytettäväksi henkilöstön työpajassa. Käytä visuaalisia tunnuksia, kuten emojeita sekä värikoodausta, jotka helpottavat kortin hahmottamista. Pyri infografiikkamaiseen ilmeeseen: kortin tulisi mahtua yhdelle dialle.
 
@@ -323,11 +323,11 @@ Tee verkkokaupan tilauskäsittelyn prosessikortista versio, joka soveltuisi käy
 | **Liittyvät prosessit** | Asiakaspalvelu, palautusten käsittely, varastonhallinta, maksuliikenne. |
 | **IT-järjestelmät** | Verkkokauppa-alusta, maksupalvelut, varastonhallintajärjestelmä, kuljetusjärjestelmät. |
 
-## Luku 6: Tehtävä 28
+## Tehtävä 37
 
 Yritä piirtää pizzan tilaaminen (@fig-pizzatilaus.svg) tai Complex Gateway -esimerkkiprosessi (@fig-complex-esim) vuokaaviotekniikkaa käyttäen. Vuokaavion piirtämiseen voi käyttää esimerkiksi Draw.io -välinettä: https://draw.io.
 
-## Luku 6: Tehtävä 29
+## Tehtävä 38
 
 Etsi ja laske kriittinen polku uuden työntekijän rekrytoinnin prosessille.
 
@@ -350,13 +350,16 @@ Etsi ja laske kriittinen polku uuden työntekijän rekrytoinnin prosessille.
 
 ![Työntekijän rekrytoinnin prosessi projektiverkkona kriittisen polun laskentaa varten](kuviot/cpm.png){#fig-cpm}
 
-# Luku 6: Tehtävä 30
+## Tehtävä 39
 
 Keksi muutama hyödyllinen prosessien hallintaa tai analysointia tukeva näkymä, jotka voitaisiin rakentaa kokonaisarkkitehtuuri-informaation perusteella. Näkymät voivat olla esimerkiksi lämpökartta- tai liikennevalotyylisiä, kojetaulutyyppisiä mittaristoja, numeerisia yhteenvetoja, eri arkkitehtuurinäkökulmia yhdistäviä graafisia malleja tai muita vastaavia.
 
+## Tehtävä 40
 
-## Luku 6: PALJON PIENIÄ BPMN-TEHTÄVIÄ
+Teksti, josta yritetään tunnistaa prosessikulku vapaavalintaisella LLM:llä (tai kahdell ja tuloksia verrataan)
 
-Pikkutehtäviin mallivastaukset. Käytä Claudea.
+## Tehtävä 41
 
-Jaa tehtävät bpmn-tehtäviin ja muihin?
+BPMN-analyysi LLM:n avulla (tai kahdella ja tuloksia verrataan)
+
+## Paljon pieniä BPMN-tehtäviä (ja oikeat vastaukset?)
