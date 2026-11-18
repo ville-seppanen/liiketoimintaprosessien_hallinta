@@ -2,26 +2,26 @@
 
 ## Tehtävä 1
 
-Jos tunnemme riittävän tarkasti prosessikulun, jolla yritys lähettää vuosittain 3 500 asiakkaalleen toimitusjohtajan käsin kirjaileman joulutervehdyksen postikortilla, tiedämme, että yhdeltä työntekijältä kuluu postimerkkien liimaamiseen noin 35 000 sekuntia eli noin 9 tuntia 45. Sopivan lyhyine taukoineen tämä vas-taa noin puoltatoista työpäivää. Jos postimerkkien liimaamiseen osallistuisikin neljä työntekijää, olisi urakka hoidettu noin 2,5 tunnissa. Säästäisimme aikaa, mutta nyt yksi prosessin vaihe sitoisi neljä työntekijää eli kuluttaisi hetkellisesti neljä kertaa enemmän henkilöstöresurssia. Vaiheen tarvitsemat henkilötyötun-nit säilyisivät kokonaisuudessaan kuitenkin tietysti suurin piirtein ennallaan. 
+Jos tunnemme riittävän tarkasti prosessikulun, jolla yritys lähettää vuosittain 3 500 asiakkaalleen toimitusjohtajan käsin kirjaileman joulutervehdyksen postikortilla, tiedämme, että yhdeltä työntekijältä kuluu postimerkkien liimaamiseen noin 35 000 sekuntia eli noin 9 tuntia 45 minuuttia. Sopivan lyhyine taukoineen tämä vastaa noin puoltatoista työpäivää. Jos postimerkkien liimaamiseen osallistuisikin neljä työntekijää, olisi urakka hoidettu noin 2,5 tunnissa. Säästäisimme aikaa, mutta nyt yksi prosessin vaihe sitoisi neljä työntekijää eli kuluttaisi hetkellisesti neljä kertaa enemmän henkilöstöresurssia. Vaiheen tarvitsemat henkilötyötunnit säilyisivät kokonaisuudessaan kuitenkin tietysti suurin piirtein ennallaan. 
 
-Joulukorttiprosessiasiantuntija saattaisi tässä vaiheessa myös harkita sellaisia joulukortteja, joiden postimaksu on valmiiksi maksettu. Yrityksen logolla varus-tettu joulukortti maksaa 50 senttiä ja siihen postimerkki 1,50 euroa. Näin ollen yksi postitusvalmis kortti postimerkkeineen maksaa kaksi euroa ja koko 3 500 kortin nippu 7 000 euroa. Punaisen Ristin joulukortti, jossa postimaksu on valmiiksi maksettu, maksaa 3,40 euroa kappaleelta, joten kortit maksaisivat yhteensä 11 900 euroa. Postimerkit itse liimaamalla yritys siis säästäisi joulukor-teissa ja postimerkeissä vuosittain 4 900 euroa. Ei tule kuitenkaan unohtaa postimerkkien liimaamiseen kuluvaa työaikaa, joka oli siis vajaat kymmenen tuntia.
+Joulukorttiprosessiasiantuntija saattaisi tässä vaiheessa myös harkita sellaisia joulukortteja, joiden postimaksu on valmiiksi maksettu. Yrityksen logolla varustettu joulukortti maksaa 50 senttiä ja siihen postimerkki 1,50 euroa. Näin ollen yksi postitusvalmis kortti postimerkkeineen maksaa kaksi euroa ja koko 3 500 kortin nippu 7 000 euroa. Punaisen Ristin joulukortti, jossa postimaksu on valmiiksi maksettu, maksaa 3,40 euroa kappaleelta, joten kortit maksaisivat yhteensä 11 900 euroa. Postimerkit itse liimaamalla yritys siis säästäisi joulukorteissa ja postimerkeissä vuosittain 4 900 euroa. Ei tule kuitenkaan unohtaa postimerkkien liimaamiseen kuluvaa työaikaa, joka oli siis vajaat kymmenen tuntia.
 
-Jos olisimme mittaroineet aiempien vuosien joulukorttiprosessja erityisen tarkasti, saattaisimme myös tietää, kuinka moni postimerkki repeää vihkosta irro-tettaessa liimauskelvottomaan kuntoon, kuinka moni joulukortti on ollut vekillä jo saapuessaan tai ruttaantuu merkkien liimaamisen aikana ja niin edelleen. Nämä ja monet muut tiedot, tai jonkinlaiset arviot niistä, voisimme myös syöttää prosessisimulaattoriin optimaalista tehokkuutta etsittäessä.
+Jos olisimme mittaroineet aiempien vuosien joulukorttiprosessia erityisen tarkasti, saattaisimme myös tietää, kuinka moni postimerkki repeää vihkosta irrotettaessa liimauskelvottomaan kuntoon, kuinka moni joulukortti on ollut vekillä jo saapuessaan tai ruttaantuu merkkien liimaamisen aikana ja niin edelleen. Nämä ja monet muut tiedot, tai jonkinlaiset arviot niistä, voisimme myös syöttää prosessisimulaattoriin optimaalista tehokkuutta etsittäessä.
 
-Sen ainakin tiedämme, että merkkien liimaamiseen osallistuvan henkilön tunti-palkka on 25 euroa, joten välittömät palkkakustannukset yhdeksän tunnin lii-mausurakasta ovat noin 225 euroa. Palkkakustannuksiin täytyy tietenkin lisätä muut kustannukset, kuten työnantajan sosiaaliturvamaksut, työterveyskulut, vakuutukset ja muut vastaavat. Nämä lisäkulut ovat tavallisesti vähintään 30 prosenttia palkasta, joten postimerkkien liimaamisen kustannukset nousisivat nyt lähelle 300 euroa. Postimerkit itse liimaamalla prosessin kustannukset olisivat kuitenkin edelleen noin 4 600 euroa matalammat kuin Punaisen Ristin joulukortteja käytettäessä. Tässä ei kuitenkaan tule unohtaa, että työntekijä tai työntekijät, jotka käyttävät tunteja postimerkkien liimaamiseen, ovat sen ajan poissa varsinaiseen toimenkuvaansa liittyvien tehtävien hoitamisesta. Mikä tuottotappio tästä seuraa, ja mitkä ovat sen kokonais- ja mahdolliset heijastus-kustannukset, riippuu lukuisista tekijöistä. Myös nämä tekijät tulisi tuntea, jotta prosessille voidaan valita ideaali toteutustapa.
+Sen ainakin tiedämme, että merkkien liimaamiseen osallistuvan henkilön tuntipalkka on 25 euroa, joten välittömät palkkakustannukset yhdeksän tunnin liimausurakasta ovat noin 225 euroa. Palkkakustannuksiin täytyy tietenkin lisätä muut kustannukset, kuten työnantajan sosiaaliturvamaksut, työterveyskulut, vakuutukset ja muut vastaavat. Nämä lisäkulut ovat tavallisesti vähintään 30 prosenttia palkasta, joten postimerkkien liimaamisen kustannukset nousisivat nyt lähelle 300 euroa. Postimerkit itse liimaamalla prosessin kustannukset olisivat kuitenkin edelleen noin 4 600 euroa matalammat kuin Punaisen Ristin joulukortteja käytettäessä. Tässä ei kuitenkaan tule unohtaa, että työntekijä tai työntekijät, jotka käyttävät tunteja postimerkkien liimaamiseen, ovat sen ajan poissa varsinaiseen toimenkuvaansa liittyvien tehtävien hoitamisesta. Mikä tuottotappio tästä seuraa, ja mitkä ovat sen kokonais- ja mahdolliset heijastuskustannukset, riippuu lukuisista tekijöistä. Myös nämä tekijät tulisi tuntea, jotta prosessille voidaan valita ideaali toteutustapa.
 
-Ja mikäli prosessiasiantuntijamme ei olisi vielä saanut tarpeekseen, voisi hän seuraavaksi yrityksen PR-vastaavan kannustamana ryhtyä selvittämään, ar-vottavatko asiakkaamme joulukorteissaan korkeammalle yrityksemme logon vai Punaisen Ristin logon. Jälkimmäinen voisi kenties viestiä asiakkaille yrityksen vastuullisesta arvopohjasta. Mutta johtavatko joulukortit palaaviin asiakkaisin ja lisämyyntiin? Tuottaako joulukorttiprosessi lopulta lainkaan arvoa vai ainoastaan kustannuksia?
+Ja mikäli prosessiasiantuntijamme ei olisi vielä saanut tarpeekseen, voisi hän seuraavaksi yrityksen PR-vastaavan kannustamana ryhtyä selvittämään, arvottavatko asiakkaamme joulukorteissaan korkeammalle yrityksemme logon vai Punaisen Ristin logon. Jälkimmäinen voisi kenties viestiä asiakkaille yrityksen vastuullisesta arvopohjasta. Mutta johtavatko joulukortit palaaviin asiakkaisiin ja lisämyyntiin? Tuottaako joulukorttiprosessi lopulta lainkaan arvoa vai ainoastaan kustannuksia?
 
 Pohdi edellisen perusteella seuraavia kysymyksiä:
 
 - Mitkä ovat prosessin kriittiset vaiheet ja mahdolliset pullonkaulat?
 - Miten vaiheiden ajoitus ja resursointi vaikuttavat koko prosessin läpimenoaikaan?
-- Analysoi, milloin on perusteltua käyttää useampia työntekijöitä verrattuna yhden työntekijän pidempään suoritukseen?
+- Milloin on perusteltua käyttää useampia työntekijöitä yhden työntekijän pidemmän suorituksen sijaan?
 - Miten mittaisit, tuottaako prosessi yritykselle arvoa?
 
 ## Tehtävä 2
 
-Selvitä, mitä tarkoittaa digitaalinen kaksonen eli digital twin. Kuinka se liittyy prosessisimulointiin vai liittyykö mitenkään?
+Selvitä, mitä tarkoittaa digitaalinen kaksonen eli digital twin. Liittyykö se prosessisimulointiin, ja jos liittyy, niin miten?
 
 ## Tehtävä 3
 
@@ -33,7 +33,7 @@ Prosessi käynnistyy, kun asiakas tekee tilauksen verkkokaupassamme. Tämä voi 
 
 **Kuinka usein prosessi suoritetaan?**
 
-Päivittäin käsitellään noin 300 tilausta ja viikossa määrä on keskimäärin 2000 tilausta. Sesonkeina tilauksia on tietysti sitten paljon enemmän. Black Friday ja joulumyynti erityisesti tekevät piikkejä. Päivässä saatetaan myydä enemmän, kuin hiljaisempana aikana parissa viikossa.
+Päivittäin käsitellään noin 300 tilausta ja viikossa määrä on keskimäärin 2000 tilausta. Sesonkeina tilauksia on tietysti sitten paljon enemmän. Black Friday ja joulumyynti erityisesti tekevät piikkejä. Päivässä saatetaan myydä enemmän kuin hiljaisempana aikana parissa viikossa.
 
 **Voitko kuvailla, miten prosessi etenee?**
 
@@ -71,9 +71,9 @@ Lisäksi joskus on satunnaisia teknisiä häiriöitä integraatioissa. Nämä us
 
 **Mitä virhe- tai poikkeustilanteita prosessin aikana voi tapahtua?**
 
-Tyypillisimmistä ainakin tuo, jonka jo kerroin, että tuote puuttuu varastosta, vaikka järjestelmä näyttää saatavuutta. Jonkin verran on myös tapauksia, joissa maksu ei jostain syystä vahvistu, eikä tilausta voida käsitellä. Joskus harvoin nämä ongelmat johtuvat integraatioista tai verkkopankkien häiriöistä. Tavallisesti kyseessä on kuitenkin asiakkaan tekemä virhe, mutta asiakas ei välttämättä ymmärrä, että maksu ei onnistunut. Sitten asiakas on parin viikon päästä vihainen ja soittaa asiakaspalveluun, että miksi tilausta ei ole toimitettu. Asiakaspalvelu tietysti silloin tilaustenhallintajärjestelmästä näkee, ettei tilauksesta ole tullut maksu perille eikä sitä ole vahvistettu. Tämä ei tietenkään korjaa sitä tilannetta, että kummilapsen joululahja on jäänyt saamatta, ja vika lopulta on taas meidän. 
+Tyypillisimmistä ainakin tuo, jonka jo kerroin, että tuote puuttuu varastosta, vaikka järjestelmä näyttää saatavuutta. Jonkin verran on myös tapauksia, joissa maksu ei jostain syystä vahvistu, eikä tilausta voida käsitellä. Joskus harvoin nämä ongelmat johtuvat integraatioista tai verkkopankkien häiriöistä. Tavallisesti kyseessä on kuitenkin asiakkaan tekemä virhe, mutta asiakas ei välttämättä ymmärrä, että maksu ei onnistunut. Sitten asiakas on parin viikon päästä vihainen ja soittaa asiakaspalveluun, että miksi tilausta ei ole toimitettu. Asiakaspalvelu tietysti silloin tilaustenhallintajärjestelmästä näkee, ettei tilauksen maksu ole tullut perille eikä sitä ole vahvistettu. Tämä ei tietenkään korjaa sitä tilannetta, että kummilapsen joululahja on jäänyt saamatta, ja vika lopulta on taas meidän. 
 
-Kiireisenä kausina tapahtuu jonkin verran sellaisia, että tilaus menee väärään osoitteeseen. Näihinkin virheisiin meillä on nykyisellään valitettavan vähän vaikuttamismahdollisuuksia.
+Kiireisinä kausina tapahtuu jonkin verran sellaisia, että tilaus menee väärään osoitteeseen. Näihinkin virheisiin meillä on nykyisellään valitettavan vähän vaikuttamismahdollisuuksia.
 
 Jonkin verran meidän päässämme tapahtuu sellaista, että tuote pakataan väärin, jolloin se on voinut sitten vaurioitua kuljetuksen aikana. Tällaisia käy kesälomakausilla huomattavasti enemmän, koska meillä on aika paljon lomatuuraajia, jotka eivät kokemuksen puutteen vuoksi osaa tehdä omaa harkintaa ja arviointia siinä pakkaamisessa, vaan menevät aina niillä pakkausjärjestelmän ehdottamilla minimeillä.
 
@@ -95,16 +95,17 @@ Pääosin kyllä, mutta sesonkiaikoina resurssit ovat tiukoilla. Normaalikuormal
 
 ## Tehtävä 4
 
-Piirrä edellisen tapapahtumalokiesimerkin @tbl-tapahtumaloki perusteella hahmotelma sydänpäivystyksen prosessikulusta. Huomaa, että yllä olevassa lokissa on esitetty ainoastaan yksi potilastapaus. Mieti, mitä vaihtoehtoisia kulkuja prosessiin voi liittyä.
+Piirrä luvun 3 tapahtumalokiesimerkin (@tbl-tapahtumaloki) perusteella hahmotelma sydänpäivystyksen prosessikulusta. Huomaa, että lokissa on esitetty ainoastaan yksi potilastapaus. Mieti, mitä vaihtoehtoisia kulkuja prosessiin voi liittyä.
 
 ## Tehtävä 5
 
-Seuraavassa BPMN-mallissa esitetään perunankuorinnan prosessi. Mitä, millä mittareilla tätä prosessia voisi arvioida. Entä liittyykö prosessiin hukkaa ja voisiko prosessia jollain tavalla kehittää?
+Seuraavassa BPMN-mallissa esitetään perunankuorinnan prosessi. Millä mittareilla tätä prosessia voisi arvioida? Entä liittyykö prosessiin hukkaa ja voisiko prosessia jollain tavalla kehittää?
 
-![Perunankuorinnan prosessi](kuviot/perunankuorinta.svg)
+![Perunankuorinnan prosessi](kuviot/perunankuorinta.svg){#fig-perunankuorinta-teht}
+
 ## Tehtävä 6
 
-Kuvitellaan tilanne, jossa erään kunnan viranomaisen rakennuslupia käsittelevän prosessin tuottamista päätöksistä valitetaan lähes 20 prosentissa tapauksista. Kuinka lähtisit purkamaan tilannetta ja selvittämään, mistä asikkaiden huono tyytyväisyys johtuu?
+Kuvitellaan tilanne, jossa erään kunnan viranomaisen rakennuslupia käsittelevän prosessin tuottamista päätöksistä valitetaan lähes 20 prosentissa tapauksista. Kuinka lähtisit purkamaan tilannetta ja selvittämään, mistä asiakkaiden tyytymättömyys johtuu?
 
 ## Tehtävä 7
 
@@ -112,11 +113,11 @@ Tuttavasi on asettanut tavoitteekseen katsoa mahdollisimman lyhyessä ajassa 50 
 
 ## Tehtävä 8
 
-Mieti millaisia mittareita voitaisiin käyttää erilaisia tietotyön asiantuntijatehtävien prosesseja mitattaessa?
+Mieti, millaisia mittareita voitaisiin käyttää erilaisia tietotyön asiantuntijatehtävien prosesseja mitattaessa?
 
 ## Tehtävä 9
 
-Mitä muutoksia pizzerian prosessi ([@fig-pizzatilaus-teht]) tarvitsisi, jotta raaka-aineiden loppuminen ei pääsisi aiheuttamaan suurempia ongelmia?
+Mitä muutoksia pizzerian prosessi (@fig-pizzatilaus-teht) tarvitsisi, jotta raaka-aineiden loppuminen ei pääsisi aiheuttamaan suurempia ongelmia?
 
 Entä olisiko tilanne korjattavissa jollain IT-ratkaisulla ja miten sellainen vaikuttaisi prosessikulkuun?
 
@@ -124,11 +125,11 @@ Entä olisiko tilanne korjattavissa jollain IT-ratkaisulla ja miten sellainen va
 
 ## Tehtävä 10
 
-Jo useamman kerran esiintynyt prosessimalli pizzan tilaamisesta on vakiinnuttanut asemansa osana BPMN:n ohje- ja koulutusmateriaaleja. Kuinka ymmärrettävä malli tässä sinusta tässä vaiheessa on? Onko siinä joitain vähemmän ilmeisiä osia?
+Jo useamman kerran esiintynyt prosessimalli pizzan tilaamisesta on vakiinnuttanut asemansa osana BPMN:n ohje- ja koulutusmateriaaleja. Kuinka ymmärrettävä malli sinusta tässä vaiheessa on? Onko siinä joitain vähemmän ilmeisiä osia?
 
 ## Tehtävä 11
 
-Mieti jotain omaan arkeesi liittyvää prosessia, johon kuuluu vähintään kaksi uima-allasta ja joissa molemmissa on vähintään kaksi uimarataa.
+Mieti jotain omaan arkeesi liittyvää prosessia, johon kuuluu vähintään kaksi uima-allasta ja joissa molemmissa on vähintään kaksi uimarataa. Mallinna prosessi BPMN:llä.
 
 ## Tehtävä 12
 
@@ -136,9 +137,9 @@ Päivitä edellistä pizzan tilaamisen prosessikulkua niin, että tilauksen toim
 
 ## Tehtävä 13
 
-Lisää seuraavaan prosessimalliin ([@fig-flow-t]) siitä puuttuvat Sequence Flow-, Message Flow- ja Data Association -yhteydet.
+Lisää seuraavaan prosessimalliin (@fig-flow-t) siitä puuttuvat Sequence Flow-, Message Flow- ja Data Association -yhteydet.
 
-![Prosessimallista puuttuu yhteydet](kuviot/flow-tehtava_1.svg){#fig-flow-t}
+![Prosessimallista puuttuvat yhteydet](kuviot/flow-tehtava_1.svg){#fig-flow-t}
 
 ## Tehtävä 14
 
@@ -150,9 +151,9 @@ Laadi valitsemastasi aiheesta looginen prosessimalli, jossa käytät seuraavia t
 
 ## Tehtävä 16
 
-Toteuta @fig-dmn-hakemus :n valintataulu valintaporttien avulla.
+Toteuta kuvan @fig-dmn-hakemus-teht päätöstaulu porttien avulla.
 
-![Hakemuksen käsittelyyn liittyvä päätöstaulu](kuviot/dmn-hakemus.png){#fig-dmn-hakemus}
+![Hakemuksen käsittelyyn liittyvä päätöstaulu](kuviot/dmn-hakemus.png){#fig-dmn-hakemus-teht}
 
 ## Tehtävä 17
 
@@ -163,7 +164,7 @@ Piirrä seuraava tapahtumasarja prosessiksi ja käytä mallissa myös Service Ta
 3. Tarkista maksu ulkoisesta maksupalvelusta.
 4. Päivitä varastosaldot ERP-järjestelmään.
 5. Muodosta pakkauslistat tilauksen riveistä.
-6. Tilaa nuoto kuljetusliikkeeltä.
+6. Tilaa nouto kuljetusliikkeeltä.
 7. Lähetä tilausvahvistus asiakkaalle.
 8. Päätä prosessi.
 
@@ -192,9 +193,9 @@ Muuta seuraavaa tilauskäsittelyprosessia niin, että kanta-asiakkaat saavat til
 
 ## Tehtävä 20
 
-Toteuta seuraava päätöstaulu valintaporteilla.
+Toteuta seuraava päätöstaulu porttien avulla. Vertaa ratkaisua tehtävän 16 ratkaisuun: kumpi päätöslogiikka oli helpompi esittää portteina ja miksi?
 
-![Päätöstaulu hakemuksesta päättämiseksi](kuviot/dmn-paatostaulu.png){#fig-dmn-paatostaulu}
+![Päätöstaulu hakemuksesta päättämiseksi](kuviot/dmn-paatostaulu.png){#fig-dmn-paatostaulu-teht}
 
 ## Tehtävä 21
 
@@ -228,7 +229,7 @@ Jaa seuraavat tehtävät aliprosesseiksi. Nimeä aliprosessit loogisella tavalla
 
 Mallinna vastaava prosessikulku ilman Loop-tehtävää.
 
-![](kuviot/loop.png){#fig-loop}
+![Ehtoperusteisesti toistettava Loop-tehtävä](kuviot/loop.png){#fig-loop-teht}
 
 ## Tehtävä 23
 
@@ -236,11 +237,13 @@ Laadi Parallel ja Sequential Multi-instance -tehtäviä käyttävä prosessimall
 
 ## Tehtävä 24
 
+Mallinna työpisteen siivous Ad-hoc-aliprosessina. Aliprosessiin kuuluvat tehtävät *Tyhjennä roskakori*, *Pyyhi pöytä*, *Järjestä paperit*, *Imuroi lattia* ja *Kastele kasvit*. Tehtävät voi tehdä missä järjestyksessä tahansa, eikä kaikkia tarvitse tehdä joka kerta. Mitä etuja ja haittoja Ad-hoc-aliprosessilla on verrattuna siihen, että tehtävät mallinnettaisiin kiinteään järjestykseen? Missä tilanteissa Ad-hoc-rakenne voisi soveltua tekoälyagentin ohjaamaan prosessiin?
+
 ## Tehtävä 25
 
 Lisää seuraavaan prosessiin ei-keskeyttävä Message Boundary Event, joka ottaa vastaan asiakkaan tilaukseensa tekemän muutoksen, sekä sen käynnistämä polku.
 
-![Message Start Event, Message Intermediate Boundary Event ja Message End Event](kuviot/eventteja3.png){#fig-eventteja3}
+![Message Start Event, Message Intermediate Boundary Event ja Message End Event](kuviot/eventteja3.png){#fig-eventteja3-teht}
 
 ## Tehtävä 26
 
@@ -258,12 +261,12 @@ Kun lasku saapuu, prosessi käynnistyy Message Start Eventillä. Seuraavaksi las
 
 Miten seuraavat prosessimallit tulkitaan?
 
-![](kuviot/timer_esim.svg){#fig-timer_esim}
+![Esimerkkejä Timer-tapahtuman käytöstä](kuviot/timer_esim.svg){#fig-timer_esim-teht}
 
 ## Tehtävä 29
 
-1. Ilmaise vuoden viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
-2. Muunna tapahtuma, joka alkaa 2025-12-06 klo 09:00 Europe/Helsinki, ISO 8601 -muotoon sisältäen aikavyöhykkeen offseting ja UTC-vastineen.
+1. Ilmaise vuoden 2026 viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
+2. Muunna tapahtuma, joka alkaa 2025-12-06 klo 09:00 Europe/Helsinki, ISO 8601 -muotoon sisältäen aikavyöhykkeen poikkeaman (offset) sekä UTC-vastineen.
 3. Esitä 2 tuntia 30 minuuttia ISO 8601 -keston merkintänä ja lisää siihen 15 minuutin tauko erillisenä kesto-osana.
 4. Kirjoita jakso maanantaista torstaihin klo 09:00-16:00 yhtenä ISO 8601 -aikavälinä, joka sisältää päivämäärät ja kellonajat.
 5. Esitä viikoittainen luento, joka pidetään joka keskiviikko klo 12:15-13:45 tammi-maaliskuussa 2026, ISO 8601 -aikavälinä ja liitä mukaan toistuvuutta kuvaava sääntö käyttäen standardin mukaisia rakenteita.
@@ -278,7 +281,7 @@ Toimiiko suunnittelemasi kompensaatio, mikäli `luku1`:n arvo ei saa koskaan men
 
 ## Tehtävä 31
 
-Piirrä prosessimalli seuraavasta tapauksesta: Prosessi käynnistyy tuotetilauksen vastaanottamisella. Jos tilattua tuotetta löytyy valmiina, se toimitetaan asiakkaalle lähetysvahvistuksen saattelemana. Mikäli tilattua tuotetta ei ole varastossa, tarkastetaan ensin, onko kaikki sen kokoamiseen tarvittavat komponentit yrityksen pajalla. Tarvittaessa komponentteja tilataan toimittajalta. Mikäli tarvittavia osia ei ole saatavilla, tilaus perutaan ja siitä ilmoitetaan asiakkaalle. Kun tuote on saatu valmistettua, se lähetetään asiakkaalle pikatoimituksena. Lisäksi asiakkaalle lähetetään lähetysvahvistus.
+Piirrä prosessimalli seuraavasta tapauksesta: Prosessi käynnistyy tuotetilauksen vastaanottamisella. Jos tilattua tuotetta löytyy valmiina, se toimitetaan asiakkaalle lähetysvahvistuksen saattelemana. Mikäli tilattua tuotetta ei ole varastossa, tarkastetaan ensin, ovatko kaikki sen kokoamiseen tarvittavat komponentit yrityksen pajalla. Tarvittaessa komponentteja tilataan toimittajalta. Mikäli tarvittavia osia ei ole saatavilla, tilaus perutaan ja siitä ilmoitetaan asiakkaalle. Kun tuote on saatu valmistettua, se lähetetään asiakkaalle pikatoimituksena. Lisäksi asiakkaalle lähetetään lähetysvahvistus.
 
 ## Tehtävä 32
 
@@ -288,9 +291,9 @@ Lihapiirakka leikataan auki taskuksi ja väliin lisätään nokare voita. Piirak
 
 ## Tehtävä 33
 
-Missä kohdissa seuraavassa prosessimallissa käyttäisit Parallel Port-, Inclusive Gateway- ja Exclusive Gateway -portteja?
+Missä kohdissa seuraavassa prosessimallissa käyttäisit Parallel Gateway-, Inclusive Gateway- ja Exclusive Gateway -portteja?
 
-![](kuviot/porttitehtava.png){#fig-porttitehtava}
+![Prosessimalli ilman portteja](kuviot/porttitehtava.png){#fig-porttitehtava}
 
 ## Tehtävä 34
 
@@ -302,9 +305,9 @@ Tee edellisestä prosessista versio, jossa asiakasta muistutetaan lisätiedoista
 
 ## Tehtävä 35
 
-Mallinna seuraava tarjouspyyntöprosessi (@fig-complex-esim) käyttämättä Complex Gateway -porttia.
+Mallinna seuraava tarjouspyyntöprosessi (@fig-complex-esim-teht) käyttämättä Complex Gateway -porttia.
 
-![Complex Gateway -portti tarjouspyyntöprosessissa](kuviot/complex-esim.png){#fig-complex-esim}
+![Complex Gateway -portti tarjouspyyntöprosessissa](kuviot/complex-esim.png){#fig-complex-esim-teht}
 
 ## Tehtävä 36
 
@@ -325,11 +328,11 @@ Tee verkkokaupan tilauskäsittelyn prosessikortista versio, joka soveltuisi käy
 
 ## Tehtävä 37
 
-Yritä piirtää pizzan tilaaminen (@fig-pizzatilaus.svg) tai Complex Gateway -esimerkkiprosessi (@fig-complex-esim) vuokaaviotekniikkaa käyttäen. Vuokaavion piirtämiseen voi käyttää esimerkiksi Draw.io -välinettä: https://draw.io.
+Yritä piirtää pizzan tilaaminen (@fig-pizzatilaus.svg) tai Complex Gateway -esimerkkiprosessi (@fig-complex-esim-teht) vuokaaviotekniikkaa käyttäen. Vuokaavion piirtämiseen voi käyttää esimerkiksi Draw.io -välinettä: https://draw.io.
 
 ## Tehtävä 38
 
-Etsi ja laske kriittinen polku uuden työntekijän rekrytoinnin prosessille.
+Laske uuden työntekijän rekrytoinnin prosessille kunkin tehtävän ES-, EF-, LS- ja LF-arvot sekä pelivara, ja tunnista kriittinen polku. Voit täyttää arvot projektiverkon pohjaan (@fig-cpm-teht). Mikä on prosessin vähimmäiskesto?
 
 | Tunnus | Uuden työntekijän rekrytointi | Kesto (pv) | Edeltävät tehtävät |
 |:------:|-------------------------------|:----------:|:------------------:|
@@ -346,9 +349,9 @@ Etsi ja laske kriittinen polku uuden työntekijän rekrytoinnin prosessille.
 | K | Sidosryhmätapaamiset | 5 | G |
 | L | Rekrytoinnin palautekeskustelu | 1 | H, I, J, K |
 
-: Uuden työntekijän rekrytoinnin tehtävät, kestot ja riippuvuudet {#tbl-rekrytointi}
+: Uuden työntekijän rekrytoinnin tehtävät, kestot ja riippuvuudet {#tbl-rekrytointi-teht}
 
-![Työntekijän rekrytoinnin prosessi projektiverkkona kriittisen polun laskentaa varten](kuviot/cpm.png){#fig-cpm}
+![Työntekijän rekrytoinnin prosessi projektiverkkona kriittisen polun laskentaa varten](kuviot/cpm.png){#fig-cpm-teht}
 
 ## Tehtävä 39
 
@@ -356,10 +359,378 @@ Keksi muutama hyödyllinen prosessien hallintaa tai analysointia tukeva näkymä
 
 ## Tehtävä 40
 
-Teksti, josta yritetään tunnistaa prosessikulku vapaavalintaisella LLM:llä (tai kahdell ja tuloksia verrataan)
+Anna tehtävän 3 haastattelutranskriptio jollekin kielimallille (esimerkiksi ChatGPT, Claude tai Copilot) ja pyydä sitä tunnistamaan prosessin vaiheet, roolit, päätöskohdat sekä virhe- ja poikkeustilanteet. Vertaa tulosta omaan ratkaisuusi. Mitä kielimalli tunnisti oikein, mitä se jätti huomiotta ja mitä se keksi, vaikka sitä ei aineistossa ollut? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa niiden tuloksia keskenään.
 
 ## Tehtävä 41
 
-BPMN-analyysi LLM:n avulla (tai kahdella ja tuloksia verrataan)
+Anna jokin tekemäsi BPMN-malli kielimallille joko kuvana tai .bpmn-tiedostona (BPMN XML) ja pyydä sitä arvioimaan mallin oikeellisuutta ja ymmärrettävyyttä luvussa 7 esiteltyjen Mendlingin ym. seitsemän mallinnusohjeen (7PMG) valossa. Tarkista arvio itse: mitkä kielimallin huomioista pitivät paikkansa ja mitkä olivat virheellisiä? Kuinka paljon työtä arvion tarkistaminen vaati verrattuna siihen, että olisit arvioinut mallin itse? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa tuloksia.
 
-## Paljon pieniä BPMN-tehtäviä (ja oikeat vastaukset?)
+## Tehtävä 42 (essee)
+
+Organisaation toimintaa voidaan tarkastella funktioina (osastot ja yksiköt), projekteina tai prosesseina. Valitse jokin tuntemasi organisaatio, esimerkiksi oma työpaikkasi, oppilaitoksesi tai harrastusseurasi, ja pohdi, mitä etuja ja haittoja sen toiminnan tarkastelusta prosessien kautta olisi. Mitkä organisaation toiminnoista ovat luontevimmin prosesseja, mitkä projekteja ja mitkä funktioita? Mitä muuttuisi, jos organisaatioon nimettäisiin prosessinomistajat?
+
+Laajuus 2–3 sivua. Käytä vähintään kolmea lähdettä, joista ainakin yksi on kirjan lähdeluettelon ulkopuolelta.
+
+## Tehtävä 43 (essee)
+
+”*You get what you measure.*” Kirjoita essee prosessimittareiden haitallisista sivuvaikutuksista. Kuvaa vähintään kaksi esimerkkiä, joissa mittari ohjaa toimintaa ei-toivottuun suuntaan. Esimerkit voivat olla omasta kokemuksestasi, uutisista tai tutkimuskirjallisuudesta. Selvitä, mitä tarkoittaa Goodhartin laki, ja pohdi, miten mittaristo voidaan suunnitella niin, että sen ”pelaaminen” on mahdollisimman vaikeaa. Miten mittaamiseen kohdistuvaan muutosvastarintaan kannattaa suhtautua?
+
+Laajuus 2–3 sivua.
+
+## Tehtävä 44 (essee)
+
+Vertaa prosessien jatkuvaa parantamista (BPI, PDCA, kaizen) ja radikaalia uudistamista (BPR). Millaisissa tilanteissa kumpikin lähestymistapa soveltuu paremmin? Pohdi erityisesti toiminnanohjausjärjestelmän (ERP) käyttöönottoa: onko se luonteeltaan jatkuvaa parantamista, radikaalia uudistamista vai jotain muuta? Kumpaa tulisi muuttaa, prosesseja vai järjestelmää, kun ne eivät sovi yhteen?
+
+Laajuus 2–3 sivua.
+
+## Tehtävä 45 (essee)
+
+Valitse jokin organisaation tukiprosessi, esimerkiksi palkanlaskenta, IT-tuki, siivous tai rekrytointi. Arvioi luvussa 4 esitellyn McIvorin viitekehyksen avulla, kannattaisiko prosessi ulkoistaa. Käsittele ainakin seuraavia näkökulmia: prosessin kriittisyys ja kytkökset ydinprosesseihin, kustannukset, osaaminen ja sen säilyminen, tietosuoja sekä palvelun takaisinoton (insourcing) mahdollisuus.
+
+Laajuus 2–3 sivua.
+
+## Tehtävä 46 (essee)
+
+BPMN-mallit kuvaavat prosessin työnkulun tarkasti, mutta eivät juurikaan kerro, mihin prosessi liittyy organisaation kokonaisuudessa. Pohdi kokonaisarkkitehtuurin ja ArchiMaten roolia prosessien hallinnassa. Millaisiin kysymyksiin arkkitehtuurimallit vastaavat paremmin kuin prosessimallit, ja päinvastoin? Kenen organisaatiossa pitäisi vastata siitä, että prosessimallit ja arkkitehtuurikuvaukset pysyvät keskenään yhdenmukaisina?
+
+Laajuus 2–3 sivua.
+
+## Tehtävä 47 (essee)
+
+Ohjelmistorobotiikka (RPA) automatisoi tarkasti määriteltyjä työnkulkuja, kun taas tekoälyagentit voivat päättää itse, mitä tehtäviä ne suorittavat ja missä järjestyksessä. Pohdi, millaisiin prosesseihin kumpikin soveltuu. Missä kohdissa prosessia ihmisen tulisi olla mukana päätöksenteossa (*human in the loop*)? Kuka vastaa virheestä, jonka agentti tekee? Käsittele myös sitä, millaisia erityisvaatimuksia julkisen sektorin automaattiseen päätöksentekoon liittyy.
+
+Laajuus 3–4 sivua.
+
+## Pieniä BPMN-mallinnustehtäviä
+
+Tämän osion tehtävät ovat lyhyitä harjoituksia, joista kukin keskittyy yhteen tai muutamaan BPMN-kielen piirteeseen. Useimpiin malleihin tarvitaan vain muutama elementti, ja yhden tehtävän tekemiseen kuluu tyypillisesti 5–15 minuuttia. Tehtävät on järjestetty karkeasti helpoimmasta vaikeimpaan ja aiheittain. Mallit voi piirtää paperille, Camunda Modelerilla tai Draw.io:lla, ja Token Simulationilla voit testata, toimiiko mallisi niin kuin olit ajatellut.
+
+Jokaisen tehtävän perässä on sanallinen malliratkaisu. Yritä ratkaista tehtävä ensin itse. Huomaa, että useimpiin tehtäviin on useampia oikeita ratkaisuja.
+
+### Tehtävät, tapahtumat ja järjestysvirrat
+
+#### Pikatehtävä 1
+
+Mallinna aamukahvin keittäminen. Prosessiin kuuluvat tehtävät *Keitä kahvi*, *Kaada kahvi kuppiin* ja *Juo kahvi*. Käytä yhtä aloitus- ja yhtä lopetustapahtumaa.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Start Event → *Keitä kahvi* → *Kaada kahvi kuppiin* → *Juo kahvi* → End Event. Elementit yhdistetään järjestysvirroilla. Tapahtumat kannattaa nimetä tilaa kuvaavasti, esimerkiksi ”Kahvihammasta kolottaa” ja ”Kahvi juotu”.
+:::
+
+#### Pikatehtävä 2
+
+Nimeä seuraavat tehtävät uudelleen verbi-objekti-muotoon: *Laskun hyväksyntä*, *Tilausten käsittely ja lähettäminen*, *Sähköposti* ja *Asiakas*. Mitä ongelmia nimeämisessä huomaat?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+- *Laskun hyväksyntä* → *Hyväksy lasku*
+- *Tilausten käsittely ja lähettäminen* → kaksi tehtävää: *Käsittele tilaus* ja *Lähetä tilaus*. Yksi tehtävä kuvaa yhtä toimintoa, ja yksikkömuoto sopii paremmin, koska yksi prosessi-instanssi käsittelee yhden tilauksen.
+- *Sähköposti* ja *Asiakas* eivät kerro, mitä tehdään. Ilman asiayhteyttä niitä ei voi nimetä uudelleen. Vaihtoehtoja ovat esimerkiksi *Lähetä vahvistussähköposti* ja *Rekisteröi asiakas*.
+:::
+
+#### Pikatehtävä 3
+
+Kirjaston lainaustiskillä asiakas valitsee kirjan ja esittää kirjastokorttinsa. Kirjastonhoitaja kirjaa lainan ja antaa asiakkaalle kuitin. Mallinna prosessi yhtenä uima-altaana (*Kirjasto*), jossa on kaksi uimarataa (*Asiakas* ja *Kirjastonhoitaja*).
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Asiakkaan radalla: Start Event → *Valitse kirja* → *Esitä kirjastokortti*. Järjestysvirta jatkuu kirjastonhoitajan radalle: *Kirjaa laina* → *Anna kuitti* → End Event. Saman altaan ratojen välillä käytetään järjestysvirtaa, ei viestivirtaa.
+:::
+
+#### Pikatehtävä 4
+
+Valitse kullekin tehtävälle sopivin BPMN-tehtävätyyppi (User, Manual, Service, Script, Business Rule, Send tai Receive Task):
+
+1. Kanna paketti autoon.
+2. Hyväksy matkalasku matkahallintajärjestelmässä.
+3. Hae yrityksen tiedot YTJ:n rajapinnasta.
+4. Laske tilauksen arvonlisävero.
+5. Päätä lainan myöntämisestä luottopolitiikan sääntöjen perusteella.
+6. Lähetä asiakkaalle tilausvahvistus.
+7. Odota toimittajan tarjousta.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+1. Manual Task
+2. User Task
+3. Service Task
+4. Script Task
+5. Business Rule Task
+6. Send Task (myös Service Task on mahdollinen, jos lähetys tehdään sähköpostipalvelun kautta)
+7. Receive Task (tai Message Intermediate Catch Event)
+:::
+
+### Portit
+
+#### Pikatehtävä 5
+
+Ennen ulos lähtemistä tarkistetaan sääennuste. Jos sataa, otetaan mukaan sateenvarjo. Lopuksi lähdetään ulos. Mallinna prosessi Exclusive Gatewayn avulla.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Start Event → *Tarkista sääennuste* → Exclusive Gateway ”Sataako?”. Haara ”Kyllä” → *Ota sateenvarjo* → yhdistävä Exclusive Gateway. Haara ”Ei” johtaa suoraan yhdistävään porttiin. Portin jälkeen *Lähde ulos* → End Event. Yhdistävä portti on tarpeen, jotta molemmat haarat päätyvät samaan jatkoon. Ilman sitä mallissa olisi kaksi rinnakkaista loppua.
+:::
+
+#### Pikatehtävä 6
+
+Elokuvateatterin kassalla myydään lippuja K18-elokuvaan. Kassa pyytää asiakkaalta henkilöllisyystodistuksen. Jos asiakas on täysi-ikäinen, hänelle myydään lippu, ja muuten myynnistä kieltäydytään. Mallinna prosessi. Käytätkö yhtä vai kahta lopetustapahtumaa? Perustele valintasi.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Start Event → *Pyydä henkilöllisyystodistus* → Exclusive Gateway ”Onko asiakas täysi-ikäinen?”. Haara ”Kyllä” → *Myy lippu*, haara ”Ei” → *Kieltäydy myymästä*. Molemmat ratkaisut ovat oikein. Kaksi nimettyä lopetustapahtumaa (”Lippu myyty” ja ”Myynti evätty”) tekevät lopputuloksista näkyviä. Yksi lopetustapahtuma yhdistävän portin jälkeen noudattaa Mendlingin ym. ohjetta yhdestä aloitus- ja lopetustapahtumasta.
+:::
+
+#### Pikatehtävä 7
+
+Postin palvelupisteessä lähetyksen hinnoittelu riippuu painosta. Alle 2 kg:n lähetys hinnoitellaan kirjeenä ja 2–30 kg:n lähetys pakettina. Kaikki muut lähetykset hinnoitellaan rahtina. Mallinna päätös niin, että prosessi ei voi jäädä jumiin.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Punnitse lähetys* → Exclusive Gateway, josta lähtee kolme haaraa. Ehdolliset virrat ovat `paino < 2` → *Hinnoittele kirjeenä* ja `paino >= 2 and paino <= 30` → *Hinnoittele pakettina*. Kolmas haara on oletusvirta (Default Flow) → *Hinnoittele rahtina*. Oletusvirta takaa, että prosessi etenee, vaikka mikään ehto ei täyttyisi. Lopuksi haarat yhdistetään Exclusive Gatewaylla.
+:::
+
+#### Pikatehtävä 8
+
+Kun juhlapäivä on päätetty, juhlien järjestäjä lähettää kutsut, tilaa kakun ja siivoaa kodin. Näillä tehtävillä ei ole keskinäistä järjestystä. Kun kaikki on tehty, pidetään juhlat. Mallinna prosessi.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Päätä juhlapäivä* → Parallel Gateway (jakava), josta lähtee kolme haaraa: *Lähetä kutsut*, *Tilaa kakku* ja *Siivoa koti*. Haarat yhdistetään Parallel Gatewaylla, joka odottaa kaikkien kolmen haaran valmistumista. Sen jälkeen *Pidä juhlat* → End Event.
+:::
+
+#### Pikatehtävä 9
+
+Hampurilaisravintolassa asiakas voi valita annokseensa lisukkeeksi ranskalaiset, salaatin ja juoman: yhden, kaksi tai kaikki kolme. Kun lisukkeet on valmistettu, tarjotin kootaan. Mallinna prosessi.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Ota tilaus vastaan* → Inclusive Gateway, josta lähtee kolme ehdollista haaraa: *Paista ranskalaiset*, *Valmista salaatti* ja *Kaada juoma*. Haarat yhdistetään Inclusive Gatewaylla, joka odottaa kaikkia aktivoituneita haaroja. Sen jälkeen *Kokoa tarjotin*. Jos on mahdollista, ettei asiakas valitse yhtään lisuketta, jakavaan porttiin tarvitaan oletusvirta, joka johtaa suoraan yhdistävään porttiin.
+:::
+
+#### Pikatehtävä 10
+
+Etsi virhe. Mallissa Exclusive Gateway jakaa prosessin kahteen haaraan: *Lähetä lasku* ja *Lähetä maksumuistutus*. Haarat yhdistetään Parallel Gatewaylla, jonka jälkeen tulee tehtävä *Kirjaa tapahtuma*. Mitä prosessia suoritettaessa tapahtuu?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Prosessi jumiutuu. Exclusive Gateway aktivoi vain toisen haaran, mutta Parallel Gateway odottaa, että molemmat haarat saapuvat. *Kirjaa tapahtuma* ei siis koskaan käynnisty. Korjaus: haarat yhdistetään Exclusive Gatewaylla.
+:::
+
+#### Pikatehtävä 11
+
+Etsi virhe. Mallissa Parallel Gateway jakaa prosessin kahteen haaraan: *Varaa hotelli* ja *Varaa lento*. Haarat yhdistetään Exclusive Gatewaylla, jonka jälkeen tulee tehtävä *Lähetä matkasuunnitelma*. Mitä tapahtuu?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Lähetä matkasuunnitelma* suoritetaan kahdesti, koska Exclusive Gateway päästää jokaisen saapuvan haaran läpi heti odottamatta toista. Korjaus: haarat yhdistetään Parallel Gatewaylla.
+:::
+
+#### Pikatehtävä 12
+
+Opiskelija kirjoittaa esseen ja pyytää siitä palautetta. Jos opettaja ei hyväksy esseetä, opiskelija korjaa sen ja pyytää palautetta uudelleen. Hyväksytty essee palautetaan. Mallinna toisto porteilla ilman Loop-merkintää.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Start Event → *Kirjoita essee* → yhdistävä Exclusive Gateway → *Pyydä palautetta* → Exclusive Gateway ”Hyväksytty?”. Haara ”Kyllä” → *Palauta essee* → End Event. Haara ”Ei” → *Korjaa essee* → takaisin yhdistävään porttiin ennen tehtävää *Pyydä palautetta*. Taaksepäin palaava järjestysvirta johdetaan porttiin eikä suoraan tehtävään, jotta tehtävään saapuu vain yksi virta.
+:::
+
+### Tapahtumat
+
+#### Pikatehtävä 13
+
+Joka arkipäivä kello kahdeksan järjestelmä kokoaa edellisen päivän tilaukset raportiksi ja lähettää sen myyntipäällikölle. Mallinna prosessi. Millä tapahtumalla prosessi käynnistyy?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Timer Start Event → *Kokoa tilausraportti* (Script tai Service Task) → *Lähetä raportti myyntipäällikölle* (Send Task) → End Event. Pelkällä ISO 8601 -toistomääreellä ei voi rajata toistoa arkipäiviin. Esimerkiksi Camunda hyväksyy ajastimelle myös cron-lausekkeen, jolla arkipäivät voi määritellä.
+:::
+
+#### Pikatehtävä 14
+
+Sämpylätaikinan vaivaamisen jälkeen taikinan annetaan kohota 45 minuuttia. Sitten sämpylät leivotaan ja niiden annetaan kohota vielä 20 minuuttia, minkä jälkeen ne paistetaan. Mallinna prosessi ja kirjoita odotusajat ISO 8601 -muodossa.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Vaivaa taikina* → Timer Intermediate Catch Event `PT45M` → *Leivo sämpylät* → Timer Intermediate Catch Event `PT20M` → *Paista sämpylät* → End Event. Kohoaminen ei ole kenenkään tekemä tehtävä vaan odotusta, joten se esitetään ajastintapahtumana.
+:::
+
+#### Pikatehtävä 15
+
+Pizzerian lupaus on, että pizza toimitetaan tunnissa. Jos toimitus kestää yli tunnin, asiakkaalle lähetetään alennuskoodi seuraavaa tilausta varten, mutta toimitus jatkuu normaalisti. Mallinna toimitus. Miten prosessin kulku muuttuisi, jos käyttäisit keskeyttävää ajastinta?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Tehtävään *Toimita pizza* liitetään ei-keskeyttävä (katkoviivainen) Timer Boundary Event `PT1H`. Siitä lähtee haara *Lähetä alennuskoodi* → End Event. Pääpolku jatkuu tehtävästä *Toimita pizza* omaan End Eventiinsä. Keskeyttävä ajastin pysäyttäisi toimituksen tunnin kohdalla, eli pizza jäisi toimittamatta.
+:::
+
+#### Pikatehtävä 16
+
+Verkkokaupan asiakkaalla on 15 minuuttia aikaa maksaa tilauksensa. Jos maksua ei kuulu, tuotteiden varaus perutaan. Mallinna prosessi Receive Taskin ja ajastimen avulla.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Varaa tuotteet* → Receive Task *Vastaanota maksu*, johon liitetään keskeyttävä Timer Boundary Event `PT15M`. Pääpolku: *Vastaanota maksu* → *Vahvista tilaus* → End Event. Ajastimen polku: *Peru varaus* → End Event. Tässä keskeyttävä ajastin on oikea valinta, koska maksun odottaminen halutaan lopettaa.
+:::
+
+#### Pikatehtävä 17
+
+Hammaslääkärin vastaanotolle saapuu ajanvarauspyyntö verkkolomakkeen kautta. Vastaanoton sihteeri varaa ajan kalenterista, minkä jälkeen asiakkaalle lähetetään vahvistus. Mallinna prosessi viestitapahtumien avulla.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Message Start Event ”Ajanvarauspyyntö saapunut” → User Task *Varaa aika kalenterista* → Message End Event ”Vahvistus lähetetty”. Viestitapahtumat kertovat, että prosessi käynnistyy ulkoisesta viestistä ja päättyy viestin lähettämiseen.
+:::
+
+#### Pikatehtävä 18
+
+Yritys lähettää asiakkaalle tarjouksen. Jos asiakas hyväksyy tarjouksen, tehdään tilaus. Jos asiakas hylkää sen, hylkäys kirjataan. Jos asiakkaalta ei kuulu mitään kahteen viikkoon, myyjä soittaa hänelle. Mallinna tilanne.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Lähetä tarjous* → Event-Based Gateway, jota seuraa kolme tapahtumaa: Message Intermediate Catch Event ”Hyväksyntä saapunut” → *Tee tilaus*, Message Intermediate Catch Event ”Hylkäys saapunut” → *Kirjaa hylkäys* ja Timer Intermediate Catch Event `P14D` → *Soita asiakkaalle*. Ensimmäisenä toteutuva tapahtuma ratkaisee polun.
+:::
+
+#### Pikatehtävä 19
+
+Kassalla asiakkaan maksukortti veloitetaan. Jos maksupalvelu hylkää kortin, asiakkaalta pyydetään toinen maksutapa. Mallinna virhetilanne Error Eventin avulla. Voiko virhetapahtuma olla ei-keskeyttävä?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Service Task *Veloita kortti*, johon liitetään Error Boundary Event (virhekoodi esimerkiksi `KORTTI_HYLATTY`) → *Pyydä toinen maksutapa*. Pääpolku jatkuu tehtävästä *Veloita kortti* tehtävään *Anna kuitti*. Error Boundary Event on aina keskeyttävä: virhe lopettaa tehtävän suorittamisen.
+:::
+
+#### Pikatehtävä 20
+
+Perhe etsii kadonnutta kissaa. Yksi perheenjäsen etsii pihalta ja toinen läheisestä metsästä samaan aikaan. Kun kissa löytyy, kaikki etsiminen lopetetaan. Mallinna prosessi. Mikä ero on End Eventillä ja Terminate End Eventillä tässä tilanteessa?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Huomaa kissa kadonneeksi* → Parallel Gateway → kaksi haaraa: *Etsi pihalta* ja *Etsi metsästä*. Kumpikin haara päättyy Terminate End Eventiin ”Kissa löytyi”. Tavallinen End Event lopettaisi vain oman haaransa, ja toinen perheenjäsen jatkaisi etsimistä turhaan.
+:::
+
+#### Pikatehtävä 21
+
+Toimistorakennuksen turvallisuuspäällikkö käynnistää palohälytyksen. Rakennuksen jokaisessa kerroksessa käynnistyy oma evakuointiprosessi: kerroksen henkilökunta poistuu rakennuksesta ja ilmoittautuu kokoontumispaikalla. Mallinna tilanne. Miksi Message Event ei sovi tähän?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Turvallisuuspäällikön prosessi: *Havaitse palo* → Signal Intermediate Throw Event ”Palohälytys”. Kunkin kerroksen prosessi: Signal Start Event ”Palohälytys” → *Poistu rakennuksesta* → *Ilmoittaudu kokoontumispaikalla* → End Event. Signaali välitetään kaikille sitä kuunteleville, eikä lähettäjän tarvitse tietää, montako vastaanottajaa on. Viesti sen sijaan osoitetaan aina yhdelle tietylle vastaanottajalle.
+:::
+
+### Altaat, viestit ja tieto
+
+#### Pikatehtävä 22
+
+Opiskelija tilaa opintorekisteriotteen opintotoimistosta. Opintotoimisto tulostaa otteen ja lähettää sen opiskelijalle, joka vastaanottaa sen. Mallinna prosessi kahtena uima-altaana.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Altaassa *Opiskelija*: Start Event → *Lähetä otepyyntö* → *Vastaanota ote* → End Event. Altaassa *Opintotoimisto*: Message Start Event → *Tulosta ote* → *Lähetä ote* → End Event. Viestivirrat kulkevat tehtävästä *Lähetä otepyyntö* opintotoimiston aloitustapahtumaan sekä tehtävästä *Lähetä ote* tehtävään *Vastaanota ote*.
+:::
+
+#### Pikatehtävä 23
+
+Etsi virhe. Mallissa on kaksi uima-allasta, *Asiakas* ja *Yritys*. Asiakkaan altaan tehtävästä *Maksa lasku* kulkee järjestysvirta yrityksen altaan tehtävään *Kirjaa maksu*. Mikä mallissa on vialla, ja miten se korjataan?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Järjestysvirta ei saa ylittää uima-altaan rajaa. Altaiden välinen vuorovaikutus esitetään viestivirralla. Yrityksen altaaseen tarvitaan myös viestin vastaanottava elementti, esimerkiksi Message Start Event tai Receive Task *Vastaanota maksu*, ennen tehtävää *Kirjaa maksu*.
+:::
+
+#### Pikatehtävä 24
+
+Mallinna taksin tilaaminen mobiilisovelluksella omasta näkökulmastasi. Taksiyhtiön sisäistä prosessia et tunne, joten esitä taksiyhtiö suljettuna altaana (*black box pool*).
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Oma allas: Start Event → *Tilaa taksi sovelluksella* → *Vastaanota tilausvahvistus* → *Odota taksia* → *Maksa matka* → End Event. Taksiyhtiön allas on tyhjä ja suljettu. Viestivirrat kulkevat tilauksesta suljetun altaan reunaan ja altaan reunasta vahvistuksen vastaanottoon. Suljettu allas kertoo, että osapuoli on mukana, mutta sen prosessia ei kuvata.
+:::
+
+#### Pikatehtävä 25
+
+Prosessissa on tehtävät *Rekisteröi uusi asiakas* ja *Hae asiakkaan tiedot*. Lisää malliin Data Store *Asiakasrekisteri* ja yhdistä se tehtäviin. Kumpi yhteyksistä on Data Input Association ja kumpi Data Output Association?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+*Rekisteröi uusi asiakas* tallentaa tietoa rekisteriin, joten yhteys kulkee tehtävästä tietovarastoon. Se on Data Output Association, koska tieto on tehtävän tuotos. *Hae asiakkaan tiedot* lukee rekisteriä, joten yhteys kulkee tietovarastosta tehtävään. Se on Data Input Association, koska tieto on tehtävälle syöte.
+:::
+
+### Aliprosessit ja toisto
+
+#### Pikatehtävä 26
+
+Muuttoon kuuluvat seuraavat tehtävät: *Pakkaa laatikot*, *Tee osoitteenmuutos*, *Kanna tavarat autoon*, *Irtisano sähkösopimus*, *Aja uuteen osoitteeseen*, *Tee uusi sähkösopimus*, *Kanna tavarat sisään* ja *Pura laatikot*. Ryhmittele tehtävät kahteen tai kolmeen aliprosessiin ja mallinna pääprosessi niin, että aliprosessit on esitetty tiivistettyinä.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Esimerkiksi aliprosessit *Hoida paperityöt* (osoitteenmuutos ja sähkösopimukset) ja *Siirrä tavarat* (pakkaus, kantaminen, ajo ja purku). Paperityöt voidaan tehdä rinnakkain tavaroiden siirron kanssa, joten pääprosessi voi olla muotoa Parallel Gateway → kaksi aliprosessia → Parallel Gateway. Tiivistetty aliprosessi merkitään +-merkillä.
+:::
+
+#### Pikatehtävä 27
+
+Opettaja arvioi kurssin 25 esseetä. Mallinna tehtävä Multi-Instance-merkinnällä kahdessa versiossa: (a) opettaja arvioi esseet yksin, (b) arviointiin osallistuu kolme assistenttia samanaikaisesti.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+(a) Tehtävä *Arvioi essee*, jossa on Sequential Multi-Instance -merkintä (kolme vaakaviivaa). Instanssit suoritetaan yksi kerrallaan. (b) Sama tehtävä Parallel Multi-Instance -merkinnällä (kolme pystyviivaa). Instanssit suoritetaan rinnakkain. Molemmissa syötteenä on esseiden lista, ja prosessi jatkuu vasta, kun kaikki instanssit on suoritettu.
+:::
+
+#### Pikatehtävä 28
+
+Maksupäätteellä asiakas syöttää PIN-koodin. Väärän koodin jälkeen asiakas saa yrittää uudelleen, mutta kolmannen väärän yrityksen jälkeen kortti lukitaan. Mallinna prosessi (a) Loop-tehtävän avulla ja (b) porttien avulla.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+(a) Loop-tehtävä *Syötä PIN-koodi*, jonka toistoehto on `pinOikein = false` ja `loopMaximum = 3`. Tehtävän jälkeen Exclusive Gateway ”PIN oikein?”: kyllä → *Hyväksy maksu*, ei → *Lukitse kortti*. (b) Yhdistävä portti → *Syötä PIN-koodi* → *Kasvata yrityslaskuria* (Script Task) → Exclusive Gateway, jossa kolme haaraa: koodi oikein → *Hyväksy maksu*, `yritykset >= 3` → *Lukitse kortti* ja oletusvirta takaisin yhdistävään porttiin.
+:::
+
+### Kokoavia pikatehtäviä
+
+#### Pikatehtävä 29
+
+Kirjaston asiakas tilaa kaukolainan. Kirjasto lähettää pyynnön toiselle kirjastolle ja odottaa kirjaa enintään 14 päivää. Jos kirja saapuu, asiakkaalle ilmoitetaan noudettavasta kirjasta. Jos kirjaa ei kuulu, asiakkaalle ilmoitetaan, ettei kirjaa saatu. Mallinna kirjaston prosessi ja lainaavan kirjaston osuus suljettuna altaana.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Kirjaston allas: Message Start Event ”Kaukolainapyyntö saapunut” → Send Task *Lähetä pyyntö lainaavalle kirjastolle* → Event-Based Gateway, jota seuraa Message Intermediate Catch Event ”Kirja saapunut” → *Ilmoita asiakkaalle noudettavasta kirjasta* sekä Timer Intermediate Catch Event `P14D` → *Ilmoita asiakkaalle, ettei kirjaa saatu*. Lainaava kirjasto on suljettu allas, johon ja josta kulkevat viestivirrat.
+:::
+
+#### Pikatehtävä 30
+
+Verkkopalveluun kirjaudutaan kaksivaiheisesti. Käyttäjä syöttää salasanan, ja jos se on oikein, hänen puhelimeensa lähetetään vahvistuskoodi. Jos käyttäjä syöttää koodin viiden minuutin kuluessa, kirjautuminen onnistuu. Muuten kirjautuminen keskeytetään. Väärästä salasanasta käyttäjälle näytetään virheilmoitus. Mallinna prosessi.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Start Event → User Task *Syötä salasana* → Exclusive Gateway ”Salasana oikein?”. Haara ”Ei” → *Näytä virheilmoitus* → End Event. Haara ”Kyllä” → Send Task *Lähetä vahvistuskoodi* → Event-Based Gateway, jota seuraa Message Intermediate Catch Event ”Koodi syötetty” → *Kirjaa käyttäjä sisään* → End Event sekä Timer Intermediate Catch Event `PT5M` → *Keskeytä kirjautuminen* → End Event. Vaihtoehtoisesti koodin syöttäminen voi olla User Task, johon liitetään keskeyttävä Timer Boundary Event.
+:::

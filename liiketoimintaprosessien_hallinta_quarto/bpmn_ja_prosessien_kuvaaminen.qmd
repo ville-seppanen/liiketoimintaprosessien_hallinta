@@ -205,7 +205,9 @@ Seuraavassa esimerkissä (@fig-tilauksen_hinnoittelu) on Script Task -tehtäviä
 
 BPMN-kielen graafisen esityksen taustalle prosessimallinnusvälineet tuottavat BPMN XML -muotoista koodia. Edellinen yksinkertainen Zeebe-skripti näyttää tältä.
 
- `<zeebe:script expression="=yksikkohinta * maara" resultVariable="hinta" />`
+```xml
+<zeebe:script expression="=yksikkohinta * maara" resultVariable="hinta" />
+```
 
 Kokonaishinta tallennetaan tulosmuuttujaan `resultVariable` nimellä `hinta`. *Laske tilauksen hinta* -tehtävää seuraavassa portissa muuttujan arvo tarkastetaan. Koska tilauksen hinta jää alle sadan euron (2 * 12,50 = 25,00), tilaukseen lisätään toimitusmaksu (@fig-lisataan_toimitusmaksu).
 
@@ -419,31 +421,45 @@ Edellä ajastintapahtumiin liittyvät aikamääreet on esitetty yleistajuisesti.
 
 *Fixed Date* -muotoa voidaan käyttää, kun prosessin tai tapahtuman halutaan alkavan tiettynä ajanhetkenä. Fixed Date esitetään muodossa:
 
-`YYYY-MM-DDTHH:MM:SS`
+```text
+YYYY-MM-DDTHH:MM:SS
+```
 
 eli esimerkiksi `2027-03-24T08:15:00`, mikä tarkoittaa vuoden 2027 maaliskuun 24. päivää ja kellonaikaa 8:15. Aikavyöhyke ilmaistaan liittämällä litanian perään ajan ero UTC-aikaan. Suomen normaaliaika on kaksi tuntia edellä koordinoitua yleisaikaa, joten edellinen aikamääre Suomen talviajassa olisi siis:
 
-`2027-03-24T08:15:00+02:00`
+```text
+2027-03-24T08:15:00+02:00
+```
 
 *Cyclen* avulla voidaan esittää toistuva ajankohta seuraavassa muodossa, eli toistokertojen määrä, aloitusaika, toistoväli:
 
-`R/StartTime/Duration`
+```text
+R/StartTime/Duration
+```
 
 Mikäli aloitusaikaa ei ilmoiteta, toistuva aika määrittyy tehtävän ensimmäisen kohtaamisen perusteella. Mikäli toistokertoja ei määritellä, toistoja tehdään loputtomasti. Loputtomiin kerran päivässä toistuva tapahtuma ilmaistaan:
 
-`R/P1D`
+```text
+R/P1D
+```
 
 ja vastaavasti kerran viikossa toistuva tapahtuma olisi:
 
-`R/P1W`
+```text
+R/P1W
+```
 
 Jos tehtävä yrittäisi vaikkapa hakea tietoa jostain verkkopalvelusta, voitaisiin se ajastaa yrittämään sitä esimerkiksi enintään viisi kertaa ja kymmenen sekunnin välein tapahtuen:
 
-`R5/PT10S`
+```text
+R5/PT10S
+```
 
 Seuraava aikamääre asettaisi aloituksen 1.6.2027 kello 9:00 ja tapahtuma tai prosessi toistuisi samalla kellonlyömällä päivittäin seitsemän päivän ajan:
 
-`R7/2027-06-01T09:00:00/PT1D`
+```text
+R7/2027-06-01T09:00:00/PT1D
+```
 
 jolloin viimeinen toistokerta tapahtuisi siis 7.6.2027 kello 9:00. *Duration* määrittelee odotusajan ennen prosessin jatkamista. Esimerkiksi:
 
