@@ -16,7 +16,6 @@ book:
     - prosessiautomaatio.qmd
     - tehtavat.qmd
     - tyovalineita.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

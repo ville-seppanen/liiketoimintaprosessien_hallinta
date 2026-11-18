@@ -2,15 +2,15 @@
 
 Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston Informaatioteknologian tiedekunnan kurssille Liiketoimintaprosessien hallinta.
 
-Kirjan alkuosa, luvut 1-7, käsittelevät liiketoimintaprosesseja, niiden hallintaa ja kehittämistä. Sen jälkeen luvussa 8 tarkastellaan prosessien mallintamista, keskittyen erityisesti Business Process Model and Notation -standardiin.
+Kirjan alkuosa, luvut 1–6, käsittelee liiketoimintaprosesseja, niiden hallintaa ja kehittämistä. Sen jälkeen luvussa 7 tarkastellaan prosessien mallintamista, keskittyen erityisesti Business Process Model and Notation -standardiin.
 
-Jos et ole lainkaan kiinnostunut prosessien mallintamisesta, voit jättää kahdeksannan luvun lukematta. Toisaalta jos olet kiinnostunut nimenomaan mallintamisesta, voit jättää kirjan alkupuolen vähemmälle huomiolle.
+Jos et ole lainkaan kiinnostunut prosessien mallintamisesta, voit jättää seitsemännen luvun lukematta. Toisaalta jos olet kiinnostunut nimenomaan mallintamisesta, voit jättää kirjan alkupuolen vähemmälle huomiolle.
 
 Osat kuitenkin hetkittäin väistämättä viittaavat toistensa suuntaan, joten suositeltavaa on tutustua tekstiin kokonaisuudessaan.
 
-Luvusta 9 löytyy harjoitustehtäviä. *Osaan tehtävistä on annettu myös malliratkaisut???* Huomaa kuitenkin, että hyvin harvaan tehtävään on olemassa vain yksi oikea vastaus.
+Luvusta 8 löytyy harjoitustehtäviä. *Osaan tehtävistä on annettu myös malliratkaisut???* Huomaa kuitenkin, että hyvin harvaan tehtävään on olemassa vain yksi oikea vastaus.
 
-Lopuksi luvussa 10 esitellään lyhyesti avoimia ja ilmaiseksi käytettävissä olevia ohjelmistoja prosessien kanssa työskentelyyn. Samoja ohjelmistoja on käytetty myös kurssin esimerkeissä.
+Lopuksi luvussa 9 esitellään lyhyesti avoimia ja ilmaiseksi käytettävissä olevia ohjelmistoja prosessien kanssa työskentelyyn. Samoja ohjelmistoja on käytetty myös kurssin esimerkeissä.
 
 Kiitokset seuraaville henkilöille sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
 

@@ -6,19 +6,19 @@ Käsitteet prosessimalli, prosessikaavio ja prosessin visualisointi ovat tulleet
 
 ### Mitä mallit ovat?
 
-Malli on abstrakti kuvaus jostakin ilmiöstä tai asiasta, kuten vaikkapa liiketoimintaprosessista. Mallin tarkoitus on auttaa ymmärtämään, hallitsemaan tai ennakoimaan jotain kohdetta tai kokonaisuutta tai sen toimintaa. Mallit ovat siis todellisuutta (mennyttä, nykyistä tai mahdollista tulevaa) kuvaavia abstrahoituja esityksiä, jotka säilyttävät ja välittävät kohdealuetta koskevaa tietoa. Abstrahointi tarkoittaa sitä, että monimutkaisesta ilmiöstä tai ongelmasta pyritään poistamaan epäoleelliset yksityiskohdat ja näin helpottamaan kuvaaman kohteen käsittelyä.
+Malli on abstrakti kuvaus jostakin ilmiöstä tai asiasta, kuten vaikkapa liiketoimintaprosessista. Mallin tarkoitus on auttaa ymmärtämään, hallitsemaan tai ennakoimaan jotain kohdetta tai kokonaisuutta tai sen toimintaa. Mallit ovat siis todellisuutta (mennyttä, nykyistä tai mahdollista tulevaa) kuvaavia abstrahoituja esityksiä, jotka säilyttävät ja välittävät kohdealuetta koskevaa tietoa. Abstrahointi tarkoittaa sitä, että monimutkaisesta ilmiöstä tai ongelmasta pyritään poistamaan epäoleelliset yksityiskohdat ja näin helpottamaan kuvattavan kohteen käsittelyä.
 
 Mallin keskeinen tarkoitus on tehdä kohteensa näkyväksi. Joissain tapauksissa malleilla esitettävien kohteiden suora havainnointi on hankalaa tai mahdotonta. Hankalasti havainnoitava asia on esimerkiksi edellä sivuttu ukonilman syntyminen, kun taas rakennusarkkitehdit voivat laatia malleja kohteista, joita ei ole vielä olemassakaan. Sääilmiöitä koskevat mallit tavallaan vastaavat tai pyrkivät vastaamaan nykytilan prosessikuvauksia, kun taas rakennusarkkitehdin laatima arkkitehtuurisuunnitelma vertautuu tavoitetilan suunniteltuun prosessikulkuun[^box].
 
-[^box]: Tilastotieteilijä George Box on todennut, että ”*All models are wrong, some are useful*” eli kaikki mallit ovat virheellisiä, mutta jotkin niistä ovat hyödyllisiä. Tämä kannattaa pitää mielessä, puhuttiinpa sitten Boxin alan tilastomatemaattisista malleista tai muista ilmiöitä abstrahoivista ja yleistävistä malleista, kuten prosessimalleista.
+[^box]: Tilastotieteilijä George Box on todennut, että ”*All models are wrong, but some are useful*” eli kaikki mallit ovat virheellisiä, mutta jotkin niistä ovat hyödyllisiä. Tämä kannattaa pitää mielessä, puhuttiinpa sitten Boxin alan tilastomatemaattisista malleista tai muista ilmiöitä abstrahoivista ja yleistävistä malleista, kuten prosessimalleista.
 
 Mallit voidaan jakaa kahteen pääkategoriaan: kuvaileviin malleihin (jotka kuvaavat nykyistä tilannetta) ja suunnittelumalleihin (jotka tukevat muutoksen suunnittelua ja toteutusta)[^mallit]. Kuvailevat mallit esittävät jotain olemassa olevaa asiaa tai ilmiötä, kuten vaikkapa rautatieverkostoa, asuinrakennusta, organisaation kokonaisarkkitehtuuria, tietojärjestelmää tai prosessia. Kuvailevia malleja voidaan käyttää esimerkiksi hallittaessa jotain monimutkaista kokonaisuutta, tunnistettaessa tarkasteltavan kohteen nykyisessä toteutuksessa olevia puutteita tai arvioitaessa kohteen yhteensopivuutta sen nykyisen tai tulevan ympäristön kanssa. Suunnittelumallien avulla puolestaan voidaan hahmotella johonkin nykyiseen asiaan aiottavaa muutosta tai jotain, mitä ei vielä ole – kuten vaikkapa se rakennusarkkitehdin suunnittelema rakennus. Suunnittelumalleja tarvitaan ensinnäkin suunnitellun muutoksen toteuttamiskelpoisuuden arviointiin ja sen jälkeen muutoksen toteuttamisen tueksi.
 
 [^mallit]: On olemassa lukuisia muitakin mallityyppejä, kuten ennustavat mallit (*predictive model*), joiden avulla pyritään ennakoimaan tulevaa eli jonkin kohteen tai ilmiön käyttäytymistä ja analyyttiset mallit (*analytical model*), jotka rikastavat mallin kohteen tarkastelua matemaattisten funktioiden, kuten differentiaaliyhtälöiden, ja määrällisen analyysin avulla.
 
-Lisäksi mallit voidaan jakaa epäformaaleihin, puoliformaaleihin ja formaaleihin malleihin. Oikeastaan formaalisuus on mallinnuksessa käytettävän mallinnustavan tai -kielen ominaisuus, jota kielellä luotu malli sitten noudattaa. Mallinnuskielen semantiikan[^semantiikka] ja syntaksin[^syntaksi]  määrittelyn tarkkuus vaikuttaa siihen, kuinka formaaleja malleja kielellä voidaan tuottaa. Mitä yksiselitteisemmät ja tarkemmin määritellyt semantiikka ja syntaksi ovat, sitä suurempi on mallien formaalisuus. Mallinnuskielen semantiikka viittaa kielen elementtien merkityksien määrittelyyn ja syntaksilla tarkoitetaan sääntöjä siitä, miten mallit ovat kielen avulla rakennettavissa. Se, että tummakärkinen nuoli esittää prosessin kulkua tehtävästä toiseen, on BPMN-kielen semantiikkaa. Vastaavasti se, tällainen nuoli ei voi liikkua uima-altaasta toiseen, on kielen syntaksia koskeva määrittely.
+Lisäksi mallit voidaan jakaa epäformaaleihin, puoliformaaleihin ja formaaleihin malleihin. Oikeastaan formaalisuus on mallinnuksessa käytettävän mallinnustavan tai -kielen ominaisuus, jota kielellä luotu malli sitten noudattaa. Mallinnuskielen semantiikan[^semantiikka] ja syntaksin[^syntaksi]  määrittelyn tarkkuus vaikuttaa siihen, kuinka formaaleja malleja kielellä voidaan tuottaa. Mitä yksiselitteisemmät ja tarkemmin määritellyt semantiikka ja syntaksi ovat, sitä suurempi on mallien formaalisuus. Mallinnuskielen semantiikka viittaa kielen elementtien merkityksien määrittelyyn ja syntaksilla tarkoitetaan sääntöjä siitä, miten mallit ovat kielen avulla rakennettavissa. Se, että tummakärkinen nuoli esittää prosessin kulkua tehtävästä toiseen, on BPMN-kielen semantiikkaa. Vastaavasti se, että tällainen nuoli ei voi liikkua uima-altaasta toiseen, on kielen syntaksia koskeva määrittely.
 
-[^semantiikka]: Semantiikka eli merkitysoppi tutkii sanojen ja ajatusten sisältöjä, merkityksiä ja viittauksia. Semantiikka on kielitieteen ja filosofian alalaji, mutta käsitettä käytetään myös puhekielessä jokseenkin samanlaisessa tarkoituksessa. Mallinnuskielissä kuten BPMN kielen semanttisen määrittelyn tarkkuus liittyy siihen, kuinka tarkasti ja yksiselitteisesti kielen elementit on määritelty. Jos prosessimallintajalle on esimerkiksi epäselvää, pitäisikö tietyssä tilanteessa käyttää Manual Task- vai User Task -tyyppistä tehtävää, on kyse kielen semantiikkaan liittyvästä ongelmasta.
+[^semantiikka]: Semantiikka eli merkitysoppi tutkii sanojen ja ajatusten sisältöjä, merkityksiä ja viittauksia. Semantiikka on kielitieteen ja filosofian alalaji, mutta käsitettä käytetään myös puhekielessä jokseenkin samanlaisessa tarkoituksessa. Mallinnuskielissä, kuten BPMN:ssä, kielen semanttisen määrittelyn tarkkuus liittyy siihen, kuinka tarkasti ja yksiselitteisesti kielen elementit on määritelty. Jos prosessimallintajalle on esimerkiksi epäselvää, pitäisikö tietyssä tilanteessa käyttää Manual Task- vai User Task -tyyppistä tehtävää, on kyse kielen semantiikkaan liittyvästä ongelmasta.
 
 [^syntaksi]: Syntaksi eli lauseoppi tarkastelee luonnollisen tai formaalin kielen merkkiyhdistelmiä (sanoja tai käsitteitä), niiden oikeaa muotoa (oikeinkirjoitus) ja oikeaa käyttöä (kielioppi ja lauserakenne). BPMN:n kaltaisissa visuaalisissa mallinnuskielissä käsitteiden oikeinkirjoitus on harvoin ongelma, koska sanoja vastaavat valmiit graafiset symbolit. Haasteet voivat sen sijaan liittyä mallien kielioppiin ja lauserakenteeseen, eli kuinka näitä symboleita tulisi käyttää kieliopillisesti oikean mallin muodostamiseksi. Samoin kuin suomenkielinen virke alkaa isolla alkukirjaimella ja päättyy lopettavaan välimerkkiin, BPMN-kielellä esitetty prosessimalli alkaa Start Event -tyyppisellä tapahtumalla ja päättyy End Event -tyyppiseen tai Terminate Event -tapahtumaan.
 
@@ -52,7 +52,7 @@ Pizzatilauksen prosessikaavio toisaalta osoittaa, että varsin yksinkertaisestak
 
 Esimerkin pizzatilausprosessi on siis käytännön kannalta lähes äärimmilleen yksinkertaistettu. Järkevä abstrahointi tässä tapauksessa voisi esimerkiksi tarkoittaa, ettei prosessikulun näkökulmasta tarvitse tietää, onko varastosta loppunut ananas, kinkkusuikaleet vai tomaattikastike (emme siis mallintaisi prosessiin päätöstaulua tai erillistä ehtoporttia jokaiselle täytevaihtoehdolle), vaan huomioisimme yleisesti sen, että jokin raaka-aine saattaa loppua. Prosessimalleja laadittaessa abstrahointi edellyttää mallintajalta toimialan tuntemusta tai aktiivista vuorovaikutusta toimialan asiantuntijoiden kanssa. Se, kuinka korkealta oksalta prosessia voidaan katsoa, jotta malli kuitenkin sisältää kaiken relevantin tiedon, riippuu tilanteesta, tarpeesta ja mallin käyttötarkoituksesta.
 
-Kaikki mallit ovat siis enemmän tai vähemmän puutteellisia ja virheellisiä kun niitä verrataan todellisuuteen. Boxin keskeinen kysymys olikin, kuinka virheellinen, puutteellinen tai abstrahoitu malli voi olla, ennen kuin se muuttuu hyödyttömäksi.
+Kaikki mallit ovat siis enemmän tai vähemmän puutteellisia ja virheellisiä, kun niitä verrataan todellisuuteen. Boxin keskeinen kysymys olikin, kuinka virheellinen, puutteellinen tai abstrahoitu malli voi olla, ennen kuin se muuttuu hyödyttömäksi.
 
 Malli pyrkii siis esittämään tarkoituksenmukaisesti abstrahoidun kuvauksen jostakin ilmiöstä, joka usein, mutta ei välttämättä aina, esiintyy myös todellisuudessa. Näin ilmiötä kyetään hahmottamaan, ymmärtämään ja ennakoimaan. Vastaavasti mallia voidaan verrata ympäröivästä todellisuudesta saatavaan palautteeseen. Tämän tulisi tarvittaessa johtaa mallin mukauttamiseen, täydentämiseen tai korjaamiseen (@fig-malli_vs_todellisuus). Edellisessä esimerkissä se, että prosessimalli ei huomioinut täytteen mahdollista loppumista, voisi olla todellisuuden esiin nostama palaute, joka johtaisi prosessimallin tarkentamiseen.
 
@@ -68,7 +68,7 @@ Semiotiikan näkökulmasta edellinen korostaa, että kielen ja todellisuuden suh
 
 Palataan vielä hetkeksi tapaukseen, jossa pizzerian keittiössä ananas oli päässyt loppumaan. IT-orientoitunut ihminen saattaisi ehdottaa ratkaisuksi vaikkapa yksinkertaista inventaariohallintajärjestelmää. Järjestelmä voisi välittää tilauksia vastaanottavalle asiakaspalvelijalle tiedon, kun ananas alkaa käydä vähiin. Tämä olisi varsin helppoa, mikäli järjestelmän tiedot päivittyisivät sisäänostojen ja myyntien perusteella. Edelleen järjestelmä voisi ananaksen loppuessa automaattisesti muuttaa ananasta tarvitsevien pizzojen tilaksi ”loppuunmyyty”.
 
-Malleihin, mallien laatimiseen ja niiden käyttöön liittyy myös riskejä, koska niiden jo määritelmällisestikin oletetaan kuvaavan todellisuutta, mutta toisaalta ne ovat lähes aina myös jollain tavalla puutteellisia. Ajatellaan, että pizzeria päättäisi hankkia joltain ohjelmistotalolta verkkotilausjärjestelmän. Osana järjestelmän vaatimusmäärittelydokumentaatiota pizzeria tarjoasi edellä nähdyn prosessimallin (@fig-pizzatilaus), ja järjestelmä rakennettaisiin sen mukaisesti. Järjestelmä ja erityisesti pizzerian toiminta alkaisivat yskähdellä heti, kun saapuu tilaus, jota jonkin raaka-aineen loppumisen vuoksi ei kyettäisi toimittamaan. Järjestelmä sinällään toimisi vaatimusten mukaisesti, mutta koska toiminnalliset vaatimukset olivat puutteellisen ja epätarkan prosessimallin vuoksi esitetty yhtä lailla puutteellisesti ja epätarkasti, ei järjestelmä vastaisi liiketoiminnan tarpeita. Tämä korostaa liiketoiminnan ymmärtämisen merkitystä prosessimalleja laadittaessa. Sen puuttuessa taitavakaan mallintaja ei pysty tuottamaan hyvää prosessimallia. Yhteen vetäen, hyvä prosessimalli
+Malleihin, mallien laatimiseen ja niiden käyttöön liittyy myös riskejä, koska niiden jo määritelmällisestikin oletetaan kuvaavan todellisuutta, mutta toisaalta ne ovat lähes aina myös jollain tavalla puutteellisia. Ajatellaan, että pizzeria päättäisi hankkia joltain ohjelmistotalolta verkkotilausjärjestelmän. Osana järjestelmän vaatimusmäärittelydokumentaatiota pizzeria tarjoaisi edellä nähdyn prosessimallin (@fig-pizzatilaus), ja järjestelmä rakennettaisiin sen mukaisesti. Järjestelmä ja erityisesti pizzerian toiminta alkaisivat yskähdellä heti, kun saapuu tilaus, jota jonkin raaka-aineen loppumisen vuoksi ei kyettäisi toimittamaan. Järjestelmä sinällään toimisi vaatimusten mukaisesti, mutta koska toiminnalliset vaatimukset olivat puutteellisen ja epätarkan prosessimallin vuoksi esitetty yhtä lailla puutteellisesti ja epätarkasti, ei järjestelmä vastaisi liiketoiminnan tarpeita. Tämä korostaa liiketoiminnan ymmärtämisen merkitystä prosessimalleja laadittaessa. Sen puuttuessa taitavakaan mallintaja ei pysty tuottamaan hyvää prosessimallia. Yhteenvetona: hyvä prosessimalli
 
 - vastaa käyttötarkoitustaan,
 - perustuu tietoon, joka on kerätty useista eri tietolähteistä,
@@ -77,7 +77,7 @@ Malleihin, mallien laatimiseen ja niiden käyttöön liittyy myös riskejä, kos
 - ei sisällä syntaktisia, semanttisia tai loogisia virheitä,
 - on ymmärrettävä, visuaalisesti selkeä ja tekee prosessitiedosta läpinäkyvää.
 
-Mendling ym. [-@mendling2010seven] ovat esittäneet seitsemän konkreettista ohjetta prosessimallintajille. Tutkimusta tehdessään he huomasivat, että nämä ohjeet saattavat olla joissain tapauksissa keskenään ristiriitaisia. Esimerkiksi yksi ohjeista on, että mallin tulisi sisältää mahdollisimman vähän elementtejä, kun taas toinen ohje kuuluu, että reititysten määrä tulisi pyrkiä minimoimaan. Siinä missä pienempi määrä elementtejä tekee mallista helpommin ymmärrettävän, reitityspolkujen karsimisesta usein seuraa tarve lisätä elementtien määrää. Tämän vuoksi Mendling ym. [-@mendling2010seven] priorisoivat ohjeet perustuen keskusteluihinsa prosessimallinuksen asiantuntijoiden ja ammattilaisten kanssa. Mikäli ohjeet asettavat mallille ristiriitaisia vaatimuksia, tulee niitä soveltaa prioriteettijärjestyksessä. Mendlingin ym. [-@mendling2010seven][^mallinnusohjeet] ohjeet ovat:
+Mendling ym. [-@mendling2010seven] ovat esittäneet seitsemän konkreettista ohjetta prosessimallintajille. Tutkimusta tehdessään he huomasivat, että nämä ohjeet saattavat olla joissain tapauksissa keskenään ristiriitaisia. Esimerkiksi yksi ohjeista on, että mallin tulisi sisältää mahdollisimman vähän elementtejä, kun taas toinen ohje kuuluu, että reititysten määrä tulisi pyrkiä minimoimaan. Siinä missä pienempi määrä elementtejä tekee mallista helpommin ymmärrettävän, reitityspolkujen karsimisesta usein seuraa tarve lisätä elementtien määrää. Tämän vuoksi Mendling ym. [-@mendling2010seven] priorisoivat ohjeet perustuen keskusteluihinsa prosessimallinnuksen asiantuntijoiden ja ammattilaisten kanssa. Mikäli ohjeet asettavat mallille ristiriitaisia vaatimuksia, tulee niitä soveltaa prioriteettijärjestyksessä. Mendlingin ym. [-@mendling2010seven][^mallinnusohjeet] ohjeet ovat:
 
 [^mallinnusohjeet]: Näihin ohjeisiin kannattaa palata uudelleen, kun on perehtynyt BPMN-kieltä käsittelevään osuuteen.
 
@@ -85,7 +85,7 @@ Mendling ym. [-@mendling2010seven] ovat esittäneet seitsemän konkreettista ohj
 2.	Minimoi reitityspolkujen määrä per elementti. Mitä suurempi elementin aste prosessimallissa on (eli yhteenlaskettu sisään tulevien ja ulos lähtevien virtojen (*sequence flow*) määrä), sitä vaikeampi mallia on ymmärtää. Mendlingin ym. [-@mendling2010seven] artikkelissa viitattujen tutkimusten mukaan elementtien määrällä ja asteilla on vahva korrelaatio mallinnusvirheiden määrän kanssa.
 3.	Käytä yhtä aloitustapahtumaa ja yhtä lopetustapahtumaa. Myös aloitus- ja lopetustapahtumien määrän kasvu on yhteydessä virheiden todennäköisyyden kasvuun ja hankaloittaa mallin ymmärtämistä. Yhtä aloitus- ja lopetustapahtumaa käyttävien mallien oikeellisuuden tarkastaminen on helpompaa. Lisäksi useimmat työnkulkuautomaatiojärjestelmät edellyttävät yhtä aloitus- ja lopetustapahtumaa[^cam_poikkeus].
 4.	Mallinna mahdollisimman rakenteisesti. Tällä tarkoitetaan, että jokaiselle prosessivirran jakavalle portille tulee vastinparina mallista löytyä samaa tyyppiä oleva yhdistävä portti. Tämä vertautuu esimerkiksi ohjelmakoodissa tai matemaattisissa lausekkeissa käytettyihin sulkumerkkeihin: jokaisella avaavalla sulkumerkillä tulee olla sulkeva pari. Tutkimusten mukaan rakenteettomissa malleissa virheiden todennäköisyys on suurempi, ja ihmiset myös ymmärtävät niitä huonommin.
-5.	Vältä OR-reitityselementtejä. Mendling ym. [-@mendling2010seven] neuvovat välttämään OR- eli *Inclusive gateway* -päätösportteja, koska tutkimusten mukaan niihin liittyy helposti semanttista epäselvyyttä ja toteutusongelmia. AND- (esim. *Parallel port*) ja XOR-portit (esim. *Exclusive port*) on todettu vähemmän virhealttiiksi.
+5.	Vältä OR-reitityselementtejä. Mendling ym. [-@mendling2010seven] neuvovat välttämään OR- eli *Inclusive Gateway* -päätösportteja, koska tutkimusten mukaan niihin liittyy helposti semanttista epäselvyyttä ja toteutusongelmia. AND- (*Parallel Gateway*) ja XOR-portit (*Exclusive Gateway*) on todettu vähemmän virhealttiiksi.
 6.	Käytä aktiviteettien nimissä verbi-objekti -muotoa. Tutkimuksissa, joissa on tarkasteltu todellisissa prosessimalleissa käytettyjä nimeämiskäytänteitä, on kahdeksi vallitsevaksi tyyliksi tunnistettu verbi-objektia (esimerkiksi ”Käsittele reklamaatio”) sekä aktiviteetin teon nimeä (esimerkiksi ”Reklamaation käsittely”) käyttävät muodot. Kolmas yleisesti käytetty tyyli on nimetä aktiviteetit epämääräisemmin toiminnan kontekstilla (esimerkiksi ”Reklamaatio”). Mendling ym. [-@mendling2010seven] ehdottavat verbi-objekti -muotoa parhaaksi käytänteeksi.
 7.	Jaa malli osiin, mikäli siinä on yli 50 elementtiä. Mallin koon ja virheiden välillä on todettu olevan voimakas positiivinen korrelaatio. Mendlingin ym. [-@mendling2007understanding] toisen tutkimuksen mukaan malleissa, joissa on yli 50 elementtiä, on virheiden todennäköisyys taipuvainen kasvamaan yli 50 prosentin. Näin ollen he suosittelevatkin, että suuret mallit tulisi jakaa pienemmiksi osamalleiksi. Huomautettakoon kuitenkin, että osiin jaettujen mallien ylläpito sekä niiden koherenssin ja konsistenssin toteuttaminen voi olla yksittäistä, suurtakin, mallia hankalampaa. Useimmat prosessimallinnusvälineet osaavat kuitenkin haluttaessa piilottaa aliprosessien tarkemman työnkulun, jolloin monimutkainen malli on mahdollista näin jakaa osiin ja myös mallintaa osissa, vaikka mallia ei tosiasiassa pilkottaisikaan.
 
@@ -125,9 +125,9 @@ BPMN on paitsi virallinen standardi myös *de facto* -standardi liiketoimintapro
 
 [^camunda]: https://camunda.com/platform/modeler/
 
-Seuraavissa alaluvuissa käydään läpi BPMN 2.0:n ominaisuuksia prosessien graafisessa mallintamisessa. Vaikka niissä käsitellään BPMN-kieli kokonaisuudessaan, todettakoon, että varsin pieni osajoukko kielen elementtejä riittää varsin pitkälle yksikertaisten ja ainoastaan ihmisten luettaviksi tarkoitettujen prosessien suunnittelussa, dokumentoinnissa ja viestinnässä. BPMN sisältää kuitenkin useita hienostuneempia elementtejä ja ominaisuuksia monimutkaisempien ja yksityiskohtaisempien prosessikulkujen esittämiseksi sekä niiden automatisoimiseksi.
+Seuraavissa alaluvuissa käydään läpi BPMN 2.0:n ominaisuuksia prosessien graafisessa mallintamisessa. Vaikka niissä käsitellään BPMN-kieli kokonaisuudessaan, todettakoon, että varsin pieni osajoukko kielen elementtejä riittää varsin pitkälle yksinkertaisten ja ainoastaan ihmisten luettaviksi tarkoitettujen prosessien suunnittelussa, dokumentoinnissa ja viestinnässä. BPMN sisältää kuitenkin useita hienostuneempia elementtejä ja ominaisuuksia monimutkaisempien ja yksityiskohtaisempien prosessikulkujen esittämiseksi sekä niiden automatisoimiseksi.
 
-Palataan vielä kerran hetkeksi pizzatilausesimerkkin (@fig-pizzatilaus.svg) pariin.
+Palataan vielä kerran hetkeksi pizzatilausesimerkin (@fig-pizzatilaus.svg) pariin.
 
 ![Pizzatilausprosessi](kuviot/pizzatilaus.svg){#fig-pizzatilaus.svg fig-alt="Klassinen esimerkki pizzatilauksen prosessista."}
 
@@ -139,7 +139,7 @@ Tehtäviä yhdistävät nuolet esittävät prosessin kulkua eli sitä, missä j�
 
 Ympyrän muotoisilla symboleilla esitetään prosessin aikana toteutuvia tapahtumia. Tapahtumat eroavat tehtävistä siinä, että ne eivät ole tekemistä, jonka jokin prosessiin osallistuva toimija suorittaisi, vaan ne pikemminkin – nimensä mukaisesti – ”tapahtuvat”, ja signaalien tai herätteiden tapaan saavat aikaan muutoksen prosessin tilassa. Prosessin aloitus ja lopetus ovat tapahtumia. Aloituksen ja lopetuksen lisäksi tapahtumia voi esiintyä myös prosessikulun aikana. Pizzatilausesimerkissä on viisarikellon näköinen tapahtuma, joka on nimetty *60 minuuttia*. Tämä tapahtuma aktivoituu silloin, kun 60 minuuttia on kulunut. Tällöin prosessikulku etenee tapahtumaan liittyvää haaraa ja asiakas suorittaa tehtävän *Tiedustele pizzaa*. On myös mahdollista, että pizza toimitetaan asiakkaalle alle tunnissa, jolloin tapahtuma *60 minuuttia* ei ehdi toteutua. Tapahtumat ovatkin ehdollisia, ja niiden avulla prosessi voidaan saada reagoimaan myös poikkeustilanteisiin.
 
-Vinoneliösymboleilla esitetään portteja, jotka määrittävät prosessin kulun haarautumista, yhdistymistä ja synkronointia. Näissä kohdissa tehdään päätös siitä, kuinka prosessin kulku etenee. Ne voivat esimerkiksi ohjata tilanteen mukaan prosessin vaihtoehtoisiin suuntiin tai ne voivat jakaa prosessin useampaan rinnakkain suoritettaan haaraan.
+Vinoneliösymboleilla esitetään portteja, jotka määrittävät prosessin kulun haarautumista, yhdistymistä ja synkronointia. Näissä kohdissa tehdään päätös siitä, kuinka prosessin kulku etenee. Ne voivat esimerkiksi ohjata tilanteen mukaan prosessin vaihtoehtoisiin suuntiin tai ne voivat jakaa prosessin useampaan rinnakkain suoritettavaan haaraan.
 
 ### Virrat ja yhteydet
 
@@ -147,11 +147,11 @@ Aloitetaan BPMN:n tarkempi läpikäynti käsittelemällä erilaiset nuolet ja vi
 
 ![Prosessimalliin Association-yhteydellä liitettyjä huomautuksia](kuviot/association.svg){#fig-association}
 
-Vaikka prosessimalliin lisätyt huomautukset ja kommentit eivät mallia varsinaisesti kaunista, on niiden runsas käyttäminen kuitenkin suositeltavaa. Hankalasti seurattavia tai monimutkaisia prosessikulkuja voidaan dokumentoida ohjelmakoodin kommenttien tavoin. Prosessikehittäjät ja mallintajat voivat käyttää niitä jättääkseen toisilleen -- tai miksei itselleenkin -- kysymyksiä, huomautuksia tai selvennyksiä: ”*Toimiiko tämä näin?*”, *”Tämä kohta täytyy vielä varmistaa myymäläpäälliköiltä!*”, ”*Päivämäärämuuttujan arvo tulee Oraclesta amerikkalaisessa muodossa. Se käännetään tällä skriptillä suomalaiseen muotoon ja tallennetaan muuttajaan pvm.*”
+Vaikka prosessimalliin lisätyt huomautukset ja kommentit eivät mallia varsinaisesti kaunista, on niiden runsas käyttäminen kuitenkin suositeltavaa. Hankalasti seurattavia tai monimutkaisia prosessikulkuja voidaan dokumentoida ohjelmakoodin kommenttien tavoin. Prosessikehittäjät ja mallintajat voivat käyttää niitä jättääkseen toisilleen -- tai miksei itselleenkin -- kysymyksiä, huomautuksia tai selvennyksiä: ”*Toimiiko tämä näin?*”, *”Tämä kohta täytyy vielä varmistaa myymäläpäälliköiltä!*”, ”*Päivämäärämuuttujan arvo tulee Oraclesta amerikkalaisessa muodossa. Se käännetään tällä skriptillä suomalaiseen muotoon ja tallennetaan muuttujaan pvm.*”
 
 Dokumentaatio myös helpottaa prosessimallin ymmärtämistä silloin, kun prosessin katselija ei ole BPMN-kielen asiantuntija. Annotaatioiden avulla voidaan myös tehdä näkyväksi toimintoja, jotka eivät välttämättä prosessin graafisessa esityksessä tule esille. Tällaisia tapauksia ovat esimerkiksi myöhemmin käsiteltävät *Script*- ja *Business Rule* -tehtävät.
 
-Toinen prosessimalleissa käytettävä assosiaatiosuhte on *Data Association*, jonka avulla voidaan esittää prosessin ja tietovaraston (*Data Store*) välillä toteutuvia tietovirtoja. Yhteyttä, jossa prosessista liikkuu tietoa tietovarastoon, kutsutaan nimellä *Data Output Association*. Kun ilmaistaan tiedon siirtymistä tietovarastosta prosessille, yhteyttä kutsutaan nimellä *Data Input Association* (@fig-data_association). Data Storea ja Data Associationia käsitellään hieman tarkemmin luvussa 5.5.
+Toinen prosessimalleissa käytettävä assosiaatiosuhte on *Data Association*, jonka avulla voidaan esittää prosessin ja tietovaraston (*Data Store*) välillä toteutuvia tietovirtoja. Yhteyttä, jossa prosessista liikkuu tietoa tietovarastoon, kutsutaan nimellä *Data Output Association*. Kun ilmaistaan tiedon siirtymistä tietovarastosta prosessille, yhteyttä kutsutaan nimellä *Data Input Association* (@fig-data_association). Data Storea ja Data Associationia käsitellään hieman tarkemmin myöhemmin tässä luvussa.
 
 ![Data Store ja siihen liittyvät Data Input Association- ja Data Output Association -yhteydet](kuviot/data_association.svg){#fig-data_association}
 
@@ -159,7 +159,7 @@ Toinen prosessimalleissa käytettävä assosiaatiosuhte on *Data Association*, j
 
 BPMN-kielessä virrasta eli Sequence Flow:sta on kaksi erikoisversiota: *Conditional Flow* sekä *Default Flow*. Conditional Flow on ehdollinen järjestysvirta, jota pitkin edetään vain, jos jokin määritelty ehto täyttyy. Sitä voidaan käyttää toteuttamaan *Exclusive*- ja *Inclusive* -päätösportteja vastaavaa toiminnallisuutta. Päätösportteja käsitellään myöhemmin tässä luvussa. Conditional Flow’n käyttö on kuitenkin melko harvinaista, koska sama logiikka voidaan esittää myös päätösportteja käyttäen. Conditional Flow ilmaistaan virtanuolen alussa olevalla valkoisella viistoneliöllä.
 
-Default Flow’n avulla voidaan määritellä oletusvirta, jota seurataan, ellei mikään ehto täyty tai jos useampi ehto täyttyy saman aikaisesti. Default Flow ilmaistaan virtanuolta leikkaavalla vinolla poikkiviivalla. Oletusvirran määrittely on suositeltavaa aina päätösportteja käytettäessä. Sen avulla voidaan estää tilanne, jossa prosessi jäisi jumiin, mikäli mikään määritellyistä ehdoista ei täyty. Toki sama varmistus voidaan toteuttaa huolellisella if-else-rakenteen suunnittelulla, mutta oletusvirran käyttö on helppo tapa pelata varman päälle. (@fig-sec_def_cond)
+Default Flow’n avulla voidaan määritellä oletusvirta, jota seurataan, ellei mikään ehto täyty tai jos useampi ehto täyttyy samanaikaisesti. Default Flow ilmaistaan virtanuolta leikkaavalla vinolla poikkiviivalla. Oletusvirran määrittely on suositeltavaa aina päätösportteja käytettäessä. Sen avulla voidaan estää tilanne, jossa prosessi jäisi jumiin, mikäli mikään määritellyistä ehdoista ei täyty. Toki sama varmistus voidaan toteuttaa huolellisella if-else-rakenteen suunnittelulla, mutta oletusvirran käyttö on helppo tapa pelata varman päälle. (@fig-sec_def_cond)
 
 ![Sequence Flow, Default Flow ja Conditional Flow](kuviot/seq_def_cond.svg){#fig-sec_def_cond}
 
@@ -185,17 +185,17 @@ Ihmisen suoritettavaksi tarkoitettuja tehtävätyyppejä on kaksi. *Manual Task*
 
 #### User Task
 
-Myös *User Task* (@fig-user_task) ilmaisee ihmisen suorittamaa tehtävää. Se on kuitenkin tehtävä, joka on suoritetaan IT:n -- tyypillisesti jonkin ohjelmiston tai järjestelmän -- avulla. Erottelu manuaalisten ja IT-avusteisten tehtävien välillä johtuu siitä, että BPMN-kieltä voidaan käyttää automatisoitavien prosessien mallintamiseen, jolloin näillä kahdella ihmisen suorittamalla tehtävällä voi olla hyvinkin erilainen merkitys.
+Myös *User Task* (@fig-user_task) ilmaisee ihmisen suorittamaa tehtävää. Se on kuitenkin tehtävä, joka suoritetaan IT:n -- tyypillisesti jonkin ohjelmiston tai järjestelmän -- avulla. Erottelu manuaalisten ja IT-avusteisten tehtävien välillä johtuu siitä, että BPMN-kieltä voidaan käyttää automatisoitavien prosessien mallintamiseen, jolloin näillä kahdella ihmisen suorittamalla tehtävällä voi olla hyvinkin erilainen merkitys.
 
 ![User Task ilmaisee ihmisen tietokoneella suorittamaa tehtävää, kuten tietojen syöttöä](kuviot/user_task.svg){#fig-user_task}
 
-User Taskissa luetaan, käytetään tai tuotetaan tietoa ohjelmistoa käyttäen, esimerkiksi täyttämällä sähköinen lomake, kun taas Manual Task -tehtävät liittyvät tyypillisesti vuorovaikutukseen "fyysien maailman" kanssa.
+User Taskissa luetaan, käytetään tai tuotetaan tietoa ohjelmistoa käyttäen, esimerkiksi täyttämällä sähköinen lomake, kun taas Manual Task -tehtävät liittyvät tyypillisesti vuorovaikutukseen "fyysisen maailman" kanssa.
 
 #### Script Task
 
 *Script Task* -tehtävätyypillä esitetään tehtäviä, jotka suoritetaan prosessin aikana automaattisesti koodiskriptin avulla ilman ihmisen osallistumista. Käytännössä siis prosessikulun saapuessa Script Task -tehtävään, käynnistetään ennalta määritelty ohjelmakoodi, joka tavallisesti käsittelee prosessimuuttujiin tallennettuja arvoja.
 
-Seuraavassa esimerkissä (@fig-tilauksen_hinnoittelu) on Script Task -tehtäviä käyttävä prosessikulku. Asiakkaalta laskutetaan 9,90 € toimitusmaksu ellei tilattujen tuotteiden hinta ole vähintään 100,00 €. Esimerkissä Camunda-ympäristössä suoritettavalle prosessille tilatun tuotteen yksikköhinnaksi annetaan 12,50 € ja niitä on tilattu kaksi kappaletta.
+Seuraavassa esimerkissä (@fig-tilauksen_hinnoittelu) on Script Task -tehtäviä käyttävä prosessikulku. Asiakkaalta laskutetaan 9,90 € toimitusmaksu, ellei tilattujen tuotteiden hinta ole vähintään 100,00 €. Esimerkissä Camunda-ympäristössä suoritettavalle prosessille tilatun tuotteen yksikköhinnaksi annetaan 12,50 € ja niitä on tilattu kaksi kappaletta.
 
 ![Tilauksen kokonaishinnan muodostaminen](kuviot/tilauksen_hinnoittelu.png){#fig-tilauksen_hinnoittelu}
 
@@ -203,7 +203,7 @@ Seuraavassa esimerkissä (@fig-tilauksen_hinnoittelu) on Script Task -tehtäviä
 
 ![Laske tilauksen hinta](kuviot/yksikkohinta_x_maara.png){#fig-kokonaishinta}
 
-BPMN-kielen graafisen esityksen taustalle prosessimallinnusvälineet tuottavat BPMN XML -muotosta XML-koodia. Edellinen yksinkertainen Zeebe-skripti näyttää tältä.
+BPMN-kielen graafisen esityksen taustalle prosessimallinnusvälineet tuottavat BPMN XML -muotoista koodia. Edellinen yksinkertainen Zeebe-skripti näyttää tältä.
 
  `<zeebe:script expression="=yksikkohinta * maara" resultVariable="hinta" />`
 
@@ -215,7 +215,7 @@ Kun prosessi suoritetaan Camundan ajoympäristössä edellisillä muuttujien arv
 
 ![Tilauksen hinnoittelu -prosessi suoritettuna ajoympäristössä](kuviot/tilaus_runtime.png){#fig-tilaus_runtime}
 
-Seuraavassa tilauksen käsittelyn prosessimallissa käytetään kaikkia kolme tähän mennessä esiteltyä tehtävätyyppiä (@fig-tilauksen-kasittely-valiyhtveto).
+Seuraavassa tilauksen käsittelyn prosessimallissa käytetään kaikkia kolmea tähän mennessä esiteltyä tehtävätyyppiä (@fig-tilauksen-kasittely-valiyhtveto).
 
 ![Tilauksen käsittely](kuviot/tilauksen-kasittely-valiyhtveto.svg){#fig-tilauksen-kasittely-valiyhtveto}
 
@@ -227,7 +227,7 @@ Ensimmäinen tehtävä, Laske tilauksen hinta, on Script Task, jossa tilauksen k
 
 ![Service Task -tehtävän avulla voidaan kutsua prosessin ulkopuolista järjestelmää](kuviot/service_task.svg){#fig-service_task}
 
-Seuraavassa esimerkissä (@fig-ytunnus) käytetään Patentti- ja rekisterihallituksen Yritys- ja yhteisötietojärjestelmää[^ytj]
+Seuraavassa esimerkissä (@fig-ytunnus) käytetään Patentti- ja rekisterihallituksen ja Verohallinnon yhteistä Yritys- ja yhteisötietojärjestelmää (YTJ)[^ytj] asiakasyrityksen tietojen hakemiseen.
 
 [^ytj]: https://www.ytj.fi/
 
@@ -247,7 +247,7 @@ Kun prosessi suoritetaan, se kutsuu YTJ-palvelua, joka palauttaa yritystunnusta 
 
 [^dmn]: https://www.omg.org/dmn/
 
-![Business Rule Taskin avulla prosessin aikana voidaaan suorittaa sääntöperusteita automaattista päätöksentekoa](kuviot/business_rule_task.svg){#fig-business_rule_task}
+![Business Rule Taskin avulla prosessin aikana voidaan suorittaa sääntöperusteista automaattista päätöksentekoa](kuviot/business_rule_task.svg){#fig-business_rule_task}
 
 Päätöksen tekeminen tapahtuu niin, että tehtävään menee syötteenä joitain tietoja, joita verrataan ennalta määriteltyihin ehtoihin, joiden perusteella päätös tehdään. Prosessimuuttujille voidaan asettaa päätöksen mukaiset arvot ja prosessikulku etenee Business Rule Taskin jälkeen päätöstä vastaavasti (@fig-dmn-hakemus).
 
@@ -287,7 +287,7 @@ Edellinen Call Activityn kutsuma tunnistautumisprosessi voisi näyttää seuraav
 
 ![Kaksivaiheisen tunnistautumisen prosessi](kuviot/kaksivaiheinen-tunnistautuminen.png){#fig-kaksivaiheinen-tunnistautuminen}
 
-Samaa tunnistautumisprosessia voitaisiin kutsua kirjautumisen, salasanan vaihdon tai vaikkappa tilitietojen muuttamisen yhteydessä. Jos tunnistautumistapa muuttuu, muutos tarvitsee tehdä vain yhteen paikkaan.
+Samaa tunnistautumisprosessia voitaisiin kutsua kirjautumisen, salasanan vaihdon tai vaikkapa tilitietojen muuttamisen yhteydessä. Jos tunnistautumistapa muuttuu, muutos tarvitsee tehdä vain yhteen paikkaan.
 
 Call Activityllä kutsuttava prosessi on myös suoritettavissa useana instanssina, eli se on esimerkiksi mahdollista suorittaa jokaiselle asiakkaalle erikseen saman prosessikulun aikana.
 
@@ -328,19 +328,19 @@ Sequential Multi-Instance puolestaan käynnistää tehtävät peräkkäisinä. S
 
 ![Tehtävän toteutus rinnakkaisina instansseina (Parallel Multi-instance) ja peräkkäisinä instansseina (Sequential Multi-instance)](kuviot/multi_instance.svg){#fig-multi_instance}
 
-Seuraava esimerkki (@fig-multi_esim1) kuvaa tilannetta, jossa asiakas asioi myymälässä. Kukin hänen tilaamansa tuote poimitaan varaston hyllyltä, yksi kerrallaan ja peräkkäisessä järjestyksessä (). Tämän jälkeen asiakkaalta peritään maksu. Maksua penätään asiakkaalta tarvittaessa useampaan kertaan, ennen kuin tuotteet luovutetaan. Jos asiakas ei maksa viidennelläkään pyynnöllä (loopMaximum = 5), ei tuotteita luovuteta.
+Seuraava esimerkki (@fig-multi_esim1) kuvaa tilannetta, jossa asiakas asioi myymälässä. Kukin hänen tilaamansa tuote poimitaan varaston hyllyltä, yksi kerrallaan ja peräkkäisessä järjestyksessä. Tämän jälkeen asiakkaalta peritään maksu. Maksua penätään asiakkaalta tarvittaessa useampaan kertaan, ennen kuin tuotteet luovutetaan. Jos asiakas ei maksa viidennelläkään pyynnöllä (loopMaximum = 5), ei tuotteita luovuteta.
 
 ![Tehtävän toistaminen peräkkäin (tuotteiden kerääminen) ja kunnes ehto täyttyy (maksusuoritus tehty)](kuviot/multi_esim1.svg){#fig-multi_esim1}
 
-Toisen esimerkin (@fig-multi_esim2) tilaus liittyy digitaalisiin tuotteisiin, joihin käyttäjälle annetaan maksun jälkeen käyttöoikeudet. Kaikki käyttöoikeudet voidaan luovuttaa kerralla, joten tehtävän instanssit voidaan suorittaa rinnakkain. Prosessi päättyy ilman käyttöoikeuksia luovuttamista, mikäli asiakas ei ole maksanut tilaustaan kahden maksumuistutuksen jälkeen.
+Toisen esimerkin (@fig-multi_esim2) tilaus liittyy digitaalisiin tuotteisiin, joihin käyttäjälle annetaan maksun jälkeen käyttöoikeudet. Kaikki käyttöoikeudet voidaan luovuttaa kerralla, joten tehtävän instanssit voidaan suorittaa rinnakkain. Prosessi päättyy ilman käyttöoikeuksien luovuttamista, mikäli asiakas ei ole maksanut tilaustaan kahden maksumuistutuksen jälkeen.
 
-![Usean tehtäväinstannsin suorittaminen rinnakkain](kuviot/multi_esim2.svg){#fig-multi_esim2}
+![Usean tehtäväinstanssin suorittaminen rinnakkain](kuviot/multi_esim2.svg){#fig-multi_esim2}
 
 Ad-hoc -prosessi tai -aliprosessi on BPMN-kielen villi kortti (@fig-ad-hoc).
 
 ![Ad-hoc -aliprosessi](kuviot/ad-hoc.svg){#fig-ad-hoc}
 
-Sen avulla voidaan esittää tehtäväsarjoja, joiden suoritusjärjestys ei ole ennalta määritelty. Ad-hoc -prosessiin kuuluvat tehtävät voidaan suorittaa kokonaan tai osittain, vapaassa järjestyksessä tai vaikka rinnakkain (@fig-ad-hoc_auki). Näin ollen ad-hoc -prosessille ei myöskään määritellä prosessikulkua. Ad-hoc -tyyppinen prosessi merkitään matematiikassa approksimaatiota ilmaisevalla tilde-merkillä (~).
+Sen avulla voidaan esittää tehtäväsarjoja, joiden suoritusjärjestys ei ole ennalta määritelty. Ad-hoc -prosessiin kuuluvat tehtävät voidaan suorittaa kokonaan tai osittain, vapaassa järjestyksessä tai vaikka rinnakkain (@fig-ad-hoc_auki). Näin ollen ad-hoc -prosessille ei myöskään määritellä prosessikulkua. Ad-hoc -tyyppinen prosessi merkitään tilde-merkillä (~), jolla matematiikassa ilmaistaan approksimaatiota.
 
 ![Siivoa työpiste -ad-hoc-prosessin tehtävät](kuviot/ad-hoc_auki.png){#fig-ad-hoc_auki}
 
@@ -352,9 +352,9 @@ Siinä missä edellä käsitellyt tehtävät kuvaavat prosessin aikana suoritett
 
 Jotkin intermediate-tyyppisistä tapahtumista voidaan myös liittää tehtävään, jolloin niitä kutsutaan nimellä *Boundary Event*. Tällainen rajatapahtuma voi olla keskeyttävä (*interrupting*) tai ei-keskeyttävä (*non-interrupting*), jolloin se esitetään kaksoiskatkoviivalla (@fig-boundaryt).
 
-![Keskeyttävä (Interrupting)ja ei-keskeyttävä (Non-interrupting) Boundary Event](kuviot/boundaryt.png){#fig-boundaryt}
+![Keskeyttävä (Interrupting) ja ei-keskeyttävä (Non-interrupting) Boundary Event](kuviot/boundaryt.png){#fig-boundaryt}
 
-Mikäli tilauksen käsittelyn aikana vastaanotettaisiin ilmoitus tilauksen peruutuksesta, tehtävän suorittaminen lopetettaisiin. Vastaavasti asiakkaan ilmoittama tieto osoitteen muutoksesta ei keskeyttäisi tilauksen käsittely, vaan johtaisi tilauksen osoitetiedon päivittämiseen. 
+Mikäli tilauksen käsittelyn aikana vastaanotettaisiin ilmoitus tilauksen peruutuksesta, tehtävän suorittaminen lopetettaisiin. Vastaavasti asiakkaan ilmoittama tieto osoitteen muutoksesta ei keskeyttäisi tilauksen käsittelyä, vaan johtaisi tilauksen osoitetiedon päivittämiseen. 
 
 Keskeyttävän ja ei-keskeyttävän tapahtuman toiminnalliset erot on esitetty seuraavassa taulukossa (@tbl-keskeyttava-tapahtuma).
 
@@ -371,7 +371,7 @@ Seuraavassa kuviossa (@fig-eventteja) on tilauskäsittelyn prosessimalli, jossa 
 
 ![Start Event, Boundary Event ja End Event](kuviot/eventteja.png){#fig-eventteja}
 
-Seuraavassa esimerkissä ([@fig-eventteja2]) esiintyy myös Terminate Event. Se voidaan mieltää End Eventin voimakkaammaksi versioksi. Prosessin jonkin haaran päätyessä Terminate Eventiin, koko prosessi lopetetaan riippumatta siitä, missä vaiheessa sen muut haarat ovat. Mikäli tilaus peruutetaan, kaikki prosessiin liittyvä toiminta lopetetaan.
+Seuraavassa esimerkissä (@fig-eventteja2) esiintyy myös Terminate Event. Se voidaan mieltää End Eventin voimakkaammaksi versioksi. Prosessin jonkin haaran päätyessä Terminate Eventiin, koko prosessi lopetetaan riippumatta siitä, missä vaiheessa sen muut haarat ovat. Mikäli tilaus peruutetaan, kaikki prosessiin liittyvä toiminta lopetetaan.
 
 ![Terminate Event](kuviot/eventteja2.png){#fig-eventteja2}
 
@@ -381,7 +381,7 @@ Message Event -viestitapahtumia on muutama erilainen. *Message Start Event* on p
 
 Jo edellä nähdyn *Message Intermediate Event* -tapahtuman (@fig-eventteja2) avulla voidaan esittää tilanne, jossa prosessin jokin tehtävä on valmis vastaanottamaan viestin, johon se reagoi, mikäli viesti saapuu.
 
-Seuraavassa esimerkissä (@fig-eventteja3) Message Start Event käynnistää prosessin saadessaan viestin tehdystä tilauksesta. Ensimmäisessä tehtävässä asiakkaalta ruvetaan keräämään maksua. Tähän tehtävään liittyy myös *Message Boundary Event* eli tieto tapahtumasta, jossa asiakas onkin perunut tilauksensa. Jos proessia luetaan tarkkaavaisesti, huomataan, että viesti tilauksen perumisesta voi saapua sinä aikana, kun maksun kerääminen on vielä käynnissä. Mikäli prosessi siirtyy *Lähetä tilaus* -tehtävään, ei tilauksen peruminen enää voi johtaa prosessin päättymiseen. Prosessia suunniteltaessa tulee tietenkin huomioida, että mikäli asiakas voi perua tilauksen vielä maksamisen jälkeenkin (minkä etämyyntiä koskevan lainsäädännön mukaan täytyykin Suomessa olla mahdollista), ei prosessi voi ainoastaan päättyä perumisviestin vastaanottavan tapahtuman jälkeen, vaan prosessin tulee huolehtia muun muassa maksun palauttamisesta asiakkaalle. Esimerkkiprosessimme päättyy *Lähetä tilaus*- tehtävää seuraavaan *Message End Event* -tapahtumaan, joka voisi prosessin lopuksi lähettää asiakkaalle tiedon siitä, että hänen tilauksensa on jätetty kuljetettavaksi.
+Seuraavassa esimerkissä (@fig-eventteja3) Message Start Event käynnistää prosessin saadessaan viestin tehdystä tilauksesta. Ensimmäisessä tehtävässä asiakkaalta ruvetaan keräämään maksua. Tähän tehtävään liittyy myös *Message Boundary Event* eli tieto tapahtumasta, jossa asiakas onkin perunut tilauksensa. Jos prosessia luetaan tarkkaavaisesti, huomataan, että viesti tilauksen perumisesta voi saapua sinä aikana, kun maksun kerääminen on vielä käynnissä. Mikäli prosessi siirtyy *Lähetä tilaus* -tehtävään, ei tilauksen peruminen enää voi johtaa prosessin päättymiseen. Prosessia suunniteltaessa tulee tietenkin huomioida, että mikäli asiakas voi perua tilauksen vielä maksamisen jälkeenkin (minkä etämyyntiä koskevan lainsäädännön mukaan täytyykin Suomessa olla mahdollista), ei prosessi voi ainoastaan päättyä perumisviestin vastaanottavan tapahtuman jälkeen, vaan prosessin tulee huolehtia muun muassa maksun palauttamisesta asiakkaalle. Esimerkkiprosessimme päättyy *Lähetä tilaus* -tehtävää seuraavaan *Message End Event* -tapahtumaan, joka voisi prosessin lopuksi lähettää asiakkaalle tiedon siitä, että hänen tilauksensa on jätetty kuljetettavaksi.
 
 ![Message Start Event, Message Intermediate Boundary Event ja Message End Event](kuviot/eventteja3.png){#fig-eventteja3}
 
@@ -389,17 +389,17 @@ Edellä todettiin, että Boundary Eventit voivat olla keskeyttäviä tai ei-kesk
 
 #### Conditional Event
 
-*Conditional Event* eli ehdollinen tapahtuma voi olla prosessin ehdollisesti käynnistävä Conditional Start Event tai prosessin aikana tapahtuva *Conditiona Boundary Event* tai *Conditional Intermediate Catch Event* (@fig-conditional).
+*Conditional Event* eli ehdollinen tapahtuma voi olla prosessin ehdollisesti käynnistävä Conditional Start Event tai prosessin aikana tapahtuva *Conditional Boundary Event* tai *Conditional Intermediate Catch Event* (@fig-conditional).
 
-![Eri tyyppisiä ehdollisia tapahtumia](kuviot/conditional.png){#fig-conditional}
+![Erityyppisiä ehdollisia tapahtumia](kuviot/conditional.png){#fig-conditional}
 
 Ehdollinen aloitustapahtuma siis käynnistää prosessin tietyn ennalta määritellyn ja tarvittaessa monimutkaisenkin ehdon täyttyessä (@fig-cond_esim). Conditional Boundary Event, eli ehdollinen rajatapahtuma, voi olla tyypiltään keskeyttävä tai ei-keskeyttävä. Ehdon täyttyessä tehtävä voi käynnistää prosessiin uuden haaran. Conditional Intermediate Catch Event puolestaan pysäyttää prosessin, kunnes määritelty ehto muuttuu todeksi, jonka jälkeen eteneminen jatkuu.
 
 ![Esimerkki yksinkertaisesta Conditional Start Eventin aloitusehdosta](kuviot/cond_esim.png){#fig-cond_esim}
 
-Tässä vaiheessa saattaa ajatella, että mihin tällaisia tapahtumatyyppejä tarvitaan. Eikö saman asian voi esittää ja saman toiminnallisuuden toteuttaa joitain muita elementtityyppejä -- kuten viestejä -- käyttäen. Vastaus ainakin useimmissa tapauksissa on, että kyllä voi. Ehdollisten tapahtumien etu viesteihin perustuvaan kommunikointiin verrattuna on löyhäkytkentäisyydessä (Loose Coupling).
+Tässä vaiheessa saattaa ajatella, että mihin tällaisia tapahtumatyyppejä tarvitaan. Eikö saman asian voi esittää ja saman toiminnallisuuden toteuttaa joitain muita elementtityyppejä -- kuten viestejä -- käyttäen? Vastaus ainakin useimmissa tapauksissa on, että kyllä voi. Ehdollisten tapahtumien etu viesteihin perustuvaan kommunikointiin verrattuna on löyhäkytkentäisyydessä (Loose Coupling).
 
-Ehdolliset tapahtumat mahdollistavat loogisten ehtojen varassa toimimisen, sen sijaan, etttä prosessiin tarvitsee rakentaa tiukkoja, rajapintojen ja viestimuotojen tuntemista edellyttäviä kytkentöjä. Ehto voi olla loogisesti johdettu tai vaikkapa tietovarastosta saatava tieto siitä, että tilauksen maksu on suoritettu. Tämä sen sijaan, että prosessilla tulisi olla valmiudet kytkeytyä kaikkiin nykyisiin ja mahdollisiin tuleviin vaihtoehtoisiin maksujärjestelmiin sekä kyetä tulkitsemaan ja ymmärtämään niistä saapuvat kuittausviestit. Järjestelmiä ja muita teknisiä ratkaisuja toteutettaessa löyhäkytkentäisyys on yleisesti hyvänä pidetty suunnitteluperiaate. Täytyy kuitenkin muistaa, että jos prosessi halutaan rakentaa pelkästään loogisen tason ehdoille ja päätöksille[^bisnesskieli], ja siten mahdollisimman riippumattomaksi sitä ympäröivistä järjestelmistä ja teknologioista, täytyy vaiva kuitenkin nähdä jossain muualla. Kehittäjä joutuu todennäköisesti tekemään töitä sen eteen, että prosessin ehdolliselle tapahtumalle saadaan tietovarastosta tai eri pankkien maksurajapinnoista loogisen tason tieto siitä, että `maksu == ok`.
+Ehdolliset tapahtumat mahdollistavat loogisten ehtojen varassa toimimisen, sen sijaan, että prosessiin tarvitsee rakentaa tiukkoja, rajapintojen ja viestimuotojen tuntemista edellyttäviä kytkentöjä. Ehto voi olla loogisesti johdettu tai vaikkapa tietovarastosta saatava tieto siitä, että tilauksen maksu on suoritettu. Tämä sen sijaan, että prosessilla tulisi olla valmiudet kytkeytyä kaikkiin nykyisiin ja mahdollisiin tuleviin vaihtoehtoisiin maksujärjestelmiin sekä kyetä tulkitsemaan ja ymmärtämään niistä saapuvat kuittausviestit. Järjestelmiä ja muita teknisiä ratkaisuja toteutettaessa löyhäkytkentäisyys on yleisesti hyvänä pidetty suunnitteluperiaate. Täytyy kuitenkin muistaa, että jos prosessi halutaan rakentaa pelkästään loogisen tason ehdoille ja päätöksille[^bisnesskieli], ja siten mahdollisimman riippumattomaksi sitä ympäröivistä järjestelmistä ja teknologioista, täytyy vaiva kuitenkin nähdä jossain muualla. Kehittäjä joutuu todennäköisesti tekemään töitä sen eteen, että prosessin ehdolliselle tapahtumalle saadaan tietovarastosta tai eri pankkien maksurajapinnoista loogisen tason tieto siitä, että `maksu == ok`.
 
 [^bisnesskieli]: Tällöin voitaisiin ehkä puhua myös ”liiketoiminnan ymmärtämästä kielestä”.
 
@@ -423,11 +423,11 @@ Edellä ajastintapahtumiin liittyvät aikamääreet on esitetty yleistajuisesti.
 
 eli esimerkiksi `2027-03-24T08:15:00`, mikä tarkoittaa vuoden 2027 maaliskuun 24. päivää ja kellonaikaa 8:15. Aikavyöhyke ilmaistaan liittämällä litanian perään ajan ero UTC-aikaan. Suomen normaaliaika on kaksi tuntia edellä koordinoitua yleisaikaa, joten edellinen aikamääre Suomen talviajassa olisi siis:
 
-`2027-03-24T08:15:00:00+02:00`
+`2027-03-24T08:15:00+02:00`
 
 *Cyclen* avulla voidaan esittää toistuva ajankohta seuraavassa muodossa, eli toistokertojen määrä, aloitusaika, toistoväli:
 
-`StartTime/R/Duration`
+`R/StartTime/Duration`
 
 Mikäli aloitusaikaa ei ilmoiteta, toistuva aika määrittyy tehtävän ensimmäisen kohtaamisen perusteella. Mikäli toistokertoja ei määritellä, toistoja tehdään loputtomasti. Loputtomiin kerran päivässä toistuva tapahtuma ilmaistaan:
 
@@ -441,16 +441,16 @@ Jos tehtävä yrittäisi vaikkapa hakea tietoa jostain verkkopalvelusta, voitais
 
 `R5/PT10S`
 
-Seuraava aikamääre asettaisi aloituksen 1.6.2025 kello 9:00 ja tapahtuma tai prosessi toistuisi samalla kellonlyömällä päivittäin seitsemän päivän ajan:
+Seuraava aikamääre asettaisi aloituksen 1.6.2027 kello 9:00 ja tapahtuma tai prosessi toistuisi samalla kellonlyömällä päivittäin seitsemän päivän ajan:
 
-`2027-06-01T09:00:00/R7/PT1D`
+`R7/2027-06-01T09:00:00/PT1D`
 
-jolloin viimeinen toistokerta tapahtuisi siis 7.1.2025 kello 09:00. *Duration* määrittelee odotusajan ennen prosessin jatkamista. Esimerkiksi:
+jolloin viimeinen toistokerta tapahtuisi siis 7.6.2027 kello 9:00. *Duration* määrittelee odotusajan ennen prosessin jatkamista. Esimerkiksi:
 
 - viiden sekunnin viive: `PT5S`
 - 1,5 tunnin viive: `PT1H30M`
 - viikon viive: `P7D`
-- viikon ja 1,5 tunnin viive: `P1WT1H30M`
+- viikon ja 1,5 tunnin viive: `P7DT1H30M`
 - yhden vuoden, kuuden kuukauden, kahden päivän, neljän tunnin, kahdeksan minuutin ja yhdeksän sekunnin viive: `P1Y6M2DT4H8M9S`
 
 Camunda Modelerissa ajan määrittely onnistuu seuraavassa kuviossa näkyvällä tavalla (@fig-timer-juhannus). Timer Definition Type -valikosta valitaan aikamääreen tyyppi ja aika määritellään Timer Definition -kohtaan ISO 8601 -standardin mukaisessa muodossa.
@@ -469,7 +469,7 @@ Aikailmaisuissa käytetään seuraavia kirjainlyhenteitä. Kirjaimet ovat vastaa
 - `M` on minuutteja (*minute*) osoittava kirjain, joka tulee minuuttien määrän jälkeen.  
 - `S` on sekunteja (*second*) osoittava kirjain, joka tulee sekuntien määrän jälkeen.  
 
-Huomaa, että M-kirjain esiintyy sekä kuukausia ilmaistaessa (päivämääräosassa) että minuutteja ilmaistaessa (aikaosassa). Tämän vuoksi P- ja T-kirjaimet erottavat kesto- ja aikaosat.
+Huomaa, että M-kirjain esiintyy sekä kuukausia ilmaistaessa (päivämääräosassa) että minuutteja ilmaistaessa (aikaosassa). Tämän vuoksi T-kirjain erottaa päivämäärä- ja aikaosat toisistaan.
 
 #### Error Event
 
@@ -477,13 +477,13 @@ Huomaa, että M-kirjain esiintyy sekä kuukausia ilmaistaessa (päivämääräos
 
 [^virhe]: Virheillä ei tässä tarkoiteta BPMN-mallissa itsessään olevia syntaksi- tai loogisia virheitä.
 
-*Error Boundary Event* liitetään tehtävään tai aliprosessiin, ja se laukaisee virheen tapahtuessa vaihtoehtoisen haaran. Tällainen virhetapahtuma voi olla keskeyttävä tai ei-keskeyttävä. *Error End Event* puolestaan lopettaa prosessin virhetapahtumaan.
+*Error Boundary Event* liitetään tehtävään tai aliprosessiin, ja se laukaisee virheen tapahtuessa vaihtoehtoisen haaran. Error Boundary Event on aina keskeyttävä. *Error End Event* puolestaan lopettaa prosessin virhetapahtumaan.
 
 Seuraavassa prosessimallissa (@fig-error-esim) Script task -tehtävä tarkastaa käyttäjän lomakkeen kautta syöttämät tiedot. Mikäli tiedoissa on virhe, prosessi päättyy virhetapahtumaan. *Error Boundary Event* nappaa virheen ja ohjaa prosessin korjaavalle polulle.
 
 ![Error End Event- ja Error Boundary Event -tapahtumat](kuviot/error-esim.png){#fig-error-esim}
 
-Error End Eventille on tulee määritellä virhekoodi ja viite (*Global error reference*), jonka avulla virheenkäsittely voidaan toteuttaa (@fig-error_esim2). Edellisessä esimerkissä käyttäjää siis vain pyydettäisiin täyttämään tiedot uudelleen, mutta joissain tapauksissa voisi olla tarpeen määritellä esimerkiksi korjaava prosessikulku, joka käynnistettäisiin virheen havaitsemisen jälkeen.
+Error End Eventille tulee määritellä virhekoodi ja viite (*Global error reference*), jonka avulla virheenkäsittely voidaan toteuttaa (@fig-error_esim2). Edellisessä esimerkissä käyttäjää siis vain pyydettäisiin täyttämään tiedot uudelleen, mutta joissain tapauksissa voisi olla tarpeen määritellä esimerkiksi korjaava prosessikulku, joka käynnistettäisiin virheen havaitsemisen jälkeen.
 
 ![Virheen määrittely Camundassa](kuviot/error-esim2.png){#fig-error_esim2}
 
@@ -493,11 +493,11 @@ Error End Eventille on tulee määritellä virhekoodi ja viite (*Global error re
 
 Ajatellaan jotain systeemiä, jolla on useita samanaikaisia käyttäjiä. Yksi käyttäjistä käynnistää prosessin, jossa prosessimuuttujan `luku1` numeroarvosta siirretään puolet muuttujan `luku2` arvoon. Jokin tehtävä lukee ensin `luku1`:n lähtöarvon ja vähentää siitä puolet. Mikäli `luku2`:n arvon kasvattaminen `luku1`:n puolikkaalla jostain teknisestä tai vaikka liiketoimintasääntöön perustuvasta syystä kuitenkin epäonnistuu, transaktiomuotoisessa suorituksessa prosessi keskeytetään (*Abort*) ja systeemi palautetaan sen alkuperäiseen tilaan (*Rollback*). On kuitenkin mahdollista, että systeemin toinen käyttäjä on tällä välin päivittänyt `luku1`:n arvoa, jolloin alkuperäisen tilan palauttaminen rollback-operaatiolla hävittää myös toisen käyttäjän tekemän muutoksen. Tarvitaan peräkkäinen palautus (*Cascading Rollback*), joka peruuttaa kaikki väärän tiedon varassa toteutetut toiminnot. Yksinkertaisin ratkaisu tietysti olisi lukita kunkin transaktion tarvitsemat resurssit kyseiselle transaktiolle, kunnes koko prosessi on suoritettu onnistuneesti loppuun tai keskeytetty. Liiketoimintaprosessit voivat kuitenkin olla kestoltaan pitkiä, joten resurssien lukitseminen voisi aiheuttaa huomattavaakin viivettä kaikkiin muihin samoja resursseja tarvitseviin toimintoihin.
 
-Seuraavassa esimerkissä (@fig-compensation-esim) varauspyynnön vastaanottamisen jälkeen asiakkaalle varataan matkakohteeseen lento ja hotellimajoitus. Mikäli maksun veloitus ei kuitenkaan onnistu, prosessi etenee *Compensation End Event* -tapahtumaan ja *Compensation Boundary Event* -tapahtumat käynnistävät kompensoivat tehtävät. Compensoivalle tehtävälle ei ole omaa tehtävätyyppiään, vaan esimerkiksi Camundassa tehtävään lisätään kompensointia ilmaiseva symboli automaattisesti, kun tehtävän käynnistyy Compensation Eventin kautta.
+Seuraavassa esimerkissä (@fig-compensation-esim) varauspyynnön vastaanottamisen jälkeen asiakkaalle varataan matkakohteeseen lento ja hotellimajoitus. Mikäli maksun veloitus ei kuitenkaan onnistu, prosessi etenee *Compensation End Event* -tapahtumaan ja *Compensation Boundary Event* -tapahtumat käynnistävät kompensoivat tehtävät. Kompensoivalle tehtävälle ei ole omaa tehtävätyyppiä, vaan esimerkiksi Camundassa tehtävään lisätään kompensointia ilmaiseva symboli automaattisesti, kun tehtävä käynnistyy Compensation Eventin kautta.
 
 ![Maksun epäonnistuessa suoritetaan kompensaatio](kuviot/compensation-esim.png){#fig-compensation-esim}
 
-Kompensointi koskee vain tehtäviä, jotka on jo tehty loppuun. Jos prosessi olisi kaatunut jo hotellin varaamiseen, vain lento peruttaisiin. Peruminen -- tai kumoaminen -- ei ole tekninen rollback, vaan sitä varten täytyy määritellä oma toimenpiteensä, eikä kompensoinnin tarvitse siis palauttaa systeemiä täsmälleen alkutilaan. Esimerkiksi luennon peruutuksesta voisi asiakkaalle jäädä maksettavaksi peruutusmaksu.
+Kompensointi koskee vain tehtäviä, jotka on jo tehty loppuun. Jos prosessi olisi kaatunut jo hotellin varaamiseen, vain lento peruttaisiin. Peruminen -- tai kumoaminen -- ei ole tekninen rollback, vaan sitä varten täytyy määritellä oma toimenpiteensä, eikä kompensoinnin tarvitse siis palauttaa systeemiä täsmälleen alkutilaan. Esimerkiksi lennon peruutuksesta voisi asiakkaalle jäädä maksettavaksi peruutusmaksu.
 
 #### Link Event
 
@@ -513,21 +513,21 @@ Seuraavassa prosessissa (@fig-link-esim) puuttuvan tuotteen tilaamisen jälkeen 
 
 Siinä missä Message-tehtävät ja -tapahtumat on aina tarkoitettu tarkoin koordinoituun kahden osapuolen väliseen viestinvaihtoon, *Signal Event* mahdollistaa samanaikaisen *broadcast*-tyyppisen viestinnän useille signaalia kuunteleville. Signaalin lähettäjän ei tarvitse tietää, kuinka monta vastaanottajaa sillä on, eikä se odota vastaanottajilta vastausta (@fig-signal-token-esim).
 
-Signal Event -tapahtuman tyypit ovat heittävä (*Throw*) ja vastaanottava (*Catch*). Sitä sitä voidaan käyttää *Boundary*, *Intermediate*-, *Start*- ja *End*-tapahtumissa.
+Signal Event -tapahtuman tyypit ovat heittävä (*Throw*) ja vastaanottava (*Catch*). Sitä voidaan käyttää *Boundary*-, *Intermediate*-, *Start*- ja *End*-tapahtumissa.
 
 Seuraavassa esimerkissä tehtävää *1* seuraa Intermediate Signal Event *A*. Kaksi muuta prosessia kuuntelevat tätä signaalia ja sen saatuaan suorittavat omat tehtävänsä *2* ja *3*. Signaloiva prosessi siis pyytää kaikkia signaalin *A* kuulevia prosesseja Signal Start Eventin kautta suorittamaan omat tehtävänsä ja siirtyy suorittamaan tehtäväänsä *4*.
 
 Teknisesti ottaen -- ja automaattisia prosessikulkuja simuloitaessa -- tehtävien *2* ja *3* suorittaminen alkaa samaan aikaan kuin tehtävän *4*. Mikäli tehtävillä ei ole määriteltyä suoritusaikaa, ne kaikki myös valmistuvat samaan aikaan. Käytännössä ja todellisissa prosesseissa tätä ei tietenkään voida taata.
 
-![Signal Eventin suorittaminen prosessisimulaatiossa[^signal-token-esim]](kuviot/signal-token-esim.png)
+![Signal Eventin suorittaminen prosessisimulaatiossa[^signal-token-esim]](kuviot/signal-token-esim.png){#fig-signal-token-esim}
 
-[^signal-token-esim]: Kuviossa näkyvä Token Simulator esitellään Työvälineitä-luvussa. 
+[^signal-token-esim]: Kuviossa näkyvä Token Simulation esitellään Työvälineitä-luvussa. 
 
-Käytäntöä lähempänä olevassa esimerkissa laadunvarmistus huomaa ongelman jossain myytävässä tuotteessa ja prosessi signaloi siitä (@fig-signal-ongelma).
+Käytäntöä lähempänä olevassa esimerkissä laadunvarmistus huomaa ongelman jossain myytävässä tuotteessa ja prosessi signaloi siitä (@fig-signal-ongelma).
 
 ![Myytävässä tuotteessa on havaittu ongelma](kuviot/signal-ongelma.png){#fig-signal-ongelma}
 
-Kaikki tilausten keräilyprosessit, jotka saavat tiedon keräitävään tilaukseen kuuluvan tuotteen takaisinvedosta, keskeytetään.
+Kaikki tilausten keräilyprosessit, jotka saavat tiedon kerättävään tilaukseen kuuluvan tuotteen takaisinvedosta, keskeytetään.
 
 ![Keräily keskeytetään tilatun tuotteen ongelman vuoksi](kuviot/signal-reaktio.png){#fig-signal-reaktio}
 
@@ -539,17 +539,17 @@ None Eventit pystyvät myös asettamaan muuttujia, joten niitä voidaan hyödynt
 
 ![Reklamaatio ratkaistu -None Event](kuviot/reklamaation-kasittely.png){#fig-none-esim}
 
- Vaikka None Event ei varsinaisesti tee mitään, se voi kertoa prosessista ja sen tilasta paljonkin. Sen avulla (*Reklamaatio ratkaistu*) edellinen prosessi jaettiin kahteen konkreettiseen vaiheeseen: ongelman selvittämiseen ja reklamaation käsittelyn jälkitoimiin. Yrityksen palvelulupaus voi olla, että reklamaatio ratkaistaan viidessä arkipäivässä. Tässä voidaan prosessin kokonaiskeston sijaan mitataan aikaa aloituksesta välitavoitteeseen, koska korvaavan tuotteen toimituksen kesto ei ole reklamaatioiden käsittelijöiden hallinnassa. Lisäksi asiakaspalvelija näkee käynnissä olevasta prosessi-instanssista, onko reklamaatio jo ratkaistu, vaikka prosessi ei olisi vielä päättynyt.
+ Vaikka None Event ei varsinaisesti tee mitään, se voi kertoa prosessista ja sen tilasta paljonkin. Sen avulla (*Reklamaatio ratkaistu*) edellinen prosessi jaettiin kahteen konkreettiseen vaiheeseen: ongelman selvittämiseen ja reklamaation käsittelyn jälkitoimiin. Yrityksen palvelulupaus voi olla, että reklamaatio ratkaistaan viidessä arkipäivässä. Tässä voidaan prosessin kokonaiskeston sijaan mitata aikaa aloituksesta välitavoitteeseen, koska korvaavan tuotteen toimituksen kesto ei ole reklamaatioiden käsittelijöiden hallinnassa. Lisäksi asiakaspalvelija näkee käynnissä olevasta prosessi-instanssista, onko reklamaatio jo ratkaistu, vaikka prosessi ei olisi vielä päättynyt.
 
 ### Portit
 
 Porttien (*Gateway*) avulla voidaan ohjata prosessin etenemistä tietyissä päätöspisteissä prosessin aikana. Portit voivat myös haarauttaa (*Split*) prosessivirran useaan suuntaan ja yhdistää (*Join*) useita virtoja taas yhdeksi. Portin symbolina käytetään vinoneliötä, jonka sisällä on portin tyyppiä ilmaiseva tunnus.
 
-#### Parallel Port
+#### Parallel Gateway
 
-*Parallel Port* eli rinnakkainen portti jakaa prosessivirran useaan rinnakkain suoritettavaan haaraan. Rinnakkaisen portin tunnisteena käytetään +-merkkiä. Rinnakkaiset virrat tulisi taas yhdistää, kun se on mahdollista.
+*Parallel Gateway* eli rinnakkainen portti jakaa prosessivirran useaan rinnakkain suoritettavaan haaraan. Rinnakkaisen portin tunnisteena käytetään +-merkkiä. Rinnakkaiset virrat tulisi taas yhdistää, kun se on mahdollista.
 
-Seuraavassa esimerkissä (@fig-til-toimi) prosessin kulku haarautuun kolmeen rinnakkaiseen järjestysvirtaan, jotka aktivoituvat samanaikaisesti.
+Seuraavassa esimerkissä (@fig-til-toimi) prosessin kulku haarautuu kolmeen rinnakkaiseen järjestysvirtaan, jotka aktivoituvat samanaikaisesti.
 
 ![Tilaus toimitukseen kolmella rinnakkain suoritettavalla tehtävällä](kuviot/tilauksen-toimitus.png){#fig-til-toimi}
 
@@ -585,7 +585,7 @@ OR-portin haarojen ehdot tarkastetaan ja haarat aktivoituvat tarvittaessa. Ylemm
 
 ![Asetetaan VIP-alennus](kuviot/inclu-esim3.png){#fig-inclu-esim3}
 
-Myös alempi haara tarkastetaan ja tarvittaessa asetetaan muuttujalle `kantaAlennus` arvo `2.5`. Lopuksi  *Laske kokonaisasennus* -tehtävässä kokonaisalennus muodostetaan FEEL-skriptillä (@fig-inclu-esim4). Mikäli `vipAlennus`- ja `kantaAlennus`-muuttujia ei ole asetettu, saavat ne arvon `0`.
+Myös alempi haara tarkastetaan ja tarvittaessa asetetaan muuttujalle `kantaAlennus` arvo `2.5`. Lopuksi  *Laske kokonaisalennus* -tehtävässä kokonaisalennus muodostetaan FEEL-skriptillä (@fig-inclu-esim4). Mikäli `vipAlennus`- ja `kantaAlennus`-muuttujia ei ole asetettu, saavat ne arvon `0`.
 
 ![Lasketaan kokonaisalennus](kuviot/inclu-esim4.png){#fig-inclu-esim4}
 
@@ -593,11 +593,11 @@ Myös alempi haara tarkastetaan ja tarvittaessa asetetaan muuttujalle `kantaAlen
 
 *Event-Based Gateway* eli tapahtumapohjainen portti suorittaa valinnan sen perusteella, mikä siihen liittyvistä tapahtumista tapahtuu ensimmäisenä[^samaan_aikaan]. Prosessin kulku siis aina odottaa vähintään hetken ensimmäistä tapahtumaa. Sen sijaan esimerkiksi joko-tai-muotoinen XOR-portti päästää virran läpi välittömästi, koska päätökseen tarvittavat tiedot menevät porttiin syötteinä. Event-Based Gateway merkitään vinoneliön sisällä olevalla kaksiviivaisella ympyrällä, jonka sisällä on viisikulmio.
 
-[^samaan_aikaan]: On mahdollista, että useampi Event-Based Gatewayn odottama tapahtuma tapahtuisi täsmälleen samaan aikaan. Automatisoidussa prosessissa näin ei kuitenkaan voi käydä. Reaaliaikaiset ja rinnakkaislaskentaa toteuttavat järjestelmätkin valmistavat samaan kokonaisuuteen tai prosessiin liittyvät tehtävät aina jonkinlaisessa peräkkäisjärjestyksessä, vaikka niiden käsittely tapahtuisikin nanosekunneissa. Viimeistään prosessia suorittava prosessimoottori voisi ratkaista tilanteen valitsemalla jonkin samanaikaisista tehtävistä suoritettavaksi ensimmäisenä järjestelmän sisäisen aikaleiman tai prioriteettilogiikan mukaan.
+[^samaan_aikaan]: On mahdollista, että useampi Event-Based Gatewayn odottama tapahtuma tapahtuisi täsmälleen samaan aikaan. Automatisoidussa prosessissa näin ei kuitenkaan voi käydä. Reaaliaikaiset ja rinnakkaislaskentaa toteuttavat järjestelmätkin käsittelevät samaan kokonaisuuteen tai prosessiin liittyvät tehtävät aina jonkinlaisessa peräkkäisjärjestyksessä, vaikka niiden käsittely tapahtuisikin nanosekunneissa. Viimeistään prosessia suorittava prosessimoottori voisi ratkaista tilanteen valitsemalla jonkin samanaikaisista tehtävistä suoritettavaksi ensimmäisenä järjestelmän sisäisen aikaleiman tai prioriteettilogiikan mukaan.
 
 Koska Event-Based Gateway odottaa seuraavaa tapahtumaa, voivat prosessin suorituksessa sitä seurata erilaiset tapahtumatyyppiset elementit eli *Conditional Catch Event*, *Message Catch Event*, *Signal Catch Event* ja *Timer Event*. Näiden lisäksi voidaan sallia myös viestin vastaanottava tehtävä *Receive Task*.
 
-Seuraavassa esimerkissä (@fig-event-based-esim) käytetään tapahtumapohjaista porttia prosessissa, jossa Service Task kutsuu jotain ulkoista palvelua API-rajanpinnan kautta. Tapahtumapohjaiseen porttiin mentäessä ei vielä tiedetä, saadaanko palvelulta vastaus. Porttia seuraa kaksi vaihtoehtoista tapahtumaa: viestin vastaanottava tapahtuma, joka nappaa ulkoisen palvelun vastauksen sen saapuessa sekä Timer, joka palauttaa prosessin palvelukutsuun kymmenen sekunnin kuluttua. Mikäli kutsuttu palvelu ei siis vastaa kymmenen sekunnin sisällä, Timer aktivoituu ensin ja palvelua kutsutaan uudelleen. Jos taas vastaus saapuu ennen tätä, prosessi jatkaa eteenpäin.
+Seuraavassa esimerkissä (@fig-event-based-esim) käytetään tapahtumapohjaista porttia prosessissa, jossa Service Task kutsuu jotain ulkoista palvelua API-rajapinnan kautta. Tapahtumapohjaiseen porttiin mentäessä ei vielä tiedetä, saadaanko palvelulta vastaus. Porttia seuraa kaksi vaihtoehtoista tapahtumaa: viestin vastaanottava tapahtuma, joka nappaa ulkoisen palvelun vastauksen sen saapuessa sekä Timer, joka palauttaa prosessin palvelukutsuun kymmenen sekunnin kuluttua. Mikäli kutsuttu palvelu ei siis vastaa kymmenen sekunnin sisällä, Timer aktivoituu ensin ja palvelua kutsutaan uudelleen. Jos taas vastaus saapuu ennen tätä, prosessi jatkaa eteenpäin.
 
 ![Event-Based Gateway ulkoista palvelua kutsuttaessa](kuviot/event-based-esim.png){#fig-event-based-esim}
 
@@ -615,9 +615,9 @@ Seuraavassa esimerkissä (@fig-complex-esim) esitetään eräänlaisen tarjouspy
 
 Prosesseja mallinnettaessa ollaan ensisijaisesti kiinnostuneita prosessien toimintalogiikasta eikä niinkään prosesseihin liittyvistä ohjelmistoista tai tietolähteistä. Haluttaessa tarkastella prosessia vaikkapa suhteessa niihin liiketoiminta- ja teknologiaympäristöihin, joissa se tapahtuu, ovat esimerkiksi arkkitehtuurimallinnukset sopivampi työväline. Jotkin mallinnusvälineet mahdollistavat myös useiden mallinnuskielten samanaikaisen käyttämisen. Tällöin prosesseja voidaan esimerkiksi kokonaisarkkitehtuurin kontekstissa tarkastella ArchiMate-kaavioina ja tarvittaessa siirtyä jonkin prosessikulun tarkempaan tarkasteluun BPMN-muodossa (@fig-porautuminen).
 
-![Porautuminen ArchiMate-notaatiolla esitetyn prosessin kautta tarkempaan BPMN-muotoiseen esityksen Arter ARC -työvälineessä](kuviot/porautuminen.png){#fig-porautuminen}
+![Porautuminen ArchiMate-notaatiolla esitetyn prosessin kautta tarkempaan BPMN-muotoiseen esitykseen Arter ARC -työvälineessä](kuviot/porautuminen.png){#fig-porautuminen}
 
-Järjestelmillä ja niiden rajapinnoilla, tietokoneiden suorittamilla skripteillä sekä prosesseissa liikkuvalla informaatiolla ja datalla on kuitenkin keskeinen rooli varsinkin silloin, kun prosesseja halutaan automatisoida. Edellä onkin jo käsitelty Service Task -tehtäviä, joita käytetään ulkoisten palvelujen (eli käytännössä ohjelmistojen ja tietojärjestelmien) kutsumiseen, Script Task -tehtäviä, joiden avulla voidaan suorittaa ohjelmakoodia prosessikulun sisällä sekä Human Task -tehtäviä, jotka nekin tyypillisesti toteutetaan jotain ohjelmistoa hyödyntäen.
+Järjestelmillä ja niiden rajapinnoilla, tietokoneiden suorittamilla skripteillä sekä prosesseissa liikkuvalla informaatiolla ja datalla on kuitenkin keskeinen rooli varsinkin silloin, kun prosesseja halutaan automatisoida. Edellä onkin jo käsitelty Service Task -tehtäviä, joita käytetään ulkoisten palvelujen (eli käytännössä ohjelmistojen ja tietojärjestelmien) kutsumiseen, Script Task -tehtäviä, joiden avulla voidaan suorittaa ohjelmakoodia prosessikulun sisällä sekä User Task -tehtäviä, jotka nekin tyypillisesti toteutetaan jotain ohjelmistoa hyödyntäen.
 
 Luvun alussa nähtiin myös Data Store -elementti ja siihen liittyvät Data Input Association ja Data Output Association -suhteet. Data Storea voidaan käyttää tietovarastojen, tietokantojen tai muiden ”tietosäiliöiden” esittämiseen prosessikulkujen yhteydessä. Joskus niitä käytetään myös yleisemminkin kuvaamaan prosessissa käytettäviä tietojärjestelmiä ja ohjelmistoja, ja niille voidaan varata prosessiin oma uimarata tai -allas. Vaikka tämä onkin hieman luovaa BPMN:n soveltamista, on tekniikka melko usein käytetty ja joissain -- pääasiassa viestinnällisissä -- käyttötarkoituksissa myös käyttökelpoinen (@fig-datastoret).
 
@@ -651,7 +651,7 @@ Orkestraatio puolestaan kuvaa yhden prosessin ohjaamaa yhteistyötä, jossa joki
 
 ![Verkkokaupan tilausprosessi orkestroituna asiakkaan näkökulmasta](kuviot/orkest-verkkokauppa.png){#fig-orkest-verkkokauppa}
 
-Prosessikoreografiassa ei millään osapuolella ei ole prosessikulkua ohjaavaa roolia, eikä siten myöskään pääprosessin tuottamaa keskitettyä ohjausta. Koreografia on kaikkien osallistujien yhteistoimintaa, jolle on määritelty ennalta sovitut vuorovaikutusäännöt, joita noudattaen jokainen osallistuja toimii itsenäisesti. Jos prosessiorkestraatio vertautuu orkesteriin ja sitä johtavaan kapellimestariin, voidaan prosessikoreografiaa verrata tanssiteokseen. Kun tanssijat tuntevat koreografian, kukin tietää, mitä hänen tulee tehdä ja milloin, kuinka asemoida itsensä suhteessa muihin tanssijoihin ja niin edelleen. Teoksen läpivienti ei edellytä, että koreografi seisoisi ryhmän edessä ja ohjaisi suoritusta. Sitä toki tarvitaan vielä silloin, kun teosta harjoitellaan. Vastaavasti prosessikoreografian suunnittelu vaatii suunnittelua ja yhteistyötä, jotta yhteistyöprosessi saadaan toteutettua luotettavasti ja tehokkaasti ainoastaan osapuolen välille ennalta määriteltyyn viestinvaihtoon tukeutuen.
+Prosessikoreografiassa millään osapuolella ei ole prosessikulkua ohjaavaa roolia, eikä siten myöskään pääprosessin tuottamaa keskitettyä ohjausta. Koreografia on kaikkien osallistujien yhteistoimintaa, jolle on määritelty ennalta sovitut vuorovaikutussäännöt, joita noudattaen jokainen osallistuja toimii itsenäisesti. Jos prosessiorkestraatio vertautuu orkesteriin ja sitä johtavaan kapellimestariin, voidaan prosessikoreografiaa verrata tanssiteokseen. Kun tanssijat tuntevat koreografian, kukin tietää, mitä hänen tulee tehdä ja milloin, kuinka asemoida itsensä suhteessa muihin tanssijoihin ja niin edelleen. Teoksen läpivienti ei edellytä, että koreografi seisoisi ryhmän edessä ja ohjaisi suoritusta. Sitä toki tarvitaan vielä silloin, kun teosta harjoitellaan. Vastaavasti prosessikoreografian suunnittelu vaatii suunnittelua ja yhteistyötä, jotta yhteistyöprosessi saadaan toteutettua luotettavasti ja tehokkaasti ainoastaan osapuolten välille ennalta määriteltyyn viestinvaihtoon tukeutuen.
 
 BPMN:ssa koreografia esitetään prosessimallina, jossa on uima-allas kullekin osallistujalle ja altaissa kunkin osallistujan suorittama prosessi. Kokonaisprosessi ohjautuu altaita yhdistävien viestivirtojen kautta. Tällaiset prosessit sinällään ovatkin tuttuja jo aiemmista esimerkeistä, joten tässä käytännössä esiteltiinkin niille ainoastaan uusi nimi. Seuraavassa kuviossa (@fig-koreografia) esitetään edellisen prosessikollaboraation kuvaama prosessi koreografiana.
 
@@ -659,11 +659,11 @@ BPMN:ssa koreografia esitetään prosessimallina, jossa on uima-allas kullekin o
 
 ## Joitain muita tapoja prosessien kuvaamiseen
 
-Prosessien kuvaamiseen voidaan käyttää muitankin tekniikoita kuin BPMN-kieltä. Tässä luvussa käydään niistä läpi muutama.
+Prosessien kuvaamiseen voidaan käyttää muitakin tekniikoita kuin BPMN-kieltä. Tässä luvussa käydään niistä läpi muutama.
 
 ### Prosessikortti
 
-Prosessikortti on teksti- tai graafinen dokumentti, joka kokoaa prosessiin liittyvät oleelliset tiedot. Kortti voi käyttötarkoituksensa mukaisesti käsitellä prosessia yleisellä tasolla tai vastaavasti kortin sisältö voi olla yksityiskohtaistakin. Korttia voidaan hyödyntää niin prosessitiedon keräämisessä kuin myös prosessitiedon tallentamisessa ja esittämisessä. Kortti voi toimia itsenäisenä prosessidokumentaation välineenä tai se voidaan laatia graafisen prosessimallin liitteeksi. Prosessikorttia voidaan käyttää esimerkiksi prosessihaastattelun dokumentointiin. Se voitaisiin harkinnan varaisesti myös toimittaa haastateltavalle henkilölle ennakkomateriaaliksi ennen haastattelua.
+Prosessikortti on teksti- tai graafinen dokumentti, joka kokoaa prosessiin liittyvät oleelliset tiedot. Kortti voi käyttötarkoituksensa mukaisesti käsitellä prosessia yleisellä tasolla tai vastaavasti kortin sisältö voi olla yksityiskohtaistakin. Korttia voidaan hyödyntää niin prosessitiedon keräämisessä kuin myös prosessitiedon tallentamisessa ja esittämisessä. Kortti voi toimia itsenäisenä prosessidokumentaation välineenä tai se voidaan laatia graafisen prosessimallin liitteeksi. Prosessikorttia voidaan käyttää esimerkiksi prosessihaastattelun dokumentointiin. Se voitaisiin harkinnanvaraisesti myös toimittaa haastateltavalle henkilölle ennakkomateriaaliksi ennen haastattelua.
 
 Seuraavassa (@tbl-prosessikortti-esim) on verkkokaupan kuvitteellisesta tilauskäsittelyprosessista laadittu tiivis prosessikortti.
 
@@ -690,7 +690,7 @@ Prosessikortteja voidaan käyttää myös uusien työntekijöiden perehdyttämis
 
 [^iso-9001]: https://sfs.fi/standardeista/tutustu-standardeihin/suositut-standardit/iso-9001-laadunhallinta/ 
 
-Prosesseja kuvattaessa voidaan myös käyttää visuaalisuutta korostavaa -- infografiikkamista palvelukorttia muistuttavaa -- esitystapaa. Tiivisti ja visuaalinen esitystapa toimii varsinkin silloin, kun tavoitteena on viestiä asiakkaalle tai yhteistyökumppanille, mitä prosessi tekee ja tuottaa.
+Prosesseja kuvattaessa voidaan myös käyttää visuaalisuutta korostavaa -- infografiikkamaista palvelukorttia muistuttavaa -- esitystapaa. Tiivis ja visuaalinen esitystapa toimii varsinkin silloin, kun tavoitteena on viestiä asiakkaalle tai yhteistyökumppanille, mitä prosessi tekee ja tuottaa.
 
 ### Vuokaavio
 
@@ -702,7 +702,7 @@ Seuraavassa (@fig-vuokaavio-esim) on esitetty vuokaaviona verkkokauppatilaus asi
 
 ### Aktiviteettikaavio
 
-UML[^uml]-kieleen kuuluvaa aktiviteettikaaviota (*Activity Diagram*) käytetään pääasiassa ohjelmistojen sisäisten prosessikulkujen esittämiseen korkealla abstraktiotasolla. Sen peruselementit ovat aloituspiste ja lopetustila (*End State*), aktiviteetit, päätökset (*Decision Node*), haarautumat (*Fork*), yhdistymiset (*Join*) sekä kontrollivirta (*Control Flow*). Aktiviteeteilla voidaan esittää tehtäviä, forkeilla ja joineille rinnakkain suoritettavien tehtävien kulkua ja päätöksillä päätösportteja, kuten XOR-portti (@fig-activity_diagram-esim). Ohjelmistoprosesseja esitettäessä säikeet voidaan esittää altaina, mutta altaat toimivat myös roolien esittämisessä, mikäli aktiviteettikaaviota käytetään esimerkiksi organisaatioita tai ihmisen suorittamia tehtäviä sisältävien prosessien kuvaamiseen.
+UML[^uml]-kieleen kuuluvaa aktiviteettikaaviota (*Activity Diagram*) käytetään pääasiassa ohjelmistojen sisäisten prosessikulkujen esittämiseen korkealla abstraktiotasolla. Sen peruselementit ovat aloituspiste ja lopetustila (*End State*), aktiviteetit, päätökset (*Decision Node*), haarautumat (*Fork*), yhdistymiset (*Join*) sekä kontrollivirta (*Control Flow*). Aktiviteeteilla voidaan esittää tehtäviä, forkeilla ja joineilla rinnakkain suoritettavien tehtävien kulkua ja päätöksillä päätösportteja, kuten XOR-portti (@fig-activity_diagram-esim). Ohjelmistoprosesseja esitettäessä säikeet voidaan esittää altaina, mutta altaat toimivat myös roolien esittämisessä, mikäli aktiviteettikaaviota käytetään esimerkiksi organisaatioita tai ihmisen suorittamia tehtäviä sisältävien prosessien kuvaamiseen.
 
 [^uml]: https://www.omg.org/uml/
 
@@ -712,11 +712,11 @@ UML[^uml]-kieleen kuuluvaa aktiviteettikaaviota (*Activity Diagram*) käytetää
 
 Kriittisen polun menetelmä (*Critical Path Method*, *CPM*) kehitettiin Yhdysvalloissa 1950-luvun lopulla monimutkaisten teollisten projektien aikatauluttamiseen ja hallintaan. CPM:n perusajatuksena on, että projekti koostuu tehtävistä, joilla on arvioidut kestot ja joiden välillä on loogisia riippuvuus- ja erityisesti edeltävyyssuhteita; esimerkiksi ennen resurssien allokointia täytyy olla olemassa tieto käytettävissä olevista resursseista. Tehtävät esitetään verkostomallina, jossa kriittinen polku on se polku kaikkien tehtävien joukossa, jonka kokonaiskesto on pisin. Tämä tehtäväketju siis määrittelee projektin vähimmäiskeston ja projektin valmistuminen viivästyy, mikäli jokin kriittisen polun tehtävistä viivästyy. Jos projektin halutaan valmistuvan suunnitellussa vähimmäisaikataulussa, ei kriittiseen polkuun kuuluvien tehtävien valmistumisajoista voida joustaa. Sen sijaan siihen kuulumattomien tehtävien aikataulussa voi olla pelivaraa, mikä voi mahdollistaa resurssien tilapäisen uudelleenohjailun projektin aikana, esimerkiksi kriittisten tehtävien suorittamiseen.
 
-CPM soveltuu myös prosessien tarkasteluun -- erityisesti prosessien ollessa aikakriittisiä. Sen avulla voidaan selvittää, mitkä prosessin tehtävistä määrittelevät prosessin kokonaiskeston ja mihin puolestaan liittyy ajallista joustovaraa. Kriittiseen polkuun kuuluvat tehtävät voivat aiheuttaa prosessiin pullonkauloja, joten niiden riittävä resursointi ja sujuvan työnkulun varmistaminen on tärkeää. Kehittämistehtävät tulisikin kohdistaa juuri prosessien kriittisiin vaiheisiin ja niiden suorittamisen optimointiin. Prosessitiedon louhinta antaa tarjoaa konkreettista tietoa prosessin tehtävien kestoista ja suhteista, ja sitä voidaankin käyttää yhdessä CPM-analyysin kanssa.
+CPM soveltuu myös prosessien tarkasteluun -- erityisesti prosessien ollessa aikakriittisiä. Sen avulla voidaan selvittää, mitkä prosessin tehtävistä määrittelevät prosessin kokonaiskeston ja mihin puolestaan liittyy ajallista joustovaraa. Kriittiseen polkuun kuuluvat tehtävät voivat aiheuttaa prosessiin pullonkauloja, joten niiden riittävä resursointi ja sujuvan työnkulun varmistaminen on tärkeää. Kehittämistehtävät tulisikin kohdistaa juuri prosessien kriittisiin vaiheisiin ja niiden suorittamisen optimointiin. Prosessilouhinta tarjoaa konkreettista tietoa prosessin tehtävien kestoista ja suhteista, ja sitä voidaankin käyttää yhdessä CPM-analyysin kanssa.
 
 > **Seuraavassa Tuomas Kokko ja Pentti Marttiin Jyväskylän yliopiston IT-tiedekunnasta kertovat tarkemmin projektiverkosta ja kriittisen polun laskemisesta prosessikontekstiin sopivan esimerkin avulla.**
 >
-> Useissa tapauksissa pelkkä janakaavio ei anna tarpeeksi tietoa projektin tehtävien välisistä suhteista ja aikataulussa olevista joustomahdollisuuksista. Tällöin tehtäviä ja niiden tavoiteaikatauluja on vaikea sijoittaa janakaaviolle oikeisiin ajankohtiin. Tämän ongelman ratkaisemiseksi on kehitetty erilaisia aikataulusuunnitteluntekniikoita, joilla voidaan muodostaa projektiverkko.
+> Useissa tapauksissa pelkkä janakaavio ei anna tarpeeksi tietoa projektin tehtävien välisistä suhteista ja aikataulussa olevista joustomahdollisuuksista. Tällöin tehtäviä ja niiden tavoiteaikatauluja on vaikea sijoittaa janakaaviolle oikeisiin ajankohtiin. Tämän ongelman ratkaisemiseksi on kehitetty erilaisia aikataulusuunnittelun tekniikoita, joilla voidaan muodostaa projektiverkko.
 >
 > Projektiverkko (Project Network) on projektinhallinnan menetelmä, jonka avulla suunnitellaan, aikataulutetaan ja valvotaan projektin eri tehtäviä ja niiden keskinäisiä riippuvuuksia. Projektiverkossa tehtävät voivat olla toisiinsa nähden peräkkäisiä tai rinnakkaisia. Projektiverkko soveltuu hyvin myös liiketoimintaprosessien mallintamiseen, koska niissäkin on usein peräkkäisyyttä ja rinnakkaisuutta osaprosessien suhteen.
 >
@@ -747,7 +747,7 @@ CPM soveltuu myös prosessien tarkasteluun -- erityisesti prosessien ollessa aik
 
 > Kriittisen polun menetelmä auttaa löytämään liiketoimintaprosessille pienimmän mahdollisen kokonaiskeston, ja auttaa siten kohdistamaan valvontaa ja resursseja oikein. Kriittinen polku määritellään seuraavasti: ”projektin pisin polku tehtäväverkossa, joka määrittää projektin minimikeston”. Tehtävät kriittisellä polulla eivät saa viivästyä ilman, että koko projekti, tai tässä tapauksessa liiketoimintaprosessi, viivästyy.
 >
-> Kriittisen polun menetelmässä oletetaan, että ositusrakenteen mukaan tehtävät ja työpaketit ovat tunnettuja, määritettyjä ja kiinteitä. Mikäli tehtävien kestot ovat epävarmoja, voidaan tehtäväkohtaisesti käyttää estimointitekniikoita, esimerkiksi PERT-menetelmää [@fulkerson1962expected]. Toisaalta tehtävien järjestelyyn vaikuttaa tehtävien keston lisäksi monet muut asiat kuten rajoitteet, esim. joissakin tapauksissa projektin kestolle tai aikataululle saatetaan asettaa rajoitteita kuten resurssien saatavuus voi olla aikasidonnaista, tai projektien keskinäiset riippuvuudet ja päällekkäisyydet on otettava huomioon.
+> Kriittisen polun menetelmässä oletetaan, että ositusrakenteen mukaan tehtävät ja työpaketit ovat tunnettuja, määritettyjä ja kiinteitä. Mikäli tehtävien kestot ovat epävarmoja, voidaan tehtäväkohtaisesti käyttää estimointitekniikoita, esimerkiksi PERT-menetelmää [@fulkerson1962expected]. Toisaalta tehtävien järjestelyyn vaikuttavat tehtävien keston lisäksi monet muut asiat kuten rajoitteet, esim. joissakin tapauksissa projektin kestolle tai aikataululle saatetaan asettaa rajoitteita kuten resurssien saatavuus voi olla aikasidonnaista, tai projektien keskinäiset riippuvuudet ja päällekkäisyydet on otettava huomioon.
 >
 > Projektiverkko esittää tehtävien suoritusjärjestyksen ja riippuvuudet. Projektiverkossa lasketaan seuraavat arvot kullekin tehtävälle:
 >
