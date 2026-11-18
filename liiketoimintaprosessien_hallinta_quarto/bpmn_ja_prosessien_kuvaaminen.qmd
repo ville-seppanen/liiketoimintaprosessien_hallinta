@@ -149,7 +149,7 @@ Vaikka prosessimalliin lisätyt huomautukset ja kommentit eivät mallia varsinai
 
 Dokumentaatio myös helpottaa prosessimallin ymmärtämistä silloin, kun prosessin katselija ei ole BPMN-kielen asiantuntija. Annotaatioiden avulla voidaan myös tehdä näkyväksi toimintoja, jotka eivät välttämättä prosessin graafisessa esityksessä tule esille. Tällaisia tapauksia ovat esimerkiksi myöhemmin käsiteltävät *Script*- ja *Business Rule* -tehtävät.
 
-Toinen prosessimalleissa käytettävä assosiaatiosuhte on *Data Association*, jonka avulla voidaan esittää prosessin ja tietovaraston (*Data Store*) välillä toteutuvia tietovirtoja. Yhteyttä, jossa prosessista liikkuu tietoa tietovarastoon, kutsutaan nimellä *Data input Association*. Kun ilmaistaan tiedon siirtymistä tietovarastosta prosessille, yhteyttä kutsutaan nimellä *Data Output Association* (@fig-data_association). Data Storea ja Data Associationia käsitellään hieman tarkemmin myöhemmin tässä luvussa.
+Toinen prosessimalleissa käytettävä assosiaatiosuhte on *Data Association*, jonka avulla voidaan esittää prosessin ja tietovaraston (*Data Store*) välillä toteutuvia tietovirtoja. Yhteyttä, jossa tietoa liikkuu tietovarastosta prosessin tehtävälle, kutsutaan nimellä *Data Input Association*: tieto on tehtävälle syöte. Kun ilmaistaan tiedon siirtymistä tehtävästä tietovarastoon, yhteyttä kutsutaan nimellä *Data Output Association* (@fig-data_association). Data Storea ja Data Associationia käsitellään hieman tarkemmin myöhemmin tässä luvussa.
 
 ![Data Storet ja niihin liittyvät Data Input Association- ja Data Output Association -yhteydet](kuviot/data_association.svg){#fig-data_association}
 
