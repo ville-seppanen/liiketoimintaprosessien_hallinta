@@ -88,7 +88,7 @@ Prosesseja koskevaa dokumentoitua tietoa voidaan löytää monista lähteistä. 
 
 ![Katkelma matkustussäännöstä](/kuviot/matkaohje.png){#fig-matkaohje fig-alt=""}
 
-Laatujärjestelmät, kuten ISO 9001 Laadunhallinta[^iso_9001], edellyttävät organisaation toiminnan kuvaamista esimerkiksi prosessimallien avulla. Itse asiassa ISO 9001 Laadunhallinta -järjestelmää ohjaavia periaatteita ovat asiakaslähtöisyys ja laadun jatkuva parantaminen, joten laatusertifikaatin ansainneen organisaation voidaan olettaa päässeen jo varsin pitkälle prosessiajattelussa ja prosessimuotoisessa toiminnassa. Useissa sertifioimattomissakin organisaatioissa on laadittu laatujärjestelmiä, vastuutauluja tai vaikkapa vähemmän muodollisia laatukäsikirjoja, jotka voivat toimia erinomaisena materiaalina liiketoimintaprosesseja tarkasteltaessa.
+Laatujärjestelmät, kuten ISO 9001 Laadunhallinta[^iso_9001], edellyttävät prosessimaista toimintatapaa ja prosessien määrittämistä. ISO 9001 Laadunhallinta -järjestelmää ohjaavia periaatteita ovat asiakaslähtöisyys ja laadun jatkuva parantaminen, joten laatusertifikaatin ansainneen organisaation voidaan olettaa päässeen jo varsin pitkälle prosessiajattelussa ja prosessimuotoisessa toiminnassa. Useissa sertifioimattomissakin organisaatioissa on laadittu laatujärjestelmiä, vastuutauluja tai vaikkapa vähemmän muodollisia laatukäsikirjoja, jotka voivat toimia erinomaisena materiaalina liiketoimintaprosesseja tarkasteltaessa.
 
 [^iso_9001]: https://sfs.fi/standardeista/tutustu-standardeihin/suositut-standardit/iso-9001-laadunhallinta/
 
@@ -195,7 +195,7 @@ Puolistrukturoitu prosessihaastattelu voisi edetä esimerkiksi seuraavan kysymyk
 - *Tukevatko tietojärjestelmät prosessin toteuttamista?*
 - *Onko prosessi resursoitu riittävästi?*
 
-[^vaihe_eli_tehtava]: Vaiheella tarkoitetaan tässä BPMN-mallin mukaista tehtävää (*Task* tai *Activity*).
+[^vaihe_eli_tehtava]: Vaiheella tarkoitetaan tässä BPMN-mallin mukaista tehtävää (*Task*).
 
 <!--
 | Teema | Kysymykset |
@@ -218,7 +218,7 @@ Puolistrukturoitu prosessihaastattelu voisi edetä esimerkiksi seuraavan kysymyk
 
 ## Prosessilouhinta
 
-Prosessilouhinta (*Process Mining*) on tekniikka, jossa tietojärjestelmien lokeja tarkastelemalla pyritään tekemään näkyväksi ja analysoimaan, miten prosessit todellisuudessa tapahtuvat. Prosessilouhinnan käyttötapauksia ovat:
+Prosessilouhinta (*Process Mining*) on tekniikka, jossa tietojärjestelmien lokeja tarkastelemalla pyritään tekemään näkyväksi ja analysoimaan, miten prosessit todellisuudessa tapahtuvat [@van2016data]. Prosessilouhinnan käyttötapauksia ovat:
 
 - Prosessien löytäminen (*Process Discovery*), jossa lokitietoja analysoimalla pyritään tunnistamaan, kuinka prosessit tapahtuvat. Lokimerkintä syntyy esimerkiksi silloin, kun käyttäjä kirjaa järjestelmään jonkin tiedon. Tästä pystytään usein päättelemään, mitä ja milloin prosessissa on tapahtunut. Prosessin toteumasta rakennetaan malli lokitietoihin perustuen.
 - Prossien yhtenäisyyden tai sääntöjenmukaisen toteutumisen arviointi (*Process Conformance Checking*), jossa verrataan olemassa olevaa prosessimallia ja esimerkiksi prosessia koskevia ohjeita ja vaatimuksia lokitiedoista ilmenevään prosessin toteumaan.

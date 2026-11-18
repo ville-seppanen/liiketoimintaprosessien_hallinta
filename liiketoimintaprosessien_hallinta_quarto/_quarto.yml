@@ -12,8 +12,8 @@ book:
     - prosessitiedon_keraaminen.qmd
     - prosessiorganisaatio_ja_prosessien_kehittaminen.qmd
     - prosessiarkkitehtuuri.qmd
-    - prosessiautomaatio.qmd
     - bpmn_ja_prosessien_kuvaaminen.qmd
+    - prosessiautomaatio.qmd
     - tehtavat.qmd
     - tyovalineita.qmd
     - summary.qmd
