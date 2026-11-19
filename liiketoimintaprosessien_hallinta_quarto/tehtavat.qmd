@@ -865,7 +865,7 @@ Esitä BPMN-tehtävän 43 verkkokaupan ja logistiikkayrityksen välinen viestinv
 ::: {.callout-tip collapse="true"}
 ## Malliratkaisu
 
-![Noutopyynnön koreografia](kuviot/noutokoreografia.png){#fig-noutokoreografia-teht}
+![](kuviot/noutokoreografia.png){fig-alt="Noutopyynnön koreografia"}
 
 Start Event → koreografiatehtävä *Pyydä nouto* (aloittaja Verkkokauppa, viesti Noutopyyntö, paluuviesti Noutovahvistus) → Exclusive Gateway ”Sopiiko noutoaika?”. Haara ”Kyllä” → *Hyväksy noutoaika* (Verkkokauppa → Logistiikkayritys, viesti Noutoajan hyväksyntä) → End Event. Haara ”Ei” → *Pyydä noutoajan muutos* (Verkkokauppa → Logistiikkayritys, viesti Muutospyyntö, paluuviesti Muutospäätös) → End Event.
 
