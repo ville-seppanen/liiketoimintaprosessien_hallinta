@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Liiketoimintaprosessit ja tietojärjestelmät -- mallintaminen, arkkitehtuuri ja automaatio"
+  title: "Liiketoimintaprosessit -- hallinta, mallintaminen, tietojärjestelmät ja automaatio"
   author: "Ville Seppänen"
   date: "11/18/2026"
   chapters:
