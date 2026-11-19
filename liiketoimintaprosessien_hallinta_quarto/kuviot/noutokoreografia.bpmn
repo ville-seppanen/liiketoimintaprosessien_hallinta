@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_noutokoreografia" targetNamespace="http://bpmn.io/schema/bpmn">
+
+  <bpmn:message id="Message_1" name="Noutopyyntö" />
+  <bpmn:message id="Message_2" name="Noutovahvistus" />
+  <bpmn:message id="Message_3" name="Noutoajan hyväksyntä" />
+  <bpmn:message id="Message_4" name="Muutospyyntö" />
+  <bpmn:message id="Message_5" name="Muutospäätös" />
+  <bpmn:choreography id="Choreography_1">
+    <bpmn:participant id="P_V" name="Verkkokauppa" />
+    <bpmn:participant id="P_L" name="Logistiikkayritys" />
+    <bpmn:messageFlow id="MessageFlow_1" sourceRef="P_V" targetRef="P_L" messageRef="Message_1" />
+    <bpmn:messageFlow id="MessageFlow_2" sourceRef="P_L" targetRef="P_V" messageRef="Message_2" />
+    <bpmn:messageFlow id="MessageFlow_3" sourceRef="P_V" targetRef="P_L" messageRef="Message_3" />
+    <bpmn:messageFlow id="MessageFlow_4" sourceRef="P_V" targetRef="P_L" messageRef="Message_4" />
+    <bpmn:messageFlow id="MessageFlow_5" sourceRef="P_L" targetRef="P_V" messageRef="Message_5" />
+    <bpmn:startEvent id="Start">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="Gw" name="Sopiiko noutoaika?">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="End" name="Nouto sovittu">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="End2" name="Muutospyyntö käsitelty">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:choreographyTask id="CT_Nouto" name="Pyydä nouto" initiatingParticipantRef="P_V">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+      <bpmn:participantRef>P_V</bpmn:participantRef>
+      <bpmn:participantRef>P_L</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_1</bpmn:messageFlowRef>
+      <bpmn:messageFlowRef>MessageFlow_2</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:choreographyTask id="CT_Hyv" name="Hyväksy noutoaika" initiatingParticipantRef="P_V">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+      <bpmn:participantRef>P_V</bpmn:participantRef>
+      <bpmn:participantRef>P_L</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_3</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:choreographyTask id="CT_Muutos" name="Pyydä noutoajan muutos" initiatingParticipantRef="P_V">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+      <bpmn:participantRef>P_V</bpmn:participantRef>
+      <bpmn:participantRef>P_L</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_4</bpmn:messageFlowRef>
+      <bpmn:messageFlowRef>MessageFlow_5</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Start" targetRef="CT_Nouto" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="CT_Nouto" targetRef="Gw" />
+    <bpmn:sequenceFlow id="Flow_3" name="kyllä" sourceRef="Gw" targetRef="CT_Hyv" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="CT_Hyv" targetRef="End" />
+    <bpmn:sequenceFlow id="Flow_5" name="ei" sourceRef="Gw" targetRef="CT_Muutos" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="CT_Muutos" targetRef="End2" />
+  </bpmn:choreography>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Choreography_1">
+      <bpmndi:BPMNShape id="Start_di" bpmnElement="Start">
+        <dc:Bounds x="142" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_di" bpmnElement="Gw" isMarkerVisible="true">
+        <dc:Bounds x="435" y="175" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="405" y="143" width="110" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_di" bpmnElement="End">
+        <dc:Bounds x="772" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="735" y="223" width="110" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End2_di" bpmnElement="End2">
+        <dc:Bounds x="772" y="382" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="735" y="423" width="110" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Nouto_di" bpmnElement="CT_Nouto">
+        <dc:Bounds x="235" y="150" width="130" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Nouto_P_V_di" bpmnElement="P_V" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Nouto_di">
+        <dc:Bounds x="235" y="150" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Nouto_P_L_di" bpmnElement="P_L" isMessageVisible="true" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Nouto_di">
+        <dc:Bounds x="235" y="230" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Hyv_di" bpmnElement="CT_Hyv">
+        <dc:Bounds x="555" y="150" width="130" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Hyv_P_V_di" bpmnElement="P_V" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Hyv_di">
+        <dc:Bounds x="555" y="150" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Hyv_P_L_di" bpmnElement="P_L" isMessageVisible="false" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Hyv_di">
+        <dc:Bounds x="555" y="230" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Muutos_di" bpmnElement="CT_Muutos">
+        <dc:Bounds x="555" y="350" width="130" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Muutos_P_V_di" bpmnElement="P_V" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Muutos_di">
+        <dc:Bounds x="555" y="350" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Muutos_P_L_di" bpmnElement="P_L" isMessageVisible="true" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Muutos_di">
+        <dc:Bounds x="555" y="430" width="130" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="178" y="200" />
+        <di:waypoint x="235" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="365" y="200" />
+        <di:waypoint x="435" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="485" y="200" />
+        <di:waypoint x="555" y="200" />
+        <bpmndi:BPMNLabel><dc:Bounds x="491" y="204" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="685" y="200" />
+        <di:waypoint x="772" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="460" y="225" />
+        <di:waypoint x="460" y="400" />
+        <di:waypoint x="555" y="400" />
+        <bpmndi:BPMNLabel><dc:Bounds x="466" y="229" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="685" y="400" />
+        <di:waypoint x="772" y="400" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

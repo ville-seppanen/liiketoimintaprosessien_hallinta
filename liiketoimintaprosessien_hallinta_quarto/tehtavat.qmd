@@ -822,9 +822,79 @@ Lähettirata poistuu pizzerian altaasta, ja malliin lisätään uusi allas *Wolt
 Pizzerian oma prosessi yksinkertaistuu, mutta samalla asiakasrajapinta siirtyy pizzerialta Woltille. Woltin ja pizzerian välinen tilitys on oma prosessinsa, eikä sitä tarvitse mallintaa tähän.
 :::
 
-### Aliprosessit ja toisto
+### Yhteistyöprosessit
 
 #### BPMN-tehtävä 46
+
+Tee BPMN-tehtävän 43 logistiikkayrityksen prosessista julkinen prosessi. Mitkä tehtävät jäävät pois ja miksi? Mitä hyötyä julkisesta prosessista on verkkokaupalle?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Logistiikkayrityksen julkinen prosessi: Message Start Event ”Noutopyyntö saapunut” → Send Task *Lähetä noutovahvistus* → Receive Task *Vastaanota muutospyyntö* → Send Task *Lähetä muutospäätös* → End Event. Verkkokauppa voidaan esittää suljettuna altaana, johon viestivirrat kulkevat.
+
+Pois jäävät *Tarkista kuljetuskapasiteetti* ja *Päätä muutos*, koska ne ovat logistiikkayrityksen sisäisiä tehtäviä, jotka eivät näy verkkokaupalle. Päätöksen tulos näkyy verkkokaupalle vain muutospäätösviestin sisältönä, joten julkiseen prosessiin ei tarvita porttia hyväksynnälle ja hylkäykselle.
+
+Verkkokauppa näkee julkisesta prosessista, mitä viestejä logistiikkayritys odottaa ja lähettää ja missä järjestyksessä. Tieto riittää oman prosessin ja järjestelmäintegraation suunnitteluun, eikä logistiikkayrityksen tarvitse paljastaa sisäistä toimintaansa. Julkinen prosessi paljastaa myös BPMN-tehtävän 43 malliratkaisussa mainitun ongelman: logistiikkayritys odottaa muutospyyntöä, jota ei välttämättä koskaan tule.
+:::
+
+#### BPMN-tehtävä 47
+
+Päättele kunkin tilanteen perusteella, sopiiko sen kuvaamiseen parhaiten julkinen prosessi, kollaboraatio, orkestraatio vai koreografia. Perustele valintasi.
+
+1. Pankin työnkulkualusta käsittelee lainahakemuksen kutsumalla luottotietopalvelua, sähköisen allekirjoituksen palvelua ja maksuliikennejärjestelmää.
+2. Kolme yritystä sopii, millä viesteillä ja missä järjestyksessä ne vaihtavat sähköisesti tilaukset, toimitusvahvistukset ja laskut. Mikään yrityksistä ei ohjaa muita.
+3. Asiakaspalvelun henkilöstölle halutaan kuvata, miten oma reklamaatioiden käsittely toimii yhdessä asiakkaan kanssa. Asiakkaan omaa toimintaa ei tunneta.
+4. Yritys julkaisee kumppaneilleen kuvauksen siitä, mitä viestejä sen tilausrajapinta vastaanottaa ja lähettää.
+5. Verkkokaupan mikropalvelut julkaisevat tapahtumia, kuten ”tilaus luotu” ja ”maksu vastaanotettu”, ja muut palvelut reagoivat niihin itsenäisesti ilman keskitettyä ohjausta.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+1. **Orkestraatio**: pankin prosessi ohjaa muita palveluita, ja ne vain vastaavat niille osoitettuihin pyyntöihin. Pankin prosessi mallinnetaan auki, ja muut palvelut ovat suljettuja altaita.
+2. **Koreografia**: kyse on osapuolten yhteisestä viestinvaihdosta, jota kukaan ei ohjaa. Kenenkään sisäinen prosessi ei ole kiinnostava. Sama voidaan kuvata myös kollaboraationa suljetuin altain, mutta koreografia ilmaisee viestien järjestyksen ja vastuun seuraavasta askeleesta tarkemmin.
+3. **Kollaboraatio**: oma prosessi on auki ja asiakas on suljettu allas, koska sen prosessia ei tunneta. Avattu allas on tässä oma yksityinen prosessi.
+4. **Julkinen prosessi**: kuvaus näyttää vain ne tehtävät ja tapahtumat, joiden kautta kumppanit ovat vuorovaikutuksessa yrityksen kanssa.
+5. **Koreografia**: palvelut toimivat itsenäisesti sovittujen viestien perusteella. Huomaa, että ohjelmistoarkkitehtuurissa tätä kutsutaan usein tapahtumapohjaiseksi koreografiaksi, ja käsite on lähellä BPMN:n merkitystä, joskaan ei täsmälleen sama.
+:::
+
+#### BPMN-tehtävä 48 (laajempi)
+
+Esitä BPMN-tehtävän 43 verkkokaupan ja logistiikkayrityksen välinen viestinvaihto koreografiakaaviona. Ota huomioon, että noutoajan muutospyyntöä ei aina lähetetä. Miten logistiikkayritys koreografiassa tietää, odotetaanko siltä vielä jotain? Koreografiakaavioita voi piirtää esimerkiksi chor-js-mallintimella.
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+![Noutopyynnön koreografia](kuviot/noutokoreografia.png){#fig-noutokoreografia-teht}
+
+Start Event → koreografiatehtävä *Pyydä nouto* (aloittaja Verkkokauppa, viesti Noutopyyntö, paluuviesti Noutovahvistus) → Exclusive Gateway ”Sopiiko noutoaika?”. Haara ”Kyllä” → *Hyväksy noutoaika* (Verkkokauppa → Logistiikkayritys, viesti Noutoajan hyväksyntä) → End Event. Haara ”Ei” → *Pyydä noutoajan muutos* (Verkkokauppa → Logistiikkayritys, viesti Muutospyyntö, paluuviesti Muutospäätös) → End Event.
+
+Tehtävän 43 alkuperäisessä mallissa verkkokauppa ei ilmoita mitään, jos noutoaika sopii, joten logistiikkayritys ei voi tietää, tuleeko muutospyyntö vielä. Koreografiassa jokaisen osapuolen on pystyttävä toimimaan pelkästään saamiensa viestien perusteella. Siksi myös ”Kyllä”-haaraan tarvitaan viesti, jolla verkkokauppa hyväksyy noutoajan. Portin jälkeisten koreografiatehtävien aloittaja on verkkokauppa, joka tekee päätöksen ja joka osallistui edelliseen viestinvaihtoon, joten koreografia noudattaa standardin sääntöjä.
+
+Sisäiset tehtävät, kuten *Tarkista kuljetuskapasiteetti*, *Päätä muutos*, *Päivitä tilaus* ja *Valmistele tilaus noutoa varten*, eivät näy koreografiassa. Muutoksen hyväksyntä tai hylkäys näkyy vain muutospäätösviestin sisältönä. Vaihtoehto hyväksyntäviestille on sopia määräaika, jonka jälkeen noutoaika katsotaan hyväksytyksi. Silloin osapuolten on kuitenkin luotettava siihen, että kummankin kello ja tulkinta määräajasta ovat samat.
+:::
+
+#### BPMN-tehtävä 49 (essee)
+
+Kuvan @fig-koreografia koreografiassa vain verkkokauppa voi perua tilauksen. Pohdi, miksi asiakkaan oikeus perua tilaus milloin tahansa ennen toimitusta olisi koreografiassa ongelmallinen. Millaisilla säännöillä osapuolet voisivat sopia asiasta niin, että kumpikin tietää aina, mikä tilanne on?
+
+::: {.callout-tip collapse="true"}
+## Malliratkaisu
+
+Jos asiakas saa perua tilauksen milloin tahansa, kaksi osapuolta voi aloittaa oman viestinvaihtonsa yhtä aikaa: asiakas lähettää peruutuksen samaan aikaan, kun verkkokauppa lähettää tilauksen matkaan. Kumpikaan ei tiedä toisen viestistä ennen kuin oma viesti on jo lähetetty, joten osapuolten käsitys tilauksen tilasta voi erota. Koreografiassa tällaista kilpatilannetta ei voi esittää yksiselitteisesti. BPMN-standardin mukaan esimerkiksi tapahtumapohjaisen portin jälkeisillä viestinvaihdoilla on oltava sama lähettäjä tai sama vastaanottaja, mikä tässä ei täyty.
+
+Mahdollisia sopimuksia:
+
+- **Määräaika**: peruutus on mahdollinen tietyn ajan tilauksesta, minkä jälkeen tilaus käsitellään. Tämä on yksinkertaista, mutta edellyttää yhteistä käsitystä ajasta.
+- **Ilmoitus ennen lähetystä**: verkkokauppa ilmoittaa, kun tilaus on lähdössä, ja asiakas joko peruu tilauksen tai antaa lähettää sen. Päätösvalta on hetkellisesti asiakkaalla, ja koreografia pysyy yksiselitteisenä, mutta viestejä tarvitaan enemmän.
+- **Peruutus pyyntönä**: asiakkaan peruutus on pyyntö, johon verkkokauppa vastaa joko hyväksymällä sen tai ilmoittamalla, että tilaus on jo lähetetty. Viimeinen sana on verkkokaupalla, ja myöhästynyt peruutus käsitellään palautuksena.
+
+Hyvä vastaus huomaa, että ongelma ei ole mallinnustekninen vaan liiketoiminnallinen: koreografian laatiminen pakottaa osapuolet sopimaan asioista, jotka muuten jäisivät epäselviksi.
+:::
+
+### Aliprosessit ja toisto
+
+#### BPMN-tehtävä 50
 
 Muuttoon kuuluvat seuraavat tehtävät: *Pakkaa laatikot*, *Tee osoitteenmuutos*, *Kanna tavarat autoon*, *Irtisano sähkösopimus*, *Aja uuteen osoitteeseen*, *Tee uusi sähkösopimus*, *Kanna tavarat sisään* ja *Pura laatikot*. Ryhmittele tehtävät kahteen tai kolmeen aliprosessiin ja mallinna pääprosessi niin, että aliprosessit on esitetty tiivistettyinä.
 
@@ -834,7 +904,7 @@ Muuttoon kuuluvat seuraavat tehtävät: *Pakkaa laatikot*, *Tee osoitteenmuutos*
 Esimerkiksi aliprosessit *Hoida paperityöt* (osoitteenmuutos ja sähkösopimukset) ja *Siirrä tavarat* (pakkaus, kantaminen, ajo ja purku). Paperityöt voidaan tehdä rinnakkain tavaroiden siirron kanssa, joten pääprosessi voi olla muotoa Parallel Gateway → kaksi aliprosessia → Parallel Gateway. Tiivistetty aliprosessi merkitään +-merkillä.
 :::
 
-#### BPMN-tehtävä 47
+#### BPMN-tehtävä 51
 
 Opettaja arvioi kurssin 25 esseetä. Mallinna tehtävä Multi-Instance-merkinnällä kahdessa versiossa: (a) opettaja arvioi esseet yksin, (b) arviointiin osallistuu kolme assistenttia samanaikaisesti.
 
@@ -844,7 +914,7 @@ Opettaja arvioi kurssin 25 esseetä. Mallinna tehtävä Multi-Instance-merkinnä
 (a) Tehtävä *Arvioi essee*, jossa on Sequential Multi-Instance -merkintä (kolme vaakaviivaa). Instanssit suoritetaan yksi kerrallaan. (b) Sama tehtävä Parallel Multi-Instance -merkinnällä (kolme pystyviivaa). Instanssit suoritetaan rinnakkain. Molemmissa syötteenä on esseiden lista, ja prosessi jatkuu vasta, kun kaikki instanssit on suoritettu.
 :::
 
-#### BPMN-tehtävä 48 (laajempi)
+#### BPMN-tehtävä 52 (laajempi)
 
 Jaa seuraavat tehtävät aliprosesseiksi. Nimeä aliprosessit loogisella tavalla ja yhdistä ne toisiinsa järjestysvirroilla. Huomaa, että tehtävät on esitetty alla aakkosjärjestyksessä, ei välttämättä niiden suoritusjärjestyksessä.
 
@@ -888,7 +958,7 @@ Yksi mahdollinen jako:
 Pääprosessi: Start Event → 1 → 2 → 3 → 4 → 5 → 6 → *Sulje tapaus* → End Event. Poikkeukset eivät kuulu normaaliin kulkuun. Ne voidaan liittää pääprosessiin esimerkiksi Error Boundary Eventillä (maksu epäonnistui) ja Message Boundary Eventillä tai tapahtuma-aliprosessilla (peruutus). Palautus käynnistyy yleensä vasta toimituksen jälkeen, joten se voi olla myös oma erillinen prosessinsa. Muutkin jaot ovat perusteltavissa, esimerkiksi varaston varaaminen ennen hinnoittelua.
 :::
 
-#### BPMN-tehtävä 49
+#### BPMN-tehtävä 53
 
 Mallinna vastaava prosessikulku ilman Loop-tehtävää.
 
@@ -900,7 +970,7 @@ Mallinna vastaava prosessikulku ilman Loop-tehtävää.
 Start Event → Script Task *Nollaa yrityslaskuri* → yhdistävä Exclusive Gateway → User Task *Syötä salasana* → Script Task *Kasvata yrityslaskuria* → Exclusive Gateway, josta lähtee kolme haaraa: `salasanaOikein` → *Tee tehtävä* → End Event, `not salasanaOikein and yritykset >= 3` → End Event ”Kirjautuminen epäonnistui” ja oletusvirta takaisin yhdistävään porttiin. Koska alkuperäisessä mallissa `testBefore = false`, tehtävä suoritetaan vähintään kerran ennen ehdon tarkistamista. Siksi paluuvirta johdetaan tehtävää edeltävään porttiin, eikä ehtoa tarkisteta ennen ensimmäistä yritystä.
 :::
 
-#### BPMN-tehtävä 50 (laajempi)
+#### BPMN-tehtävä 54 (laajempi)
 
 Laadi Parallel ja Sequential Multi-instance -tehtäviä käyttävä prosessimalli, joka pystyy käsittelemään samaan tilaukseen sisältyviä fyysisiä tuotteita sekä digitaalisten palvelujen käyttöoikeuksia.
 
@@ -915,7 +985,7 @@ Message Start Event ”Tilaus vastaanotettu” → Parallel Gateway → kaksi ha
 Haarat yhdistetään Parallel Gatewaylla → Send Task *Lähetä tilausvahvistus* → End Event. Jos tilauksessa ei ole lainkaan jompaakumpaa tuotetyyppiä, Multi-Instance-tehtävä tyhjällä listalla päättyy heti. Vaihtoehtoisesti haarat voi jakaa Inclusive Gatewaylla tuotetyyppien mukaan.
 :::
 
-#### BPMN-tehtävä 51
+#### BPMN-tehtävä 55
 
 Mallinna työpisteen siivous Ad-hoc-aliprosessina. Aliprosessiin kuuluvat tehtävät *Tyhjennä roskakori*, *Pyyhi pöytä*, *Järjestä paperit*, *Imuroi lattia* ja *Kastele kasvit*. Tehtävät voi tehdä missä järjestyksessä tahansa, eikä kaikkia tarvitse tehdä joka kerta. Mitä etuja ja haittoja Ad-hoc-aliprosessilla on verrattuna siihen, että tehtävät mallinnettaisiin kiinteään järjestykseen? Missä tilanteissa Ad-hoc-rakenne voisi soveltua tekoälyagentin ohjaamaan prosessiin?
 
@@ -931,7 +1001,7 @@ Tekoälyagentti: ad-hoc-aliprosessin tehtävät voivat toimia agentin käytettä
 
 ### Kokoavia tehtäviä
 
-#### BPMN-tehtävä 52
+#### BPMN-tehtävä 56
 
 Kirjaston asiakas tilaa kaukolainan. Kirjasto lähettää pyynnön toiselle kirjastolle ja odottaa kirjaa enintään 14 päivää. Jos kirja saapuu, asiakkaalle ilmoitetaan noudettavasta kirjasta. Jos kirjaa ei kuulu, asiakkaalle ilmoitetaan, ettei kirjaa saatu. Mallinna kirjaston prosessi ja lainaavan kirjaston osuus suljettuna altaana.
 
@@ -941,7 +1011,7 @@ Kirjaston asiakas tilaa kaukolainan. Kirjasto lähettää pyynnön toiselle kirj
 Kirjaston allas: Message Start Event ”Kaukolainapyyntö saapunut” → Send Task *Lähetä pyyntö lainaavalle kirjastolle* → Event-Based Gateway, jota seuraa Message Intermediate Catch Event ”Kirja saapunut” → *Ilmoita asiakkaalle noudettavasta kirjasta* sekä Timer Intermediate Catch Event `P14D` → *Ilmoita asiakkaalle, ettei kirjaa saatu*. Lainaava kirjasto on suljettu allas, johon ja josta kulkevat viestivirrat.
 :::
 
-#### BPMN-tehtävä 53
+#### BPMN-tehtävä 57
 
 Verkkopalveluun kirjaudutaan kaksivaiheisesti. Käyttäjä syöttää salasanan, ja jos se on oikein, hänen puhelimeensa lähetetään vahvistuskoodi. Jos käyttäjä syöttää koodin viiden minuutin kuluessa, kirjautuminen onnistuu. Muuten kirjautuminen keskeytetään. Väärästä salasanasta käyttäjälle näytetään virheilmoitus. Mallinna prosessi.
 
