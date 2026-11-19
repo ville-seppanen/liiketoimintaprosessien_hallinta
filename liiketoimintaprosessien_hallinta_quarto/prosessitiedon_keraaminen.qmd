@@ -45,9 +45,9 @@ Kypsyyden arvioinnissa voidaan hyödyntää tässä luvussa esiteltäviä proses
 
 Kyvykkyys (*business capability*) on organisaation kyky, joka sillä on tai jonka se voi hankkia saavuttaakseen tietyn lopputuloksen [@togaf-kyvykkyydet]. Kyvykkyys kuvaa, mitä organisaatio pystyy tekemään, riippumatta siitä, kuka työn tekee, millä prosesseilla tai millä tietojärjestelmillä. Prosessi puolestaan kuvaa, miten työ tehdään. Kyvykkyys rakentuu siis ihmisten, prosessien, tiedon ja teknologian yhdistelmästä, ja yhtä kyvykkyyttä voi toteuttaa useampi prosessi.
 
-Seuraavassa kuviossa (@fig-kyvykkyyskartta) on esimerkki kyvykkyyskartasta, joka voi myös auttaa tunnistamaan kyvykkyyksiin liittyvät ja kyvykkyyksiä toteuttavat prosessit. Kyvykkyyksien kypsyyttä voidaan arvioida samalla tavalla kuin prosessien. Kun kartta väritetään "lämpökartaksi" kypsyystason tai tunnistetun parannustarpeen mukaan, siitä näkee nopeasti, mihin kyvykkyyksiin ja niitä toteuttaviin prosesseihin kehittämistoimet kannattaa ensimmäiseksi kohdistaa.
+Seuraavassa kuviossa (@fig-kyvykkyyskartta)[^hosiaisluoma] on esimerkki kyvykkyyskartasta, joka voi myös auttaa tunnistamaan kyvykkyyksiin liittyvät ja kyvykkyyksiä toteuttavat prosessit. Kyvykkyyksien kypsyyttä voidaan arvioida samalla tavalla kuin prosessien. Kun kartta väritetään "lämpökartaksi" kypsyystason tai tunnistetun parannustarpeen mukaan, siitä näkee nopeasti, mihin kyvykkyyksiin ja niitä toteuttaviin prosesseihin kehittämistoimet kannattaa ensimmäiseksi kohdistaa.
 
-![Esimerkki kyvykkyyskartasta[^hosiaisluoma]](kuviot/kyvykkyyskartta.svg){#fig-kyvykkyyskartta fig-alt="Esimerkki kyvykkyyskartasta."}
+![Esimerkki kyvykkyyskartasta](kuviot/kyvykkyyskartta.svg){#fig-kyvykkyyskartta fig-alt="Esimerkki kyvykkyyskartasta."}
 
 [^hosiaisluoma]: https://www.hosiaisluoma.fi/
 

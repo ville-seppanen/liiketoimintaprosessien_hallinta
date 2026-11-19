@@ -527,7 +527,7 @@ Seuraavassa prosessissa (@fig-link-esim) puuttuvan tuotteen tilaamisen jälkeen 
 
 #### Signal Event
 
-Siinä missä Message-tehtävät ja -tapahtumat on aina tarkoitettu tarkoin koordinoituun kahden osapuolen väliseen viestinvaihtoon, *Signal Event* mahdollistaa samanaikaisen *broadcast*-tyyppisen viestinnän useille signaalia kuunteleville. Signaalin lähettäjän ei tarvitse tietää, kuinka monta vastaanottajaa sillä on, eikä se odota vastaanottajilta vastausta (@fig-signal-token-esim).
+Siinä missä Message-tehtävät ja -tapahtumat on aina tarkoitettu tarkoin koordinoituun kahden osapuolen väliseen viestinvaihtoon, *Signal Event* mahdollistaa samanaikaisen *broadcast*-tyyppisen viestinnän useille signaalia kuunteleville. Signaalin lähettäjän ei tarvitse tietää, kuinka monta vastaanottajaa sillä on, eikä se odota vastaanottajilta vastausta (@fig-signal-token-esim)[^signal-token-esim].
 
 Signal Event -tapahtuman tyypit ovat heittävä (*Throw*) ja vastaanottava (*Catch*). Sitä voidaan käyttää *Boundary*-, *Intermediate*-, *Start*- ja *End*-tapahtumissa.
 
@@ -535,7 +535,7 @@ Seuraavassa esimerkissä tehtävää *1* seuraa Intermediate Signal Event *A*. K
 
 Teknisesti ottaen -- ja automaattisia prosessikulkuja simuloitaessa -- tehtävien *2* ja *3* suorittaminen alkaa samaan aikaan kuin tehtävän *4*. Mikäli tehtävillä ei ole määriteltyä suoritusaikaa, ne kaikki myös valmistuvat samaan aikaan. Käytännössä ja todellisissa prosesseissa tätä ei tietenkään voida taata.
 
-![Signal Eventin suorittaminen prosessisimulaatiossa[^signal-token-esim]](kuviot/signal-token-esim.png){#fig-signal-token-esim}
+![Signal Eventin suorittaminen prosessisimulaatiossa](kuviot/signal-token-esim.png){#fig-signal-token-esim}
 
 [^signal-token-esim]: Kuviossa näkyvä Token Simulation esitellään Työvälineitä-luvussa. 
 
