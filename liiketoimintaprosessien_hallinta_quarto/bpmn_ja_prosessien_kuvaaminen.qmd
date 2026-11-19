@@ -643,35 +643,57 @@ Ohjelmallista toimintalogiikkaa voidaan joissain tapauksissa myös jäsentää p
 
 ![Riskianalysaattorin toimintalogiikkaa](kuviot/riski-esim.png){#fig-riski}
 
-### Julkinen ja yksityinen prosessi: koreografia, orkestraatio sekä kollaboraatio[^koreo-kasitteet]
+### Julkinen ja yksityinen prosessi: kollaboraatio, orkestraatio ja koreografia[^koreo-kasitteet]
 
-[^koreo-kasitteet]: Huomautettakoon, että koreografia, orkestraatio ja kollaboraatio saatetaan eri lähteissä ja prosessimallinnusvälineissä esittää toisistaan poikkeavilla tavoilla ja myös toisistaan poikkeavissa merkityksissä.
+[^koreo-kasitteet]: Tässä käsitteet esitetään BPMN 2.0 -standardin mukaisesti (ks. standardin luku 7.2, https://www.omg.org/spec/BPMN/2.0.2/PDF). Esimerkiksi palvelukeskeisen arkkitehtuurin ja mikropalveluarkkitehtuurin yhteydessä orkestraatiolla ja koreografialla tarkoitetaan hieman eri asioita, ja myös mallinnusvälineet voivat käyttää termejä omilla tavoillaan.
 
-Prosessimallien ja prosessien muotojen yhteydessä esiin saattavat nousta käsitteet julkinen prosessi (*Public Process*) ja yksityinen prosessi (*Private Process*).
+Prosessien yhteistyötä mallinnettaessa esiin nousevat käsitteet yksityinen prosessi (*Private Process*) ja julkinen prosessi (*Public Process*). Ne ovat saman osapuolen prosessin kaksi eri näkymää.
 
-Julkisella prosessilla tarkoitetaan useiden toimijoiden yhteistyönä toteutettavan prosessin kokonaisrakennetta. Yksityiset prosessit puolestaan ovat kokonaisrakenteen muodostavia toimijoiden sisäisiä prosessikulkuja (@fig-julk_vs_yks). Yksityiset prosessit voivat sikäli olla kirjaimellisestikin yksityisiä, että liiketoimintaverkostossa tapahtuvassa yritysten välisessä yhteistyössä osapuolten ei tarvitse ainakaan täsmällisesti tietää, millä tavoin muut yritykset omat prosessinsa toteuttavat. Tässä riittää, että tiedetään, kuinka tarvittava informaatio saadaan liikkumaan prosessien välillä.
+Yksityinen prosessi on organisaation sisäinen prosessi, josta näkyvät kaikki sen tehtävät, portit ja tapahtumat. Yksityinen prosessi voi olla myös suoritettava (*executable*) eli tarkoitettu ajettavaksi työnkulkualustalla. Kuvassa (@fig-yksityinen) on verkkokaupan tilausprosessi yksityisenä prosessina. Asiakas on kuvattu suljettuna altaana (niin kutsuttu *black box*), koska verkkokauppa ei tiedä eikä sen tarvitse tietää, millainen asiakkaan oma prosessi on.
 
-![Julkinen prosessi ja siihen liittyvät yksityiset prosessit](kuviot/julk_vs_yks.png){#fig-julk_vs_yks}
+![Verkkokaupan tilausprosessi yksityisenä prosessina](kuviot/yksityinen-prosessi.png){#fig-yksityinen}
 
-Yhteistyöprosesseihin liittyvät myös käsitteet kollaboraatio (*Collaboration*), orkestraatio (*Orchestration*) ja koreografia (*Choreography*). Ne ovat erilaisia tapoja hallita ja kuvata, miten eri osallistujat, esimerkiksi organisaatiot, osastot tai sovellukset toimivat yhdessä prosessin aikana. Näitä tyyppejä voidaan mallintaa myös BPMN:n avulla.
+Julkinen prosessi näyttää samasta prosessista vain ne osat, joiden kautta osapuoli on vuorovaikutuksessa muiden kanssa: viestejä lähettävät ja vastaanottavat tehtävät ja tapahtumat sekä niiden välisen kulun. Sisäiset tehtävät, kuten maksun tarkistus, tuotteiden varaaminen ja keräily, jäävät pois (@fig-julkinen). Julkinen prosessi on siis kuin yrityksen ulospäin näyttämä rajapinta. Liiketoimintaverkoston osapuolten ei tarvitse tuntea toistensa sisäisiä prosesseja, kunhan ne tietävät, mitä viestejä toisiltaan voivat odottaa ja missä järjestyksessä. Yksityiset prosessit voivat siten olla kirjaimellisestikin yksityisiä.
 
-Kollaboraatiomalli on yksinkertainen. Se sisältää kaksi tai useampia prosessiin osallistuvia osapuolia sekä näiden välisen vuorovaikutuksen. BPMN-kielen mukaisessa prosessikollaboraatiossa käytetään osapuolten esittämiseen uima-altaita ja vuorovaikutuksen esittämiseen viestivirtoja. Seuraavassa kuviossa (@fig-kollaboraatio) on esitetty edellinen julkisen prosessin esimerkki (@fig-julk_vs_yks) kollaboraatiomallin muodossa.
+![Saman tilausprosessin julkinen prosessi](kuviot/julkinen-prosessi.png){#fig-julkinen}
 
-![Kollaboraatiomalli](kuviot/kollaboraatio.png){#fig-kollaboraatio}
+Yhteistyöprosesseihin liittyvät myös käsitteet kollaboraatio (*Collaboration*), orkestraatio (*Orchestration*) ja koreografia (*Choreography*). Ne kuvaavat eri näkökulmista sitä, miten osallistujat, esimerkiksi organisaatiot, osastot tai sovellukset, toimivat yhdessä prosessin aikana.
 
-Seuraava kollaboraatiomalli (@fig-verkkokauppa-kollab) esittää vuorovaikutusta verkkokaupan ja asiakkaan välillä tilausprosessissa. Esitystapa muistuttaa hieman UML:n sekvenssikaaviota.
+#### Kollaboraatio
 
-![Verkkokaupan ja asiakkaan vuorovaikutusta ilmaiseva prosessikollaboraatio](kuviot/verkkokauppa-kollab.png){#fig-verkkokauppa-kollab}
+Kollaboraatiomalli kuvaa kaksi tai useampia prosessiin osallistuvia osapuolia sekä näiden välisen vuorovaikutuksen. BPMN:ssä osapuolet esitetään uima-altaina ja vuorovaikutus viestivirtoina. Altaat voivat olla avattuja, jolloin niissä näkyy osapuolen yksityinen tai julkinen prosessi, tai suljettuja, jolloin osapuolesta näkyvät vain sen lähettämät ja vastaanottamat viestit. Edellisetkin kuvat (@fig-yksityinen ja @fig-julkinen) ovat siis kollaboraatiomalleja. Itse asiassa kaikki aiemmat esimerkit, joissa on useampi allas ja niitä yhdistäviä viestivirtoja, ovat kollaboraatioita.
 
-Orkestraatio puolestaan kuvaa yhden prosessin ohjaamaa yhteistyötä, jossa jokin osapuoli koordinoi prosessin etenemistä eli hallitsee työnkulkua. Orkesterinjohtajan tavoin tämä toimija antaa muille osapuolille ohjeita, mitä niiden odotetaan tekevän ja milloin. Prosessiorkestraatio kuvataan usein prosessimallina, jossa koordinoiva prosessi on mallinnettu auki tapahtumien ja tehtävien tarkkuudella, ja muut osallistujat on kuvattu ainoastaan viestivinä altaina, kuten kollaboraatiossa. Tällainen malli soveltuu käytettäväksi, kun halutaan mallintaa jokin yhteistyöprosessi, mutta tarkka näkymä ainoastaan omaan prosessiin on relevantti. Seuraavassa esimerkissä (@fig-orkest-verkkokauppa) esitetään verkkokauppaprosessi asiakkaan orkestroimana.
+Kollaboraatiomallissa kaikki altaat voidaan esittää myös suljettuina (@fig-verkkokauppa-kollab). Silloin malli kertoo ainoastaan, mitä viestejä osapuolten välillä kulkee. Esitystapa muistuttaa hieman UML:n sekvenssikaaviota, mutta toisin kuin sekvenssikaaviossa, viestien järjestys ei ole yksiselitteinen, koska se riippuu altaiden sisällä olevista prosesseista.
 
-![Verkkokaupan tilausprosessi orkestroituna asiakkaan näkökulmasta](kuviot/orkest-verkkokauppa.png){#fig-orkest-verkkokauppa}
+![Verkkokaupan ja asiakkaan vuorovaikutusta ilmaiseva kollaboraatiomalli, jossa molemmat altaat on suljettu](kuviot/verkkokauppa-kollab.png){#fig-verkkokauppa-kollab}
 
-Prosessikoreografiassa millään osapuolella ei ole prosessikulkua ohjaavaa roolia, eikä siten myöskään pääprosessin tuottamaa keskitettyä ohjausta. Koreografia on kaikkien osallistujien yhteistoimintaa, jolle on määritelty ennalta sovitut vuorovaikutussäännöt, joita noudattaen jokainen osallistuja toimii itsenäisesti. Jos prosessiorkestraatio vertautuu orkesteriin ja sitä johtavaan kapellimestariin, voidaan prosessikoreografiaa verrata tanssiteokseen. Kun tanssijat tuntevat koreografian, kukin tietää, mitä hänen tulee tehdä ja milloin, kuinka asemoida itsensä suhteessa muihin tanssijoihin ja niin edelleen. Teoksen läpivienti ei edellytä, että koreografi seisoisi ryhmän edessä ja ohjaisi suoritusta. Sitä toki tarvitaan vielä silloin, kun teosta harjoitellaan. Vastaavasti prosessikoreografian suunnittelu vaatii suunnittelua ja yhteistyötä, jotta yhteistyöprosessi saadaan toteutettua luotettavasti ja tehokkaasti ainoastaan osapuolten välille ennalta määriteltyyn viestinvaihtoon tukeutuen.
+#### Orkestraatio
 
-BPMN:ssa koreografia esitetään prosessimallina, jossa on uima-allas kullekin osallistujalle ja altaissa kunkin osallistujan suorittama prosessi. Kokonaisprosessi ohjautuu altaita yhdistävien viestivirtojen kautta. Tällaiset prosessit sinällään ovatkin tuttuja jo aiemmista esimerkeistä, joten tässä käytännössä esiteltiinkin niille ainoastaan uusi nimi. Seuraavassa kuviossa (@fig-koreografia) esitetään edellisen prosessikollaboraation kuvaama prosessi koreografiana.
+Orkestraatio kuvaa yhden osapuolen ohjaamaa yhteistyötä. Orkesterinjohtajan tavoin tämä toimija koordinoi prosessin etenemistä: se kutsuu muita osapuolia, odottaa niiden vastauksia ja päättää niiden perusteella, mitä seuraavaksi tapahtuu. Muut osapuolet eivät tiedä kokonaisuudesta. Ne vain vastaavat niille osoitettuihin pyyntöihin.
+
+BPMN:ssä orkestraatio on yksityinen prosessi, joka on mallinnettu auki tehtävien ja tapahtumien tarkkuudella. Muut osallistujat kuvataan suljettuina altaina, joihin kulkee viestivirtoja. Tyypillisesti orkestroiva prosessi on suoritettava, ja sitä ajetaan työnkulkualustalla, joka kutsuu muiden osapuolten järjestelmiä niiden rajapintojen kautta. Kuvassa (@fig-orkestraatio) verkkokaupan tilausprosessi ohjaa maksupalvelua, varastoa ja kuljetusliikettä sekä tiedottaa asiakkaalle tilauksen etenemisestä.
+
+![Verkkokaupan tilausprosessi orkestroimassa maksupalvelua, varastoa ja kuljetusliikettä](kuviot/orkestraatio-verkkokauppa.png){#fig-orkestraatio}
+
+Orkestraatiossa kokonaisuuden hallinta on yhdellä osapuolella. Tämä tekee prosessin seurannasta ja muuttamisesta suoraviivaista, mutta orkestroijasta tulee samalla koko yhteistyön kriittinen piste. Jos sen prosessi pysähtyy, pysähtyvät kaikki.
+
+#### Koreografia
+
+Prosessikoreografiassa millään osapuolella ei ole prosessikulkua ohjaavaa roolia, eikä siten myöskään keskitettyä ohjausta. Koreografia on kaikkien osallistujien yhteistoimintaa, jolle on määritelty ennalta sovitut vuorovaikutussäännöt, joita noudattaen jokainen osallistuja toimii itsenäisesti. Jos prosessiorkestraatio vertautuu orkesteriin ja sitä johtavaan kapellimestariin, voidaan prosessikoreografiaa verrata tanssiteokseen. Kun tanssijat tuntevat koreografian, kukin tietää, mitä hänen tulee tehdä ja milloin, kuinka asemoida itsensä suhteessa muihin tanssijoihin ja niin edelleen. Teoksen läpivienti ei edellytä, että koreografi seisoisi ryhmän edessä ja ohjaisi suoritusta. Sitä toki tarvitaan vielä silloin, kun teosta harjoitellaan. Vastaavasti prosessikoreografia vaatii huolellista suunnittelua ja osapuolten yhteistyötä, jotta yhteistyöprosessi saadaan toteutettua luotettavasti pelkästään ennalta sovittuun viestinvaihtoon tukeutuen.
+
+BPMN:ssä koreografialla on oma kaaviotyyppinsä, joka poikkeaa selvästi prosessi- ja kollaboraatiomalleista. Koreografiakaaviossa ei ole uima-altaita, eikä siinä näy yhdenkään osapuolen sisäinen prosessi. Sen sijaan kaavion perusyksikkö on koreografiatehtävä (*Choreography Task*), joka kuvaa yhtä osapuolten välistä viestinvaihtoa. Koreografiatehtävän ylä- ja alareunassa on osallistujanauhat (*Participant Band*), joihin on merkitty viestinvaihdon osapuolet. Vaalealla pohjalla oleva nauha on viestinvaihdon aloittaja (*initiating participant*) ja harmaa nauha vastaanottaja. Nauhaan liitetty kirjekuori kertoo, mikä viesti vaihdetaan. Valkoinen kirjekuori on aloittajan lähettämä viesti ja harmaa kirjekuori vastaanottajan paluuviesti. Koreografiatehtäviä yhdistetään järjestysvirroilla ja porteilla samaan tapaan kuin tavallisia tehtäviä, ja koreografialla on aloitus- ja lopetustapahtuma.
+
+Kuvassa (@fig-koreografia) on verkkokaupan tilaus koreografiana. Asiakas aloittaa koreografian lähettämällä tilauksen, johon verkkokauppa vastaa kuittauksella. Jos tuotteet ovat saatavilla, verkkokauppa toimittaa tilauksen, ja asiakas maksaa sen. Muussa tapauksessa verkkokauppa peruu tilauksen ja ilmoittaa siitä asiakkaalle.
 
 ![Verkkokauppatilauksen koreografia](kuviot/koreografia-verkkokauppa.png){#fig-koreografia}
+
+Koska koreografiassa ei ole ohjaavaa osapuolta, kaavion on oltava sellainen, että jokainen osapuoli pystyy toimimaan oikein pelkästään saamiensa viestien perusteella. BPMN-standardi asettaa tästä syystä koreografioille sääntöjä. Esimerkiksi koreografiatehtävän aloittajan on täytynyt osallistua edelliseen viestinvaihtoon, jotta se tietää, että on sen vuoro toimia. Samoin portin jälkeisten viestinvaihtojen aloittajien on täytynyt nähdä tieto, jonka perusteella portissa valitaan. Esimerkissä verkkokauppa aloittaa sekä toimituksen että peruutuksen, ja valinta perustuu sen omaan tietoon tuotteiden saatavuudesta.
+
+Säännöt paljastavat helposti yhteistyön suunnitteluvirheitä. Jos esimerkiksi asiakkaan sallittaisiin perua tilaus milloin tahansa ennen toimitusta (kuten kollaboraatiomallissa @fig-verkkokauppa-kollab), sekä asiakas että verkkokauppa voisivat aloittaa oman viestinvaihtonsa samanaikaisesti: asiakas lähettää peruutuksen, kun verkkokauppa on jo lähettänyt tilauksen matkaan. Koreografiaa mallintaessa tällaiset tilanteet tulevat näkyviin, ja osapuolten on sovittava, kumman ratkaisu on voimassa, esimerkiksi niin, että peruutus on mahdollinen vain siihen asti, kun verkkokauppa on ilmoittanut lähettävänsä tilauksen.
+
+Koreografiakaavioita tuetaan mallinnusvälineissä selvästi heikommin kuin prosessi- ja kollaboraatiomalleja. Esimerkiksi Camunda Modeler ei tue niitä, mutta niitä voi laatia esimerkiksi avoimen lähdekoodin chor-js-mallintimella[^chor-js]. Käytännössä yritysten välistä yhteistyötä kuvataankin usein kollaboraatiomalleilla, ja koreografioita käytetään erityisesti silloin, kun usean organisaation on sovittava yhteisestä viestinvaihdosta, eikä kenenkään sisäinen prosessi ole kiinnostuksen kohteena.
+
+[^chor-js]: https://github.com/bptlab/chor-js
 
 ## Joitain muita tapoja prosessien kuvaamiseen
 

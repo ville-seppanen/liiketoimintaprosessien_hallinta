@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_yksityinen" targetNamespace="http://bpmn.io/schema/bpmn">
+
+  <bpmn:collaboration id="Collaboration_1">
+    <bpmn:participant id="Verkkokauppa" name="Verkkokauppa – yksityinen prosessi" processRef="Process_Verkkokauppa" />
+    <bpmn:participant id="Asiakas" name="Asiakas" />
+    <bpmn:messageFlow id="MessageFlow_1" name="Tilaus" sourceRef="Asiakas" targetRef="Start" />
+    <bpmn:messageFlow id="MessageFlow_2" sourceRef="Vahvistus" targetRef="Asiakas" />
+    <bpmn:messageFlow id="MessageFlow_3" sourceRef="Ilmoitus" targetRef="Asiakas" />
+    <bpmn:messageFlow id="MessageFlow_4" sourceRef="Hylkays" targetRef="Asiakas" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_Verkkokauppa" isExecutable="false">
+    <bpmn:startEvent id="Start" name="Tilaus saapunut">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="Start_md" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Maksu" name="Tarkista maksu">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gw" name="Maksu hyväksytty?">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Varaa" name="Varaa tuotteet varastosta">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sendTask id="Vahvistus" name="Lähetä tilausvahvistus">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:task id="Keraa" name="Kerää ja pakkaa tuotteet">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sendTask id="Ilmoitus" name="Lähetä toimitusilmoitus">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:endEvent id="End" name="Tilaus toimitettu">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sendTask id="Hylkays" name="Ilmoita hylätystä maksusta">
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:endEvent id="End2" name="Tilaus hylätty">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Start" targetRef="Maksu" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Maksu" targetRef="Gw" />
+    <bpmn:sequenceFlow id="Flow_3" name="kyllä" sourceRef="Gw" targetRef="Varaa" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Varaa" targetRef="Vahvistus" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Vahvistus" targetRef="Keraa" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Keraa" targetRef="Ilmoitus" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Ilmoitus" targetRef="End" />
+    <bpmn:sequenceFlow id="Flow_8" name="ei" sourceRef="Gw" targetRef="Hylkays" />
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Hylkays" targetRef="End2" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
+      <bpmndi:BPMNShape id="Verkkokauppa_di" bpmnElement="Verkkokauppa" isHorizontal="true">
+        <dc:Bounds x="100" y="40" width="1200" height="280" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Asiakas_di" bpmnElement="Asiakas" isHorizontal="true">
+        <dc:Bounds x="100" y="420" width="1200" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_di" bpmnElement="Start">
+        <dc:Bounds x="172" y="122" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="140" y="90" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Maksu_di" bpmnElement="Maksu">
+        <dc:Bounds x="245" y="100" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_di" bpmnElement="Gw" isMarkerVisible="true">
+        <dc:Bounds x="395" y="115" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="370" y="83" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Varaa_di" bpmnElement="Varaa">
+        <dc:Bounds x="485" y="100" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Vahvistus_di" bpmnElement="Vahvistus">
+        <dc:Bounds x="635" y="100" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Keraa_di" bpmnElement="Keraa">
+        <dc:Bounds x="785" y="100" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ilmoitus_di" bpmnElement="Ilmoitus">
+        <dc:Bounds x="935" y="100" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_di" bpmnElement="End">
+        <dc:Bounds x="1102" y="122" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1070" y="163" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Hylkays_di" bpmnElement="Hylkays">
+        <dc:Bounds x="485" y="220" width="110" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End2_di" bpmnElement="End2">
+        <dc:Bounds x="1102" y="242" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1070" y="283" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="208" y="140" />
+        <di:waypoint x="245" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="355" y="140" />
+        <di:waypoint x="395" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="445" y="140" />
+        <di:waypoint x="485" y="140" />
+        <bpmndi:BPMNLabel><dc:Bounds x="451" y="144" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="595" y="140" />
+        <di:waypoint x="635" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="745" y="140" />
+        <di:waypoint x="785" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="895" y="140" />
+        <di:waypoint x="935" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7">
+        <di:waypoint x="1045" y="140" />
+        <di:waypoint x="1102" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8">
+        <di:waypoint x="420" y="165" />
+        <di:waypoint x="420" y="260" />
+        <di:waypoint x="485" y="260" />
+        <bpmndi:BPMNLabel><dc:Bounds x="426" y="169" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9">
+        <di:waypoint x="595" y="260" />
+        <di:waypoint x="1102" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_1_di" bpmnElement="MessageFlow_1">
+        <di:waypoint x="190" y="420" />
+        <di:waypoint x="190" y="158" />
+        <bpmndi:BPMNLabel><dc:Bounds x="198" y="375" width="90" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_2_di" bpmnElement="MessageFlow_2">
+        <di:waypoint x="690" y="180" />
+        <di:waypoint x="690" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_3_di" bpmnElement="MessageFlow_3">
+        <di:waypoint x="990" y="180" />
+        <di:waypoint x="990" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_4_di" bpmnElement="MessageFlow_4">
+        <di:waypoint x="540" y="300" />
+        <di:waypoint x="540" y="420" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
