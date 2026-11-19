@@ -95,7 +95,7 @@ Prosessien luokittelu auttaa hahmottamaan organisaation toimintaa kokonaisuutena
 
 ### Ennakointi ja ennustaminen
 
-Mitä tahansa tekojen tai tapahtumien sarjaa voidaan tarkastella prosessina. Esimerkiksi ukonilman muodostuminen on hahmotettavissa prosessina: ensimmäisessä vaiheessa aurinko lämmittää maanpintaa. Koska lämmennyt ilma on kylmää ilmaa kevyempää, alkaa se nousta ylöspäin. Jossain vaiheessa lämmin ilma törmää ylempänä ilmakehässä sijaitseviin kylmempiin ilmamassoihin. Lämpimän ilman kosteus tiivistyy nopeasti ja muodostuu pilviä. Ja niin edelleen.
+Mitä tahansa tekojen tai tapahtumien sarjaa voidaan tarkastella prosessina. Esimerkiksi ukonilman muodostuminen on hahmotettavissa prosessina. Ensimmäisessä vaiheessa aurinko lämmittää maanpintaa. Koska lämmennyt ilma on kylmää ilmaa kevyempää, alkaa se nousta ylöspäin. Jossain vaiheessa lämmin ilma törmää ylempänä ilmakehässä sijaitseviin kylmempiin ilmamassoihin. Lämpimän ilman kosteus tiivistyy nopeasti ja muodostuu pilviä. Ja niin edelleen.
 
 Edellinen oli maallikon ymmärryksellä esitetty yritelmä hahmottaa ukkosen syntyä prosessina eli sarjana toisiaan seuraavia tapahtumia. Kaikkia tapahtumasarjoja ei kuitenkaan välttämättä ole mielekästä ajatella prosesseina. Ukkosen prosessista saattavat olla kiinnostuneita ilmakehän ja sääilmiöiden tutkijat. Useimmille meistä kuitenkin riittää, että meteorologi vinkkaa hyvissä ajoin huomisen mahdollisesta ukkosmyrskystä.
 

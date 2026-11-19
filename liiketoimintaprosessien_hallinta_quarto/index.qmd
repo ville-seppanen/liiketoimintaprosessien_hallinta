@@ -1,28 +1,31 @@
 # Alkusanat {.unnumbered}
 
-Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston Informaatioteknologian tiedekunnan kurssille Liiketoimintaprosessien hallinta.
+Tämä kirja on kirjoitettu oppimateriaaliksi Jyväskylän yliopiston informaatioteknologian tiedekunnan kurssille Liiketoimintaprosessien hallinta. Se sopii luettavaksi myös muille, jotka haluavat ymmärtää, miten organisaatioiden toimintaa voidaan tarkastella, kuvata ja kehittää prosessien kautta.
 
-Kirjan alkuosa, luvut 1–6, käsittelee liiketoimintaprosesseja, niiden hallintaa ja kehittämistä. Sen jälkeen luvussa 7 tarkastellaan prosessien mallintamista, keskittyen erityisesti Business Process Model and Notation -standardiin.
+Kirjan näkökulma on melko tukevasti tietojärjestelmätieteellinen. Prosesseja tarkastellaan liiketoiminnan ja tietotekniikan rajapinnassa: miten työ todella tehdään, millaista tietoa se tarvitsee ja tuottaa, ja miten tietojärjestelmät, automaatio ja tekoäly voivat sitä tukea ja muuttaa. Kirja ei kuitenkaan edellytä lukijaltaan kauppatieteellis-teknistä taustaa, koska käsitteet ja menetelmät esitellään.
 
-Jos et ole lainkaan kiinnostunut prosessien mallintamisesta, voit jättää seitsemännen luvun lukematta. Toisaalta jos olet kiinnostunut nimenomaan mallintamisesta, voit jättää kirjan alkupuolen vähemmälle huomiolle.
+Kirjassa käydään läpi seuraavat teemat:
 
-Osat kuitenkin hetkittäin väistämättä viittaavat toistensa suuntaan, joten suositeltavaa on tutustua tekstiin kokonaisuudessaan.
+- Prosessit ja liiketoimintaprosessit (luku 2): mitä prosessit ovat, miten ydinprosessit eroavat muista prosesseista ja milloin prosesseihin kannattaa kiinnittää huomiota.
+- Prosessitiedon kerääminen (luku 3): kuinka prosesseista voidaan saada tietoa esimerkiksi kypsyystasoarvioinnin, kyvykkyyskarttojen, Business Model Canvasin, olemassa olevan dokumentaation, prosessihaastattelujen ja prosessilouhinnan avulla.
+- Prosessiorganisaatio ja prosessien kehittäminen (luku 4): prosessien omistajuus ja johtaminen, prosessien mittaaminen, jatkuva parantaminen ja radikaali uudistaminen, muutoksenhallinta sekä prosessien ulkoistaminen.
+- Prosessiarkkitehtuuri (luku 5): kuinka organisaation prosessit muodostavat hallittavan kokonaisuuden ja miten ne liittyvät kokonaisarkkitehtuuriin.
+- Prosessien mallintaminen (luku 6): mallien ja mallintamisen perusteet sekä Business Process Model and Notation (BPMN) -standardi. Luvussa käydään läpi BPMN-kielen elementit, yhteistyöprosessien kuvaaminen sekä muita prosessien kuvaustapoja.
+- Prosessiautomaatio ja tekoäly (luku 7): työnkulkuautomaatio, ohjelmistorobotiikka, hyperautomaatio ja tekoälyn mahdollisuudet prosessien kehittämisessä ja automatisoinnissa.
 
-Luvusta 8 löytyy harjoitustehtäviä. *Osaan tehtävistä on annettu myös malliratkaisut???* Huomaa kuitenkin, että hyvin harvaan tehtävään on olemassa vain yksi oikea vastaus.
+Kirjan voi lukea kannesta kanteen, mutta sen voi myös lukea kahtena osana. Luvut 1–5 käsittelevät liiketoimintaprosesseja, niiden hallintaa ja kehittämistä.
 
-Lopuksi luvussa 9 esitellään lyhyesti avoimia ja ilmaiseksi käytettävissä olevia ohjelmistoja prosessien kanssa työskentelyyn. Samoja ohjelmistoja on käytetty myös kurssin esimerkeissä.
+Luku 6, joka on melko laaja osuus, keskittyy prosessien mallintamiseen. Jos et ole lainkaan kiinnostunut mallintamisesta, voit jättää luvun 6 vähemmälle huomiolle. Jos taas olet kiinnostunut nimenomaan mallintamisesta, voit siirtyä suoraan lukuun 6. Luvussa esitetyn sisällön pitäisi olla varsin ajantasaista (BPMN 2.0) ja virheetöntä, joten sitä voi käyttää myös jonkinlaisena suomenkielisenä -- ja toivottavasti kohtalaisen selkokielisenä -- BPMN-käsikirjana. Aihetta on pyritty havainnollistamaan runsailla esimerkeillä.
 
-Kiitokset seuraaville henkilöille sisällön tuottamiseen osallistumisesta: Tuomas Kokko, Ari Kuusio, Pentti Marttiin ja Sara Seppänen.
+Luvun 7 automaatioesimerkit edellyttävät jonkin verran BPMN-kielen hallintaa, joten luku 6 kannattaa lukea ennen sitä.
 
-TODO
+Suosittelen kuitenkin tutustumaan tekstiin kokonaisuudessaan. Kaikki luvut lopulta käsittelevät samaa aihetta, vain hieman eri näkökulmista.
 
-- **Kuvio -> Kuva; seuraavassa kuviossa -> kuvassa jne.**
-- **Jokaisen pääluvun alkuun vähintään lyhyt metateksti / johdanto?**
-- **Essee-tyyppisiä tehtäviä, ainakin noin puolenkymmentä kpl.**
-- Läpikäynti Claudella luku kerrallaan: etsi kirjoitusvirheet ja epäloogisuudet. Löytyykö jotain, mikä tulisi esittää selkeämmin? Olisiko jotain osuutta tiivistettävä?
-- Tekstin kokonaisrakenteen loogisuus?
-- Lisää pieniä BPMN-tehtäviä: Anna Claudelle koko BPMN-osuus ja pyydä sitä laatimaan pieniä mallinnustehtäviä mallivastauksineen.
-    - Tehtävien vaikeuden luokittelu esim. kolmeen tasoon?
+Luvussa 8 on harjoitustehtäviä, jotka on jaettu kahteen osaan. Yleiset tehtävät ja esseetehtävät liittyvät pääosin kirjan alkupuolen teemoihin. Toisessa osassa on BPMN-mallinnustehtäviä. Ne on ryhmitelty aiheittain. Kustakin aiheesta on ensin pienempiä, 'nopeita' harjoituksia ja niiden jälkeen hieman laajempia tehtäviä. Mallinnustehtäviin on annettu malliratkaisut, mutta yritä ratkaista tehtävä ensin itse. Huomaa myös, että hyvin harvaan tehtävään on olemassa ainoastaan yksi oikea vastaus.
+
+Lopuksi luvussa 9 esitellään lyhyesti avoimia ja maksutta käytettävissä olevia ohjelmistoja prosessien kanssa työskentelyyn. Samoja ohjelmistoja on käytetty myös kirjan esimerkeissä.
+
+<!-- Lopuksi vielä kiitokset seuraaville (aakkosjärjestyksessä): Ari Kuusio, Claude Opus 5.5, Pentti Marttiin, Sara Seppänen ja Tuomas Kokko. -->
 
 Orivedellä XX.XX.2026
 Ville Seppänen

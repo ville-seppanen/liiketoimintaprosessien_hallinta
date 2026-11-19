@@ -60,11 +60,10 @@ TOGAF:iin kuuluva arkkitehtuurin kehittämismenetelmä (*Architecture Developmen
 
 Edellä todettiin, että BPMN-mallit on tarkoitettu kuvaamaan prosessin yksityiskohtaista työnkulkua, mutta niiden mahdollisuudet esittää prosessin kontekstia ja toimintaympäristöä ovat rajalliset. KA-kuvaukset pystyvät sen sijaan esittämään organisaation loogisen rakenteen ja ympäristön kokonaisuudessaan, mutta tyypillisesti varsin karkealla tarkkuustasolla.
 
-Monet ammattilaisten suosimat mallinnusvälineet tukevat useiden mallinnuskielten käyttöä rinnakkain, kuten ArchiMatea[^archimate] varsinaisten KA-kuvausten tuottamiseen, UML[^uml]-kieltä tarkempien ohjelmistoarkkitehtuurien suunnitteluun ja BPMN-kieltä prosessikulkujen kuvaamiseen. Tällaisten välineiden avulla voidaan tarkastella esimerkiksi ArchiMatella tuotettua prosessi- (@fig-am-esim7) tai kyvykkyyskarttaa (vrt. @fig-kyvykkyyskartta) ensin yleisellä tasolla, jotta nähdään vaikkapa prosessien suhde liiketoiminnan strategisiin tavoitteisiin tai järjestelmärajapintoihin kokonaisuudessaan. Tämän jälkeen voidaan porautua tutkimaan tarkemmin haluttuja prosessikulkuja BPMN-mallien muodossa.
+Monet ammattilaisten suosimat mallinnusvälineet tukevat useiden mallinnuskielten käyttöä rinnakkain, kuten ArchiMatea[^archimate] varsinaisten KA-kuvausten tuottamiseen, UML-kieltä tarkempien ohjelmistoarkkitehtuurien suunnitteluun ja BPMN-kieltä prosessikulkujen kuvaamiseen. Tällaisten välineiden avulla voidaan tarkastella esimerkiksi ArchiMatella tuotettua prosessi- (@fig-am-esim7) tai kyvykkyyskarttaa (vrt. @fig-kyvykkyyskartta) ensin yleisellä tasolla, jotta nähdään vaikkapa prosessien suhde liiketoiminnan strategisiin tavoitteisiin tai järjestelmärajapintoihin kokonaisuudessaan. Tämän jälkeen voidaan porautua tutkimaan tarkemmin haluttuja prosessikulkuja BPMN-mallien muodossa.
 
 [^archimate]: https://www.opengroup.org/archimate-forum/archimate-overview
 
-[^uml]: https://www.omg.org/uml/
 
 ArchiMate 3.2 -kielen sallimat suhteet liiketoimintaprosessin ja muiden kohteiden välille on koottu seuraavaan kuvioon (@fig-am-bp-suhteet). Kohteet on värikoodattu näkökulmittain: keltainen esittää liiketoiminta-arkkitehtuurin (*Business*) elementtejä, vaaleansininen sovelluksiin (*Application*) liittyviä elementtejä, vihreä teknologiaa (*Technology*) ja niin edelleen.
 
