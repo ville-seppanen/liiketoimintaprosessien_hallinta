@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_koreografia" targetNamespace="http://bpmn.io/schema/bpmn">
+
+  <bpmn:message id="Message_1" name="Tilaus" />
+  <bpmn:message id="Message_2" name="Tilauskuittaus" />
+  <bpmn:message id="Message_3" name="Toimitus" />
+  <bpmn:message id="Message_4" name="Maksu" />
+  <bpmn:message id="Message_5" name="Peruutusilmoitus" />
+  <bpmn:choreography id="Choreography_1">
+    <bpmn:participant id="P_Asiakas" name="Asiakas" />
+    <bpmn:participant id="P_Verkkokauppa" name="Verkkokauppa" />
+    <bpmn:messageFlow id="MessageFlow_1" sourceRef="P_Asiakas" targetRef="P_Verkkokauppa" messageRef="Message_1" />
+    <bpmn:messageFlow id="MessageFlow_2" sourceRef="P_Verkkokauppa" targetRef="P_Asiakas" messageRef="Message_2" />
+    <bpmn:messageFlow id="MessageFlow_3" sourceRef="P_Verkkokauppa" targetRef="P_Asiakas" messageRef="Message_3" />
+    <bpmn:messageFlow id="MessageFlow_4" sourceRef="P_Asiakas" targetRef="P_Verkkokauppa" messageRef="Message_4" />
+    <bpmn:messageFlow id="MessageFlow_5" sourceRef="P_Verkkokauppa" targetRef="P_Asiakas" messageRef="Message_5" />
+    <bpmn:startEvent id="Start">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="Gw" name="Tuotteet saatavilla?">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="End" name="Tilaus maksettu">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="End2" name="Tilaus peruttu">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:choreographyTask id="CT_Tilaus" name="Tee tilaus" initiatingParticipantRef="P_Asiakas">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+      <bpmn:participantRef>P_Asiakas</bpmn:participantRef>
+      <bpmn:participantRef>P_Verkkokauppa</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_1</bpmn:messageFlowRef>
+      <bpmn:messageFlowRef>MessageFlow_2</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:choreographyTask id="CT_Toimitus" name="Toimita tilaus" initiatingParticipantRef="P_Verkkokauppa">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+      <bpmn:participantRef>P_Verkkokauppa</bpmn:participantRef>
+      <bpmn:participantRef>P_Asiakas</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_3</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:choreographyTask id="CT_Maksu" name="Maksa tilaus" initiatingParticipantRef="P_Asiakas">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+      <bpmn:participantRef>P_Asiakas</bpmn:participantRef>
+      <bpmn:participantRef>P_Verkkokauppa</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_4</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:choreographyTask id="CT_Peruutus" name="Peru tilaus" initiatingParticipantRef="P_Verkkokauppa">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+      <bpmn:participantRef>P_Verkkokauppa</bpmn:participantRef>
+      <bpmn:participantRef>P_Asiakas</bpmn:participantRef>
+      <bpmn:messageFlowRef>MessageFlow_5</bpmn:messageFlowRef>
+    </bpmn:choreographyTask>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Start" targetRef="CT_Tilaus" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="CT_Tilaus" targetRef="Gw" />
+    <bpmn:sequenceFlow id="Flow_3" name="kyllä" sourceRef="Gw" targetRef="CT_Toimitus" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="CT_Toimitus" targetRef="CT_Maksu" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="CT_Maksu" targetRef="End" />
+    <bpmn:sequenceFlow id="Flow_6" name="ei" sourceRef="Gw" targetRef="CT_Peruutus" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="CT_Peruutus" targetRef="End2" />
+  </bpmn:choreography>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Choreography_1">
+      <bpmndi:BPMNShape id="Start_di" bpmnElement="Start">
+        <dc:Bounds x="142" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gw_di" bpmnElement="Gw" isMarkerVisible="true">
+        <dc:Bounds x="405" y="175" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="380" y="143" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_di" bpmnElement="End">
+        <dc:Bounds x="862" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="830" y="223" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End2_di" bpmnElement="End2">
+        <dc:Bounds x="862" y="372" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="830" y="413" width="100" height="27" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Tilaus_di" bpmnElement="CT_Tilaus">
+        <dc:Bounds x="230" y="150" width="120" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Tilaus_P_Asiakas_di" bpmnElement="P_Asiakas" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Tilaus_di">
+        <dc:Bounds x="230" y="150" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Tilaus_P_Verkkokauppa_di" bpmnElement="P_Verkkokauppa" isMessageVisible="true" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Tilaus_di">
+        <dc:Bounds x="230" y="230" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Toimitus_di" bpmnElement="CT_Toimitus">
+        <dc:Bounds x="500" y="150" width="120" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Toimitus_P_Verkkokauppa_di" bpmnElement="P_Verkkokauppa" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Toimitus_di">
+        <dc:Bounds x="500" y="150" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Toimitus_P_Asiakas_di" bpmnElement="P_Asiakas" isMessageVisible="false" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Toimitus_di">
+        <dc:Bounds x="500" y="230" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Maksu_di" bpmnElement="CT_Maksu">
+        <dc:Bounds x="680" y="150" width="120" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Maksu_P_Asiakas_di" bpmnElement="P_Asiakas" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Maksu_di">
+        <dc:Bounds x="680" y="150" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Maksu_P_Verkkokauppa_di" bpmnElement="P_Verkkokauppa" isMessageVisible="false" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Maksu_di">
+        <dc:Bounds x="680" y="230" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Peruutus_di" bpmnElement="CT_Peruutus">
+        <dc:Bounds x="500" y="340" width="120" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Peruutus_P_Verkkokauppa_di" bpmnElement="P_Verkkokauppa" isMessageVisible="true" participantBandKind="top_initiating" choreographyActivityShape="CT_Peruutus_di">
+        <dc:Bounds x="500" y="340" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CT_Peruutus_P_Asiakas_di" bpmnElement="P_Asiakas" isMessageVisible="false" participantBandKind="bottom_non_initiating" choreographyActivityShape="CT_Peruutus_di">
+        <dc:Bounds x="500" y="420" width="120" height="20" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="178" y="200" />
+        <di:waypoint x="230" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="350" y="200" />
+        <di:waypoint x="405" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="455" y="200" />
+        <di:waypoint x="500" y="200" />
+        <bpmndi:BPMNLabel><dc:Bounds x="461" y="204" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="620" y="200" />
+        <di:waypoint x="680" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="800" y="200" />
+        <di:waypoint x="862" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="430" y="225" />
+        <di:waypoint x="430" y="390" />
+        <di:waypoint x="500" y="390" />
+        <bpmndi:BPMNLabel><dc:Bounds x="436" y="229" width="40" height="14" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7">
+        <di:waypoint x="620" y="390" />
+        <di:waypoint x="862" y="390" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
