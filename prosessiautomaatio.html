@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Prosessiautomaatio ja tekoäly – Liiketoimintaprosessit -- hallinta, mallintaminen, tietojärjestelmät ja automaatio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./tehtavat.html" rel="next">
+<link href="./bpmn_ja_prosessien_kuvaaminen.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./prosessiautomaatio.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Liiketoimintaprosessit – hallinta, mallintaminen, tietojärjestelmät ja automaatio</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Tumma tila päälle/pois"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alkusanat</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./johdanto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Johdanto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessit_ja_liiketoimintaprosessit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prosessit ja liiketoimintaprosessit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessitiedon_keraaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiarkkitehtuuri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiautomaatio.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tehtavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Harjoitustehtäviä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tyovalineita.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Työvälineitä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lähteet</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tässä luvussa</h2>
+   
+  <ul>
+  <li><a href="#työnkulkuautomaatio" id="toc-työnkulkuautomaatio" class="nav-link active" data-scroll-target="#työnkulkuautomaatio"><span class="header-section-number">7.1</span> Työnkulkuautomaatio</a></li>
+  <li><a href="#ohjelmistorobotiikka" id="toc-ohjelmistorobotiikka" class="nav-link" data-scroll-target="#ohjelmistorobotiikka"><span class="header-section-number">7.2</span> Ohjelmistorobotiikka</a></li>
+  <li><a href="#hyperautomaatio-ja-intelligent-process-automation" id="toc-hyperautomaatio-ja-intelligent-process-automation" class="nav-link" data-scroll-target="#hyperautomaatio-ja-intelligent-process-automation"><span class="header-section-number">7.3</span> Hyperautomaatio ja Intelligent Process Automation</a></li>
+  <li><a href="#sec-tekoaly-automaatiossa" id="toc-sec-tekoaly-automaatiossa" class="nav-link" data-scroll-target="#sec-tekoaly-automaatiossa"><span class="header-section-number">7.4</span> Tekoäly prosessiautomaatiossa</a>
+  <ul>
+  <li><a href="#tekoäly-prosessin-yksittäisissä-tehtävissä" id="toc-tekoäly-prosessin-yksittäisissä-tehtävissä" class="nav-link" data-scroll-target="#tekoäly-prosessin-yksittäisissä-tehtävissä"><span class="header-section-number">7.4.1</span> Tekoäly prosessin yksittäisissä tehtävissä</a></li>
+  <li><a href="#agenttinen-tekoäly" id="toc-agenttinen-tekoäly" class="nav-link" data-scroll-target="#agenttinen-tekoäly"><span class="header-section-number">7.4.2</span> Agenttinen tekoäly</a></li>
+  <li><a href="#ihminen-silmukassa-ja-tekoälyn-hallinta" id="toc-ihminen-silmukassa-ja-tekoälyn-hallinta" class="nav-link" data-scroll-target="#ihminen-silmukassa-ja-tekoälyn-hallinta"><span class="header-section-number">7.4.3</span> Ihminen silmukassa ja tekoälyn hallinta</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Tässä luvussa käsitellään liiketoimintaprosessien automaatiota<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Tarkastelu keskittyy asiantuntija- ja tietotyön tehtäviin liittyviin automaatiomahdollisuuksiin, eikä esimerkiksi teollisuus- tai tuotantoautomaatioon, joilla tarkoitetaan valmistus- ja tuotantoprosessien sekä niihin liittyvien koneiden ohjaamista ja valvontaa teknologian avulla (<a href="#fig-manufacturing_line" class="quarto-xref">kuva&nbsp;<span>7.1</span></a>).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Tässä luvussa tarvitaan jonkin verran BPMN-kielen tuntemista, joten harkitse, luetko tarvittaessa ensin luvun <em>Mallit, mallintaminen ja Business Process Model and Notation</em>.</p></div></div><div id="fig-manufacturing_line" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-manufacturing_line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/manufacturing_line.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Kuva&nbsp;7.1: Tuotantoteollisuuden prosessiautomaatiota (CC BY 4.0, Steve Jurvetson)"><img src="kuviot/manufacturing_line.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-manufacturing_line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.1: Tuotantoteollisuuden prosessiautomaatiota (CC BY 4.0, Steve Jurvetson)
+</figcaption>
+</figure>
+</div>
+<p>Lisäksi tarkastellaan tekoälyn mahdollisuuksia prosessien kehittämisessä ja automaatiossa. Koska tekoälyratkaisujen kehitysvauhti on tällä hetkellä valtavan nopea, tarkastelu pidetään melko yleisellä tasolla.</p>
+<p>Kun prosessi on kuvattu ja analysoitu riittävän tarkasti, voidaan arvioida automatisoinnin mahdollisuuksia ja kannattavuutta. Seuraavissa luvuissa käsitellään kolmea liiketoimintaprosessien automaation toteuttamisen muotoa: työnkulkuautomaatiota, ohjelmistorobotiikkaa sekä tekoälypohjaisia ratkaisuja.</p>
+<p>Edellisten rinnalla ei kannata myöskään unohtaa ohjelmistojen ja järjestelmien omia mahdollisuuksia, jotka usein voivat olla kevyin ja edullisin tapa prosessien tehostamiseksi. Tällaisia ovat esimerkiksi taulukkolaskennan makrot, valmiit raporttipohjat, tallennetut tietokantakyselyt ja toiminnanohjausjärjestelmän automaattinen täsmäytys tai hälytykset. Ennen kuin uutta automaatioratkaisua lähdetään hankkimaan, kannattaa selvittää, onnistuisiko se jo nykyisillä välineillä.</p>
+<section id="työnkulkuautomaatio" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="työnkulkuautomaatio"><span class="header-section-number">7.1</span> Työnkulkuautomaatio</h2>
+<p>Työnkulkuautomaatio (<em>Workflow Automation</em>) tarkoittaa toistuviin, sääntöpohjaisiin prosesseihin kuuluvien tehtävien siirtämistä ohjelmistojen suoritettavaksi. Työnkulkuautomaatio on tässä luvussa käsiteltävistä aiheista vanhin: käsitteenä se eli huippukauttaan 1990-luvun lopulla tai 2000-luvun alussa. Toisaalta nykypäivänäkin esimerkiksi älykäs prosessiautomaatio ja hyperautomaatio edelleen toteuttavat työnkulkuautomaation tavoitteita ja periaatteita; nyt tosin hieman kehittyneempien teknologioiden tuella.</p>
+<p>Kun prosessimalli esitetään tarkkuudella, joka mahdollistaa prosessin seuraamisen yksittäisten tehtävien ja tapahtumien tasolla, voidaan sitä kutsua työnkulkumalliksi.</p>
+<p>Tarvitaan tarkkaa ja todellisuudelle uskollista mallintamista, jotta prosessi – tai sen työnkulku – voidaan automatisoida. Ajatellaan esimerkiksi johonkin prosessiin kuuluvaa tehtävää ”Laske tuotteiden yhteishinta”. Vaikka tämä tehtävän nimi tai sen sisällön kuvaus on sinällään ymmärrettävä, ei se vielä riitä siihen, että automaatiomoottori osaisi suorittaa tehtävän. Työnkulkumallit vertautuvat työohjeisiin. Jos työohje neuvoo uutta HR-työntekijää ”Käsittele saapunut työhakemus”, ei ohjeella pääse vielä puusta pitkälle. Paitsi, että ohjeen täytyy jakaa tehtävä pienempiin osiin, täytyy sen myös kertoa, miten työntekijä voi tietää, että hakemus on saapunut, mistä hän hakemuksen löytää ja niin edelleen.</p>
+<p>Työnkulkumallia (<a href="#fig-pros-workflow" class="quarto-xref">kuva&nbsp;<span>7.2</span></a>) voidaan ajatella automaattiseen toimintaan kykenevien järjestelmien työohjeena. Suuriin kielimalleihin perustuvat ja luonnollisen kielen käsittelyyn kykenevät järjestelmät saattavat ehkä sopivassa kontekstissa osata tulkita ja toteuttaa geneerisestikin esitettyjä tehtäviä (kuten ”Käsittele saapunut työhakemus”) yksityiskohtaisina työnkulkuina, mutta ainakin toistaiseksi työnkulun mahdollisimman tarkka määritteleminen on turvallinen valinta.</p>
+<div id="fig-pros-workflow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pros-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/pros-workflow.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Kuva&nbsp;7.2: Prosessista työnkulkusovellukseksi [mukailtu lähteestä @georgakopoulos1995overview]"><img src="kuviot/pros-workflow.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pros-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.2: Prosessista työnkulkusovellukseksi <span class="citation" data-cites="georgakopoulos1995overview">(mukailtu lähteestä <a href="references.html#ref-georgakopoulos1995overview" role="doc-biblioref">Georgakopoulos ym. 1995</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>Osa automatisoitavista tehtävistä saattaa nousta esille välittömästi, kun taas osa voi muodostua vasta työnkulkuspesifikaation ideoinnin, rakentamisen ja iteroinnin kautta. Oleellista on, ettei työnkulkuja suunniteltaessa takerruta nykyisiin toimintatapoihin ja niiden automatisointiin, vaan mietitään, mitä uusia mahdollisuuksia ja uudenlaisia toimintatapoja teknologiat ja automaatio mahdollistavat. Tulee myös muistaa, ettei työnkulkujen automatisoinnissa ole useinkaan mahdollista – tai edes järkevää – pyrkiä täysin automatisoituun toteutukseen. Osa tehtävistä voidaan jättää ihmistoimijoiden suoritettaviksi <em>Manual Task</em>- ja <em>User Task</em> -tyyppisinä.</p>
+<p>Seuraavassa luvussa käsiteltävän BPMN-kielen (<em>Business Process Model and Notation</em>) ominaisuudet riittävät erinomaisesti työnkulkumallien laadintaan. BPMN XML -spesifikaatio mahdollistaa myös prosessimallien automaattisen suorittamisen, joten BPMN toimii paitsi määrittelykielenä työnkulkumallia luotaessa, myös runtime-ajoympäristössä suoritettavana työnkulkusovelluksena. Ohjelmistokokonaisuuksia, jotka mahdollistavat prosessien ja päätöslogiikan mallintamisen, testaamisen, käyttöönoton ja lopulta niiden automaattisen suorittamisen, kutsutaan nimellä <em>Workflow Engine</em> tai työnkulkumoottori.</p>
+</section>
+<section id="ohjelmistorobotiikka" class="level2 page-columns page-full" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="ohjelmistorobotiikka"><span class="header-section-number">7.2</span> Ohjelmistorobotiikka</h2>
+<p>Ohjelmistorobotiikassa (<em>Robotic Process Automation</em>, <em>RPA</em>) on kyse sellaisten tehtävien tai prosessien automatisoinnista, joita suoritetaan tietokoneohjelmistojen käyttöliittymien kautta ja joiden suorittaminen vaatii tavallisesti runsaasti manuaalista työtä. Tällaiset tehtävät voivat sisältää vaikkapa tietojen käsittelyä siten, että lähteenä toimii yksi järjestelmä tai sähköinen dokumentti ja kohteena toinen. Esimerkiksi sähköpostitse vastaanotettu vikailmoitus voitaisiin RPA:n avulla kirjata automaattisesti tikettijärjestelmään tai tilaus tilausrekisteriin.</p>
+<p>Ohjelmistorobotiikka saatetaan joskus sekoittaa tekoälyyn, mutta RPA-ratkaisuilla ei välttämättä tarvitse olla mitään tekemistä tekoälyn kanssa. Ohjelmistorobotit suorittavat tarkoin määriteltyjä työnkulkuja seuraten ennalta määriteltyjä ohjeita. Ne toteuttavat tietokoneen ohjainlaitteiden (kuten näppäimistö ja hiiri) automaatiota, eli ne pystyvät syöttämään tekstiä ohjelmistojen käyttöliittymiin, liikuttamaan hiiren kursoria ja vaikkapa painamaan graafisen käyttöliittymän oikeaa painiketta. Tätä ne eivät tietenkään tee näppäimistöä fyysisesti näpyttelemällä tai hiirtä liikuttamalla, vaan ohjelmallisesti. RPA-toteutuksissa voi olla myös konenäköön liittyviä ominaisuuksia, jolloin ne voivat esimerkiksi etsiä dokumentista tekstiä tai näytöltä oikean näköisen painikkeen sen sijaan, että niille täytyisi kertoa, missä koordinaateissa oikea kohde sijaitsee.</p>
+<p>Seuraavassa kuvassa (<a href="#fig-mulesoft" class="quarto-xref">kuva&nbsp;<span>7.3</span></a>) näkyy MuleSoftin <em>RPA Builder</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> -välineen käyttöliittymä. Prosessikulku esitetään BPMN-kielellä ja RPA:n suorittamat tehtävät ovat mallissa <em>Service Task</em> -tyyppiä. Kullekin niistä voidaan määritellä tarkempi tehtävänkulku, jonka aikana edelleen voidaan hyödyntää RPA Builderin toiminnallisuuksia, kuten vaikkapa tekstin tunnistaminen dokumentista OCR:n avulla tai muuttujien käsittely.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;https://www.mulesoft.com/platform/rpa</p></div></div><div id="fig-mulesoft" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mulesoft-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/mulesoft-rpa-builder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Kuva&nbsp;7.3: MuleSoft RPA Builder on edistynyt kaupallinen RPA-ympäristö"><img src="kuviot/mulesoft-rpa-builder.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mulesoft-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.3: MuleSoft RPA Builder on edistynyt kaupallinen RPA-ympäristö
+</figcaption>
+</figure>
+</div>
+<p>Alla olevassa kuvassa (<a href="#fig-powerautomate" class="quarto-xref">kuva&nbsp;<span>7.4</span></a>) on yksityiskohta <em>Microsoft Power Automate</em> -välineellä toteutetusta prosessikulusta, jossa ohjelmistorobotti hakee työntekijän työmatkan pituuden lähtöpaikasta työmaalle <em>Google Maps</em> -palvelun avulla ja liittää sen työseurannan <em>Excel</em>-taulukkoon. Esimerkki <span class="citation" data-cites="kemppainen2024prosessien">(<a href="references.html#ref-kemppainen2024prosessien" role="doc-biblioref">Kemppainen 2024</a>)</span> osoittaa, kuinka tarkasti ohjelmistorobotin toimintaa voidaan – ja toisaalta täytyy – ohjeistaa, kun se operoi graafisen käyttöliittymän päällä ilman API-rajapintojen käyttöä. Esimerkissä pyydetään RPA:ta ensin aktivoimaan selaimen Google Maps -ikkuna ja sen jälkeen kaksoisnapauttamaan näyttöä määritellyssä koordinaattipisteessä. Sen jälkeen suoritetaan näppäinkomento <em>Control+C</em>, joka kopioi kaksoisnapautuksella valitun tekstin leikepöydälle. Kopioitu teksti liitetään tämän jälkeen Excel-taulukon oikeaan soluun <em>Control+V</em> -komennolla.</p>
+<p>Useat RPA-ratkaisut osaavat myös kutsua ohjelmistorajapintoja. Tällöin ohjelmistorobotti lukee ja kirjoittaa tietoja sekä käynnistää ohjelmistojen toimintoja esimerkiksi REST-kutsujen avulla sen sijaan, että vuorovaikuttaisi niiden kanssa graafisen käyttöliittymän kautta.</p>
+<div id="fig-powerautomate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-powerautomate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/powerautomate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Kuva&nbsp;7.4: Esimerkki Microsoft Power Automatella laaditusta työnkulusta [@kemppainen2024prosessien]"><img src="kuviot/powerautomate.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-powerautomate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.4: Esimerkki Microsoft Power Automatella laaditusta työnkulusta <span class="citation" data-cites="kemppainen2024prosessien">(<a href="references.html#ref-kemppainen2024prosessien" role="doc-biblioref">Kemppainen 2024</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>RPA-ratkaisut ovat erittäin tiukkakytkentäisiä. Tämä tarkoittaa, että niiden rakentaminen edellyttää prosessin suorittamisessa käytettävien ohjelmistojen ja niiden käyttöliittymien tarkkaa tuntemista. Pienikin muutos ohjelmiston toimintalogiikassa tai graafisessa käyttöliittymässä, kuten esimerkiksi tekstikentän tai painikkeen sijainnin muuttuminen, voi rikkoa työnkulun nykyisen määrittelyn.</p>
+<p>Ennen RPA-projektin käynnistämistä kannattaa tehdä huolellinen arviointi RPA-ratkaisun toteutettavuudesta ja tarpeellisuudesta. Tässä arvioidaan, voidaanko prosessin toiminnot automatisoida RPA:n avulla ja kuinka hyödyllistä ja kannattavaa automatisointi on.</p>
+<p><span class="citation" data-cites="leshob2018towards">Leshob ym. (<a href="references.html#ref-leshob2018towards" role="doc-biblioref">2018</a>)</span> ovat esittäneet prosessin automaatiokelpoisuuden arviointiin laskentakaavan (<a href="#fig-rpa-arv1" class="quarto-xref">kuva&nbsp;<span>7.5</span></a>), joka muodostaa tulon prosessin tehtävien ohjelmistoavusteisuudesta sekä sääntöperusteisuudesta. Ensimmäistä tekijää varten selvitetään niiden tehtävien määrä, joissa ihminen käyttää sovelluksen käyttöliittymää esimerkiksi valintojen tekemiseen tai tietojen syöttämiseen. Toinen tekijä muodostuu sellaisten tehtävien osuudesta, jotka toteutetaan tunnetun säännön tai vakioidun toimintatavan mukaisesti. Toisin sanoen, mitä useampaan prosessin tehtävistä liittyy sovellusten käyttöä ja mitä harvempi tehtävistä edellyttää inhimillistä harkintaa tai improvisoitua päätöksentekoa (esimerkiksi poikkeustilanteissa, joissa automaattinen päätöksenteko ei ole mahdollista), sitä potentiaalisempi prosessi on RPA:n avulla automatisoitavaksi.</p>
+<div id="fig-rpa-arv1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rpa-arv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/rpa-arv1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Kuva&nbsp;7.5: Prosessin arviointi RPA-potentiaalin näkökulmasta"><img src="kuviot/rpa-arv1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rpa-arv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.5: Prosessin arviointi RPA-potentiaalin näkökulmasta
+</figcaption>
+</figure>
+</div>
+<p>Tarpeellisuutta – tai relevanssia – puolestaan arvioidaan prosessin transaktiomäärien (kuinka usein tehtävä tapahtuu) ja kompleksisuuden avulla (<a href="#fig-rpa-arv2" class="quarto-xref">kuva&nbsp;<span>7.6</span></a>). Jälkimmäisen <span class="citation" data-cites="leshob2018towards">Leshob ym. (<a href="references.html#ref-leshob2018towards" role="doc-biblioref">2018</a>)</span> määrittelevät prosessin keston perusteella, mutta joissain tapauksissa voi olla tarpeen käyttää muitakin parametreja.</p>
+<div id="fig-rpa-arv2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rpa-arv2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/rpa-arv2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Kuva&nbsp;7.6: Prosessin RPA-relevanssin asteikko"><img src="kuviot/rpa-arv2.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rpa-arv2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.6: Prosessin RPA-relevanssin asteikko
+</figcaption>
+</figure>
+</div>
+<p>Potentiaalin ja relevanssin perusteella voidaan tehdä kokonaisarvio siitä, kannattaako prosessille ryhtyä rakentamaan RPA-toteutusta (<a href="#fig-rpa-arv3" class="quarto-xref">kuva&nbsp;<span>7.7</span></a>).</p>
+<div id="fig-rpa-arv3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rpa-arv3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/rpa-arv3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Kuva&nbsp;7.7: Prosessien luokittelu RPA-toteutuksen kannalta"><img src="kuviot/rpa-arv3.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rpa-arv3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.7: Prosessien luokittelu RPA-toteutuksen kannalta
+</figcaption>
+</figure>
+</div>
+<p>On syytä arvioida myös RPA-toteutuksen sijoitetun pääoman tuottoa (<em>Return On Investment</em>, <em>ROI</em>), takaisinmaksuaikaa tai kokonaiskustannuksia (<em>Total Cost of Ownership</em>, <em>TCO</em>) sisältäen toteutuksen välittömät ja välilliset kustannukset sen koko elinkaaren ajalta. Mikäli prosessin manuaalisen suorittamisen kustannukset ovat suurillakin tapahtumamäärillä matalat verrattuna RPA-ratkaisun toteuttamisen hintaan, ei toteutus tietenkään ole taloudellisesti järkevä. Tulee myös huomioida, että jos prosessin kulku tai siinä käytettävät ohjelmistot ovat jatkuvasti alttiita muutoksille, joudutaan myös RPA-toteutusta toistuvasti päivittämään, jolloin sen elinkaarikustannukset kasvavat.</p>
+<p>Onnistuneiden RPA-ratkaisujen hyödyt ovat kuitenkin selkeitä. Tutkimuksissa <span class="citation" data-cites="shamsuzzoha2025robotic">(esimerkiksi <a href="references.html#ref-shamsuzzoha2025robotic" role="doc-biblioref">Shamsuzzoha ja Pelkonen 2025</a>)</span> raportoituja hyötyjä ovat muun muassa prosessien suorittamisen nopeutuminen, inhimillisten virheiden poistuminen ja se, että työntekijät voidaan ohjata tehtäviin, jotka he kokevat mielekkäämmiksi ja joissa tarvitaan inhimillistä päätöksentekoa tai vuorovaikutusta. Tästä huolimatta RPA-teknologioihin liitetään kenties aiheellisiakin pelkoja esimerkiksi joidenkin työtehtävien katoamisesta. Siksi pienissäkin RPA-projekteissa on syytä huomioida muutosjohtamisen ja sidosryhmäviestinnän näkökulmat.</p>
+<p>Edellä on keskitytty pääasiassa prosessien RPA-potentiaalin arviointiin. Kuten kaikki muutkin liiketoimintaprosessien kehittämiseen liittyvät tehtävät, myös RPA-ratkaisujen harkinta, arviointi ja rakentaminen edellyttävät nykyisten prosessien hyvää tuntemista. Prosessien tulisi olla dokumentoituja ja mielellään esimerkiksi BPMN-kielellä mallinnettuja. Monet RPA-välineistä toimivat BPMN-mallien perusteella. Prosesseihin liittyvien liiketoimintasääntöjen tunnistaminen edellyttää varsin tarkkaakin prosessituntemusta ja RPA-ratkaisun kustannustehokkuuden arviointi hyötyy suuresti prosesseista kerätystä mittaritiedosta, kuten suoritustiheys, suoritusaika sekä erilaisten virhe- ja poikkeustilanteiden määrä.</p>
+<div id="tbl-rpa-yhtveto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rpa-yhtveto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Taulukko&nbsp;7.1: RPA-potentiaalin osatekijät <span class="citation" data-cites="syed2020robotic">(<a href="references.html#ref-syed2020robotic" role="doc-biblioref">Syed ym. 2020</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-rpa-yhtveto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kriteerit</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sääntöpohjaisuus</td>
+<td>Prosessi on pystyttävä kuvaamaan yksiselitteisesti kaikkien mahdollisten prosessikulkujen osalta.</td>
+</tr>
+<tr class="even">
+<td>Vähäinen monimutkaisuus</td>
+<td>Yksinkertainen ja selkeästi hahmotettavissa oleva prosessikulku mahdollistaa RPA-toteutuksen.</td>
+</tr>
+<tr class="odd">
+<td>Runsas toistuvuus</td>
+<td>Usein toistuvien prosessien automatisointi parantaa RPA-toteutukseen käytetyn pääoman tuoton todennäköisyyttä.</td>
+</tr>
+<tr class="even">
+<td>Suuri tapahtumamäärä</td>
+<td>Runsaasti tehtäviä sisältävä prosessi usein maksimoi RPA:n hyötyjen toteutumisen. Tällaiset prosessit ovat tavallisesti myös rutiininomaisia ja toistuvia.</td>
+</tr>
+<tr class="odd">
+<td>Digitaaliset syötteet</td>
+<td>Kaikkien syöte- ja tulostetietojen on oltava jäsenneltyjä ja digitaalisessa muodossa – tai digitaaliseen muotoon muutettavissa.</td>
+</tr>
+<tr class="even">
+<td>Normalisoitu, jäsennelty, standardoitu ja kypsä prosessi</td>
+<td>Mitä paremmin prosessi tunnetaan ja mitä yksityiskohtaisemmin se on kuvattu, sitä helpompaa ja vähemmän aikaa vievää RPA-robotin konfigurointi on.</td>
+</tr>
+<tr class="odd">
+<td>Vuorovaikutus useiden ohjelmistojen kanssa</td>
+<td>Useita ohjelmistoja käyttävä prosessi on hyvä RPA:n kohde. Manuaalinen siirtyminen järjestelmien välillä kasvattaa virheriskiä ja epäjohdonmukaisuutta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="hyperautomaatio-ja-intelligent-process-automation" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="hyperautomaatio-ja-intelligent-process-automation"><span class="header-section-number">7.3</span> Hyperautomaatio ja Intelligent Process Automation</h2>
+<p>Hyperautomaatiolla (<em>Hyperautomation</em>) tarkoitetaan erilaisten automatisoinnin mahdollisuuksien ja niitä tukevien teknologioiden yhdistelemistä siten, että automaatio voidaan toteuttaa mahdollisimman laaja-alaisesti. Edellä mainittujen työnkulkuautomaation ja ohjelmistorobotiikan rinnalla hyperautomaatiossa voidaan käyttää myös esimerkiksi koneoppimista ja tekoälyä.</p>
+<p>Erilaisten teknologioiden soveltamisen lisäksi hyperautomaatiolla voidaan viitata myös eri toiminta-alueita leikkaavaan ja yhdistävään automaatioon. Tämä voi esimerkiksi tarkoittaa, että havainnot markkinoiden muutoksista ohjaavat markkinoinnin prosesseja, joiden toteuma edelleen vaikuttaa tuotannon prosesseihin, ja joista saatava reaaliaikainen palaute säätää tarpeen mukaan toimitusketjun prosesseja.</p>
+<p>Viime aikoina on ryhdytty käyttämään myös käsitettä <em>Intelligent Process Automation</em> (<em>IPA</em>), älykäs prosessiautomaatio, joka useissa määritelmissä kuulostaa hyvin samankaltaiselta hyperautomaation kanssa. IPA rikastaa perinteisempiä ohjelmistorobotiikan ratkaisuja esimerkiksi API-automaation, hahmontunnistuksen, päätösautomaation ja tekoälyn teknologioilla.</p>
+<p>Seuraavassa (<a href="#fig-ipa-esim1" class="quarto-xref">kuva&nbsp;<span>7.8</span></a>) on esitetty yksinkertaistettu prosessikulku toimittajalaskun tarkastukselle ja käsittelylle. Esimerkistä on jätetty pois mahdollisia poikkeustilanteita ja vaihtoehtoisia kulkuja, joihin tällaisessa prosessissa todellisuudessa olisi tarpeen varautua. Prosessi alkaa, kun yrityksen tiettyyn sähköpostiosoitteeseen saapuu toimittajalta lasku PDF-muodossa. Ostoassistentti tallentaa laskun verkkolevylle ja sen jälkeen tarkastaa laskun oleelliset tiedot. Sitten hän varmistaa ERP-järjestelmästä, että laskutetut tuotteet on vastaanotettu. Tämän jälkeen hän toimittaa laskun hyväksyttäväksi oikealle henkilölle, esimerkiksi yksikön johtajalle tai hankintavastaavalle. Kun lasku on hyväksytty, ostoassistentti kirjaa sen tiedot talousjärjestelmään maksettaviin laskuihin.</p>
+<div id="fig-ipa-esim1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ipa-esim1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/ipa-esim1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Kuva&nbsp;7.8: Yksinkertainen toimittajalaskun tarkastuksen ja käsittelyn prosessi"><img src="kuviot/ipa-esim1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ipa-esim1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.8: Yksinkertainen toimittajalaskun tarkastuksen ja käsittelyn prosessi
+</figcaption>
+</figure>
+</div>
+<p>Seuraavassa (<a href="#fig-ipa-esim2" class="quarto-xref">kuva&nbsp;<span>7.9</span></a>) edellinen prosessi on hahmoteltu hyperautomaatiototeutuksen muotoon. Uimaradat on varattu prosessimallissa nyt kolmelle teknologialle, joita prosessin suorittamisessa hyödynnetään. Työnkulkualusta vastaa prosessikulun yleisestä ohjaamisesta ja suorittamisesta. Prosessin aikana se ohjaa osan tehtävistä muiden automaatioteknologioiden suoritettavaksi sekä kutsuu ERP-järjestelmää.</p>
+<div id="fig-ipa-esim2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ipa-esim2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/ipa-esim2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Kuva&nbsp;7.9: Yksinkertaisen toimittajalaskun tarkastuksen ja käsittelyn prosessi hyperautomaationa"><img src="kuviot/ipa-esim2.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ipa-esim2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;7.9: Yksinkertaisen toimittajalaskun tarkastuksen ja käsittelyn prosessi hyperautomaationa
+</figcaption>
+</figure>
+</div>
+<p>Toimittajalaskun saavuttua sähköpostiin, työnkulkualusta kutsuu ohjelmistorobottia, joka etsii laskun ja tallentaa sen verkkoasemalle. Ohjelmistorobotti kutsuu OCR-toimintoa (<em>Optical Character Recognition</em>), joka lukee hahmontunnistusta hyödyntäen laskulta relevantit tiedot ja palauttaa ne takaisin työnkulkualustalle prosessimuuttujina. Työnkulkualusta kysyy ERP-järjestelmältä (<em>Service Task</em>) API-rajapinnan yli, ovatko tilaukseen liittyvät tuotteet saapuneet ja lasku siltä osin valmis maksettavaksi. Seuraavaksi työnkulkualusta päättelee päätöstaulun (<em>Business Rule Task</em>) avulla, voidaanko lasku hyväksyä automaattisesti. Mikäli se on mahdollista, lasku hyväksytään prosessikulkuun liitetyllä ohjelmakoodilla (<em>Script Task</em>). Mikäli lasku jostain syystä – esimerkiksi korkean hinnan vuoksi – tarvitsee manuaalisen hyväksynnän, hyväksyntä pyydetään kutsumalla aliprosessia (<em>Call Activity</em>). Lopuksi hyväksytyn laskun tiedot viedään automaattisesti (<em>Service Task</em>) talousjärjestelmään maksettavien laskujen joukkoon.</p>
+<p>Koko prosessi voidaan käsitellä ilman manuaalista työtä, ellei laskun hyväksyntä jostain syystä sitä edellytä. Prosessin läpinäkyvyys ja nopeus paranevat, samoin kuin unohdusten ja inhimillisten virheiden määrä vähenee.</p>
+</section>
+<section id="sec-tekoaly-automaatiossa" class="level2 page-columns page-full" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="sec-tekoaly-automaatiossa"><span class="header-section-number">7.4</span> Tekoäly prosessiautomaatiossa</h2>
+<p>Hyperautomaation ratkaisuissa tekoälyä käytetään lähinnä yksittäisten tehtävien suorittamisessa, esimerkiksi hahmontunnistus dokumenttia luettaessa tai päätösautomaatiota täydentävä koneoppiminen. Suurten kielimallien yleistyminen on kuitenkin tuomassa tekoälyn prosessiautomaatioon myös laajamittaisemmin. Se voi tietyissä tilanteissa ottaa vastuulleen kokonaisia prosessikulkuja tai jopa päättää, missä järjestyksessä ja millä keinoin prosessiin kuuluvat tehtävät suoritetaan.</p>
+<p>Autonomiset tekoälyagentit pystyvät jo nykyisin suorittamaan vaativiakin tehtäviä itsenäisesti ja ilman ohjausta. Useista keskenään vuorovaikuttavista agenteista koostuvat järjestelmät pystyvät suorittamaan monimutkaisia tehtäväsarjoja – eli prosesseja. Lähitulevaisuudessa saatamme olla tilanteessa, jossa prosessimalliksi riittää BPMN:n <em>Ad-hoc</em> -prosessin kaltainen sekalainen joukko irrallisia tehtäviä tai jopa ainoastaan halutun lisättyä arvoa tuottavan lopputuloksen ilmoittaminen.</p>
+<p>Vuoden 2026 aikana saatiin lukea useista “välikohtauksista”, joissa tekoälyagenttien kerrottiin “karanneen” ja murtautuneen esimerkiksi terveydenhuollon järjestelmiin<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a><sup>,</sup><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Agentit eivät tietenkään toimi näin ilkeyttään, vaan etsiessään tietoa, jota ne tarvitsevat niille annetun tehtävän ratkaisemiseksi. Joka tapauksessa autonomisen tekoälyn käyttöön prosessiautomaatiossa kannattaa vielä ainakin toistaiseksi suhtautua varauksella ja harkinnalla.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;https://yle.fi/a/74-20237506</p></div><div id="fn4"><p><sup>4</sup>&nbsp;https://yle.fi/a/74-20247954</p></div></div><p>Kuten edellä todettiin, tekoälyratkaisujen kehitysvauhti on tällä hetkellä niin suuri, että yksittäisiä tuotteita tai teknologioita koskevat havainnot vanhenevat nopeasti. Tarkastelu pidetään seuraavassa siksi periaatteiden tasolla.</p>
+<section id="tekoäly-prosessin-yksittäisissä-tehtävissä" class="level3 page-columns page-full" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="tekoäly-prosessin-yksittäisissä-tehtävissä"><span class="header-section-number">7.4.1</span> Tekoäly prosessin yksittäisissä tehtävissä</h3>
+<p>Tekoälyä, kuten kielimalleja, voidaan ajatella yhtenä prosessin tehtävien suorittajana muiden joukossa. Edellä esitetyssä laskunkäsittelyn prosessissa (<a href="#fig-ipa-esim2" class="quarto-xref">kuva&nbsp;<span>7.9</span></a>) OCR-toiminto luki laskulta tiedot ja palautti ne työnkulkualustalle prosessimuuttujina. Perinteinen OCR-ratkaisu toimii, kun laskut ovat rakenteeltaan vakioituja ja tiedot löytyvät aina suurin piirtein samoista kohdista. Toimittajia saattaa kuitenkin olla useita, ja jokaisella voi olla omanlaisensa laskupohja. Joskus viitenumero on oikeassa yläkulmassa, joskus alatunnisteessa, ja joskus lasku on liitetty sähköpostiin valokuvana ruttuisesta paperista.</p>
+<p>Tekoälyllä on valmiuksia tulkita vaihtelevaa ja puolirakenteista aineistoa huomattavasti sääntöpohjaista tunnistusta joustavammin. Sille voidaan antaa ohjeeksi esimerkiksi ”Poimi laskulta toimittajan nimi, Y-tunnus, laskun summa, eräpäivä ja tilausnumero”, ja se palauttaa tiedot työnkulkualustalle samaan tapaan kuin OCR-toiminto aiemmin. Prosessimallissa tämä voisi olla <em>Service Task</em> -tyyppinen tehtävä, jossa kutsutaan kielimallia rajapinnan yli, tai oma uimarata muiden automaatioteknologioiden rinnalla.</p>
+<p>Vastaavia tehtäviä löytyy lähes kaikista asiantuntija- ja tietotyön prosesseista: palvelupyyntöjen luokittelu ja ohjaus eteenpäin, pitkien asiasisältöjen tiivistäminen, rakenteettoman tiedon muuttaminen rakenteiseen muotoon, tarvittavat tyyppimuunnokset siirrettäessä tietoja järjestelmien välillä ja niin edelleen.</p>
+<p>Tällaisissa ratkaisuissa prosessin kulku on edelleen tarkasti mallinnettu ja työnkulkualustan ohjaama. Tekoäly ainoastaan muuttaa joidenkin tehtävien toteutustapoja. Tämä on varsin hallittava ja turvallinenkin tapa tuoda tekoälyä osaksi prosessien suorittamista. Työnkulku edelleen määrittelee, mitä tehdään ja missä järjestyksessä, ja tekoäly toteuttaa vain sille osoitetun osan.</p>
+<p>On syytä kuitenkin muistaa, etteivät kielimallit toimi kuten perinteinen ohjelmakoodi. Ne eivät ole deterministisiä eli sama syöte ei välttämättä tuota joka kerta täsmälleen samaa lopputulosta. Kielimallit saattavat pahimmillaan myös tuottaa uskottavan näköisiä, mutta virheellisiä vastauksia.</p>
+<p>Tekoälyn tuottamat tiedot kannattaa mahdollisuuksien mukaan tarkistaa automaattisesti. Esimerkiksi laskun summaa voidaan verrata ERP-järjestelmän tilaustietoihin tai yritystunnuksen oikeellisuus voidaan varmistaa toimittajarekisteristä. Mikäli tiedot eivät täsmää, voi prosessi ohjata laskun ihmisen käsiteltäväksi.</p>
+<p><span class="citation" data-cites="prucha2025llm">Průcha ym. (<a href="references.html#ref-prucha2025llm" role="doc-biblioref">2025</a>)</span> vertasivat UiPath RPA<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> -ohjelmistorobotiikkaratkaisua ja kielimalliagenttia kolmessa tehtävässä: tiedonsyötössä, seurannassa ja dokumenttien tietojen poiminnassa. Tutkimuksen mukaan ohjelmistorobotti oli toiminnassaan nopeampi ja luotettavampi. Sen sijaan agenttiratkaisujen kehitysaika oli lyhyempi ja ne selvisivät käyttöliittymän muutoksia huomattavasti RPA-ratkaisuja paremmin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;https://www.uipath.com/rpa/robotic-process-automation</p></div></div></section>
+<section id="agenttinen-tekoäly" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="agenttinen-tekoäly"><span class="header-section-number">7.4.2</span> Agenttinen tekoäly</h3>
+<p>Aiemmin todettiin, että kielimalleihin perustuvat järjestelmät saattavat sopivassa kontekstissa pystyä tulkitsemaan ja toteuttamaan geneerisestikin esitettyjä tehtäviä, kuten ”Käsittele saapunut työhakemus”. Tätä voidaan kutsua agenttiseksi tekoälyksi (<em>Agentic AI</em>). Tekoälyagentille ei anneta yksityiskohtaista kuvausta prosessin kulusta, vaan prosessin tavoite sekä joukko työkaluja, joita se saa käyttää tavoitteen saavuttamiseksi. Työhakemuksen käsittelyyn liittyviä työkaluja voivat olla hakemusjärjestelmä, kalenteri ja sähköposti. Agentti päättää itsenäisesti, mitä tehtäviä se suorittaa ja missä järjestyksessä, mitä tietoja se hakee ja milloin tavoite on saavutettu. Useampi agentti voi myös toimia yhdessä siten, että kullakin on prosessissa oma erikoistunut roolinsa ja ne välittävät tehtäviä ja tietoja toisilleen.</p>
+<p><span class="citation" data-cites="ye2023proagent">Ye ym. (<a href="references.html#ref-ye2023proagent" role="doc-biblioref">2023</a>)</span> kutsuvat tätä kehitystä siirtymäksi ohjelmistorobotiikasta agenttiseen prosessiautomaatioon (<em>Agentic Process Automation</em>). Kielimalliagentit sekä rakentavat työnkulun ihmisen antamista ohjeista että tekevät sen suorittamisen aikana tarvittavat päätökset. Työnkulku koordinoi erikoistuneita agentteja, jotka suorittavat prosessin tehtäviä.</p>
+<p>Ero perinteiseen prosessiautomaatioon on merkittävä. Ohjelmistorobotti suorittaa tarkoin määriteltyjä työnkulkuja ja voi rikkoutua, jos käyttöliittymän painike vaihtaa paikkaa. Työnkulkualusta puolestaan seuraa tarkoin määriteltyä ja mallinnettua prosessikulkua. Agentti voi muodostaa oman työnkulkunsa jokaista tapausta varten. Toisaalta tämä tekee agenteista joustavia ja ne pystyvät käsittelemään poikkeustilanteita, joita ei välttämättä olisi osattu etukäteen ennakoida ja mallintaa työnkulkuun. Toisaalta samasta syystä agentin toimintaa on vaikeampi ennakoida, testata ja valvoa.</p>
+<p>BPMN-kielen <em>Ad-hoc</em>-aliprosessi sopii agenttien kuvaamiseen varsin luontevasti – vaikka sitä tuskin alun perin tähän tarkoitukseen on suunniteltu. Se on joukko tehtäviä, jotka voidaan suorittaa tai olla suorittamatta, ja joiden suoritusjärjestystä ei ole ennalta määrätty. Agentin toimintaa voidaan siis kuvata prosessimallissa Ad-hoc-aliprosessina, jonka sisällä agentti valitsee käytettävissä olevista tehtävistä ja välineistä tilanteeseen sopivat. Ympäröivä prosessi on kuitenkin tarkasti mallinnettu ja hallittu. Se määrää, milloin agentille annetaan tehtävä, mitä sen tulee tehtävän suoritettuaan palauttaa, ja mihin pääprosessin kulku sen jälkeen etenee. Osa työnkulkualustojen toimittajista onkin jo ryhtynyt tukemaan tekoälyagenttien orkestrointia BPMN-prosessien osana.</p>
+<p>Agenttiseen tekoälyyn liittyy kuitenkin periaatteellisempi haaste. Generatiivisten tekoälyjen ja suurten kielimallien toiminta on siis epädeterminististä ja muistuttaa mustaa laatikkoa. Agentille voidaan antaa tavoite ja seurata sen tekemiä toimenpiteitä. Emme kuitenkaan välttämättä tiedä, millaisen päättelyn tuloksena se päätyi juuri näihin toimenpiteisiin tai edes sitä, tuottivatko ne oikeita lopputuloksia.</p>
+<p>Tämä palauttaa meidät takaisin alkuun ja ongelmaan, jota liiketoimintaprosessien hallinnalla on pyritty ratkaisemaan:</p>
+<blockquote class="blockquote">
+<p>Sumean linssin läpi tarkasteltuna prosessi voi näyttäytyä mustana laatikkona: jotain menee sisälle, joitain asioita tapahtuu, ja lopuksi laatikosta tulee jotain ulos. Joskus tämä vertaus saattaa valitettavasti vastatakin organisaatioiden kyvykkyyttä ymmärtää omia prosessejaan.</p>
+</blockquote>
+<p>Prosessien johtamisen näkökulmasta tämä on vähintään paradoksaalista – kenties kestämätöntäkin. Prosesseja mallinnetaan, jotta toiminta olisi läpinäkyvää, toistettavaa ja kehitettävissä. Jos prosessin jokin keskeinen osa suoritetaan tavalla, jota kukaan ei täysin tunne, myös prosessin mittaaminen vaikeutuu ja konkreettiset edellytykset jatkuvalle parantamiselle katoavat.</p>
+<p>Työnkulun mahdollisimman tarkka määritteleminen on ainakin toistaiseksi turvallinen valinta silloin, kun prosessi on kriittinen, säännelty tai sen virheillä voi olla merkittäviä seurauksia. Agentit sopivat tilanteisiin, joissa tapaukset vaihtelevat paljon, virheiden seuraukset ovat korjattavissa ja joissa lopputuloksen tarkistaminen on helpompaa kuin itse työn tekeminen.</p>
+</section>
+<section id="ihminen-silmukassa-ja-tekoälyn-hallinta" class="level3 page-columns page-full" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="ihminen-silmukassa-ja-tekoälyn-hallinta"><span class="header-section-number">7.4.3</span> Ihminen silmukassa ja tekoälyn hallinta</h3>
+<p>Kun tekoäly osallistuu prosessin suorittamiseen, voi nousta kysymys siitä, kuka on vastuussa sen mahdollisesti tekemistä virheistä. Tosiasiassa vastuu säilyy aina prosessia suorittavalla organisaatiolla ja viime kädessä prosessin omistajalla. Siksi tekoälyä hyödyntäviin prosesseihin tulee suunnitella kohtia, joissa ihminen tarkastaa, hyväksyy tai korjaa tekoälyn tuotoksen. Tätä kutsutaan <em>Human in the Loop</em>- tai ihminen silmukassa -periaatteeksi.</p>
+<p>Laadittaessa prosessimallit BPMN-kielellä, on ihminen helppo lisätä silmukkaan: tekoälyn suorittaman tehtävän jälkeen prosessiin lisätään esimerkiksi <em>User Task</em>, jossa ihminen tarkastaa tuloksen ennen prosessin jatkumista.</p>
+<p>Kaikkea ei kuitenkaan ole järkevää tarkastaa. Jos jokainen tekoälyn käsittelemä lasku käydään vielä ihmisen toimesta läpi, on automaation hyöty jokseenkin kyseenalainen. Tarkastus voidaankin ehtoperusteisesti kohdistaa esimerkiksi suuriin summiin, epätavallisiin tapauksiin tai sellaisiin, joissa tekoäly ilmoittaa olevansa epävarma lopputuloksesta. Lisäksi satunnaisotannalla voidaan seurata, pysyykö tekoälyn toiminnan laatu hyväksyttävällä tasolla.</p>
+<p>Ihmisen tekemään tarkastukseen liittyy haasteitakin. Tekoälyn tuottama teksti tai muu tulos on usein uskottavan näköistä, ja virheet voivat jäädä huomaamatta. Mitä harvemmin tekoäly erehtyy, sitä helpommin tarkastaja alkaa luottaa siihen, eikä tarkastus enää ole välttämättä todellinen. Lisäksi tarkastaminen on työlästä; useissa tehtävissä työläämpää kuin tehtävän suorittaminen. Ihminen silmukassa -periaate toimii vain, kun tarkastukselle on varattu riittävästi aikaa ja tarkastajalla tehtävää koskevaa asiantuntemusta.</p>
+<p>Myös nykyinen lainsäädäntö asettaa reunaehtoja tekoälyn käyttämiselle prosessiautomaatiossa. Suomessa julkisen hallinnon automaattista päätöksentekoa koskeva lainsäädäntö tuli voimaan keväällä 2023<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Se kieltää automaattisen päätöksenteon tilanteissa, jotka edellyttävät viranomaisen harkintavaltaa, perustuvat yksilölliseen arviointiin tai olosuhteiden kokonaisvaltaiseen punnintaan, tai joihin liittyy merkittäviä vaikutuksia yksilön oikeuksiin tai velvollisuuksiin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Hallituksen esitys HE 145/2022, https://www.finlex.fi/fi/hallituksen-esitykset/2022/145</p></div><div id="fn7"><p><sup>7</sup>&nbsp;Euroopan parlamentin ja neuvoston asetus (EU) 2024/1689 tekoälyä koskevista yhdenmukaistetuista säännöistä. https://eur-lex.europa.eu/eli/reg/2024/1689/oj</p></div></div><p>Euroopan unionin tekoälysäädös<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> (<em>EU AI Act</em>) puolestaan luokittelee tekoälyjärjestelmiä niiden riskitason perusteella. Esimerkiksi rekrytointiin, koulutukseen tai julkisiin palveluihin liittyvät tekoälysovellukset voivat kuulua korkean riskin luokkaan, jolloin niiden käytölle asetetaan erityisiä vaatimuksia muun muassa ihmisen suorittaman valvonnan, dokumentoinnin ja läpinäkyvyyden osalta. Edellä mainittu ”Käsittele saapunut työhakemus” -agentti ei siis olisi ainoastaan tekninen, vaan myös juridinen kysymys.</p>
+<p>Tekoälyn tuominen osaksi prosesseja ei siis ole pelkästään teknologioita koskeva kysymys. Kuten Outi Sivonen johdannossa lainatussa kirjoituksessaan totesi, tekoälyn käyttöönotossa eivät muutu vain yksittäiset työtehtävät, vaan myös prosessit ja niiden johtaminen. Automaatio on vasta ensimmäinen askel. On liian helppoa tehdä tekoälyn ja automaation avulla nopeammin sitä, mitä jo nyt tehdään – myös silloin, kun sitä ei oikeastaan kannattaisi tehdä ollenkaan. Siksi tekoäly ei muuta prosessien kehittämisen perusperiaatteita: ensin tulee miettiä, mitä arvoa prosessi tuottaa ja kenelle, ja vasta sitten sitä, miten prosessi kannattaa toteuttaa.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-georgakopoulos1995overview" class="csl-entry" role="listitem">
+Georgakopoulos, Diimitrios, Mark Hornick, ja Amit Sheth. 1995. <span>”An overview of workflow management: From process modeling to workflow automation infrastructure”</span>. <em>Distributed and parallel Databases</em> 3 (2): 119–53.
+</div>
+<div id="ref-kemppainen2024prosessien" class="csl-entry" role="listitem">
+Kemppainen, Ville. 2024. <span>”Prosessien automatisointi ohjelmistorobotiikalla pk-yrityksess<span>ä</span>”</span>. University of Jyv<span>ä</span>skyl<span>ä</span>.
+</div>
+<div id="ref-leshob2018towards" class="csl-entry" role="listitem">
+Leshob, Abderrahmane, Audrey Bourgouin, ja Laurent Renard. 2018. <span>”Towards a process analysis approach to adopt robotic process automation”</span>. <em>2018 IEEE 15th international conference on e-business engineering (ICEBE)</em>, 46–53.
+</div>
+<div id="ref-prucha2025llm" class="csl-entry" role="listitem">
+Průcha, Petr, Michaela Matoušková, ja Jan Strnad. 2025. <em>Are LLM Agents the New RPA? A Comparative Study with RPA Across Enterprise Workflows</em>. <a href="https://arxiv.org/abs/2509.04198">https://arxiv.org/abs/2509.04198</a>.
+</div>
+<div id="ref-shamsuzzoha2025robotic" class="csl-entry" role="listitem">
+Shamsuzzoha, Ahm, ja Sini Pelkonen. 2025. <span>”A robotic process automation model for order-handling optimization in supply chain management”</span>. <em>Supply Chain Analytics</em> 9: 100102.
+</div>
+<div id="ref-syed2020robotic" class="csl-entry" role="listitem">
+Syed, Rehan, Suriadi Suriadi, Michael Adams, ym. 2020. <span>”Robotic process automation: contemporary themes and challenges”</span>. <em>Computers in industry</em> 115: 103162.
+</div>
+<div id="ref-ye2023proagent" class="csl-entry" role="listitem">
+Ye, Yining, Xin Cong, Shizuo Tian, ym. 2023. <em>ProAgent: From Robotic Process Automation to Agentic Process Automation</em>. <a href="https://arxiv.org/abs/2311.10751">https://arxiv.org/abs/2311.10751</a>.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopioitu!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopioitu!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="pagination-link" aria-label="Mallit, mallintaminen ja Business Process Model and Notation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./tehtavat.html" class="pagination-link" aria-label="Harjoitustehtäviä">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Harjoitustehtäviä</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Prosessitiedon kerääminen – Liiketoimintaprosessit -- hallinta, mallintaminen, tietojärjestelmät ja automaatio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" rel="next">
+<link href="./prosessit_ja_liiketoimintaprosessit.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./prosessitiedon_keraaminen.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Liiketoimintaprosessit – hallinta, mallintaminen, tietojärjestelmät ja automaatio</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Tumma tila päälle/pois"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alkusanat</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./johdanto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Johdanto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessit_ja_liiketoimintaprosessit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prosessit ja liiketoimintaprosessit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessitiedon_keraaminen.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiarkkitehtuuri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiautomaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tehtavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Harjoitustehtäviä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tyovalineita.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Työvälineitä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lähteet</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tässä luvussa</h2>
+   
+  <ul>
+  <li><a href="#prosessien-kypsyystaso-ja-sen-mittaaminen" id="toc-prosessien-kypsyystaso-ja-sen-mittaaminen" class="nav-link active" data-scroll-target="#prosessien-kypsyystaso-ja-sen-mittaaminen"><span class="header-section-number">3.1</span> Prosessien kypsyystaso ja sen mittaaminen</a></li>
+  <li><a href="#kyvykkyyskartta" id="toc-kyvykkyyskartta" class="nav-link" data-scroll-target="#kyvykkyyskartta"><span class="header-section-number">3.2</span> Kyvykkyyskartta</a></li>
+  <li><a href="#business-model-canvas" id="toc-business-model-canvas" class="nav-link" data-scroll-target="#business-model-canvas"><span class="header-section-number">3.3</span> Business Model Canvas</a></li>
+  <li><a href="#olemassa-oleva-dokumentaatio" id="toc-olemassa-oleva-dokumentaatio" class="nav-link" data-scroll-target="#olemassa-oleva-dokumentaatio"><span class="header-section-number">3.4</span> Olemassa oleva dokumentaatio</a></li>
+  <li><a href="#prosessihaastattelu" id="toc-prosessihaastattelu" class="nav-link" data-scroll-target="#prosessihaastattelu"><span class="header-section-number">3.5</span> Prosessihaastattelu</a></li>
+  <li><a href="#prosessilouhinta" id="toc-prosessilouhinta" class="nav-link" data-scroll-target="#prosessilouhinta"><span class="header-section-number">3.6</span> Prosessilouhinta</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Prosesseja koskevan tiedon jatkuva kerääminen on oleellista prosessien hallinnan ja kehittämisen kannalta. Omanlaisensa ponnistus on prosessitiedon kerääminen silloin, kun toistaiseksi dokumentoimattomat tai kenties jopa tunnistamattomat prosessit on tarpeen saada haltuun ja mallinnetuiksi. Prosessitiedon keräämisessä voidaan hyödyntää useita erilaisia keinoja ja lähteitä: eksplisiittinen tieto dokumentoiduista lähteistä, työntekijöiden hiljainen tieto eli <em>tacit knowledge</em> <span class="citation" data-cites="nonaka1996theory">(ks. <a href="references.html#ref-nonaka1996theory" role="doc-biblioref">Nonaka ym. 1996</a>)</span>, tietojärjestelmistä saatava data, kuten loki- ja tapahtumatiedot sekä erilaisilla asiakaskyselyillä ja organisaation sisäisistä ja ulkoisista sidosryhmäpalautteista saatava tieto. Yleisimpiä keinoja prosessitiedon keräämiseen ovat haastattelut, työpajat, havainnointi, dokumenttianalyysi ja prosessianalytiikka.</p>
+<section id="prosessien-kypsyystaso-ja-sen-mittaaminen" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="prosessien-kypsyystaso-ja-sen-mittaaminen"><span class="header-section-number">3.1</span> Prosessien kypsyystaso ja sen mittaaminen</h2>
+<p>Ennen kuin prosesseja ryhdytään kehittämään, on tarpeen tietää, mikä niiden taso tällä hetkellä on. Kypsyysmalli (<em>maturity model</em>) on tähän tarkoitettu arviointikehikko, joka kuvaa portaittaisen kehityspolun epämuodollisesta ja ehkä sattumanvaraisestakin toiminnasta kohti hallittua, mitattua ja jatkuvasti parannettavaa toimintaa. Kypsyysarviointi on siten yksi prosessitiedon keräämisen tapa: se tuottaa jäsennellyn kuvan prosessien nykytilasta ja auttaa asettamaan kehittämiselle realistisen tavoitetason.</p>
+<p>Prosessien yhteydessä kypsyysmalleja käytetään tyypillisesti kolmeen tarkoitukseen <span class="citation" data-cites="roglinger2012">(<a href="references.html#ref-roglinger2012" role="doc-biblioref">Röglinger ym. 2012</a>)</span>:</p>
+<ul>
+<li>Kuvaileva käyttö, jossa selvitetään nykytila ja tunnistetaan vahvuudet ja puutteet.</li>
+<li>Ohjaava käyttö, jossa määritellään tavoitetaso ja toimenpiteet sen saavuttamiseksi.</li>
+<li>Vertaileva käyttö, jossa organisaation tai yksikön tilannetta verrataan – <em>benchmarkataan</em> – muihin.</li>
+</ul>
+<p>Kypsyydestä puhuttaessa on syytä erottaa kaksi tasoa. Prosessin kypsyys kuvaa yksittäisen prosessin, kuten ostolaskujen käsittelyn, kykyä tuottaa tavoiteltu lopputulos johdonmukaisesti ja ennustettavasti. Prosessinhallinnan kypsyys taas kuvaa koko organisaation kyvykkyyttä johtaa ja kehittää prosessejaan: esimerkiksi onko prosesseille nimetty omistajat, onko käytössä yhteiset mallinnuskäytännöt ja mittaristot ja tukeeko organisaation kulttuuri prosessiajattelua <span class="citation" data-cites="roglinger2012">(<a href="references.html#ref-roglinger2012" role="doc-biblioref">Röglinger ym. 2012</a>)</span>.</p>
+<p>Organisaatioissa voi olla yksittäisiä hyvin hallittuja prosesseja, vaikka prosessijohtaminen kokonaisuutena olisikin kehittymätöntä. Päinvastainen tilanne on harvinaisempi, sillä kypsä prosessien hallinta käytännössä pakottaa prosessit kehittymään.</p>
+<p>Useimmat kypsyysmallit pohjautuvat Carnegie Mellonin yliopiston Software Engineering Instituten alun perin ohjelmistokehitykseen laatimaan <em>Capability Maturity Model</em> -malliin <span class="citation" data-cites="paulk1993">(<a href="references.html#ref-paulk1993" role="doc-biblioref">Paulk ym. 1993</a>)</span> ja sen seuraajaan <em>CMMI</em>:hin (<em>Capability Maturity Model Integration</em>). Malli jakaa kypsyyden viiteen tasoon, jotka seuraavassa taulukossa (<a href="#tbl-kypsyystasot" class="quarto-xref">Taulukko&nbsp;<span>3.1</span></a>) on sovitettu prosessien kypsyystason tarkasteluun.</p>
+<div id="tbl-kypsyystasot" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[8,27,65]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kypsyystasot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Taulukko&nbsp;3.1: CMMI-mallin kypsyystasot
+</figcaption>
+<div aria-describedby="tbl-kypsyystasot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 27%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Taso</th>
+<th>Nimi</th>
+<th>Tyypillinen tilanne</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Lähtötaso (<em>Initial</em>)</td>
+<td>Toiminta on epämuodollista, ja onnistuminen riippuu yksittäisistä henkilöistä.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Hallittu (<em>Managed</em>)</td>
+<td>Prosessit on suunniteltu ja niitä seurataan yksikkö- tai projektikohtaisesti.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Määritelty (<em>Defined</em>)</td>
+<td>Prosessit on kuvattu ja vakioitu koko organisaatiossa.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Mitattu (<em>Quantitatively Managed</em>)</td>
+<td>Prosessien suorituskykyä ohjataan mittaritiedon perusteella.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Optimoiva (<em>Optimizing</em>)</td>
+<td>Prosesseja parannetaan jatkuvasti mittaustiedon ja kokeilujen pohjalta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Michael Hammerin <em>Process and Enterprise Maturity Model</em> (<em>PEMM</em>) <span class="citation" data-cites="hammer2007">(<a href="references.html#ref-hammer2007" role="doc-biblioref">Hammer 2007</a>)</span> arvioi kypsyyttä kahdesta suunnasta. Yksittäisen prosessin kypsyyttä mitataan viidellä prosessin mahdollistajalla (<em>process enablers</em>): prosessin suunnittelu, suorittajat, omistaja, infrastruktuuri ja mittarit. Organisaation valmiutta taas mitataan neljällä yrityskyvykkyydellä (<em>enterprise capabilities</em>): johtajuus, kulttuuri, osaaminen ja hallintamalli. Kumpikin arvioidaan nelitasoisella asteikolla. Hammerin keskeinen havainto on, että mahdollistajat ovat toisistaan riippuvaisia: prosessi on vain niin kypsä kuin sen heikoin mahdollistaja.</p>
+<p>Rosemann ja de Bruin <span class="citation" data-cites="rosemann2005">(<a href="references.html#ref-rosemann2005" role="doc-biblioref">2005</a>)</span> tarkastelevat kypsyysmallissaan prosessien hallinnan kypsyyttä kuuden tekijän kautta: strateginen yhdenmukaisuus, hallintamalli, menetelmät, tietotekniikka, ihmiset ja kulttuuri. Malli muistuttaa, että prosessien hallinta ei ole ainoastaan prosessimallinnuksiin tai työvälineisiin liittyvä asia. Kypsyys edellyttää myös johdon sitoutuneisuutta ja prosessimyönteistä kulttuuria.</p>
+<p>Kypsyyden arvioinnissa voidaan hyödyntää tässä luvussa esiteltäviä prosessitiedon keräämisen keinoja, erityisesti prosessihaastattelua ja mittareita. Käytännössä arviointi etenee usein seuraavasti:</p>
+<ol type="1">
+<li>Rajaus. Päätetään, arvioidaanko yksittäistä prosessia vai koko organisaation prosessinhallintaa, ja valitaan malli sen mukaan.</li>
+<li>Itsearviointi. Prosessin omistaja ja keskeiset toimijat arvioivat nykytilan mallin kriteereillä, esimerkiksi kyselylomakkeella.</li>
+<li>Näytön kerääminen. Itsearviota täydennetään haastatteluilla, työpajoilla ja dokumenttianalyysilla. Prosessilouhinta voi tarjota objektiivista näyttöä esimerkiksi siitä, noudatetaanko vakioituja prosesseja myös käytännössä.</li>
+<li>Tason määrittäminen. Tulokset kootaan ulottuvuuksittain. Kokonaistason sijaan kannattaa tarkastella profiilia, joka korostaa heikkoja ulottuvuuksia.</li>
+<li>Tavoitetason ja toimenpiteiden määrittäminen. Määritellään, mikä taso on kyseiselle prosessille tarkoituksenmukainen, ja mitä sen saavuttaminen edellyttää.</li>
+<li>Uusinta. Arviointi toistetaan esimerkiksi vuosittain, jotta kehitystä voidaan seurata.</li>
+</ol>
+</section>
+<section id="kyvykkyyskartta" class="level2 page-columns page-full" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="kyvykkyyskartta"><span class="header-section-number">3.2</span> Kyvykkyyskartta</h2>
+<p>Kyvykkyys (<em>business capability</em>) on organisaation kyky, joka sillä on tai jonka se voi hankkia saavuttaakseen tietyn lopputuloksen <span class="citation" data-cites="togaf-kyvykkyydet">(<a href="references.html#ref-togaf-kyvykkyydet" role="doc-biblioref">The Open Group 2022</a>)</span>. Kyvykkyys kuvaa, mitä organisaatio pystyy tekemään, riippumatta siitä, kuka työn tekee, millä prosesseilla tai millä tietojärjestelmillä. Prosessi puolestaan kuvaa, miten työ tehdään. Kyvykkyys rakentuu siis ihmisten, prosessien, tiedon ja teknologian yhdistelmästä, ja yhtä kyvykkyyttä voi toteuttaa useampi prosessi.</p>
+<p>Seuraavassa kuviossa (<a href="#fig-kyvykkyyskartta" class="quarto-xref">kuva&nbsp;<span>3.1</span></a>) on esimerkki kyvykkyyskartasta, joka voi myös auttaa tunnistamaan kyvykkyyksiin liittyvät ja kyvykkyyksiä toteuttavat prosessit. Kyvykkyyksien kypsyyttä voidaan arvioida samalla tavalla kuin prosessien. Kun kartta väritetään “lämpökartaksi” kypsyystason tai tunnistetun parannustarpeen mukaan, siitä näkee nopeasti, mihin kyvykkyyksiin ja niitä toteuttaviin prosesseihin kehittämistoimet kannattaa ensimmäiseksi kohdistaa.</p>
+<div id="fig-kyvykkyyskartta" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Esimerkki kyvykkyyskartasta.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-kyvykkyyskartta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/kyvykkyyskartta.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Kuva&nbsp;3.1: Esimerkki kyvykkyyskartasta"><img src="kuviot/kyvykkyyskartta.svg" class="img-fluid figure-img" alt="Esimerkki kyvykkyyskartasta."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kyvykkyyskartta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;3.1: Esimerkki kyvykkyyskartasta<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</figcaption>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;https://www.hosiaisluoma.fi/</p></div></div></figure>
+</div>
+</section>
+<section id="business-model-canvas" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="business-model-canvas"><span class="header-section-number">3.3</span> Business Model Canvas</h2>
+<p>Osterwalderin <span class="citation" data-cites="osterwalder2004">(<a href="references.html#ref-osterwalder2004" role="doc-biblioref">2004</a>)</span> esittelemä <em>Business Model Canvas</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (<em>BMC</em>) (<a href="#fig-bmc" class="quarto-xref">kuva&nbsp;<span>3.2</span></a>) on laajasti käytetty strategisen organisaatiosuunnittelun työväline. BMC voi toimia tehokkaana välineenä myös liiketoimintaprosessien tarkastelussa, sillä se kyvykkyyskartan tavoin tarjoaa kokonaisvaltaisen kuvan yrityksen – tai miksei myös julkisen tai voittoa tuottamattoman organisaation – toiminnasta ja auttaa yhdistämään strategisen suunnittelun operatiivisiin toimintoihin.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;https://www.strategyzer.com/library/the-business-model-canvas</p></div></div><div id="fig-bmc" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Business Model Canvas">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bmc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/bmc.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Kuva&nbsp;3.2: Business Model Canvas. CC BY-SA 3.0, Strategyzer AG"><img src="kuviot/bmc.svg" class="img-fluid figure-img" alt="Business Model Canvas"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bmc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;3.2: Business Model Canvas. CC BY-SA 3.0, Strategyzer AG
+</figcaption>
+</figure>
+</div>
+<p>BMC-viitekehys on varsin yksinkertainen. Siinä on yhdeksän lohkoa, jotka esittävät liiketoiminnan keskeisiä rakenneosia:</p>
+<ul>
+<li>Arvolupaus (<em>Value Proposition</em>): Mitä arvoa yritys tuottaa asiakkaalle? Minkä ongelman se ratkaisee tai minkä tarpeen täyttää?</li>
+<li>Asiakassegmentit (<em>Customer Segments</em>): Kenelle arvoa tuotetaan ja mitkä ovat yrityksen tärkeimmät asiakasryhmät?</li>
+<li>Kanavat (<em>Channels</em>): Missä asiakkaat tavoitetaan? Kuinka arvo toimitetaan?</li>
+<li>Asiakassuhteet (<em>Customer Relationships</em>): Kuinka asiakkaita hankitaan, kuinka asiakkaat saadaan pidettyä ja kuinka asiakaskuntaa kasvatetaan?</li>
+<li>Tulovirrat (<em>Revenue Streams</em>): Mistä tulot saadaan? Mistä asiakkaat haluavat maksaa ja miten?</li>
+<li>Ydinresurssit (<em>Key Resources</em>): Mitä resursseja tarvitaan arvolupauksen toteuttamiseen?</li>
+<li>Ydinaktiviteetit (<em>Key Activities</em>): Mitä täytyy tehdä, jotta yrityksen antama arvolupaus voidaan toteuttaa?</li>
+<li>Kumppanit (<em>Key Partnerships</em>): Ketkä ovat yrityksen tärkeimmät yhteiskumppanit ja toimittajat?</li>
+<li>Kustannusrakenne (<em>Cost Structure</em>): Missä ja miten kustannukset syntyvät? Mitkä ovat suurimmat kulut?</li>
+</ul>
+<p>Vaikka BMC sinällään onkin yksinkertainen ryhmittely liiketoiminnan kannalta oleellisista asioista, voi kehyksen täyttäminen vaatia työpajan, jos toisenkin. BMC:n esittämä teemoittelu saattaa kuitenkin tuntua luontevammalta kuin liiketoiminnan jäsentely suoraan kyvykkyys- tai prosessikartan muotoon.</p>
+<p>Jo teemojen otsikoista nähdään, että BMC voi monella tapaa tukea prosessien tunnistamista, niiden hallinnan suunnittelua ja kehittämistä. Jokaisen teeman kohdalla voidaan esittää kysymykset: Mitä prosesseja tähän liittyy ja kuinka ne toimivat? Esimerkiksi: Mitkä prosesseista ovat välttämättömiä asiakkaille annettavan arvolupauksen toteuttamiseksi? Jos arvolupaus on nopea toimitus, on prosesseissa tietenkin painotettava logistiikan tehokkuutta. Ovatko prosessit optimoitu erilaisten asiakasryhmien tarpeisiin? Millä prosesseilla toteutetaan asiakashankintaa ja kuinka ne toimivat? Ovatko arvolupauksen toteuttamisen kannalta olennaisiksi todetut ydinaktiviteetit (eli ydinprosessit) riittävästi resursoituja? Voidaanko kustannusrakenteita keventää prosesseja tehostamalla tai olisiko syytä harkita prosessien ulkoistamista? Ja niin edelleen.</p>
+<p>Kun kanvaasi on täytetty, voidaan jokaisen alueen sisältö vielä järjestää prioriteettijärjestykseen. Mikä asiakasryhmistä tai asiakkuuksista on tärkein? Mitä uutta asiakasryhmää voitaisiin tavoitella? Mistä suurin tulovirta saadaan nyt? Entä mistä se tulee kolmen vuoden kuluttua? Mitkä ydinaktiviteeteista ovat kaikista tärkeimmät? Missä syntyvät toiminnan suurimmat kustannukset? Priorisoinnin avulla kehitystyötä voidaan suunnata ja muutoksen laajuutta rajata.</p>
+<p>Priorisoinnin jälkeen kanvaasin avulla voidaan myös tarkastella eri osa-alueiden prioriteettien johdonmukaisuutta. Jos välittömästi arvolupauksen toteuttamiseen liittyvät toiminnot löytyvät ydinaktiviteettien joukosta vasta alemmilta sijoilta, tai eivät ehkä löydy sieltä ollenkaan, jossain on vikaa. Jos tulovirrat ja ydinresurssit eivät kohtaa, jälleen on prosessien johtamisessa menty metsään.</p>
+<p>Kun liiketoimintamalli on kuvattu, voidaan arvioida, mitkä prosessit ovat tärkeimpiä strategian toteutumiselle. Näihin prosesseihin tulee kohdentaa resursseja ja tarvittaessa parantamistoimia. Arvolupauksen toteutusta voidaan optimoida ja resurssien käyttöä saatetaan voida tehostaa esimerkiksi prosessiautomaation avulla. BMC voi myös osoittaa, mihin prosesseihin liittyvää dataa olisi tarpeen kerätä ja analysoida, jotta liiketoimintamallia voidaan jalostaa tiedolla johtamisen avulla.</p>
+<p>Tunnettuudestaan huolimatta BMC ei välttämättä ole ensimmäisenä mieleen nouseva väline liiketoimintaprosessien tarkastelun tueksi, mutta se on siihen erinomainen väline. Sen käyttö mahdollistaa prosessien systemaattisen tarkastelun nimenomaan strategian näkökulmasta. Sitä soveltamalla voidaan optimoida prosesseja tukemaan arvolupausta, vähentää kustannuksia ja parantaa asiakastyytyväisyyttä. Tämä johtaa kokonaisvaltaiseen liiketoimintaprosessien, ja siten liiketoiminnan, kehittämiseen. BMC tarjoaa prosesseihin kuitenkin karkean, oikeastaan vain otsikkotasoisen näkymän. Tarkastellaankin seuraavaksi joitain keinoja ja tekniikoita, joiden avulla voidaan päästä kiinni prosessien kulkuun ja sitä kautta kehittämisen yksityiskohtaisempiin suuntiin.</p>
+</section>
+<section id="olemassa-oleva-dokumentaatio" class="level2 page-columns page-full" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="olemassa-oleva-dokumentaatio"><span class="header-section-number">3.4</span> Olemassa oleva dokumentaatio</h2>
+<p>Prosesseja koskevaa dokumentoitua tietoa voidaan löytää monista lähteistä. Useissa yrityksissä ja organisaatioissa on työ- tai toimintaohjeita, jotka saattavat parhaassa tapauksessa kuvata jopa askel askeleelta, kuinka jokin tehtävä suoritetaan. Sikäli ne ovat myös väline toiminnan jatkuvuuden varmistamiseksi esimerkiksi henkilöstömuutosten yhteydessä. Lisäksi ne voivat liittyä toiminnan laadun varmistamiseen ja monet laatujärjestelmät edellyttävätkin melko seikkaperäisiä toimintakuvauksia. Kemppaisen <span class="citation" data-cites="kemppainen2018">(<a href="references.html#ref-kemppainen2018" role="doc-biblioref">2018</a>)</span> tutkimuksessa todetaan hyvän työohjeen olevan sellainen, jonka ”avulla pystyy suorittamaan tarkasti määritetyn työtehtävän ilman muita ohjeita tai muuta opastusta.” Seuraavassa (<a href="#fig-matkaohje" class="quarto-xref">kuva&nbsp;<span>3.3</span></a>) on katkelma erään yliopiston työmatkaohjeesta.</p>
+<div id="fig-matkaohje" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Katkelma yliopiston työmatkaohjeesta.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-matkaohje-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./kuviot/matkaohje.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Kuva&nbsp;3.3: Katkelma yliopiston työmatkaohjeesta"><img src="./kuviot/matkaohje.png" class="img-fluid figure-img" alt="Katkelma yliopiston työmatkaohjeesta."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-matkaohje-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;3.3: Katkelma yliopiston työmatkaohjeesta
+</figcaption>
+</figure>
+</div>
+<p>Laatujärjestelmät, kuten ISO 9001 Laadunhallinta<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, edellyttävät prosessimaista toimintatapaa ja prosessien määrittämistä. ISO 9001 Laadunhallinta -järjestelmää ohjaavia periaatteita ovat asiakaslähtöisyys ja laadun jatkuva parantaminen, joten laatusertifikaatin ansainneen organisaation voidaan olettaa päässeen jo varsin pitkälle prosessiajattelussa ja prosessimuotoisessa toiminnassa. Useissa sertifioimattomissakin organisaatioissa on laadittu laatujärjestelmiä, vastuutauluja tai vaikkapa vähemmän muodollisia laatukäsikirjoja, jotka voivat toimia erinomaisena materiaalina liiketoimintaprosesseja tarkasteltaessa.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;https://sfs.fi/standardeista/tutustu-standardeihin/suositut-standardit/iso-9001-laadunhallinta/</p></div></div><p>Vaikka laatukäsikirjaa ei löytyisikään, on useimmilla organisaatioilla ainakin jonkinlainen organisaatiokaavio tehtävänimikkeineen ja vastuualuekuvauksineen. Samoin esimerkiksi verkkosivuilla olevat kuvaukset asiakkaille tarjottavista palveluista voivat myös johtaa prosessien äärelle. Tietojärjestelmien käyttöohjeet ja muut niihin liittyvät dokumentaatiot saattavat tarjota yksityiskohtaistakin tietoa prosesseista, joita toteutetaan tai tuetaan IT-ratkaisuilla.</p>
+<p>Sopimukset kuten palvelutasosopimus (<em>Service Level Agreement</em>, <em>SLA</em>), samoin kuin toimintaa koskeva lainsäädäntö tai muu sääntely, on myös hyvä kartoittaa ja käydä ainakin keskeisiltä osiltaan läpi. Nämä voivat paitsi tarjota tietoa nykytilan prosessien toteutuksesta, ne asettavat myös ensimmäiset raamit uusien prosessien suunnittelulle.</p>
+</section>
+<section id="prosessihaastattelu" class="level2 page-columns page-full" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="prosessihaastattelu"><span class="header-section-number">3.5</span> Prosessihaastattelu</h2>
+<p>Haastattelun avulla voidaan saada syvällistä tietoa prosessien kulusta sekä esimerkiksi resurssitarpeista, pullonkauloista ja mahdollisista poikkeustilanteista. Haastattelua voidaan käyttää pyrittäessä nykyisten prosessien dokumentointiin ja ymmärtämiseen. Sitä voidaan myös käyttää tiedonkeruumenetelmänä suunniteltaessa ja määriteltäessä prosesseille tavoitetiloja, ja siihen haastattelu onkin yksi parhaista tiedonkeruuvälineistä. Koska haastattelu soveltuu useisiin käyttötarkoituksiin ja se voidaan toteuttaa monessa eri muodossa, onkin ensimmäiseksi tärkeää määritellä tavoitteet ja vasta sen jälkeen suunnitella haastattelun toteutus.</p>
+<p>Haastattelun päätyypit ovat strukturoitu, puolistrukturoitu ja avoin haastattelu. Strukturoitu eli rakenteinen muoto on käytettävissä silloin, kun jo etukäteen tarkasti tiedetään, mitä tietoa tarvitaan ja missä muodossa se halutaan saada. Strukturoidun haastattelun ominaisuuksia on esitetty taulukossa alla (<a href="#tbl-strukturoitu-haastattelu" class="quarto-xref">Taulukko&nbsp;<span>3.2</span></a>). Suljetuilla kysymyksillä tarkoitetaan esimerkiksi valinta- ja luokituskysymyksiä.</p>
+<div id="tbl-strukturoitu-haastattelu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-strukturoitu-haastattelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Taulukko&nbsp;3.2: Strukturoidun haastattelun ominaisuudet
+</figcaption>
+<div aria-describedby="tbl-strukturoitu-haastattelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ominaisuus</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kysymykset</td>
+<td>Kysymykset ovat täsmällisesti etukäteen määriteltyjä (suljettuja tai puoliavoimia), eikä niiden sisältöä tai muotoa varioida haastattelun aikana tai niiden välillä.</td>
+</tr>
+<tr class="even">
+<td>Järjestys</td>
+<td>Kysymykset esitetään samassa järjestyksessä kaikille haastateltaville.</td>
+</tr>
+<tr class="odd">
+<td>Haastattelijan rooli</td>
+<td>Haastattelija pysyy neutraalina, ei improvisoi eikä johdattele haastateltavaa.</td>
+</tr>
+<tr class="even">
+<td>Tavoite</td>
+<td>Tavoitteena on kerätä määrämuotoista ja kvantifioitavaa tietoa.</td>
+</tr>
+<tr class="odd">
+<td>Dokumentointi</td>
+<td>Vastaukset kirjataan täsmällisesti, esimerkiksi lomakkeelle tai tietokantaan.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Strukturoitu haastattelu soveltuu käytettäväksi silloin, kun ei ole tarpeen päästä kiinni prosessikulun nyansseihin, vaan tavoitteena on muodostaa yleiskuva prosessista tai käytännöistä, ja kun halutaan saada määrällisessä muodossa analysoitavaa tietoa esimerkiksi prosessin kestosta, toistuvuudesta ja tehtävien suoritusjärjestyksestä. Määrämuotoinen strukturoitu haastattelu tuottaa yhtenäistä ja vertailtavaa aineistoa, joka on helppo kvantifioida ja analysoida. Muoto helpottaa myös useiden haastateltujen henkilöiden vastausten vertailua.</p>
+<p>Strukturoidulla haastattelulla ei kuitenkaan pystytä syventymään yksittäisen haastateltavan kokemuksiin tai kontekstiin, eikä se mahdollista joustavaa keskustelua tai lisäkysymysten esittämistä. Sen vuoksi strukturoitu haastattelu vaatii huolellisen ennakkosuunnittelun ja haastattelurungon testaamisen ennen haastattelujen aloittamista.</p>
+<p>Avoin haastattelu puolestaan toteutetaan ilman valmista kysymysrunkoa ja kysymykset muotoutuvat haastattelun edetessä. Haastattelun kulku vastaa vapaata keskustelua ja sen tavoitteena on ymmärtää ilmiötä, eli prosessihaastattelun tapauksessa jotain prosessia, haastateltavan näkökulmasta ja hänen kontekstissaan. Tekniikka soveltuu käytettäväksi parhaiten silloin, kun käsiteltävät prosessit ovat monimutkaisia tai huonosti jäsentyneitä, tai kun ollaan nimenomaan kiinnostuneita haastateltavien kokemuksista ja näkemyksistä. Avoin haastattelu voi olla toimiva tekniikka esimerkiksi lähdettäessä kartoittamaan huonosti hallussa olevia prosessialueita. Avointen haastattelujen muodossa toteutetun ensimmäisen tiedonkeruukierroksen jälkeen on mahdollista siirtyä systemaattisempiin tiedonkeruumenetelmiin. Vastaavasti avointa haastattelua voidaan käyttää vaikkapa strukturoitujen tai puolistrukturoitujen haastattelujen jälkeen eli siinä vaiheessa, kun prosessista alkaa olla jo yleiskäsitys, mutta lisäksi halutaan vielä selvittää toimijakohtaisia näkemyksiä tai harvinaisempia yksityiskohtia ja poikkeustilanteita.</p>
+<p>Puolistrukturoitu haastattelu on todennäköisesti yleisin muoto prosessihaastatteluja toteutettaessa; ainakin se on yleisin haastattelumenetelmä laadullisissa tutkimuksissa <span class="citation" data-cites="adeoye2021research">(<a href="references.html#ref-adeoye2021research" role="doc-biblioref">Adeoye-Olatunde ja Olenik 2021</a>)</span>. Se yhdistää sekä strukturoidun että avoimen haastattelun ominaisuuksia. Kysymysrunko on valmiiksi mietitty ja se voi sisältää sekä määrämuotoisia että avoimia kysymyksiä. Haastattelija voi muuttaa kysymysten esittämisjärjestystä ja tarvittaessa esittää tarkentavia tai lisäkysymyksiä. Keskustelun kulku on joustava, mutta ei samalla tavalla vapaasti rönsyilevä kuin avoimessa haastattelussa. Puolistrukturoitu haastattelu pyrkii tuottamaan määrämuotoista tietoa, mutta mahdollistaa kuitenkin syventävien ja haastateltavan kontekstiin liittyvien huomioiden esille nousun. Tätä haastattelutyyppiä käytetään, kun halutaan teemoittain vertailtavaa aineistoa, mutta samalla myös syvempää laadullista ymmärrystä. Puolistrukturoidun haastattelun ominaisuuksia on koottu seuraavaan taulukkoon (<a href="#tbl-puolistrukturoitu-haastattelu" class="quarto-xref">Taulukko&nbsp;<span>3.3</span></a>).</p>
+<div id="tbl-puolistrukturoitu-haastattelu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-puolistrukturoitu-haastattelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Taulukko&nbsp;3.3: Puolistrukturoidun haastattelun ominaisuudet
+</figcaption>
+<div aria-describedby="tbl-puolistrukturoitu-haastattelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ominaisuus</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kysymykset</td>
+<td>Kysymykset ovat etukäteen laadittuja, mutta niitä voidaan muokata tilanteen ja haastateltavan aiempien vastausten mukaan.</td>
+</tr>
+<tr class="even">
+<td>Järjestys</td>
+<td>Haastattelun teemat pyritään käymään läpi suunnitellussa järjestyksessä, mutta järjestys ei ole tiukasti sidottu.</td>
+</tr>
+<tr class="odd">
+<td>Haastattelijan rooli</td>
+<td>Haastattelija ohjaa keskustelua ja voi esittää lisäkysymyksiä ja tarkennuspyyntöjä joustavasti.</td>
+</tr>
+<tr class="even">
+<td>Tavoite</td>
+<td>Tavoitteena on yhdistää laadullinen syvyys ja aineiston vertailtavuus.</td>
+</tr>
+<tr class="odd">
+<td>Dokumentointi</td>
+<td>Haastattelut tavallisesti tallennetaan ja litteroidaan. Vaihtoehtoisesti haastattelija voi tehdä haastattelun aikana tarkkoja muistiinpanoja teemoittain.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p><strong>Seuraava osuus perustuu Sara Seppäsen kanssa käytyyn keskusteluun prosessihaastatteluista ja prosessitiedon keräämisestä. Seppänen toimii pääarkkitehtina ja hänellä on runsaasti kokemusta myös prosessien kehittämisestä.</strong></p>
+<p>Haastattelun tavoitteiden mukaisesti haastateltaviksi voidaan valita esimerkiksi prosessien omistajia, asiantuntijoita, työntekijöitä tai sidosryhmiä, joista kukin tarjoaa prosessiin erilaisen näkökulman. Kannattaa pitää mielessä, että haastattelujen avulla saatava tieto on aina vähintään jossain määrin subjektiivista – myös strukturoitujen haastattelujen tapauksessa.</p>
+<p>Prosessin omistaja tuntee prosessinsa tavoitteen ja resurssit sekä sen, kuinka se liittyy muihin prosesseihin ja toimintaympäristöönsä. Koska prosessin omistajalla on kokonaiskuva prosessista, osaa hän todennäköisesti kertoa ainakin yleisellä tasolla, mitä kaikkea prosessiin liittyy, sekä neuvoa, ketä muita olisi tavoitteiden saavuttamiseksi hyödyllistä haastatella.</p>
+<p>Prosessin yksityiskohtaisemman kulun selvittämiseksi voi olla tarpeen kääntyä prosessin operatiivisessa toteuttamisessa toimivan henkilöstön, esimerkiksi prosessitiimin, puoleen. Jotta kaikki relevantit näkökulmat saadaan katettua, usein tarvitaan eri toimijaryhmien haastatteluja ja haastatteluaineistojen yhdistelemistä.</p>
+<p>Lähellä prosessia toimiva ja prosessiin liittyviä tehtäviä toteuttava työntekijä ei välttämättä kuitenkaan ajattele toimintaansa tai työtehtäviään prosesseina<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Siksi haastattelijan on mietittävä, millaisia kysymyksiä hänen tulisi esittää, jotta haastattelujen tavoitteita vastaavaa tietoa voidaan saada. Prosessin toteuttamiseen osallistuvalla haastateltavalla saattaa olla yksityiskohtaista tietoa joistain prosessissa usein toistuvista tehtävistä tai ongelmakohdista. Vastaavasti jotkin muut prosessin vaiheet tai poikkeustilanteet, jotka saattavat olla hyvinkin merkityksellisiä, voivat tulla kuitatuiksi lyhyesti ja ainoastaan yleisellä tasolla.</p>
+<p>Erityisesti avoimia ja puolistrukturoituja haastatteluja tehtäessä on tavallista, että jokainen prosessin toteuttamiseen osallistuva kertoo prosessille hieman erilaisen kulun. Ihmiset korostavat omasta kontekstistaan eri asioita; sellaisia, joita itse pitävät prosessin kannalta oleellisimpina. Vaikka tällaisen aineiston yhteen vetäminen voi olla työlästä, se mahdollistaa perusteellisen kokonaisnäkemyksen muodostamisen, ja onkin kenties arvokkainta tietoa, mitä prosessista voidaan saada.</p>
+<p>On myös mahdollista, että prosessi todellakin toteutuu tapauksen ja toteuttajan mukaan eri tavoilla, eli prosessikulku ei ole vakioitunut. Mallinnetut kuvaukset saman prosessin erilaisista kuluista ja toteumista ovat tärkeää materiaalia vakioituja prosessikäytänteitä suunniteltaessa ja prosesseja kehitettäessä. Prosessin omistaja tai objektiivinen prosessiasiantuntija voi analysoida erilaisia variantteja ja tarkastella, kuinka ne toteuttavat prosessille asetettuja tavoitteita ja vaatimuksia. Variaatioiden joukosta voidaan valita ideaalisin toteutus tai erilaisista prosessikuluista voidaan poimia parhaat osat, jotka yhdistetään vakioitavaksi prosessimuodoksi.</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Prosessihaastattelut voivatkin toimia myös hyvänä prosessiajattelun esittelyn ja jalkauttamisen välineenä.</p></div></div></div>
+<p>Seuraavaksi esitetään Seppäsen toteutusmalli prosessihaastattelujen suunnittelusta tulosten loppukatselmointiin ja prosessien jatkuvaan kehittämiseen.</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p><strong>Ymmärrä työn tavoitteet</strong>. Ensin tulee määritellä, mitä haastatteluilla pyritään saavuttamaan. Tavoitteena voi esimerkiksi olla jonkin nykyisen prosessin dokumentoiva kuvaaminen, automaatiomahdollisuuksien tunnistaminen tai tavoitetilan suunnittelua ja kehittämistä tukevan informaation kerääminen. Tavoitteen kautta pystytään asettamaan haastattelurunkoon sopivat teemat ja kysymykset. Mikäli tavoitteena on muodostaa yleinen käsitys prosesseista ja niiden liittymäkohdista, tulee haastattelut ja muu tiedonkeruu toteuttaa eri tavalla, kuin jos tavoitteena on tuottaa mahdollisimman yksityiskohtainen kuvaus nykyisestä prosessikulusta tai suunnitella parannettu tai jopa kokonaan uudistettu prosessikulku.</p></li>
+<li><p><strong>Tutustu prosessiin mahdollisimman hyvin ennen haastattelujen aloittamista</strong>. Seuraavaksi haastattelijan tulee tutustua kaikkeen relevanttiin taustamateriaaliin, kirjallisiin lähteisiin, kuten työohjeisiin sekä toiminnallisiin ja kenties strategisiinkin tavoitteisiin, mitä käsiteltävästä prosessista on saatavilla. Jos prosessi tuottaa palvelua asiakkaalle, tutustutaan palvelun kuvaukseen, joka voi löytyä yrityksen tai organisaation verkkosivuilta. Saatavilla voi olla myös prosessin asiakkaille tarkoitettuja ohjeita. Mikäli prosessi toteutetaan tietojärjestelmällä, voi järjestelmästä ja sen dokumentaatioista löytyä ainakin välillisesti prosessikulkuun liittyvää informaatiota. Samoin, jos prosessiin liittyy esimerkiksi lomakkeita, tulee niihin tutustua, ja sähköisten lomakkeiden tapauksessa niiden toimintaa kannattaa myös kokeilla. Näin saadaan selville, mitä informaatiota prosessissa käsitellään. Erilaisten taustamateriaalien avulla prosessista saadaan todennäköisesti luotua ensimmäinen kuvaus jo ennen ensimmäisenkään haastattelun toteuttamista. Mitä paremmin haastattelija ymmärtää prosessia jo valmiiksi, sitä tuloksellisempia haastattelut tulevat olemaan. Tämä paitsi säästää haastateltavien aikaa ja auttaa haastattelijaa esittämään oikeita kysymyksiä, se myös helpottaa haastatteluaineiston tulkintaa. Haastattelijalla on paremmat edellytykset ymmärtää, milloin vastaukset käsittelevät keskeisiä teemoja ja milloin ne ehkä liikkuvat lillukan varsissa.</p></li>
+<li><p><strong>Tee luonnos prosessikulusta</strong>. Usein on hyödyllistä laatia taustatietojen perusteella prosessikulusta ensimmäinen luonnos. Mikäli prosessia on tarkoitus mallintaa myös haastattelun aikana (ks. kohta 6), voi alustava hahmotelma toimia haastattelijan muistin tukena.</p></li>
+<li><p><strong>Haastattele ensimmäiseksi prosessin omistaja</strong>. Jotta prosessista, sen tavoitteista ja vaatimuksista – esimerkiksi prosessia koskevasta sääntelystä – saadaan aluksi korkean tason käsitys, kannattaa haastattelut aloittaa prosessin omistajasta. Vaikka omistaja ei välttämättä tunne prosessikulun kaikkia yksityiskohtia, erityistapauksia tai poikkeamia, osaa hän varmasti neuvoa, ketä näiden osalta kannattaa haastatella seuraavaksi. Mikäli prosessilla ei ole nimettyä omistajaa, voidaan haastatteluun kutsua esimerkiksi toiminta-alueen esihenkilö.</p></li>
+<li><p><strong>Valitse muut haastateltavat</strong>. Seuraavaksi valitaan muut haastateltavat ja sovitaan haastattelujen aikataulu. On mahdollista, että joku ehdottaa itsensä sijaan haastateltavaksi jotain toista, tehtävän tai prosessin paremmin tuntevaa henkilöä.</p></li>
+<li><p><strong>Toteuta haastattelut</strong>. Haastattelun aluksi kannattaa käydä tavoitteet läpi haastateltavan kanssa: Miksi haastattelu toteutetaan. Mitä tarkoitusta se palvelee. Miksi juuri kyseistä henkilöä haluttiin haastatella. Mistä asioista haastattelija on kiinnostunut kuulemaan ja mikä on haastattelun tavoiteltu lopputulos. Mikäli tarpeen, haastateltava voidaan lyhyesti perehdyttää liiketoimintaprosesseihin ja niiden käsitteistöön yleisellä tasolla. Samalla voi olla hyödyllistä käydä läpi jokin yksinkertainen prosessikulku uimaratoineen esimerkiksi vuokaavion tai BPMN-mallin muodossa. Orientaatioksi voidaan jo ennen haastattelua toimittaa esimerkiksi prosessikorttipohja tai muuta materiaalia, jonka tuella haastateltava voi miettiä prosessia etukäteen. Sara Seppänen kuitenkin huomauttaa, että tällaiset ennakkomateriaalit saattavat myös hämmentää tai tarpeettomasti kuormittaa haastateltavaa, eikä hän itse niitä käytä. <br><br> Prosessin dokumentointiin tähtäävän haastattelun toteuttamiseen on erilaisia käytänteitä. Jotkut haastattelijat ainoastaan kirjaavat asioita muistiin ja avaavat muistiinpanot prosessimalliksi haastattelun jälkeen. Seppänen kertoo usein piirtävänsä prosessimallia jo haastattelun aikana siten, että myös haastateltava voi nähdä sen. Tällöin haastateltava pystyy seuraamaan, kuinka hänen vastauksensa tulevat tulkituiksi prosessin muotoon ja tarvittaessa välittömästi korjata mahdolliset väärinymmärrykset. Samoin mallin kautta haastateltavan mieleen voi nousta asioita, joita hän ei ole vielä huomannut mainita. Lisäksi prosessimalli auttaa pitämään keskustelun tarkkuustason johdonmukaisena ja tavoitetta vastaavana. Vaiheittain rakentuvasta graafisesta mallista on helpompi huomata, mikäli keskustelu uhkaa ajautua tarpeettomiin yksityiskohtiin tai toisaalta liikkuu tavoitteisiin nähden liian yleisellä tasolla. Haastattelun aikana piirrettävä prosessimalli kannattaa kuitenkin pitää notaatioltaan yksinkertaisena. Useimpiin tilanteisiin riittävät BPMN:n peruselementit tai esimerkiksi vuokaaviomalli. Lopputulos haastattelun päättyessä on tavallisesti yleisellä tasolla esitetty prosessikulku, jota on höystetty joukolla yksityiskohtiin, poikkeuksiin ja tarkennus- tai selvitystarpeisiin liittyviä annotaatioita tai muistilappuja.</p></li>
+<li><p><strong>Dokumentoi ja arvioi haastattelun tuottamat tiedot</strong>. Haastattelun jälkeen muistiinpanot kirjoitetaan auki. Mikäli haastattelun aikana on piirretty prosessimallia, sitä tarvittaessa korjataan ja täydennetään muistiinpanojen avulla, viimeistellään ja tarkastetaan. Mikäli muistiin on kirjattu lisäselvitystä vaativia asioita, nämä selvitetään ensimmäiseksi. Sen jälkeen muistiinpanot ja / tai prosessimalli toimitetaan haastatellulle kommentoitavaksi. Yksinkertaisimmillaan tämän voi toteuttaa kysymällä haastatellulta, vastaavatko ne todellisuutta.</p></li>
+<li><p><strong>Toteuta tarvittavat lisähaastattelut ja iteraatiot</strong>. Haastateltava ei välttämättä osaa kertoa prosessista kuin siltä osin, mitä hänen omalla ”uimaradallaan” tapahtuu. Voikin olla tarpeen sopia lisähaastatteluja, jotta prosessista saadaan muodostettua riittävän kokonaisvaltainen käsitys. Etenkin kysymykset prosessin käynnistymisestä, päättymisestä sekä prosessiin tulevista ja siitä lähtevistä tietovirroista voivat paljastaa lisää prosessiin liittyviä rooleja, toimijoita ja rajapintoja muihin prosesseihin. Saattaa esimerkiksi olla, että prosessi on itse asiassa käynnistynyt jo ennen kuin haastateltu henkilö osallistuu siihen tai jatkuu sen jälkeen, kun hänen tehtävänsä prosessiin liittyen ovat tulleet valmiiksi. Mahdollista on sekin, että haastattelun perusteella tunnistetaan erilaisia tapauksia ja prosessikulkuja, jotka todellisuudessa ovat eri prosesseja: esimerkiksi henkilöasiakkaan ja yritysasiakkaan prosessit. Joskus voi olla tarpeen kuulla haastateltuja henkilöitä vielä uudelleen. Usein esimerkiksi täydentävät kysymykset voidaan kuitenkin esittää lyhyessä lisäpalaverissa tai kommenttipyynnön yhteydessä kirjallisesti ilman tarvetta uudelle haastattelukierrokselle.</p></li>
+<li><p><strong>Toteuta loppukatselmointi</strong>. Lopuksi prosessimalli ja muut prosessista kerätyt tiedot toimitetaan prosessin omistajalle, joka katselmoi ja hyväksyy lopputuloksen.</p></li>
+<li><p><strong>Prosessien jatkuva parantaminen</strong>. Katselmoitu ja hyväksytty prosessi voidaan tarvittaessa avata uudelleen tarkasteltavaksi. Prosessikatselmointi on suositeltavaa toteuttaa säännöllisesti ja sitoa se esimerkiksi vuosikelloon. Laadunhallinnan ja prosessien kehittämisen kannalta tulee tietysti myös seurata prosessin toteumaa. Vastaako toteuma suunniteltua prosessikulkua ja vastaavatko prosessin tulokset asetettuja tavoitteita. Herätteenä uudelle tarkastelulle voivat myös toimia esimerkiksi muutokset toimintaympäristössä, tietojärjestelmissä tai vaikkapa lainsäädännössä, kuin myös merkittävät muutokset virheiden, läpimenoaikojen tai muiden seurattavien mittareiden tuloksissa.</p></li>
+</ol>
+</blockquote>
+<p>Puolistrukturoitu prosessihaastattelu voisi edetä esimerkiksi seuraavanlaisten kysymysten varassa. Puolistrukturoitua haastattelua saatetaan kutsua myös teemahaastatteluksi. Seuraavista esimerkkikysymyksistä on tunnistettavissa ainakin seuraavat teemat: prosessin kulku, prosessissa käsiteltävät ja tuotettavat tiedot, prosessissa käytettävät tietojärjestelmät, prosessin ongelmakohdat ja prosessin kehittämismahdollisuudet. Kaikki etukäteen päätetyt teemat pyritään käsittelemään haastattelun aikana, mutta se, missä vaiheessa haastattelua ne käsitellään, voi tarvittaessa vaihdella. Samoin teemaan liittyviä kysymyksiä voidaan säätää haastattelun aikana.</p>
+<p><strong><em>Voitko kuvailla, miten prosessi etenee?</em></strong></p>
+<ul>
+<li><em>Ketä toimijoita prosessin toteuttamiseen itsesi lisäksi osallistuu ja mitkä heidän roolinsa prosessissa ovat?</em></li>
+<li><em>Milloin prosessi käynnistyy? Mikä rooli ja tapahtuma sen käynnistää?</em></li>
+<li><em>Kuinka monta kertaa prosessi suoritetaan päivän / viikon / kuukauden / vuoden aikana?</em></li>
+<li><em>Mikä on prosessin ensimmäinen, toinen, …, viimeinen vaihe</em><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><em>?</em></li>
+<li><em>Mikä on sinun vastuusi prosessin ensimmäisessä, toisessa, …, viimeisessä vaiheessa?</em></li>
+<li><em>Mitä tietoja tarvitset näissä vaiheissa ja mistä saat nämä tiedot?</em></li>
+<li><em>Mitä tietoja vaiheessa syntyy ja minne nämä tiedot menevät?</em></li>
+<li><em>Mitä tietojärjestelmiä käytät vaiheissa ja kuinka järjestelmät tukevat työtäsi?</em></li>
+<li><em>Mitä prosessin lopputulemalta vaaditaan? Voiko prosessi esimerkiksi jäädä kesken tai olla tulematta valmiiksi?</em></li>
+<li><em>Onko prosessissa vaiheita, joissa se usein hidastuu tai törmää joihinkin ongelmiin?</em></li>
+<li><em>Mistä edelliset johtuvat?</em></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Vaiheella tarkoitetaan tässä BPMN-mallin mukaista tehtävää (<em>Task</em>).</p></div></div><p><strong><em>Mitä virhe- tai poikkeustilanteita prosessin aikana voi tapahtua?</em></strong></p>
+<ul>
+<li><em>Mistä virheet tai poikkeukset johtuvat?</em></li>
+<li><em>Kuinka usein virheitä tai poikkeuksia tapahtuu?</em></li>
+</ul>
+<p><strong><em>Miten prosessia voisi mielestäsi parantaa?</em></strong></p>
+<ul>
+<li><em>Liittyykö prosessikulkuun ongelmia tai kehittämiskohteita?</em></li>
+<li><em>Tukevatko tietojärjestelmät prosessin toteuttamista?</em></li>
+<li><em>Onko prosessi resursoitu riittävästi?</em></li>
+</ul>
+<!--
+| Teema | Kysymykset |
+|---|---|
+| Prosessin roolit ja kulku | Voitko kuvailla, miten prosessi etenee? |
+| | Ketä toimijoita prosessin toteuttamiseen itsesi lisäksi osallistuu ja mitkä heidän roolinsa prosessissa ovat? |
+| | Milloin prosessi käynnistyy? Mikä rooli ja tapahtuma sen käynnistää? |
+| | Kuinka monta kertaa prosessi suoritetaan päivän, viikon, kuukauden tai vuoden aikana? |
+| | Mikä on prosessin ensimmäinen, toinen, …, viimeinen vaihe? |
+| | Mikä on sinun vastuusi prosessin ensimmäisessä, toisessa, …, viimeisessä vaiheessa? |
+| | Mitä tietoja tarvitset näissä vaiheissa ja mistä saat nämä tiedot? |
+| | Mitä tietoja vaiheissa syntyy ja minne tiedot menevät? |
+| | Mitä tietojärjestelmiä käytät vaiheissa ja kuinka ne tukevat työtäsi? |
+| | Mitä prosessin lopputulemalta vaaditaan? Voiko prosessi esimerkiksi jäädä kesken tai olla tulematta valmiiksi? |
+| | Onko prosessissa vaiheita, joissa se usein hidastuu tai kohtaa jotain ongelmia? |
+| | Mistä nämä johtuvat? |
+
+: Esimerkkikysymyksiä puolistrukturoidulle prosessihaastattelulle {#tbl-haastattelukysymykset}
+-->
+</section>
+<section id="prosessilouhinta" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="prosessilouhinta"><span class="header-section-number">3.6</span> Prosessilouhinta</h2>
+<p>Prosessilouhinta (<em>Process Mining</em>) on tekniikka, jossa tietojärjestelmien lokeja tarkastelemalla pyritään tekemään näkyväksi ja analysoimaan, miten prosessit todellisuudessa tapahtuvat <span class="citation" data-cites="van2016data">(<a href="references.html#ref-van2016data" role="doc-biblioref">Van Der Aalst 2016</a>)</span>. Prosessilouhinnan käyttötapauksia ovat:</p>
+<ul>
+<li>Prosessien löytäminen (<em>Process Discovery</em>), jossa lokitietoja analysoimalla pyritään tunnistamaan, kuinka prosessit tapahtuvat. Lokimerkintä syntyy esimerkiksi silloin, kun käyttäjä kirjaa järjestelmään jonkin tiedon. Tästä pystytään usein päättelemään, mitä ja milloin prosessissa on tapahtunut. Prosessin toteumasta rakennetaan malli lokitietoihin perustuen.</li>
+<li>Prosessien yhtenäisyyden tai sääntöjenmukaisen toteutumisen arviointi (<em>Process Conformance Checking</em>), jossa verrataan olemassa olevaa prosessimallia ja esimerkiksi prosessia koskevia ohjeita ja vaatimuksia lokitiedoista ilmenevään prosessin toteumaan.</li>
+<li>Prosessien kehittäminen (<em>Process Enhancement</em>), jossa lokitietojen avulla pyritään selvittämään, kuinka prosessimallia voidaan rikastaa esimerkiksi lisäarvoa tuottavilla vaiheilla tai prosessin kulkua optimoida esimerkiksi tunnistettaessa pullonkauloja.</li>
+</ul>
+<p>Prosessilouhinnan puolestapuhujat huomauttavat, että perinteiset lähestymistavat prosessien tunnistamiseen, prosessikulkujen selvittämiseen ja mallintamiseen, prosessien arviointiin ja parantamiseen ovat aikaa vieviä ja kalliita. Lisäksi niihin väistämättä liittyvän subjektiivisuuden vuoksi ne ovat myös virhealttiita. Prosessilouhinta paitsi automatisoi näitä tehtäviä, lupaa se dataohjautuvana toimintona tuottaa objektiivista tietoa siitä, kuinka prosessit kaikkine variaatioineen todellisuudessa tapahtuvat – ilman tarvetta tukeutua arvailuun. Toisaalta tietysti on myös niin, että pelkästään järjestelmien lokitietoja lukemalla ei kaikissa tapauksissa välttämättä pystytä hahmottamaan prosessin kokonaiskuvaa ja sen kaikkia ulottuvuuksia.</p>
+<p>Ajatellaan, että sairaala haluaa tietää päivystyksestä alkavien sydänpotilaiden tapausten kulun. Tavoitteena voisi olla parantaa hoidon laatua, läpimenoaikaa, potilastyytyväisyyttä ja resurssien käyttöä. Sairaalan eri järjestelmistä, kuten potilastietojärjestelmä, laboratorio-, kuvantamis- ja kirjausjärjestelmät, saadaan seuraavia lokitietoja: ID (potilastunniste), tapahtumat (esim. saapuminen päivystykseen, EKG), aikaleimat jokaiselle tapahtumalle sekä tehtävien suorittajat. Näistä tiedoista rakennettu loki yhden potilaskäynnin osalta voisi näyttää esimerkiksi seuraavalta (<a href="#tbl-tapahtumaloki" class="quarto-xref">Taulukko&nbsp;<span>3.4</span></a>). Loki siis esittää potilaan käyntiin liittyvät tehtävät siten kuin ne ovat kirjautuneet sairaalan tietojärjestelmiin.</p>
+<div id="tbl-tapahtumaloki" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tapahtumaloki-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Taulukko&nbsp;3.4: Esimerkki tapahtumalokista
+</figcaption>
+<div aria-describedby="tbl-tapahtumaloki-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Aikaleima (alku)</th>
+<th>Aikaleima (loppu)</th>
+<th>Tehtävän nimi</th>
+<th>Tehtävän resurssi</th>
+<th>Toimijan rooli</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P001</td>
+<td>2025-03-30 08:12</td>
+<td>2025-03-30 08:20</td>
+<td>Saapuminen päivystykseen</td>
+<td>Mari Virta</td>
+<td>Hoitaja</td>
+</tr>
+<tr class="even">
+<td>P001</td>
+<td>2025-03-30 08:25</td>
+<td>2025-03-30 08:35</td>
+<td>Triage-haastattelu</td>
+<td>Jari Niemi</td>
+<td>Sairaanhoitaja</td>
+</tr>
+<tr class="odd">
+<td>P001</td>
+<td>2025-03-30 08:38</td>
+<td>2025-03-30 08:50</td>
+<td>EKG</td>
+<td>Katri Saari</td>
+<td>Bioanalyytikko</td>
+</tr>
+<tr class="even">
+<td>P001</td>
+<td>2025-03-30 08:55</td>
+<td>2025-03-30 09:05</td>
+<td>Verinäyte</td>
+<td>Katri Saari</td>
+<td>Bioanalyytikko</td>
+</tr>
+<tr class="odd">
+<td>P001</td>
+<td>2025-03-30 09:15</td>
+<td>2025-03-30 09:30</td>
+<td>Lääkärin konsultaatio</td>
+<td>Antti Kivi</td>
+<td>Päivystävä lääkäri</td>
+</tr>
+<tr class="even">
+<td>P001</td>
+<td>2025-03-30 09:40</td>
+<td>2025-03-30 10:10</td>
+<td>Osastohoitoon siirto</td>
+<td>Salla Mäki</td>
+<td>Vuodeosaston hoitaja</td>
+</tr>
+<tr class="odd">
+<td>P001</td>
+<td>2025-03-31 14:00</td>
+<td>2025-03-31 14:20</td>
+<td>Uloskirjaus osastolta</td>
+<td>Antti Kivi</td>
+<td>Lääkäri</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Suureen määrään lokitietoja perustuva prosessilouhinta voisi näyttää prosessin variaatiot: osa potilaista ehkä ohjautuu suoraan osastolle, kun taas osa kotiutuu suoraan päivystyksestä. Saatettaisiin havaita, että 20 % potilaista käy läpi tarpeettoman laboratorioanalyysin, joka ei vaikuta hoitopäätökseen, tai että prosessin kulku lähes poikkeuksetta hidastuu tietyn roolin tehtävien kohdalla. Nämä ovat prosessien löytämiseen liittyviä huomioita. Prosessin toteumaa voitaisiin myös verrata olemassa olevaan ohjeistettuun hoitopolkuun. Tällöin saatettaisiin esimerkiksi huomata, että tietyissä työvuoroissa tehtävistä puuttuu kardiologin konsultaatio, vaikka sitä sydänpotilaiden tapauksessa vaadittaisiin. Tällaiset puolestaan ovat prosessien poikkeavuuteen liittyviä havaintoja. Kehittämistoimenpiteiksi voitaisiin tunnistaa hoitokäytänteiden ohjeistuksen tarkentaminen, tarpeettomien laboratoriopyyntöjen välttäminen ja prosessin tiettyjen vaiheiden välisten siirtymien sujuvoittaminen.</p>
+<p>Prosessilouhinnan analytiikan mahdollistaman kehittämistyön tulokset voisivat esimerkiksi johtaa keskimääräisen läpimenoajan lyhenemiseen, tarpeettomien laboratoriokäyntien vähenemiseen, kustannussäästöihin sekä potilastyytyväisyyden kasvuun.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-adeoye2021research" class="csl-entry" role="listitem">
+Adeoye-Olatunde, Omolola A, ja Nicole L Olenik. 2021. <span>”Research and scholarly methods: Semi-structured interviews”</span>. <em>Journal of the american college of clinical pharmacy</em> 4 (10): 1358–67.
+</div>
+<div id="ref-hammer2007" class="csl-entry" role="listitem">
+Hammer, Michael. 2007. <span>”The Process Audit”</span>. <em>Harvard Business Review</em> 85 (4): 111–23.
+</div>
+<div id="ref-kemppainen2018" class="csl-entry" role="listitem">
+Kemppainen, R. 2018. <span>”Hyvä ja laadukas työohje”</span>. Insinöörityö, Automaatiotekniikka, Metropolia Ammattikorkeakoulu.
+</div>
+<div id="ref-nonaka1996theory" class="csl-entry" role="listitem">
+Nonaka, Lkujiro, Hirotaka Takeuchi, ja Katsuhiro Umemoto. 1996. <span>”A theory of organizational knowledge creation”</span>. <em>International journal of technology Management</em> 11 (7-8): 833–45.
+</div>
+<div id="ref-osterwalder2004" class="csl-entry" role="listitem">
+Osterwalder, Alexander. 2004. <span>”The Business Model Ontology: A Proposition in a Design Science Approach”</span>. Tohtorinväitöskirja, Université de Lausanne.
+</div>
+<div id="ref-paulk1993" class="csl-entry" role="listitem">
+Paulk, Mark C., Bill Curtis, Mary Beth Chrissis, ja Charles V. Weber. 1993. <span>”Capability Maturity Model, Version 1.1”</span>. <em>IEEE Software</em> 10 (4): 18–27.
+</div>
+<div id="ref-rosemann2005" class="csl-entry" role="listitem">
+Rosemann, Michael, ja Tonia de Bruin. 2005. <span>”Towards a Business Process Management Maturity Model”</span>. <em>Proceedings of the 13th European Conference on Information Systems (ECIS 2005)</em> (Regensburg).
+</div>
+<div id="ref-roglinger2012" class="csl-entry" role="listitem">
+Röglinger, Maximilian, Jens Pöppelbuß, ja Jörg Becker. 2012. <span>”Maturity Models in Business Process Management”</span>. <em>Business Process Management Journal</em> 18 (2): 328–46.
+</div>
+<div id="ref-togaf-kyvykkyydet" class="csl-entry" role="listitem">
+The Open Group. 2022. <em>TOGAF Series Guide: Business Capabilities</em>. The Open Group.
+</div>
+<div id="ref-van2016data" class="csl-entry" role="listitem">
+Van Der Aalst, Wil. 2016. <span>”Data science in action”</span>. Teoksessa <em>Process mining: Data science in action</em>. Springer.
+</div>
+</div>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopioitu!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopioitu!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./prosessit_ja_liiketoimintaprosessit.html" class="pagination-link" aria-label="Prosessit ja liiketoimintaprosessit">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prosessit ja liiketoimintaprosessit</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="pagination-link" aria-label="Prosessiorganisaatio ja prosessien kehittäminen">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

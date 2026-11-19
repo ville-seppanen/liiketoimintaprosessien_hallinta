@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Prosessiorganisaatio ja prosessien kehittäminen – Liiketoimintaprosessit -- hallinta, mallintaminen, tietojärjestelmät ja automaatio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./prosessiarkkitehtuuri.html" rel="next">
+<link href="./prosessitiedon_keraaminen.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Liiketoimintaprosessit – hallinta, mallintaminen, tietojärjestelmät ja automaatio</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Tumma tila päälle/pois"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alkusanat</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./johdanto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Johdanto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessit_ja_liiketoimintaprosessit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prosessit ja liiketoimintaprosessit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessitiedon_keraaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiarkkitehtuuri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiautomaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tehtavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Harjoitustehtäviä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tyovalineita.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Työvälineitä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lähteet</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tässä luvussa</h2>
+   
+  <ul>
+  <li><a href="#prosessiorganisaatio" id="toc-prosessiorganisaatio" class="nav-link active" data-scroll-target="#prosessiorganisaatio"><span class="header-section-number">4.1</span> Prosessiorganisaatio</a></li>
+  <li><a href="#prosessien-mittaaminen" id="toc-prosessien-mittaaminen" class="nav-link" data-scroll-target="#prosessien-mittaaminen"><span class="header-section-number">4.2</span> Prosessien mittaaminen</a></li>
+  <li><a href="#prosessien-jatkuva-parantaminen-ja-radikaali-uudelleenjärjestely" id="toc-prosessien-jatkuva-parantaminen-ja-radikaali-uudelleenjärjestely" class="nav-link" data-scroll-target="#prosessien-jatkuva-parantaminen-ja-radikaali-uudelleenjärjestely"><span class="header-section-number">4.3</span> Prosessien jatkuva parantaminen ja radikaali uudelleenjärjestely</a>
+  <ul>
+  <li><a href="#prosessien-jatkuva-parantaminen" id="toc-prosessien-jatkuva-parantaminen" class="nav-link" data-scroll-target="#prosessien-jatkuva-parantaminen"><span class="header-section-number">4.3.1</span> Prosessien jatkuva parantaminen</a></li>
+  <li><a href="#prosessien-radikaali-uudistaminen" id="toc-prosessien-radikaali-uudistaminen" class="nav-link" data-scroll-target="#prosessien-radikaali-uudistaminen"><span class="header-section-number">4.3.2</span> Prosessien radikaali uudistaminen</a></li>
+  </ul></li>
+  <li><a href="#muutoksenhallinta" id="toc-muutoksenhallinta" class="nav-link" data-scroll-target="#muutoksenhallinta"><span class="header-section-number">4.4</span> Muutoksenhallinta</a></li>
+  <li><a href="#prosessien-ulkoistaminen" id="toc-prosessien-ulkoistaminen" class="nav-link" data-scroll-target="#prosessien-ulkoistaminen"><span class="header-section-number">4.5</span> Prosessien ulkoistaminen</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Käsitteellä prosessiajattelu <span class="citation" data-cites="langley2007process">(<a href="references.html#ref-langley2007process" role="doc-biblioref">Langley 2007</a>)</span> tarkoitetaan toimintaympäristön hahmottamista prosessien kautta. Tavallisesti käsite yhdistetään organisaatioiden toimintaan, mutta yhtä hyvin sen voidaan ajatella olevan myös yksilön ominaisuus. Yksittäisten toimintojen tarkastelun sijaan prosessiajattelussa korostetaan kokonaisuuden hahmottamista. Ohjaavia periaatteita ovat asiakaslähtöisyys ja arvon tuottaminen, yksikkörajat ylittävä toiminta ja sen mahdollistama kokonaisoptimointiin tähtäävä kehittäminen. Prosessiajattelu pyrkii haastamaan siiloutuneen toiminnan, jossa kukin yksikkö optimoi ainoastaan omaa toimintaansa. <!-- Tässä luvussa käsitellään aluksi prosessiorganisaation käsitettä, joka on tavallaan prosessiajattelun laaja ja konkreettinen ilmentymä. Sen jälkeen tarkastellaan prosessien mittaamista sekä sen mahdollistamaa prosessien kehittämistä. Lopuksi perehdytään prosessien ulkoistamiseen, jonka onnistumisen edellytyksenä voidaan pitää organisaation kykyä prosessiajatteluun.--></p>
+<section id="prosessiorganisaatio" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="prosessiorganisaatio"><span class="header-section-number">4.1</span> Prosessiorganisaatio</h2>
+<p>Organisaatioiden toimintaa voidaan hahmottaa ja johtaa kokonaisvaltaisesti prosesseina. Prosessiorganisaatiolla (<em>process-based organization</em> tai <em>process-oriented organization</em>) viitataan organisaatioon, jossa sen toiminta, johtaminen, rakenne sekä toiminnan mittaaminen ja kehittäminen on jäsennetty prosesseittain. Prosessit myös määrittävät organisaation muodollisen työnjaon (<a href="#fig-prosessiorganisaatio" class="quarto-xref">kuva&nbsp;<span>4.1</span></a>).</p>
+<div id="fig-prosessiorganisaatio" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esimerkki prosessiorganisaation rakenteesta.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prosessiorganisaatio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/prosessiorganisaatio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Kuva&nbsp;4.1: Prosessiorganisaation kaavakuva [mukaeltu @rassfeld2013integrated]"><img src="kuviot/prosessiorganisaatio.svg" class="img-fluid figure-img" alt="Esimerkki prosessiorganisaation rakenteesta."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prosessiorganisaatio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.1: Prosessiorganisaation kaavakuva <span class="citation" data-cites="rassfeld2013integrated">(mukaeltu <a href="references.html#ref-rassfeld2013integrated" role="doc-biblioref">Raßfeld ym. 2013</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>Prosessit on työnjaon mukaisesti jäsennelty prosessialueittain (esimerkiksi HR-prosessit, talouden prosessit tai asiakaspalvelun prosessit) ja jokaiselle prosessille on osoitettu prosessiomistaja. Prosessin omistaja kantaa kokonaisvastuun omistamistaan prosesseista ja niiden kehittämisestä. Lisäksi prosessiomistaja edustaa prosessejaan sitä vaativissa tilanteissa. Esimerkiksi uutta tietojärjestelmää hankittaessa hankkeeseen voisivat osallistua prosessien omistajat niiltä toiminta- tai prosessialueilta, joihin tietojärjestelmä liittyy. Prosessin omistajuus ei useinkaan tarkoita sitä, että omistaja vastaisi prosessin suorittamisesta itse. Vaikka näinkin voi varsinkin pienemmissä organisaatioissa olla, on prosessiomistajuus tavallisesti liiketoiminnan tiettyyn substanssiin liittyvä asiantuntija- ja johtamistehtävä.</p>
+<p>Prosessiomistaja on kokonaisvaltaisesti vastuussa prosessin toteutuskyvystä ja tuloksesta. Tähän liittyviä tehtäviä tyypillisesti ovat esimerkiksi:</p>
+<ul>
+<li>Prosessin suorituskyvyn seuranta, jota analysoidaan esimerkiksi KPI-mittareiden avulla.</li>
+<li>Prosessin jatkuvan parantamisen ohjaaminen.</li>
+<li>Prosessin rajapintojen hallinta, eli prosessin eri vaiheiden koordinointi ja sen varmistaminen, että prosessi toimii sujuvasti yhteen muiden prosessien kanssa sekä yli yksikkörajojen ja tarvittaessa yli organisaatiorajojen.</li>
+<li>Prosessin resurssien varmistaminen, eli huolehtiminen siitä, että tarvittavat resurssit (ihmiset ja osaaminen, työvälineet, budjetti) ovat käytettävissä.</li>
+<li>Prosessin tuloksen varmistaminen.</li>
+<li>Prosessitiimin toiminnan johtaminen.</li>
+<li>Toimiminen linkkinä prosessitiimin, johdon ja muiden sidosryhmien välillä.</li>
+<li>Standardien ja sääntöjen noudattaminen, jolla varmistetaan, että prosessi toteutuu lakien, säännösten, toimialakohtaisten ja organisaation omien sopimusten mukaisesti.</li>
+</ul>
+<p>Prosessiomistajuuteen liittyvä tehtäväkenttä on siis melko laaja ja vaativa. Tehtävästä saattaa tehdä epäkiitollisen myös se, että prosessiomistajan suuntaan on helppo heitellä syytöksiä silloin, kun prosessiin liittyy ongelmia, mutta kun asiat toimivat, rooli on huomaamaton.</p>
+<p>Omistajarooleihin saattaa joskus liittyä, että vastuulla olevat asiat, olivatpa ne sitten prosesseja tai vaikka tietojärjestelmiä, nähdään ehdottoman tärkeiksi, stabiloiduiksi tai jopa lähes koskemattomiksi. Tämä voi aiheuttaa kitkaa prosessien parantamisessa, muutosten toteuttamisessa ja johtamisessa yleisemminkin. Tästä ei kuitenkaan voida syyttää ainoastaan prosessiomistajia. Pikemminkin se kertoo siitä, että prosessiorganisaatiolta vaadittava koko organisaatiota leikkaava prosessiajattelu ja prosessien kokonaisuuden johtamisen käytänteet eivät ole vielä onnistuneesti jalkautuneet.</p>
+<p>Joskus saattaa myös olla, että prosessin omistaja on ainoastaan nimellisesti vastuussa prosesseistaan ja se, mitä omistajalta todellisuudessa odotetaan, on epäselvää. Jotta prosessiorganisaatio voi toimia, täytyy prosessiomistajuuden vastuiden ja mandaatin olla selkeästi ja pitävästi määriteltyjä sekä riittävästi resursoituja.</p>
+<p>Prosessin operatiivisesta toteuttamisesta prosessiorganisaatiossa vastaa prosessitiimi. Organisaatiosta ja sen toimialasta riippuen prosessitiimin vastuulle voi kuulua useitakin prosesseja ja vastaavasti yksittäinen työntekijä voi kuulua useaan prosessitiimiin. Oleellista kuitenkin on, että kullekin prosessille on nimetty omistaja ja sen toteuttamisesta vastaava tiimi.</p>
+<p>Vaikka kokonaisvastuu prosessista ja sen kehittämisestä kuuluukin prosessiomistajalle, on prosessitiimillä tavallisesti tarkin kuva prosessin operatiivisesta toiminnasta. Siksi tiimillä on parhaat edellytykset arvioida prosessin sujuvuutta ja tunnistaa ongelmakohtia. Mittareiden seuranta (esimerkiksi läpimenoaika, viiveet, virhemäärät ja asiakastyytyväisyys) voidaan antaa tiimin vastuulle, joka edelleen raportoi tuloksista prosessiomistajalle. Tiimi voi myös laatia parannusehdotuksia ja sen osallistuminen prosessiin liittyvien muutosprojektien toteuttamiseen on välttämätöntä.</p>
+<p>Ylimmän johdon tehtävä prosessiorganisaation toiminnassa on vision ja strategisen suunnan osoittaminen. Johdon tulee ensimmäiseksi määrittää, miksi organisaatio siirtyy prosessilähtöiseen toimintatapaan ja mitä sillä halutaan saavuttaa. Johdon tulee myös aktiivisesti viestiä ja edistää prosessiajattelua.</p>
+<p>Konkreettisempia tehtäviä ovat prosessien kehittämisen strateginen ohjaus, prosessitoiminnan riittävä resursointi sekä organisaation rakenteiden muokkaaminen prosessimuotoista toimintaa vastaaviksi. Vähimmillään jälkimmäinen tarkoittaa prosessinomistajien ja prosessitiimien nimittämistä, mutta se voi myös edellyttää aiempien hierarkioiden ja yksikköjakojen muuttamista tai purkua. Lisäksi, kuten edellä todettiin, johdon tulee asettaa omistajuuksiin liittyvät tehtävät ja mandaatit siten, että rooleissa toimivilla henkilöillä on aidosti edellytykset toimia roolissaan. Lisäksi prosessiomistajien vuorovaikutus tietojärjestelmä- ja tuoteomistajien sekä esimerkiksi asiakkuuspäällikköjen kanssa ja kumppaniverkostojen tasolla <span class="citation" data-cites="klerkx2013interaction">(<a href="references.html#ref-klerkx2013interaction" role="doc-biblioref">Klerkx ja Aarts 2013</a>)</span> täytyy tehdä mahdolliseksi.</p>
+<p>Prosessiportfolion tai prosessisalkun hallinta on oleellinen väline prosessiorganisaation johtamisessa <span class="citation" data-cites="harmon2019business rosemann2006process">(<a href="references.html#ref-harmon2019business" role="doc-biblioref">Harmon 2019</a>; <a href="references.html#ref-rosemann2006process" role="doc-biblioref">Rosemann 2006</a>)</span>. Prosessiportfolio tarjoaa kokonaiskuvan organisaation kaikista prosesseista ja niihin liittyvistä tarkentavista tiedoista, samaan tapaan kuin projektisalkku kertoo organisaation projekteista tai tietojärjestelmäsalkku kokoaa yhteen tiedot kaikista järjestelmistä relevantteine attribuutteineen.</p>
+<p>Prosessikartta on visuaalinen esitys organisaation prosessien kokonaisuudesta (vrt. <a href="prosessit_ja_liiketoimintaprosessit.html#fig-prosessikartta" class="quarto-xref">kuva&nbsp;<span>2.2</span></a>). Yksinkertaisimmillaan kukin kaavion elementti vastaa yhtä prosessia. Prosessit ryhmitellään kokonaisuuksiksi esimerkiksi liiketoiminta-alueiden ja tukitoimintojen mukaan. Näin voidaan muodostaa yksi tai useampi tiivis kaavio, joka havainnollistaa, millä prosesseilla organisaation toimintaa toteutetaan. Siinä missä kyvykkyydet (vrt. <a href="prosessitiedon_keraaminen.html#fig-kyvykkyyskartta" class="quarto-xref">kuva&nbsp;<span>3.1</span></a>) kuvaavat, mitä organisaatio tekee, prosessit kuvaavat miten asiat tehdään <span class="citation" data-cites="niemi2024kokonaisarkkitehtuuri">(<a href="references.html#ref-niemi2024kokonaisarkkitehtuuri" role="doc-biblioref">Niemi 2024</a>)</span>. Prosessiportfolion hallinta on systemaattinen tapa kartoittaa, priorisoida, parantaa ja johtaa organisaation prosesseja kokonaisuutena.</p>
+</section>
+<section id="prosessien-mittaaminen" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="prosessien-mittaaminen"><span class="header-section-number">4.2</span> Prosessien mittaaminen</h2>
+<p>Prosessiorganisaation toiminnassa oleellista on toiminnan laadun, tehokkuuden ja tuloksellisuuden mittaaminen. Mittaaminen mahdollistaa ongelma- tai kehittämiskohteiden tunnistamisen ja toiminnan jatkuvan parantamisen. Jatkuva parantaminen on yksi prosessimuotoisen toiminnan kulmakivistä.</p>
+<p>Mittaaminen mahdollistaa prosessien suorituskyvyn seuraamisen. Mittaamisen avulla saadaan selville, kuinka prosessi toimii suhteessa sille asetettuihin tavoitteisiin.</p>
+<p>Pullonkaulojen ja tehottomien tehtäväkulkujen tunnistamisessa auttaa, että prosessi on mallinnettu riittävän tarkasti ja tietenkin todellisuutta vastaavassa muodossa. On kuitenkin mahdollista – ehkä jopa tavanomaista – etteivät kehittämistyön yhteydessä tai laatukäsikirjaa varten laaditut prosessimallit kuitenkaan vastaa sitä, kuinka työ todellisuudessa tapahtuu. Ne saattavat esittää ”virallisia totuuksia” tai ideaaleja siitä, kuinka prosessit tulisi toteuttaa. Sen vuoksi prosessien objektiivinen mittaaminen on tarpeen. Mittarit tarjoavat johdolle ja henkilöstölle faktapohjaista tietoa kehittämistyön tueksi. On kuitenkin huomattava, että mittarit itsessään pystyvät harvoin ilmaisemaan ongelmien juurisyitä.</p>
+<p>Yksi ensimmäisistä kokonaisvaltaisesti ja systemaattisesti toimintaprosessejaan kehittäneistä yrityksistä oli Ford, jossa rakennettiin Ford Production System (FPS) jo 1900-luvun alussa. Toimintamallia käytettiin Fordin tehtailla tuotannon organisointiin ja autonvalmistuksen prosessien tehostamiseen. FPS sisälsi monia tuolloin innovatiivisia ideoita, kuten</p>
+<ul>
+<li>jatkuvan ja tasaisen tuotantovirran ylläpitäminen, jonka avulla voitiin lyhentää valmistusaikoja ja vähentää materiaalien varastointitarvetta,</li>
+<li>prosessien jokaisen vaiheen tarkastelu ja optimointi siten, että ne toimivat mahdollisimman tehokkaasti ja välttäen tarpeettomia, arvoa tuottamattomia tehtäviä,</li>
+<li>prosessien jatkuva parantaminen, jossa prosessien toimintaa seurattiin, arvioitiin ja kehitettiin jatkuvasti sekä</li>
+<li>työn standardointi, jossa työntekijöille annettiin työtehtävien suorittamiseen selkeät ohjeet, joita seuraamalla voitiin parantaa toiminnan laatua ja vähentää virheitä sekä helpottaa uusien työntekijöiden perehtymistä työhön.</li>
+</ul>
+<p>Fordilla käytettiin tuotannossa ja prosessien jatkuvassa parantamisessa johdantoluvussa mainitun PDCA-mallin tyyppistä toimintatapaa, jota tosin vielä tuolloin ei kutsuttu tällä nimellä. Mallia sovelletaan edelleen yleisesti toiminnan laadun arvioinnissa ja parantamisessa. Toimintatavassa on siis kaikessa yksinkertaisuudessaan kyse siitä, että ensin toiminta suunnitellaan ja sitten toimintaa ryhdytään toteuttamaan suunnitelmaa vastaavalla tavalla. Toimintaa seurataan ja arvioidaan jatkuvasti tai ainakin säännöllisesti. Seurannassa ja arvioinnissa kiinnitetään huomiota esimerkiksi toiminnan tehokkuuteen ja tuloksellisuuteen, tapahtuviin virheisiin ja mahdollisiin pullonkauloihin. Toiminnan arviointi perustuu ensisijaisesti prosessien mittaamiseen, mutta välillisesti arvioinnissa voidaan hyödyntää myös esimerkiksi vuosiraportteja, tilinpäätöksiä ja toimintakertomuksia. Arvioinnin perusteella tunnistetaan kehittämistarpeita, joista edelleen johdetaan kehittämistoimenpiteitä. Nämä toimivat syötteinä seuraavalle kierrokselle, joka käynnistyy jälleen toiminnan suunnittelulla.</p>
+<p>1930-luvulla japanilainen autovalmistaja Toyota omaksui monia FPS:ssä esitettyjä ideoita omia tuotantoprosesseja kehittäessään. Keskeistä myös Toyotan tuotantomallissa oli järjestelmällinen keskittyminen olennaiseen ja kaiken arvoa tuottamattoman toiminnan karsiminen, eli hukan (<em>waste</em>) välttäminen. 1980-luvun lopulla Toyotan tuotantomenetelmistä kiinnostuttiin myös läntisessä maailmassa, jossa malli sai nimen <em>Lean</em>. Lean-filosofia on edelleen merkittävä vaikutin lukuisten organisaatioiden toimintastrategioissa. Sen ydinajatus on tehostaa prosesseja poistamalla kaikki sellainen kustannuksia aiheuttava toiminta, joka ei lisää asiakkaalle tuotettavaa arvoa.</p>
+<p>Prosessimittarit voidaan jakaa suorituskykymittareihin, laatumittareihin ja vaikuttavuusmittareihin. Suorituskykymittarit kuvaavat, kuinka tehokkaasti prosessi käyttää resurssejaan. Resurssit käsittävät kaiken, mitä prosessiin “menee sisälle” tai mitä ne kuluttavat. Resursseja ovat siis muun muassa raaka-aineet ja materiaalit, työaika ja työvälineet. Kaikki resurssit ovat palautettavissa rahalliseen arvoon. Tyypillisiä suorituskykymittareita ovat:</p>
+<ul>
+<li>Läpimenoaika (<em>Cycle Time</em>) eli kuinka kauan prosessin suorittaminen kestää kokonaisuudessaan.</li>
+<li>Prosessivaiheen suoritusaika (<em>Task Time</em>) eli yksittäisen tehtävän suorittamiseen kuluva aika. Suoritusaikaa voidaan tarkastella tehtävän suorittamiseen kuluvana aikana ilman mahdollisia odotusaikoja tai viivästyksiä. Sitä voidaan mitata myös viivästykset huomioiden (esimerkiksi keskimääräinen odotusaika), jolloin prosessin pullonkauloista on mahdollista saada kokonaisvaltaisempi ja perusteellisempi ymmärrys.</li>
+<li>Tuottavuus (<em>Productivity</em>) eli kuinka paljon prosessi saa aikaan käytetyillä resursseilla. Tuottavuutta mitataan tyypillisesti määrinä eikä rahana: esimerkiksi käsiteltyjen tilausten määrä työntekijää kohden päivässä tai valmistettujen kappaleiden määrä konetuntia kohden. Tuottavuus kertoo prosessin suorituskyvystä, mutta ei sitä, kannattaako prosessi taloudellisesti.</li>
+<li>Kustannustehokkuus (<em>Cost Efficiency</em>) eli kuinka paljon prosessin suorittaminen maksaa suhteessa sen tuottamaan arvoon. Panokset ja tuotokset muutetaan rahaksi, jolloin voidaan arvioida prosessin kannattavuutta ja muutosten taloudellisia vaikutuksia. Voidaan esimerkiksi arvioida, kattaako lopputuotteen viimeistelyyn käytettävän ajan pidentäminen neljänneksellä sen, että tuotteesta saadaan korkeampi myyntihinta. Tuottava prosessi ei siis välttämättä ole kustannustehokas: tuotoksia voi syntyä paljon, mutta liian kalliisti.</li>
+</ul>
+<p>Tyypillisiä prosessin laatua ja virheiden hallintaa mittaavia tekijöitä ovat esimerkiksi:</p>
+<ul>
+<li>Virheprosentti (<em>Error Rate</em> tai <em>Defect Rate</em>) eli kuinka monta virheellistä tuotetta tai epäonnistunutta palvelua syntyy suhteessa niiden kokonaismäärään.</li>
+<li>Ensimmäisellä kerralla oikein (<em>First-Time-Right</em>, <em>FTR</em>) eli kuinka moni prosessin toteutus onnistuu ilman poikkeuksia tai korjaavia toimenpiteitä.</li>
+<li>Palautusten tai reklamaatioiden suhteellinen määrä eli prosessin tuottamien tuotteiden ja palvelujen toimittama tai koettu laatu.</li>
+</ul>
+<p>Vaikuttavuusmittarit liittyvät tavallisimmin asiakastyytyväisyyteen (<em>Customer Satisfaction</em>, <em>Net Promoter Score</em>) eli siihen, kuinka tyytyväisiä asiakkaat ovat prosessin lopputulokseen – olipa se tuote tai palvelu – tai palveluprosessiin itseensä (<a href="#fig-happyornot" class="quarto-xref">kuva&nbsp;<span>4.2</span></a>).</p>
+<p>Viime vuosina erilaisten asiakastyytyväisyysmittareiden käyttö tuntuu lisääntyneen valtavasti. Lähikaupassa asioinnin, hotellissa yöpymisen tai asiakaspalvelunumeroon soittamisen jälkeen usein puhelimeen kilahtaa tekstiviesti, jossa pyydetään kertomaan, löytyivätkö etsityt tuotteet tai millaiseksi palvelun laatu koettiin. Vaikka tämä joskus saattaakin tuntua rasittavalta, on asiakastyytyväisyyden mittaaminen ehdottoman tärkeää prosessien jatkuvan parantamisen kannalta.</p>
+<p>Myös jotkin muut mittarit, kuten lopputuotteen laatu (<em>Quality of Output</em>) ja prosessin onnistumisaste (<em>Success Rate</em>) voidaan lukea vaikuttavuusmittareiksi, vaikka ne tavallaan ovatkin samankaltaisia esimerkiksi virheprosentin kanssa. Vaikuttavuuden mittaamisessa näihin verrattuna erilaista ja oleellista on kuitenkin se, että siinä keskitytään asiakkaan kokemukseen laadusta tai onnistumisesta. Prosessin lopputuote voi olla valmistajan asettamien sisäisten laatustandardien mukainen tai palveluprosessin toteuma täsmälleen prosessikäsikirjan suunnitelmaa vastaava, mutta asiakas saattaa silti olla tyytymätön tuotteeseen tai saamaansa palveluun. Mikäli näin on, ongelman ratkaiseminen vaatinee muitakin toimenpiteitä kuin ainoastaan hienosäätöä prosessin yksityiskohtiin. Ajateltaessa esimerkiksi prosessin onnistumisastetta, on mittarin tulos tietysti itsessään kiinnostava, mutta se tarjoaa ainoastaan summittaisen lähtökohdan prosessin parantamiselle.</p>
+<div id="fig-happyornot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Kuvassa HappyOrNot-yrityksen Smiley Terminal.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-happyornot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/happyornot.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Kuva&nbsp;4.2: Asiakaspalaute on oleellista prosessien kehittämisessä. Kuvassa HappyOrNot-yrityksen Smiley Terminal."><img src="kuviot/happyornot.webp" class="img-fluid figure-img" alt="Kuvassa HappyOrNot-yrityksen Smiley Terminal."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-happyornot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.2: Asiakaspalaute on oleellista prosessien kehittämisessä. Kuvassa HappyOrNot-yrityksen Smiley Terminal.
+</figcaption>
+</figure>
+</div>
+<p>Avainsuorituskykymittari (<em>Key Performance Indicator</em>, <em>KPI</em>) <span class="citation" data-cites="parmenter2010key">(<a href="references.html#ref-parmenter2010key" role="doc-biblioref">Parmenter 2010</a>)</span> on käsite, joka nousee usein esille puhuttaessa organisaation toiminnan arvioinnista ja kehittämisestä. KPI:t ovat kvantitatiivisia eli määrällisiä mittareita, joiden avulla pyritään seuraamaan, kuinka hyvin tietty prosessi, toiminto tai organisaatio saavuttaa sille asetetut tavoitteet. Esimerkkejä tavallisista KPI-mittareista ovat muun muassa seuraavat:</p>
+<ul>
+<li>Asiakaspalveluprosessille: asiakastyytyväisyysaste, jonka arvioinnissa käytetään usein vaikkapa suositteluhalukkuutta mittaavaa NPS-mittaria ja välitöntä tai lyhyen aikavälin asiakastyytyväisyyttä mittaavaa CSAT-mittaria (<em>Customer Satisfaction Score</em>) tai palvelukokemuksen tai asiakaspolun vaivattomuutta mittaavaa CES-mittaria (<em>Customer Effort Score</em>). Näitä mitataan tavallisesti väittämillä (esimerkiksi ”Asioiminen oli helppoa.”), joihin asiakkaat vastaavat 0-10 -skaalalla tai Likert-asteikolla (esimerkiksi 1. Täysin eri mieltä, 2. Jonkin verran eri mieltä, 3. En samaa enkä eri mieltä, 4. Jonkin verran samaa mieltä, 5. Täysin samaa mieltä).</li>
+<li>Tilauskäsittelylle: tilausten keskimääräinen käsittelyaika.</li>
+<li>Tuotantoprosessille: keskimääräinen läpimenoaika ja virheellisten tuotteiden osuus.</li>
+<li>IT-palveluprosessille: häiriön (<em>Incident</em>) keskimääräinen ratkaisuaika ja SLA:n toteutuminen.</li>
+<li>Laskutusprosessille: avoimen laskun keskimääräinen maksuaika.</li>
+</ul>
+<p>Viisipykäläisen Likert-asteikon hyvinä arvoina pidetään yleensä vaihtoehtoja 4 ja 5. Mikäli 68 % asiakkaista vastaisi asioinnin helppoutta koskevaan väittämään joko 4 tai 5, olisi asioinnin helppouden KPI-arvo vastaavasti 68, kun taas KPI:n tavoitearvoksi olisi voitu asettaa vaikkapa 75. Tavoitearvon voi toki kukin organisaatio asettaa haluamakseen; esimerkiksi niin, että yli puolet asiakkaista ovat täysin samaa mieltä sen kanssa, että asiointi oli helppoa tai että vastausten hajonta pysyy tietyn rajan alapuolella. Samaan teemaan liittyviä arvioitavia väittämiä voi tietysti olla useampiakin ja KPI-tulos muodostetaan niiden keskiarvosta. Tällöin mittari voi antaa tarkempia tuloksia.</p>
+<p>KPI-mittareissa oleellista on niiden tuottaman kvantitatiivisen tiedon vertaaminen organisaation asettamiin tavoitearvoihin. KPI-mittaristot ja niiden käyttötavat ovat tyypillisesti melko vakioituja, mikä mahdollistaa vertailun yksikköjen välillä tai kilpailijoiden tuloksia vasten (<em>benchmarking</em>). Numeerinen KPI-aineisto mahdollistaa myös muutosten seuraamisen.</p>
+<p>Edellä mainittujen prosessimittarien lisäksi saatetaan olla kiinnostuneita myös prosessin joustavuudesta ja innovaatiokyvykkyydestä. Nämä liittyvät siihen, kuinka nopeasti tai helposti prosessi pystyy reagoimaan muutoksiin. On esimerkiksi mahdollista, että asiakasodotukset muuttuvat kirjaimellisesti yhdessä yössä uuden toimijan ilmaannuttua markkinoille. Vastaavasti muutokset lainsäädännössä tai toimialakohtaisessa sääntelyssä voivat lyhyellä varoitusajalla aiheuttaa suurimittaisia muutosvaatimuksia prosesseihin. EU:n yleinen tietosuoja-asetus GDPR ja siitä seurannut myllerrys ovat edelleen useissa yrityksissä ja organisaatioissa hyvässä muistissa. Tällaiset muutokset vaativat kykyä muuttaa prosesseja nopeasti. Tehtävä on haastava, mikäli prosessit eivät alun alkujaankaan ole hallussa.</p>
+<p>Innovaatioihin reagointi puolestaan voi liittyä esimerkiksi teknologisiin muutoksiin. Vuoden 2023 alussa organisaatioissa ryhdyttiin kuumeisesti miettimään, mitä lisäarvoa suurten kielimallien avulla voidaan saada. Jotkut ovat onnistuneet tekoälyn valjastamisessa hyötykäyttöön nopeammin ja paremmin, jotkut hitaammin ja huonommin – kenties juuri prosessien innovaatiokyvyn sekä joustavuuden ja mukautuvuuden perusteella.</p>
+<p>Mittarointi on inspiroinut lentäviä lauseita johtamiskirjallisuuteen. Johtamisguru Peter Druckerin kerrotaan todenneen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, että ”<em>sitä mitä et mittaa, et voi johtaa</em>” tai ”<em>sitä ei voi parantaa, mitä ei mitata</em>”. Mittaamiseen liittyy toisaalta myös haasteita. Turing-palkittu matemaatikko Richard Hamming on puolestaan kuulemma sanonut, että ”<em>sitä saat, mitä mittaat</em>”. Jälkimmäiseen liittyykin kaksi prosessien mittaamisen keskeistä haastetta tai jopa riskiä. Ensinnäkin oikeiden mittareiden valinta on äärettömän tärkeää. Mikäli mittarit eivät mittaa oikeita asioita, tai jos sinällään oikeita asioita mitataan vääränlaisilla mittareilla, tulokset voivat johtaa harhaan. Kuten mitä tahansa mittareita käytettäessä, myös KPI-mittareiden validiteettia ja reliabiliteettia tulee miettiä huolellisesti. Validiteetti tarkoittaa mittarin kykyä mitata juuri sitä, mitä sen halutaan mittaavan. Lämpömittarin tulee mitata lämpötilaa, eikä esimerkiksi ilmankosteutta. Reliabiliteetti puolestaan viittaa mittarin johdonmukaisuuteen eli siihen, että olosuhteet tai satunnaisvirheet eivät vaikuta tuloksiin. Prosessin läpimenoaikaa on helppo mitata sopivaa aikayksikköä käyttäen, mutta esimerkiksi asiakastyytyväisyyttä ilmaisevien mittaristojen laadinta on huomattavasti hankalampaa.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Joskin Drucker Instituten mukaan “<em>What gets measured gets managed.</em>” on laitettu Druckerin nimiin virheellisesti.</p></div></div><p>Mittaamiseen liittyy myös riski liialliseen numeroihin keskittymisestä. Esimerkiksi prosessin asiakastyytyväisyyttä mitattaessa kvantitatiivisten mittareiden lisäksi tarvitaan myös laadullista mitta-aineistoa.</p>
+<p>Prosessien mittaamiseen saattaa liittyä myös datankeruun haasteita. Kaikki prosessit eivät ole helposti mitattavissa tai tietoa voi olla mahdotonta saada varsinkaan reaaliaikaisesti. Tuotantoprosessit ovat usein helposti mitattavia: kauanko kestää, että tuote kulkee koontilinjaston läpi, kuinka moni tuotteista läpäisee lopputarkastuksen ja paljonko jää viivan alle, kun ulosmyyntihinnasta on vähennetty raaka-aineiden ja valmistuksen kustannukset. Sen sijaan esimerkiksi asiantuntijatehtäviin tai tietotyöhön liittyvien prosessien mittaaminen ei ole näin yksioikoista tai se ainakin vaatii erilaisia mittareita.</p>
+<p>Jotkut voivat vierastaa ajatusta prosessien mittaamisesta, koska mieltävät sen valvonnaksi tai kyttäämiseksi. On totta, että varsinkin määrälliset mittarit mahdollistavat valvonnan, vaikka mittareiden käytön tavoitteet olisivatkin vilpittömästi toiminnan kokonaisvaltaisessa parantamisessa yksittäisten yksikköjen tai työntekijöiden osoittelun sijaan. Prosessimittareita ja -metriikoita suunniteltaessa ja lanseerattaessa on viisasta varautua kohtaamaan muutosvastaisuutta <span class="citation" data-cites="ridgway1956dysfunctional bourne2002success">(esim. <a href="references.html#ref-ridgway1956dysfunctional" role="doc-biblioref">Ridgway 1956</a>; <a href="references.html#ref-bourne2002success" role="doc-biblioref">Bourne ym. 2002</a>)</span>.</p>
+</section>
+<section id="prosessien-jatkuva-parantaminen-ja-radikaali-uudelleenjärjestely" class="level2 page-columns page-full" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="prosessien-jatkuva-parantaminen-ja-radikaali-uudelleenjärjestely"><span class="header-section-number">4.3</span> Prosessien jatkuva parantaminen ja radikaali uudelleenjärjestely</h2>
+<p>Liiketoimintaprosessien parantaminen (<em>Business Process Improvement</em>, <em>BPI</em>) on nykyisten prosessien asteittaista alhaalta ylöspäin suuntautuvaa kehittämistä. Kehittämistoiminta on jatkuvaa, mutta yksittäiset muutokset ovat pienimuotoisia ja nopeasti toteutettavissa. Muutoksen laajuus on rajallinen ja tapahtuu tavallisesti yksittäisten tehtävien sisällä. Tuloksia voidaan mitata esimerkiksi läpimenoajan, palveluajan, odotusajan ja resurssien hyödyntämisen perusteella.</p>
+<p>Toinen – ja jokseenkin täysin erilainen – lähestymistapa prosessien kehittämiseen on niiden radikaali uudistaminen (<em>Business Process Reengineering</em>, <em>BPR</em>). Sen yhteydessä jonkin toiminnon tai toiminta-alueen prosessit pyritään rakentamaan uudelleen.</p>
+<p>Prosessien kehittäminen, tehtiinpä sitä jatkuvan parantamisen tai radikaalin uudistamisen keinoin, on prosessien johtamisen ja kehittämisprojektien hallinnan yhteistyötä. Seuraava kuvio (<a href="#fig-prosessiportfoliojohtaminen" class="quarto-xref">kuva&nbsp;<span>4.3</span></a>) havainnollistaa prosessiportfolion strategisen johtamisen ja prosessien kehittämistyön suhdetta. Strategisen johtamisen tasolla suunnittelua ohjaava toiminto on mahdollisuuksien tunnistaminen ja arviointi. Nämä voivat olla liiketoimintaympäristöstä tulevia kehittämisherätteitä tai vaikkapa uusien teknologioiden tarjoamia mahdollisuuksia. Ne voivat myös olla toimintaympäristössä tapahtuvia tai prosessien suorittamiseen kohdistuvia muutoksia, jotka eivät varsinaisesti näyttäydy kehittämismahdollisuuksina, mutta joihin organisaation on kuitenkin toiminnassaan välttämätöntä reagoida.</p>
+<p>Kun jokin mahdollisuus tai uhka tunnistetaan, arvioidaan sen mahdollistamat tai edellyttämät kehittämistarpeet. Prosessien kehittämistyö voidaan sen jälkeen toteuttaa kehittämisen elinkaarimallin mukaan, jossa vaiheina ovat tilanteen analysointi, prosessin suunnittelu, prosessin valmistelu, prosessin implementointi ja jalkauttaminen sekä prosessinmukainen toiminta ja ylläpito. Toiminnasta saatavaa seuranta- ja mittaritietoa hyödynnetään edelleen jatkokehittämistarpeiden tunnistamisessa.</p>
+<div id="fig-prosessiportfoliojohtaminen" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-prosessiportfoliojohtaminen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/prosessiportfoliojohtaminen.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Kuva&nbsp;4.3: Prosessiportfolion johtamisen ja kehittämistyön vuorovaikutus"><img src="kuviot/prosessiportfoliojohtaminen.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prosessiportfoliojohtaminen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.3: Prosessiportfolion johtamisen ja kehittämistyön vuorovaikutus<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+</figcaption>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;https://www.leadingpractice.com</p></div></div></figure>
+</div>
+<p>Edellisen (<a href="#fig-prosessiportfoliojohtaminen" class="quarto-xref">kuva&nbsp;<span>4.3</span></a>) kaltainen malli soveltuu sekä jatkuvaan pienimuotoiseen parantamiseen että radikaaliin uudistamiseen. Pienemmät herätteet voivat aktivoida jatkuvan parantamisen, kun taas suuremmat muutokset ja mahdollisuudet radikaalin uudistamisen.</p>
+<section id="prosessien-jatkuva-parantaminen" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="prosessien-jatkuva-parantaminen"><span class="header-section-number">4.3.1</span> Prosessien jatkuva parantaminen</h3>
+<p>Prosessien arvioinnin ja mittarien tulosten perusteella organisaatiot voivat tehdä päätöksiä prosessien kehittämiseksi. Prosessien kehittämisessä voidaan hyödyntää erilaisia prosessijohtamisen ja jatkuvan parantamisen menetelmiä. Tunnetuimpia näistä ovat jatkuvaan parantamiseen keskittyvä <em>Kaizen</em>, siihen läheisesti liittyvä Lean-ajattelu sekä <em>Six Sigma</em>.</p>
+<p>Kaizen, jota usein kutsutaan tuttavallisemmin nimellä jatkuva kehittäminen tai jatkuva parantaminen (<em>Continuous Improvement</em>), perustuu siihen, että prosesseja optimoidaan jatkuvasti pienin muutoksin. Tästä toimintamallista on ammennettu ideoita myös ohjelmistokehityksen alueella nykyisin suosittuihin jatkuviin toimintamalleihin, kuten jatkuva julkaiseminen (<em>Continuous Delivery</em>) ja DevOps-toimintamalli yleisemminkin.</p>
+<p>Prosessimittarit auttavat tunnistamaan potentiaaliset kehityskohteet ja vastaavasti seuraamaan toteutettujen muutosten vaikutuksia. Esimerkiksi prosessin läpimenoaikaa voidaan lyhentää poistamalla siitä turhia työvaiheita. Jokaisen toimitettavan tilauksen yhteyteen käsin kirjoitettu henkilökohtainen kiitoskortti asiakkaalle hidastaa tilauskäsittelyä ja aiheuttaa kustannuksiakin. Mittareiden valossa se on hukkaa, josta Lean-toimintamallin hengessä tulisi hankkiutua eroon. Muutoksen jälkeen mittarit kuitenkin saattavat osoittaa asiakastyytyväisyyspisteiden laskeneen ja palaavien asiakkaiden määrän vähentyneen, joten ehkä kiitoskortit kuitenkin tuottavat arvoa. Täytyykin muistaa, että Lean-mallissa hukkaa on nimenomaan sellainen toiminta, joka ei tuota arvoa asiakkaille. Sitä ei voida arvioida pelkästään virtausnopeuteen ja kustannustehokkuuteen keskittyvillä mittareilla.</p>
+<p>Prosessi- ja KPI-mittareihin perustuva jatkuva parantaminen toteutetaan usein Demingin <span class="citation" data-cites="deming1982quality">(<a href="references.html#ref-deming1982quality" role="doc-biblioref">1982</a>)</span> PDCA:n ajatusta seuraavalla toimintamallilla. Suomeksi voidaan puhua myös STAK-kehästä, joka on kotimaistenkin laadunhallinta- ja kehittämismenetelmien vakiokuvastoa (<a href="#fig-pdca" class="quarto-xref">kuva&nbsp;<span>4.4</span></a>). Mallin mukaisesti toimintaa seurataan jatkuvasti ja toteumasta kerätään tietoa erilaisten mittareiden avulla.</p>
+<div id="fig-pdca" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pdca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/pdca.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Kuva&nbsp;4.4: Demingin PDCA- eli STAK-kehä"><img src="kuviot/pdca.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pdca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.4: Demingin PDCA- eli STAK-kehä
+</figcaption>
+</figure>
+</div>
+<p>Ensin kehittämiselle tunnistetaan kohde. Se voi olla havaittu mahdollisuus tai ongelma; esimerkiksi jokin pullonkaula prosessissa tai miksei se voi perustua johonkin ylimalkaisempaankin kehittämisideaan. Sitten kehittämistyölle määritellään konkreettiset tavoitteet sekä niihin liittyvät mittarit. Tavoite voisi esimerkiksi olla asiakaspalveluprosessin nopeuttaminen ja ratkaisuajan lyhentäminen neljänneksellä. Tämä auttaa hahmottamaan tarvittavaa muutosta sekä keinoja sen saavuttamiseksi.</p>
+<p>Seuraavaksi suunnitellaan toimenpiteet muutoksen tai parannuksen toteuttamiseksi. Prosessien tapauksessa tämä tarkoittaa nykyisten toimintamallien muuttamista. Muutos kannattaa toteuttaa ensin pienessä mittakaavassa ja arvioida sitä pilotoinnin avulla. Toimintatapojen muuttaminen ja uusien toimintatapojen omaksuminen vaativat aina jonkin verran aikaa ja harjoittelua, joten uuden toimintamallin systemaattinen mittaaminen on järkevää aloittaa vasta siirtymäjakson jälkeen.</p>
+<p>Uudet toimintatavat on syytä dokumentoida toimintaohjeisiin ja piirtää prosessimalleiksi, joita voidaan käyttää myös perehdyttämiseen.</p>
+<p>Asiakaspalveluprosessin nopeuttamiseen tähtäävä muutos voisi sisältää esimerkiksi uuden automaattisen vastausjärjestelmän tai tikettien sääntöperustaisen ohjausratkaisun käyttöönoton. Tällöin prosessimuutos olisikin oikeastaan ohjelmiston pilotointi- ja käyttöönottoprojekti, jonka tuloksellisuutta seurattaisiin prosessin tavoitearvomittareita soveltaen.</p>
+<p>Pilotointijakson jälkeen arvioidaan tavoitteiden toteuma. Kerätyt tiedot analysoidaan ja niitä verrataan asetettuihin tavoitearvoihin. Keskimääräisen ratkaisuajan voitaisiin todeta lyhentyneen vaikkapa 15 % ja asiakastyytyväisyyden parantuneen vastaavasti.</p>
+<p>PDCA-kehän viimeisessä vaiheessa tehdään tulkinta muutoksen onnistumisesta ja harkitaan sen mahdollista laajempaa käyttöönottoa. Mikäli tulokset eivät olleet tavoitellun kaltaiset, syyt pyritään tunnistamaan, ne analysoidaan ja suunnitellaan uusi kehittämiskierros. Lopuksi kertyneet opit dokumentoidaan.</p>
+<p>Oma haasteensa liittyy siihen, että jos pienimuotoista parantamista tapahtuu jatkuvasti, saattaa mittareiden tuloksista olla vaikea tunnistaa todelliset syy ja seuraus -suhteet. Onko KPI-arvon kehittyminen seurausta tästä kehittämisponnistuksesta tai prosessiuudistuksesta, tuosta uudesta teknologiaratkaisusta, niiden yhteisvaikutuksesta, markkinatilanteesta yleisesti vai mahdollisesti jostain aivan muusta?</p>
+<p>Jatkuvan parantamisen mallilla toimittaessa myös muutos on enemmän tai vähemmän jatkuvaa. Vaikka kehittämistoiminta olisikin tuloksellista ja muutokset pääsääntöisesti onnistuneita, ovat muutokset aina tavalla tai toisella kuormittavia. Paitsi että ne aiheuttavat välttämättä jonkinlaisia kustannuksia, ne myös kuormittavat henkilökuntaa.</p>
+<p>Jos muutokset näkyvät asiakkaille joka kerta hieman erilaisena palvelukokemuksena, saatetaan tämä kokea kielteisenä, vaikka tosiasiallisesti palvelun laatu olisikin parantunut. Voidaankin todeta, että prosessien jatkuva parantaminen ei tarkoita sitä, että niitä välttämättä täytyisi olla jatkuvasti muuttamassa. Oleellisempaa on toiminnan systemaattinen seuranta ja mittaaminen sekä valmius ryhtyä toteuttamaan muutoksia silloin, kun ne nähdään aiheellisiksi.</p>
+</section>
+<section id="prosessien-radikaali-uudistaminen" class="level3 page-columns page-full" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="prosessien-radikaali-uudistaminen"><span class="header-section-number">4.3.2</span> Prosessien radikaali uudistaminen</h3>
+<p>Siinä missä PDCA tähtää jatkuvaan ja pienimuotoiseen parantamiseen, <em>Business Process Re-engineering</em> (<em>BPR</em>) -hankkeissa tavoitteena on tehdä organisaation toimintaan suurimittaisia ja radikaaleja muutoksia. Vuonna 1993 Hammer ja Champy <span class="citation" data-cites="hammer2009reengineering">(<a href="references.html#ref-hammer2009reengineering" role="doc-biblioref">Hammer ja Champy 2009</a>)</span> määrittelivät BPR:n olevan liiketoimintaprosessien perusteellinen uudelleenarviointi ja radikaali uudelleenmuotoilu, jonka tavoitteena on merkittävä parannus suorituskyvyn kannalta keskeisissä ja ajankohtaisissa mittareissa<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;“The fundamental rethinking and radical redesign of business processes to achieve dramatic improvements in critical, contemporary measures of performance.” <span class="citation" data-cites="hammer2009reengineering">(<a href="references.html#ref-hammer2009reengineering" role="doc-biblioref">Hammer ja Champy 2009</a>)</span></p></div></div><p>BPR:ssa oleellista on hahmottaa organisaatiota prosesseina, ei yksikköinä tai osastoina. Tarkoitus on siirtää tarkastelu kokonaisvaltaisiin asiakasarvoa tuottaviin työnkulkuihin, jotka osastorajat ylittäen leikkaavat koko organisaatiota.</p>
+<p>Prosessien suunnittelussa tulisi lähteä liikkeelle puhtaalta pöydältä eikä ainoastaan nykyisiä prosesseja muokaten, iteratiivisesti ja inkrementaalisesti kehittäen, kuten jatkuvassa parantamisessa. Nykyistä toimintaa tulisi tarkastella kriittisesti: Miksi teemme asioita niin kuin teemme? Miksi teemme juuri näitä asioita? Prosessien radikaalia uudelleenmuotoilua voidaan lähestyä kysymällä, miten toiminta järjestettäisiin, mikäli kyseessä olisi nyt toimintaansa vasta aloitteleva organisaatio.</p>
+<p>Kolmas BPR:ia ohjaava ajatus on teknologian hyödyntäminen mahdollistajana. Automaation, tietojärjestelmien ja integraatioiden käyttö liiketoiminnan muutoksen ajureina oli Hammerin ja Champyn kirjan ensimmäisen julkaisun aikaan 1990-luvun alussa vielä varsin tuoretta ja radikaaliakin ajattelua. Vaikka se nykyisin onkin arkipäivää lähes kaikilla toimialoilla, ei teknologioiden rooli uuden mahdollistajana ja prosessien suurimittaisen uudistamisen pontimena ole vähentynyt – pikemminkin päinvastoin. Viime vuosien aikana esimerkiksi lohkoketjuteknologiat, (Industrial) Internet of Things, ohjelmistorobotiikka (<em>Robotic Process Automation</em>, <em>RPA</em>), kehittynyt data-analytiikka, suuret kielimallit ja edistyneet työnkulkuautomaatioratkaisut tuettuina esimerkiksi tekoälyyn perustuvalla päätöksenteolla ovat mahdollistaneet merkittäviä prosessiuudistuksia useilla aloilla. Tämä kehitys jatkuu edelleen ja uusia disruptiivisia teknologiainnovaatioita vaikuttaa nykyisin syntyvän lähes jatkuvasti.</p>
+<p>Ilman BPR:n kannustamaa ”radikaalia” ajattelua, teknologia usein vain automatisoi vanhoja toimintamalleja. Huono tapa tehdä työtä muuttuu ainoastaan nopeammaksi tavaksi tehdä sama työ edelleen huonosti.</p>
+<blockquote class="blockquote">
+<p>Joitakin vuosia sitten eräs RPA-ratkaisuja toimittava IT-konsultti kertoi minulle asiakkaastaan, joka halusi ostaa ohjelmistorobotin, jonka avulla voitaisiin automaattisesti tulostaa organisaatioon saapuvat sähköiset asiakirjat paperimuotoon. Lyhyen tarvekartoituksen jälkeen asiakaskin kuitenkin totesi, ettei dokumentteja oikeastaan ole mitään syytä saada paperille, ja RPA-ratkaisu jätettiin toteuttamatta.</p>
+</blockquote>
+<p>Vastaavaa ilmiötä on käsitelty tutkimuksissa myös nimellä IT:n tuottavuusparadoksi (<em>Productivity Paradox of Information Technology</em>). Brynjolfsson <span class="citation" data-cites="brynjolfsson1993productivity">(<a href="references.html#ref-brynjolfsson1993productivity" role="doc-biblioref">1993</a>)</span> vakiinnutti käsitteen samannimisellä tutkimusartikkelillaan vuonna 1993. Oli huomattu, että toiminnan tuottavuus ei parantunut likimainkaan samassa suhteessa informaatioteknologiaan tehtyjen investointien ja sen käytön lisääntymisen kanssa.</p>
+<p>Toiminnanohjaus- eli ERP-järjestelmät ovat jo vuosikymmenten ajan toimineet BPR:n airuina. ERP-järjestelmät kytkeytyvät lukuisiin ydin- ja tukiprosesseihin ja ne on oletusarvoisesti kehitetty tukemaan niin kutsuttuja parhaita käytänteitä (<em>Best Practices</em>), joko yleisesti tai toimialakohtaisesti (<em>Industry Best Practices</em>). ERP-järjestelmää käyttöönottava organisaatio joutuu usein tekemään valinnan, haluaako se mukauttaa järjestelmän tukemaan organisaation nykymuotoisia prosesseja tai vaihtoehtoisesti muuttaa prosessit yhteentoimiviksi järjestelmään sisäänrakennettujen oletusten kanssa. Liiketoimintaprosessien yhteensopivuus järjestelmän kanssa on todettu useissa tutkimuksissa yhdeksi ERP-järjestelmän käyttöönoton kriittisistä menestystekijöistä. Vastaavasti epäyhteensopivat prosessit tai organisaation haluttomuus tai kyvyttömyys mukauttaa prosessejaan on yksi tyypillisimmistä käyttöönoton epäonnistumiseen johtavista tekijöistä <span class="citation" data-cites="cocskun2022erp">(<a href="references.html#ref-cocskun2022erp" role="doc-biblioref">Coşkun ym. 2022</a>)</span>. Siksi ERP:n tai muun laajan tietojärjestelmän käyttöönottoprojekti on lähes aina myös BPR-projekti (<a href="#fig-lidl-erp" class="quarto-xref">kuva&nbsp;<span>4.5</span></a>).</p>
+<div id="fig-lidl-erp" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Lessons learned from the Lidl ERP failure -luettelon kohta 1. Be open to business process reengineering.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-lidl-erp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/lidl-erp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Kuva&nbsp;4.5: ERP-järjestelmän käyttöönotto on lähes poikkeuksetta myös BPR-projekti"><img src="kuviot/lidl-erp.png" class="img-fluid figure-img" alt="Lessons learned from the Lidl ERP failure -luettelon kohta 1. Be open to business process reengineering."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lidl-erp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.5: ERP-järjestelmän käyttöönotto on lähes poikkeuksetta myös BPR-projekti<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+</figcaption>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;https://www.panorama-consulting.com/lidl-erp-failure/</p></div></div></figure>
+</div>
+<p>Davenport ja Short <span class="citation" data-cites="davenport1990new">(<a href="references.html#ref-davenport1990new" role="doc-biblioref">1990</a>)</span> esittelivät vuonna 1990 viiden vaiheen mallin (<a href="#fig-davenport-bpr" class="quarto-xref">kuva&nbsp;<span>4.6</span></a>) prosessien uudelleensuunnitteluun. Malli ei nykypäivänä välttämättä näytä erityisen kekseliäältä, saati radikaalilta. Keskeistä mallissa sen julkaisuaikaan oli, ja on tietysti edelleen, että IT:lle annetaan merkittävä rooli uusia toimintatapoja suunniteltaessa. Artikkelissa korostetaan, että IT:n todellinen potentiaali löytyy sen kyvystä mahdollistaa kokonaisvaltaiset prosessiuudistukset, jotka ylittävät perinteiset osastorajat ja keskittyvät asiakaslähtöisyyteen.</p>
+<div id="fig-davenport-bpr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-davenport-bpr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/davenport-bpr.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Kuva&nbsp;4.6: Viisivaiheinen malli prosessien uudelleensuunnitteluun"><img src="kuviot/davenport-bpr.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-davenport-bpr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.6: Viisivaiheinen malli prosessien uudelleensuunnitteluun
+</figcaption>
+</figure>
+</div>
+<p>Aluksi luodaan selkeä visio muutoksen tavoitteille. Priorisoitavien tavoitteiden tulee olla kunnianhimoisia – <span class="citation" data-cites="davenport1990new">Davenport ja Short (<a href="references.html#ref-davenport1990new" role="doc-biblioref">1990</a>)</span> käyttävät ilmaisua <em>stretch targets</em>. BPR-projektia määrittelee, ettei sillä tavoitella pieniä ja inkrementaalisia uudistuksia. Seuraavaksi selvitetään, mitä prosesseja uudistuksen tavoitteet koskevat, ja näistä tunnistetaan kriittiset ja nykyisin pullonkauloja muodostavat tekijät. Koska uudet prosessit lähtökohtaisesti joka tapauksessa rakennetaan uudelleen, tulee kriittiset tekijät tuntea sen vuoksi, että ne voidaan huomioida uusia prosessikulkuja suunniteltaessa – ei niinkään siksi, että kehittämiskohteet löydettäisiin ja määriteltäisiin niiden kautta.</p>
+<p>Mikäli projektin laajuutta on tarpeen rajata, työssä on syytä keskittyä suuren vaikuttavuuden prosesseihin. Esimerkiksi ERP-järjestelmävetoisessa projektissa täytyy kuitenkin huomata prosessien kytkeytyminen toisiinsa. Mikäli vaikka tilauskäsittelyn prosessi rakennetaan uudelleen, tulee varmistua, että muut siihen kytkeytyvät prosessit saavat vastaavan päivityskäsittelyn prosessien jatkuvuuden sekä loogisen yhteentoimivuuden varmistamiseksi. Tilanne vertautuukin tältä osin prosessien ulkoistamiseen, jota käsitellään myöhemmin.</p>
+<p>Edellisessä auttaa, jos nykyiset prosessit tunnetaan ja on dokumentoitu. Yksinkertaisimmillaan tämä voi tarkoittaa esimerkiksi prosessikarttaa tai hieman edistyneemmässä tapauksessa prosessisalkkua. Usein kuitenkin tarvitaan myös tarkempaa prosessidokumentaatiota, kuten BPMN-malleja tai vastaavia työnkulkukuvauksia. Sen jälkeen tulee analysoida prosessien nykytilanne. Tässä voidaan tunnistaa vältettävät heikkoudet, pullonkaulat ja virhealttiit vaiheet. Samalla huomioidaan, onko prosesseissa on joitain ominaisuuksia, jotka ovat välttämättömiä säilyttää myös niiden uudessa toteutusmuodossa. Nämä voivat olla lakisääteisiä tai sääntelyyn liittyviä vaatimuksia ja joissain – todennäköisesti harvoissa – tapauksissa joitain kilpailukyvyn kannalta erityisiä innovaatioita tai kyvykkyyksiä, joista ei haluta luopua.</p>
+<p>Uusien prosessien suunnittelussa hyödynnetään asiakastuntemusta, teknologian tarjoamia mahdollisuuksia ja nojaudutaan mahdollisesti innovatiivisiinkin ratkaisuihin. BPR-muutosten laajuuden vuoksi innovointiin ei kuitenkaan tule suhtautua leikkikenttänä, vaan muutosten tulee olla hyvin suunniteltuja ja mielellään <em>proof-of-concept</em> -tasolla tai pilotoinnilla testattavissa.</p>
+<div id="fig-teknologia-liiketoiminta" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-teknologia-liiketoiminta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/teknologia-liiketoiminta.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Kuva&nbsp;4.7: Teknologiavetoinen ja liiketoimintavetoinen prosessimuutos"><img src="kuviot/teknologia-liiketoiminta.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-teknologia-liiketoiminta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.7: Teknologiavetoinen ja liiketoimintavetoinen prosessimuutos
+</figcaption>
+</figure>
+</div>
+<p>Perustavaa laatua oleva kysymys onkin, millainen rooli teknologialle muutoshankkeessa annetaan (<a href="#fig-teknologia-liiketoiminta" class="quarto-xref">kuva&nbsp;<span>4.7</span></a>). Muutos voidaan toteuttaa teknologiavetoisesti. Tällöin keskitytään teknologioiden mahdollisuuksiin ja prosessit rakennetaan näiden mahdollisuuksien muodostaman kivijalan varaan. Toinen vaihtoehto on suunnitella muutosta liiketoimintalähtöisesti. Tällöin muotoillaan ensin prosessit ja sen jälkeen etsitään teknologiaratkaisut, jotka tukevat niiden toteuttamista mahdollisimman hyvin. Ideaalitilanteessa molempia lähestymistapoja sovelletaan rinnakkain ja jatkuvassa vuoropuhelussa, eikä organisaation kaikilla toiminta-alueilla ole välttämätöntä soveltaa samoja periaatetason linjauksia. Joissain toiminnoissa teknologialle voidaan antaa prosesseja määrittävä rooli ja jossain muualla prosesseja tukeva rooli. Päätöksenteossa voidaan käyttää esimerkiksi McFarlanin matriisia (<a href="#fig-mcfarlanin_matriisi" class="quarto-xref">kuva&nbsp;<span>4.8</span></a>), jonka avulla voidaan määritellä IT:n rooli eri toiminnoissa tällä hetkellä ja tulevaisuudessa.</p>
+<div id="fig-mcfarlanin_matriisi" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mcfarlanin_matriisi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/mcfarlanin_matriisi.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Kuva&nbsp;4.8: McFarlanin matriisi [mukaeltu @tiirikainen2008johtaja]"><img src="kuviot/mcfarlanin_matriisi.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mcfarlanin_matriisi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.8: McFarlanin matriisi <span class="citation" data-cites="tiirikainen2008johtaja">(mukaeltu <a href="references.html#ref-tiirikainen2008johtaja" role="doc-biblioref">Tiirikainen 2008</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>Muutosten ollessa suuria, ne todennäköisesti vaikuttavat myös rooleihin ja tehtävävastuisiin, tietojärjestelmiin ja jopa organisaatiokulttuuriin. BPR-projekteihin tuleekin aina suhtautua organisaatiomuutoksina ja huomioida tämä muutoksen läpiviennin ajankohdassa ja aikataulussa, sidosryhmien osallistamisessa, koulutuksissa, muutosviestinnässä ja muutosjohtamisessa koko skaalallaan<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Prosessien radikaalin uudistamisen jälkeen toimintaa seurataan ja arvioidaan KPI- ja muiden prosessimittareiden avulla.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Laajamittaisia BPR-projekteja saatetaan toteuttaa esimerkiksi kesälomakauden aikana, jolloin niiden ajatellaan häiritsevän mahdollisimman vähän organisaation operatiivista toimintaa. Tällöin uusien toimintatapojen opettelu ja uusien järjestelmien häiriöt ovat kuitenkin odottamassa lomalta palaavia työntekijöitä.</p></div></div><p>Proctorin <span class="citation" data-cites="Proctor2018WhyDoBPR">(<a href="references.html#ref-Proctor2018WhyDoBPR" role="doc-biblioref">2018</a>)</span> mukaan BPR-projektien epäonnistumiselle tyypillisiä syitä ovat:</p>
+<ul>
+<li><strong>BPR-hanke ei kytkeydy strategisiin tavoitteisiin.</strong> Ilman selkeää yhteyttä organisaation strategisiin tavoitteisiin BPR-hankkeet voivat menettää suuntansa ja keskittyä epäolennaisiin parannuksiin. BPR on liian suuri, kallis ja riskialtis ponnistus toteutettavaksi, jos sillä ei lähtökohtaisestikaan ole edellytyksiä saavuttaa liiketoiminnan kannalta keskeisiä ja merkittäviä muutoksia.</li>
+<li><strong>BPR-hankkeessa korostuu taktisen tason tarkastelu.</strong> Keskittyminen ainoastaan päivittäisiin työprosesseihin ilman strategisen tason huomioimista voi johtaa pinnallisiin muutoksiin, jotka eivät tuota pitkäaikaista arvoa.</li>
+<li><strong>BPR-hankkeen rajallinen laajuus ja nykytilanteen suppea analyysi.</strong> Pintapuolinen prosessianalyysi ja kapea-alainen lähestymistapa voivat estää todellisten ongelmakohtien tunnistamisen ja estää merkittävien parannusten toteuttamisen.</li>
+<li><strong>Toistuvia malleja ei onnistuta tunnistamaan.</strong> Ilman kykyä tunnistaa ja ymmärtää organisaation sisäisiä toistuvia malleja ja rakenteita voi olla vaikeaa toteuttaa tehokkaita uudistuksia.</li>
+<li><strong>Epäoptimaalinen mahdollisuuksien priorisointi.</strong> Mahdollisuuksien priorisointi subjektiivisten tekijöiden perusteella voi johtaa resurssien tehottomaan käyttöön ja tärkeiden parannusten ohittamiseen.</li>
+<li><strong>Passiivinen kehitys ja toteutus.</strong> Uudistusten passiivinen lähestymistapa ilman aktiivista suunnittelua ja toteutusta voi estää muutosten onnistumisen ja kestävyyden. BPR on radikaali uudistushanke, joka edellyttää paitsi nykyisten toimintamallien ja rakenteiden purkamista, myös tehokkaan suunnitelman uusien toimintamallien rakentamiseksi ja jalkauttamiseksi. Kaikenlaisissa uudistushankkeissa onnettomin lopputulema on se, että nykyinen ratkaisu revitään auki, mutta tekemisen tahti ja into alkavat hidastua, kun uusi ratkaisu tulisi saada toteutettua.</li>
+<li><strong>Muutoksenhallinnan puutteet.</strong> BPR on aina huomattava organisaatiomuutoshanke ja muutoshankkeiden valitettavan tavallinen epäonnistumistekijä on heikko tai epäonnistunut muutosjohtaminen. Henkilöstön, prosessien ja teknologian muutosten hallinnan laiminlyönti voi johtaa BPR-hankkeen vastustukseen ja estää uudistusten onnistumisen.</li>
+<li><strong>Teknologian ja prosessien erillinen käsittely.</strong> Teknologian ja prosessien erillinen tarkastelu voi estää niiden tehokkaan integroinnin ja heikentää uudistusten vaikutusta. BPR-hankkeet lähtökohtaisesti pyrkivät uudistamaan toimintatapoja IT-ratkaisujen avulla. Sen vuoksi teknologioiden mahdollisuuksien tarkastelua ei saa erottaa prosessien tarkastelusta.</li>
+<li><strong>Liiallinen luottamus standardimalleihin.</strong> Yleisten mallien ja parhaiden käytäntöjen sokea soveltaminen ilman organisaation erityispiirteiden huomioimista voi johtaa epäonnistumiseen.</li>
+<li><strong>Väärinkäsitykset BPR:n luonteesta.</strong> BPR:n ymmärtäminen pelkästään prosessien parantamisena ilman strategista näkökulmaa ja IT:n mahdollisuuksien ymmärtämistä voi rajoittaa sen potentiaalia ja johtaa epäonnistumiseen.</li>
+</ul>
+</section>
+</section>
+<section id="muutoksenhallinta" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="muutoksenhallinta"><span class="header-section-number">4.4</span> Muutoksenhallinta</h2>
+<p>Liiketoimintaprosessien muutokset ovat lähtökohtaisesti haastavia muutoshankkeita. Paitsi, että ne muuttavat työnteon tapoja, suurempimittaiset prosessimuutokset voivat tuoda rooleille uusia tehtäviä ja vastuualueita, tehdä joistakin tehtävistä tarpeettomia, ja aiheuttaa muutoksia aina organisaation rakenteissa saakka. Tämä vaatii koko organisaatiota leikkaavaa uuden opettelua ja vanhoista toimintatavoista poisoppimista. Prosessimuutosten menestyksekäs läpivienti edellyttääkin muutosjohtamista.</p>
+<p>Systemaattisessa kirjallisuuskatsauksessaan Idogawa ym. <span class="citation" data-cites="idogawa2023critical">(<a href="references.html#ref-idogawa2023critical" role="doc-biblioref">2023</a>)</span> kartoittivat prosessien kehittämiseen liittyvän muutoksenhallinnan kriittisiä menestystekijöitä (<em>Critical Success Factor</em>, <em>CSF</em>) ja muodostivat hypoteeseja aiemmissa tutkimuksissa argumentoitujen menestystekijöiden välisistä vahvistavista vaikutuksista sekä vaikutuksista muutoksenhallintaan liiketoimintaprosessien kehittämisprojekteissa. Jos tuntee CSF-tutkimuksia, löydökset eivät sinällään ole erityisen yllättäviä: samat menestystekijät vaikuttavat toistuvan aiheesta riippumatta. Tärkeimmäksi tekijäksi tunnistettiin projektinhallinta, ja seuraavaksi tärkeimmäksi ylimmän johdon tuki, joka toimii ratkaisevana välittäjänä muutoksenhallinnan mahdollistamisessa. Vaikka myös teknologiset kompetenssit todettiin relevanteiksi, oli niiden merkitys tutkimuksen mukaan toissijaista <span class="citation" data-cites="idogawa2023critical">(<a href="references.html#ref-idogawa2023critical" role="doc-biblioref">Idogawa ym. 2023</a>)</span>.</p>
+<p>Olipa kyse pienimuotoisesta kehittämisestä tai radikaalimmasta uudistamisesta, prosessimuutosten läpivienti on syytä toteuttaa suunnitelmallisesti ja jotain toimivaksi todettua muutosjohtamisen mallia soveltaen. Tällaisia ovat esimerkiksi Lewinin klassinen <em>Unfreeze</em>-<em>Change</em>-<em>Refreeze</em> <span class="citation" data-cites="keen1981information">(ks. <a href="references.html#ref-keen1981information" role="doc-biblioref">Keen 1981</a>)</span>, Kotterin kahdeksan vaiheen muutosjohtamismalli <span class="citation" data-cites="kotter2007leading">(<a href="references.html#ref-kotter2007leading" role="doc-biblioref"><span class="nocase">Kotter ym.</span> 2007</a>)</span> ja Hiattin ADKAR-malli <span class="citation" data-cites="hiatt2006adkar">(<a href="references.html#ref-hiatt2006adkar" role="doc-biblioref">Hiatt 2006</a>)</span>. Erilaisille muutosjohtamisen malleille yhteistä on, että ensin muutoksen tarpeellisuus ja hyödyllisyys perustellaan, ja muutokselle pyritään luomaan edellytykset. Sitten muutos toteutetaan ja lopuksi uusi tila vakiinnutetaan.</p>
+<p>Prosessimuutosten tapauksessa nykytilan diagnosointi ja analyysi ovat ehdottoman tärkeitä. Näissä selvitetään, mitä tietoa prosessissa liikkuu, mitä järjestelmiä sen toteuttamisessa käytetään, mitä rooleja prosessiin osallistuu ja mitä taitoja näiltä henkilöiltä vaaditaan, mitkä säännökset prosessia koskevat ja niin edelleen. Kuten edellä todettiin, mikäli nykytilan prosessit on dokumentoitu, muutoksen vaikutusten arviointi on huomattavasti helpompaa. Myös kokonaisarkkitehtuurin tarjoamaa tietoa voidaan tässä käyttää apuna. Mikäli taas prosessien tuntemus on heikkoa, on muutoksen hallittu toteuttaminen vaikeaa.</p>
+<p>Kun tavoitetilan prosesseja suunnitellaan, tulee huomioida myös niiden mahdollisesti vaatimat organisaatiomuutokset, laatia viestintä- ja koulutussuunnitelmat sekä siirtymäskenaariot. Halutaanko uusia toimintamalleja esimerkiksi pilotoida jossain yksikössä tai jollain kohdealueella ennen päätöstä laajemmasta jalkauttamisesta? Muutoksen toteumaa ja vaikutuksia tulee myös jatkuvasti seurata, jotta mahdolliset virheet ja ongelmat, tai tarpeet hienosäädölle, voidaan tunnistaa ja niihin reagoida.</p>
+<p>Liiketoimintaprosessien muuttaminen ja siihen liittyvä muutoksenhallinta ovat vaiheineen, haasteineen ja menestystekijöineen hyvin samankaltaisia projekteja kuin uusien tietojärjestelmien käyttöönotot. Lisäksi nämä projektit toteutuvatkin usein rinnakkain: tietojärjestelmämuutoksista voi seurata tarve uudistaa prosesseja tai prosessimuutoksista tarve uudistaa järjestelmiä.</p>
+</section>
+<section id="prosessien-ulkoistaminen" class="level2 page-columns page-full" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="prosessien-ulkoistaminen"><span class="header-section-number">4.5</span> Prosessien ulkoistaminen</h2>
+<p>Ulkoistaminen (<em>outsourcing</em>) vaikuttaa olevan trendi, joka nousee toistuvasti pinnalle ja sitten taas katoaa. Tämä on koskenut erityisesti asiakaspalvelun tehtäviä ja muita tukitoimintoja. Yhdellä hetkellä näyttää siltä, että lähes kaikki yritykset ulkoistavat esimerkiksi IT-tukensa prosessit, ja seuraavaksi näitä toimintoja ollaankin jo siirtämässä takaisin (<em>insourcing</em>) yrityksen omaan haltuun. 2000-luvun alussa alkoi yleistyä myös toimintojen ulkoistaminen ulkomaille (<em>offshoring</em>). Monet suuryritykset, kuten IBM ja General Electric edelläkävijöinä, siirsivät IT-tukea, palvelinkeskuksia ja jopa ohjelmistokehitystä halvemman työvoiman maihin kuten Intiaan ja Kiinaan. Samoin tuotantoa ja logistiikkaa ulkoistettiin kansainvälisesti halvempaa työvoimaa ja mittakaavaetuja tavoitellen. 2010-luvulta alkaen pilvipalvelujen yleistyessä yhä useammat, jopa liiketoiminnan kannalta keskeiset IT-järjestelmät, on saatettu siirtää ulkoisten toimijoiden tarjoamille pilvialustoille.</p>
+<p>Ajatuksena tässä on strategia tai johtamismalli, jonka mukaan ainoastaan ydin- ja kriittiset toiminnot toteutetaan itse ja kaikki muu voidaan ulkoistaa. Ajatus perustuu Hamelin ja Prahaladin <span class="citation" data-cites="hamel1990core">(<a href="references.html#ref-hamel1990core" role="doc-biblioref">1990</a>)</span> esittelemään ydinkyvykkyyden (<em>Core Competence</em>) käsitteeseen sekä Williamsonin <span class="citation" data-cites="williamson1975markets">(<a href="references.html#ref-williamson1975markets" role="doc-biblioref">1975</a>)</span> transaktiokustannusteoriaan (<em>Transaction Cost Theory</em>). Yrityksen tulisi keskittyä sellaiseen toimintaan, jossa sillä on vahvaa osaamista ja jolla se voi saavuttaa kilpailuetua. Jos joku voi toteuttaa jonkin toiminnon laadukkaammin ja halvemmalla kuin mihin yritys itse pystyy, miksipä sitä kannattaisi itse tehdä.</p>
+<p>McIvor <span class="citation" data-cites="mcivor2000practical">(<a href="references.html#ref-mcivor2000practical" role="doc-biblioref">2000</a>)</span> on esitellyt liiketoimintaprosessien ulkoistamispäätöksiä ohjaavan viitekehyksen (<a href="#fig-ulkoistuspaatos" class="quarto-xref">kuva&nbsp;<span>4.9</span></a>). Ensimmäisessä vaiheessa määritellään, mitä ydintoiminnolla tarkoitetaan. Ne voivat esimerkiksi olla toimintoja, jotka tuottavat asiakkaille arvoa tai jotka ovat merkityksellisiä kilpailukyvyn kehittämisen kannalta. Seuraavaksi tunnistetaan ydintoiminnot ja ei-ydintoiminnot. Tämä toteutetaan organisaation ylimmän johdon ohjaamana, mutta henkilöstöä laajasti osallistaen niin hierarkkisesti kuin myös toimialoittain ja yksikköittäin.</p>
+<div id="fig-ulkoistuspaatos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ulkoistuspaatos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/ulkoistuspaatos.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Kuva&nbsp;4.9: Viitekehys ulkoistuspäätösten arviointiin [mukaeltu @mcivor2000practical]"><img src="kuviot/ulkoistuspaatos.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ulkoistuspaatos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;4.9: Viitekehys ulkoistuspäätösten arviointiin <span class="citation" data-cites="mcivor2000practical">(mukaeltu <a href="references.html#ref-mcivor2000practical" role="doc-biblioref">McIvor 2000</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>Kun ydintoiminnot on tunnistettu, arvioidaan valituilla mittareilla niihin liittyviä organisaation kyvykkyyksiä suhteessa ulkoisiin toimijoihin. Seuraavaksi pyritään arvioimaan ydintoimintojen toteuttamisen kokonaiskustannukset, jos ne toteutetaan itse ja toisaalta jos ne ulkoistettaisiin.</p>
+<p>Viitekehyksessä siis oletetaan, että ei-ydintoiminnot lähtökohtaisesti ulkoistetaan. Poikkeuksena tähän mainitaan ”poliittiset” syyt, jotka voivat liittyä toimialan sisäisiin tai ulkoisiin suhteisiin. Esimerkiksi ammattiliitot ovat joskus voineet heittää kapuloita laajamittaisten ulkoistussuunnitelmien rattaisiin.</p>
+<p>Viimeiseksi arvioidaan, millainen yhteistyö kunkin tunnistetun potentiaalisen ulkoistuskumppanin kanssa on mahdollista. Onko esimerkiksi mahdollista solmia strategisia kumppanuuksia, voidaanko toiminnon ohjaus ja johtaminen säilyttää ulkoistusjärjestelyssä itsellä (vrt. myöhemmin käsiteltäviin prosessikoreografiaan ja prosessiorkestraatioon) ja niin edelleen. Mikäli ulkoistusvaihtoehtoon ei jostain syystä päädytä, vaihtoehtona on edellisten kyvykkyysanalyysien ohjaamana investoida toimintojen sisäisen toteutuksen kehittämiseen.</p>
+<p>Asiat eivät tietenkään aina ole näin yksinkertaisia. Ensinnäkin toimintojen onnistunut ulkoistaminen edellyttää, että ydinprosessit, joita ulkoistettavien toimintojen on tarkoitus tukea, ovat hyvin hallussa. Ydinprosessien vaatimukset tulee tuntea ja ne tulee pystyä kommunikoimaan ulkoistuskumppanille niin, että prosessien yhteentoimivuus ja laatuvaatimukset toteutuvat. Mikäli laatuvaatimusten varmistaminen vaatii jatkuvaa valvontaa, voi jo se aiheuttaa niin paljon välillisiä kustannuksia, ja vaatimuksissa epäonnistuminen niin suurta asiakastyytymättömyyttä tai mainehaittaa, etteivät esimerkiksi matalampien työvoimakustannusten säästöt maksakaan itseään takaisin. Ulkoistusrakenteissa myös riskienhallinta muuttuu lähes poikkeuksetta monimutkaisemmaksi ja aiheuttaa epäsuoria kustannuksia.</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p><strong>Seuraava erityisesti IT-toimintojen ja niihin liittyvien prosessien ulkoistamiseen keskittyvä osuus perustuu keskusteluun Ari Kuusion kanssa. Kuusio on toiminut muun muassa johtaja- ja päällikkötehtävissä suurissa julkisissa organisaatioissa.</strong></p>
+<p>Kuusio toteaa aluksi, että on tärkeää, että organisaation omat prosessit tunnetaan ja ne on kuvattu selkeästi. Tämä lähtötilanne mahdollistaa prosessiulkoistusten tietoperustaisen arvioinnin. Jotta jokin toiminto, kuten IT-tukipalvelut, voidaan onnistuneesti ulkoistaa, täytyy organisaation tuntea, mitä prosesseja toimintoon kuuluu, mitkä niistä toimivat ja mitkä eivät toimi. Samoin täytyy tuntea toiminnan toteuttamisen nykyiset kustannukset.</p>
+<p>Näiden tietojen avulla voidaan mahdollisimman objektiivisesti määritellä, mitä ulkoistuksella halutaan saavuttaa. Tämä on ensimmäinen kysymys, joka organisaatiossa tulee esittää, kun ulkoistamista ryhdytään suunnittelemaan. Oletukseen, että ulkoistaminen aina ja automaattisesti johtaa matalampiin kustannuksiin ja toiminnan tai palvelujen parempaan laatuun, kannattaa suhtautua varauksella. Ulkoistamista koskeva päätöksenteko vaatii aina perusteellisen selvityksen.</p>
+<p>Ulkoistamisen kohteet ovat monenlaisia. Tavallisesti ulkoistamisen mielletään liittyvän johonkin laajaan operatiivisen toiminnan kokonaisuuteen. Kuusio kuitenkin korostaa, että nykymaailmassa on paljon toimintoja, jotka jo ovat käytännössä ulkoistettuja, vaikka asiaa ei välttämättä niin ajateltaisikaan. Monet organisaatiot esimerkiksi ostavat valmisohjelmistoja, ja talon sisällä tehtävä ohjelmistokehitys on entistä harvinaisempaa. Toisaalta taas esimerkiksi taloushallinnon tehtävien siirto ulkoisen toimijan vastuulle on tyypillinen esimerkki perinteisestä hieman suuremman toimintokokonaisuuden ulkoistamisesta.</p>
+<p>Useiden organisaatioiden toimintaan liittyykin tiiviisti joukko kumppaneita, jotka toteuttavat ulkoistettuja toimintoja. Ulkoistuskumppanuuksien suunnittelussa voidaan soveltaa esimerkiksi edellä esitettyä (<a href="#fig-ulkoistuspaatos" class="quarto-xref">kuva&nbsp;<span>4.9</span></a>) mallia. Asiaa on syytä tarkastella kokonaisvaltaisesti toiminnan tehokkuuden, tuloksellisuuden ja toiminnan laadun sekä organisaation kyvykkyyksien kannalta. Jälkimmäisessä voidaan käyttää apuna esimerkiksi kyvykkyyskarttaa (ks. <a href="prosessitiedon_keraaminen.html#fig-kyvykkyyskartta" class="quarto-xref">kuva&nbsp;<span>3.1</span></a>). Pohdintojen tulisi tukea työtä, jossa muodostetaan strategian mukainen linjaus siitä, ostetaanko jokin toiminto kumppanilta vai toteutetaanko se itse.</p>
+<p>Merkittävänä osakokonaisuutena pohdintaan liittyy tietovirtojen tarkastelu, koska prosessien ulkoistamiseen liittyy myös tietosuojakysymyksiä. On ehdottoman tärkeää tietää, mitä tietoja prosesseissa käsitellään: mitä tietoja niihin menee syötteinä ja mistä tiedot tulevat, mitä tietoja tai päätöksiä prosessit tuottavat, ja minne ne prosesseista menevät.</p>
+<p>Prosesseja, niihin liittyviä toimintoja tai niiden toteuttamia palveluja ulkoistettaessa on tavallisesti välttämätöntä siirtää myös niissä käsiteltävät tiedot oman organisaation ulkopuolelle tai vähintään mahdollistaa ulkoistuskumppanille pääsy näihin tietoihin. Tässä on muistettava EU:n yleisen tietosuoja-asetuksen GDPR:n vaatimukset. Tiedon käsittelyyn liittyviä vastuita ei voida ulkoistaa, vaikka operatiivisessa mielessä tiedon käsittely olisikin ulkoistettu.</p>
+<p>Ajatellaan seuraavassa palvelupistettä<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> (<em>Service Desk</em>), joka on perinteisesti tyypillinen IT-ulkoistuksen kohde. Kuusion mukaan tarkastelu tulee aloittaa selvittämällä, mitä nykyisen palvelupisteen tarjoamat palvelut ovat. Palvelukuvaukset toimivat tässä keskeisessä roolissa. Mikäli palvelut sekä niitä toteuttavat prosessit on kuvattu hyvin, on ulkoistuksen suunnittelu helpompaa ja sen lopputulos todennäköisesti laadukkaampi. Jos ulkoistettavaksi suunniteltuja toimintoja ei tunneta, on hyvin vaikeaa arvioida, voidaanko ulkoistuksen avulla saavuttaa parempi lopputulos tai voidaanko nykyinen taso säilyttää pienemmillä kustannuksilla. Mikäli palvelut tuotetaan vakioidulla tavalla, esimerkiksi ITIL-käytänteiden tai ISO/IEC 20000<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> -standardin mukaisesti, on ulkoistusta suunnittelevalla asiakkaalla oletettavasti varsin hyvä käsitys siitä, mitä hän on ostamassa, ja vastaavasti palveluntarjoajalla ymmärrys siitä, mitä asiakas haluaa saada.</p>
+<p>Vaikkei organisaatio lopulta lähtisikään laajaan ulkoistukseen, standardoitujen prosessien ja palvelumuotojen toteuttajiksi on helpompi löytää osaajia niin talon sisä- kuin ulkopuolelta verrattuna tilanteeseen, jossa palvelumalli on hyvin omintakeinen.</p>
+<p>Prosessien ja palvelujen mittaaminen on oleellista hyvin perusteltujen ja onnistuneiden ulkoistuspäätösten kannalta. On tärkeää tietää, missä toiminta on nykyisellään laadukasta, missä olisi kehittämisen varaa ja mitä kustannuksia palvelut aiheuttavat. Ulkoistaminen ei kuitenkaan saa olla ongelmien siirtämistä; toimivien prosessien ulkoistaminen on huomattavasti yksinkertaisempaa ja tuloksellisempaa.</p>
+<p>Mittarit palvelevat myös jo toteutettujen ulkoistusten arvioinnissa. Ulkoistettujen palvelujen mittaaminen kertoo, saadaanko sellaista palvelua, mistä on sovittu ja toimitetaanko se sovituin ehdoin ja kustannuksin. Palveluiden laatua ja kustannuksia tulisi mitata riippumatta siitä, tuotetaanko palvelu itse vai osittain tai kokonaan kumppanin toimesta. Mikäli ulkoistusratkaisuun päätyneellä organisaatiolla ei ole lähtötilanteesta verrokkitietoa, eivät mittarit pysty ilmaisemaan ulkoistuksen vaikutuksia palvelun laatuun ja kustannuksiin.</p>
+<p>Kuusio mainitsee myös, että kun prosesseja ja palveluja toteutetaan itse, on niiden mukautuvuus ja joustavuus usein parempi kuin ulkoistuskumppaneiden tuottamissa vaihtoehdoissa. Kuten edellä todettiin, palveluntuottajien toimintamallit ovat tyypillisesti vakioituja. Vakioidut toimintamallit mahdollistavat, että asiakkaalle voidaan tarjota sovittu kiinteä hinta ja että palvelutason toteumaa voidaan verrata palvelutasosopimukseen (<em>Service Level Agreement</em>, <em>SLA</em>). Tämä kuitenkin tarkoittaa myös sitä, että asiakas voi odottaa saavansa ainoastaan sen, mitä sopimuksessa on määritelty. Kaikki tästä poikkeava aiheuttaa ylimääräisiä kustannuksia – mikäli palveluntuottaja ylipäätään suostuu toimittamaan kaikkia tarvittavia lisäpalveluja.</p>
+<p>Tilanne vertautuu suuriin kaupallisiin tietojärjestelmäratkaisuihin. Niiden käyttäjien tulee mukauttaa prosessinsa yhteensopiviksi järjestelmiin ohjelmoitujen oletusten kanssa tai vaihtoehtoisesti päätyä kalliisiin ja vaikeasti ylläpidettäviin räätälöityihin ratkaisuihin sekä niiden edellyttämiin monimutkaisiin järjestelyihin. Ulkoistusta mietittäessä onkin tarkasteltava toiminnan vaatimuksia eri skenaarioissa: mitä kuuluu vakiopalveluun ja mikä on lisämaksullista palvelua. Tämä tulee ottaa huomioon myös kokonaiskustannuksia vertailtaessa.</p>
+<p>Lopuksi Kuusio korostaa laadukkaiden ulkoistussopimusten merkitystä. Sopimuksen neuvotteluun ja tekoon täytyy panostaa riittävästi resursseja. Toinen keskeinen seikka on se, että jos ulkoistukseen päädytään, tulee varmistaa, että ulkoistavaan organisaatioon jää yhteyshenkilö, joka huolehtii, että sopimus toteutuu määriteltyjen ehtojen mukaisesti ja että sitä kehitetään tarvittaessa. Tämä henkilö toimii siis ulkoistetun toiminnon rajapintana. Rooli voidaan mieltää ulkoistettujen prosessien paikalliseksi prosessinomistajaksi.</p>
+<p>Ulkoistuspäätöksiä tehtäessä on varauduttava myös siihen, että ulkoistuskumppania voi olla tarpeen vaihtaa tai ulkoistussopimus purkaa. Sopimus tulee tehdä niin, että ratkaisusta päästään tarvittaessa irti mahdollisimman sujuvasti. Ulkoistuksen lisäksi puhutaankin palvelujen takaisinotosta omaan organisaatioon (<em>insourcing</em>). Insourcing-tarkasteluun pätevät monet samat kysymykset kuin ulkoistuksia pohdittaessa. Molemmissa tapauksissa esimerkiksi prosessien ja palvelujen kuvaaminen, vakiointi ja mittaaminen sekä laadukkaat sopimukset ovat keskeisessä roolissa.</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Keskitetty yhteydenottopiste palvelutuottajan ja käyttäjien välillä. Tyypillinen service desk hallinnoi häiriöitä ja palvelupyyntöjä, ja hoitaa myös viestinnän käyttäjien kanssa. (ITIL Palvelutuotanto) https://www.itsmf.fi/site/assets/files/1931/itil_2011_finnish_glossary_v1_01.pdf</p></div><div id="fn7"><p><sup>7</sup>&nbsp;https://sales.sfs.fi/fi/index/tuotteet/SFS/ISO/ID2/2/727723.html.stx</p></div></div></div>
+<p>Organisaation ulkoistaessa joitain liiketoimintaprosessejaan tai osia prosesseista, on prosessien suunnittelussa silloin kyse oikeastaan prosessiorkestraatiosta tai -koreografiasta, jossa keskeistä on prosessien yhteentoimivuus ja rajapinnat. Tätä teemaa käsitellään myöhemmin.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-bourne2002success" class="csl-entry" role="listitem">
+Bourne, Mike, Andy Neely, Ken Platts, ja John Mills. 2002. <span>”The success and failure of performance measurement initiatives: Perceptions of participating managers”</span>. <em>International journal of operations &amp; production management</em> 22 (11): 1288–310.
+</div>
+<div id="ref-brynjolfsson1993productivity" class="csl-entry" role="listitem">
+Brynjolfsson, Erik. 1993. <span>”The productivity paradox of information technology”</span>. <em>Communications of the ACM</em> 36 (12): 66–77.
+</div>
+<div id="ref-cocskun2022erp" class="csl-entry" role="listitem">
+Coşkun, Evren, Bahar Gezici, Murat Aydos, Ayça Kolukısa Tarhan, ja Vahid Garousi. 2022. <span>”ERP failure: A systematic mapping of the literature”</span>. <em>Data &amp; Knowledge Engineering</em> 142: 102090.
+</div>
+<div id="ref-davenport1990new" class="csl-entry" role="listitem">
+Davenport, Thomas H, ja James E Short. 1990. <em>The new industrial engineering: information technology and business process redesign</em>.
+</div>
+<div id="ref-deming1982quality" class="csl-entry" role="listitem">
+Deming, W. Edwards. 1982. <em>Quality, Productivity, and Competitive Position</em>. Massachusetts Institute of Technology, Center for Advanced Engineering Study.
+</div>
+<div id="ref-hamel1990core" class="csl-entry" role="listitem">
+Hamel, G., ja C. K. Prahalad. 1990. <span>”The core competence of the corporation”</span>. <em>Harvard Business Review</em> 68 (3): 79–91.
+</div>
+<div id="ref-hammer2009reengineering" class="csl-entry" role="listitem">
+Hammer, Michael, ja James Champy. 2009. <em>Reengineering the corporation: Manifesto for business revolution, a</em>. Zondervan.
+</div>
+<div id="ref-harmon2019business" class="csl-entry" role="listitem">
+Harmon, Paul. 2019. <em>Business process change: a business process management guide for managers and process professionals</em>. Morgan Kaufmann.
+</div>
+<div id="ref-hiatt2006adkar" class="csl-entry" role="listitem">
+Hiatt, Jeff. 2006. <em>ADKAR: A model for change in business, government, and our community</em>. Prosci.
+</div>
+<div id="ref-idogawa2023critical" class="csl-entry" role="listitem">
+Idogawa, Juliano, Flávio Santino Bizarrias, ja Ricardo Câmara. 2023. <span>”Critical success factors for change management in business process management”</span>. <em>Business Process Management Journal</em> 29 (7): 2009–33.
+</div>
+<div id="ref-keen1981information" class="csl-entry" role="listitem">
+Keen, Peter GW. 1981. <span>”Information systems and organizational change”</span>. <em>Communications of the ACM</em> 24 (1): 24–33.
+</div>
+<div id="ref-klerkx2013interaction" class="csl-entry" role="listitem">
+Klerkx, Laurens, ja Noelle Aarts. 2013. <span>”The interaction of multiple champions in orchestrating innovation networks: Conflicts and complementarities”</span>. <em>Technovation</em> 33 (6-7): 193–210.
+</div>
+<div id="ref-kotter2007leading" class="csl-entry" role="listitem">
+<span class="nocase">Kotter, John P ym.</span> 2007. <em>Leading change: Why transformation efforts fail</em>.
+</div>
+<div id="ref-langley2007process" class="csl-entry" role="listitem">
+Langley, Ann. 2007. <span>”Process thinking in strategic organization”</span>. <em>Strategic organization</em> 5 (3): 271–82.
+</div>
+<div id="ref-mcivor2000practical" class="csl-entry" role="listitem">
+McIvor, Ronan. 2000. <span>”A practical framework for understanding the outsourcing process”</span>. <em>Supply Chain Management: an international journal</em> 5 (1): 22–36.
+</div>
+<div id="ref-niemi2024kokonaisarkkitehtuuri" class="csl-entry" role="listitem">
+Niemi, E. 2024. <span>”Kokonaisarkkitehtuuri: Oppaasi organisaation muutosmatkalla”</span>. <em>Alma Insights</em>.
+</div>
+<div id="ref-parmenter2010key" class="csl-entry" role="listitem">
+Parmenter, David. 2010. <em>Key performance indicators (KPI): developing, implementing, and using winning KPIs</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-Proctor2018WhyDoBPR" class="csl-entry" role="listitem">
+Proctor, James. 2018. <span>”Why Do Business Process Reengineering Initiatives Fail to Deliver Transformative Results?”</span> Inteq Group, lokakuuta 22. <a href="https://www.inteqgroup.com/blog/why-do-business-process-reengineering-initiatives-fail">https://www.inteqgroup.com/blog/why-do-business-process-reengineering-initiatives-fail</a>.
+</div>
+<div id="ref-rassfeld2013integrated" class="csl-entry" role="listitem">
+Raßfeld, Colin, Dominik Rößle, ja Roland Jochem. 2013. <span>”Integrated and modular design of an optimized process architecture”</span>. <em>International Journal of Production Management and Engineering</em> 1 (1): 63–75.
+</div>
+<div id="ref-ridgway1956dysfunctional" class="csl-entry" role="listitem">
+Ridgway, Valentine F. 1956. <span>”Dysfunctional consequences of performance measurements”</span>. <em>Administrative science quarterly</em> 1 (2): 240–47.
+</div>
+<div id="ref-rosemann2006process" class="csl-entry" role="listitem">
+Rosemann, Michael. 2006. <span>”Process portfolio management”</span>. <em>BPTrends. April</em>.
+</div>
+<div id="ref-tiirikainen2008johtaja" class="csl-entry" role="listitem">
+Tiirikainen, Vesa. 2008. <span>”Johtaja: ole IT-strategi”</span>. <em>Helsinki: Talentum</em>.
+</div>
+<div id="ref-williamson1975markets" class="csl-entry" role="listitem">
+Williamson, Oliver E. 1975. <span>”Markets and hierarchies: analysis and antitrust implications: a study in the economics of internal organization”</span>. <em>University of Illinois at Urbana-Champaign’s Academy for Entrepreneurial Leadership Historical Research Reference in Entrepreneurship</em>.
+</div>
+</div>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopioitu!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopioitu!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./prosessitiedon_keraaminen.html" class="pagination-link" aria-label="Prosessitiedon kerääminen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./prosessiarkkitehtuuri.html" class="pagination-link" aria-label="Prosessiarkkitehtuuri">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

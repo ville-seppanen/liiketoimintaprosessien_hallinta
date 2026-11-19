@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Prosessiarkkitehtuuri – Liiketoimintaprosessit -- hallinta, mallintaminen, tietojärjestelmät ja automaatio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./bpmn_ja_prosessien_kuvaaminen.html" rel="next">
+<link href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-37a0ccb6f5b9899fcb884e11bb6f7458.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2a1a1914d861ccdc16544b75d36f383a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Ei tuloksia",
+    "search-matching-documents-text": "tulokset",
+    "search-copy-link-title": "Kopioi linkki hakuun",
+    "search-hide-matches-text": "Piilota loput tulokset",
+    "search-more-match-text": "tulos tässä dokumentissa",
+    "search-more-matches-text": "tulosta tässä dokumentissa",
+    "search-clear-button-title": "Tyhjennä",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Peruuta",
+    "search-submit-button-title": "Lähetä",
+    "search-label": "Hae"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./prosessiarkkitehtuuri.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Vaihda sivupalkki" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Hae" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Liiketoimintaprosessit – hallinta, mallintaminen, tietojärjestelmät ja automaatio</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Tumma tila päälle/pois"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Hae"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alkusanat</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./johdanto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Johdanto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessit_ja_liiketoimintaprosessit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prosessit ja liiketoimintaprosessit</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessitiedon_keraaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prosessitiedon kerääminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiarkkitehtuuri.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prosessiautomaatio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prosessiautomaatio ja tekoäly</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tehtavat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Harjoitustehtäviä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tyovalineita.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Työvälineitä</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lähteet</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tässä luvussa</h2>
+   
+  <ul>
+  <li><a href="#prosessiarkkitehtuurin-muodostaminen" id="toc-prosessiarkkitehtuurin-muodostaminen" class="nav-link active" data-scroll-target="#prosessiarkkitehtuurin-muodostaminen"><span class="header-section-number">5.1</span> Prosessiarkkitehtuurin muodostaminen</a></li>
+  <li><a href="#liiketoimintaprosessit-osana-kokonaisarkkitehtuuria" id="toc-liiketoimintaprosessit-osana-kokonaisarkkitehtuuria" class="nav-link" data-scroll-target="#liiketoimintaprosessit-osana-kokonaisarkkitehtuuria"><span class="header-section-number">5.2</span> Liiketoimintaprosessit osana kokonaisarkkitehtuuria</a>
+  <ul>
+  <li><a href="#prosessit-togaf-menetelmässä-ja-archimate-mallinnuskielellä" id="toc-prosessit-togaf-menetelmässä-ja-archimate-mallinnuskielellä" class="nav-link" data-scroll-target="#prosessit-togaf-menetelmässä-ja-archimate-mallinnuskielellä"><span class="header-section-number">5.2.1</span> Prosessit TOGAF-menetelmässä ja ArchiMate-mallinnuskielellä</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Prosessiarkkitehtuuri</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Prosessiarkkitehtuuri määritellään kirjallisuudessa tavallisesti liiketoimintaprosessien ja niiden keskinäisten riippuvuuksien kokonaisuudeksi <span class="citation" data-cites="dijkman2011road eid2012business">(<a href="references.html#ref-dijkman2011road" role="doc-biblioref">Dijkman ym. 2011</a>; <a href="references.html#ref-eid2012business" role="doc-biblioref">Eid-Sabbagh ym. 2012</a>)</span>, joka tarjoaa organisaatioille välineen suurien prosessikokonaisuuksien hallitsemiseksi <span class="citation" data-cites="gonzalez2019business">(<a href="references.html#ref-gonzalez2019business" role="doc-biblioref">Gonzalez-Lopez ja Bustos 2019</a>)</span>. Suuremmissa organisaatioissa prosessien määrä voi helposti liikkua useissa kymmenissä tai jopa sadoissa.</p>
+<p>Prosessiarkkitehtuurin voidaan katsoa olevan prosessiorganisaatiomuotoisen toiminnan mahdollistaja ja välttämätön perusta prosessijohtamiselle. Prosessiarkkitehtuurin laadinta alkaa prosessien tunnistamisella ja ymmärtämisellä. Ensimmäiseksi organisaation toimintalogiikka tai ansaintamalli jäsennellään prosesseiksi ja niiden muodostamaksi verkostoksi esimerkiksi prosessihierarkian muotoon. Apuvälineenä voidaan käyttää vaikkapa edellä esiteltyä Business Model Canvasia.</p>
+<section id="prosessiarkkitehtuurin-muodostaminen" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="prosessiarkkitehtuurin-muodostaminen"><span class="header-section-number">5.1</span> Prosessiarkkitehtuurin muodostaminen</h2>
+<p>Dijkman ym. <span class="citation" data-cites="dijkman2011road">(<a href="references.html#ref-dijkman2011road" role="doc-biblioref">2011</a>)</span> ovat koonneet lähestymistapoja prosessiarkkitehtuurin jäsentämiseksi. Näistä ensimmäinen (<em>Goal-based</em>) perustuu liiketoiminnan tavoitteisiin ja tavoitteiden suhteisiin, ja prosessit tunnistetaan ja johdetaan niiden perusteella. Tavoitelähtöinen tapa mahdollistaa prosessien tarvelähtöisen arvioinnin: miksi jotain prosessia tarvitaan vai tarvitaanko sitä ollenkaan.</p>
+<p>Toimintalähtöisessä (<em>Action-based</em>) lähestymistavassa tarkastellaan liiketoimintoja, niiden tehtäviä ja toimintojen rakenteita. Lähestymistapa perustuu <em>Business Action Theory</em> -malliin <span class="citation" data-cites="gonzalez2019business">(<a href="references.html#ref-gonzalez2019business" role="doc-biblioref">Gonzalez-Lopez ja Bustos 2019</a>)</span>, jossa oletuksena on, että liiketoiminta ei ole ainoastaan teknistä ja mekaanista suorittamista vaan inhimillistä vuorovaikutusta, jossa toimijat pyrkivät saavuttamaan päämääriä yhteistyön, viestinnän ja merkityksien kautta. Malli perustuukin Habermasin kommunikatiivisen toiminnan teoriaan, jonka mukaan toimijat ilmaisevat intentioita, vaihtavat tietoa ja neuvottelevat. Toimintalähtöinen lähestymistapa voi auttaa tunnistamaan merkityksiä, sääntöjä ja rooleja liiketoimintaprosessien taustalla. Käytännössä kyse on siitä, että prosessit pyritään tunnistamaan organisaation ja sen aktoreiden toimintaa havainnoimalla. Lähestymistapa on jokseenkin ”akateeminen”, ja sen tuloksellinen soveltaminen vaatinee oikeanlaista mielenlaatua.</p>
+<p>Oliolähtöisessä (<em>Object-based</em>) tavassa liiketoiminta jäsennetään ensin ohjelmistokehityksestä tutun oliomallin muotoon esimerkiksi UML:n luokkakaaviota käyttäen. Dijkman ym. <span class="citation" data-cites="dijkman2011road">(<a href="references.html#ref-dijkman2011road" role="doc-biblioref">2011</a>)</span> esittävät kolme liiketoimintaolion tyyppiä: pysyvät oliot (<em>Permanent Objects</em>), tapausoliot (<em>Case Objects</em>) ja muut oliot (<em>Other Objects</em>). Pysyvät oliot ovat kohteita, joiden elinkaari on pitkä: tyypillisenä esimerkkinä vaikkapa asiakas. Prosessit tunnistetaan tarkastelemalla mitä asioita tai toimintoja pysyviin olioihin liittyy ja edelleen, millä nämä asiat ja toiminnot toteutetaan. Tapausoliot ohjaavat prosessien suorittamista ja siten prosessit ovat suoraan tunnistettavissa niiden perusteella (<a href="#fig-olio-suunnittelu" class="quarto-xref">kuva&nbsp;<span>5.1</span></a>).</p>
+<div id="fig-olio-suunnittelu" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-olio-suunnittelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/olio-suunnittelu.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Kuva&nbsp;5.1: Prosessiarkkitehtuurin oliolähtöinen suunnittelu"><img src="kuviot/olio-suunnittelu.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-olio-suunnittelu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.1: Prosessiarkkitehtuurin oliolähtöinen suunnittelu
+</figcaption>
+</figure>
+</div>
+<p>Referenssimallitapa (<em>Reference Model based</em>) soveltuu käytettäväksi silloin, kun organisaatiolla on jo olemassa jonkinlainen prosessikartta. Kartta otetaan tarkastelun lähtökohdaksi ja prosessiarkkitehtuuri muokataan sen perusteella. Tässä toimintatavassa voidaan hyödyntää myös toimialakohtaisia yleisiä viite- ja referenssiarkkitehtuurikuvauksia. Seuraavassa kuviossa (<a href="#fig-tem-viite" class="quarto-xref">kuva&nbsp;<span>5.2</span></a>) on työn löytymisen prosessit, kuten ne on esitetty Työvoimapalveluiden viitearkkitehtuurissa<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Referenssimalli tarjoaa raamit sille, mitä prosesseja ja palveluja toimialan viranomaisten tulee toteuttaa. Esimerkkejä yksityisen sektorin referenssimalleista ovat telekommunikaatioalan viitearkkitehtuuri TM Forum Frameworx<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, joka sisältää muun muassa eTOM-viitekehyksen (<em>enhanced Telecom Operations Map</em>) sekä pankki- ja finanssialan Banking Industry Architecture Network (BIAN)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;https://tem.fi/tyovoimapalveluiden-viitearkkitehtuuri</p></div><div id="fn2"><p><sup>2</sup>&nbsp;https://www.tmforum.org/frameworx-evolution/</p></div><div id="fn3"><p><sup>3</sup>&nbsp;https://bian.org/</p></div></div><div id="fig-tem-viite" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tem-viite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/tem-viite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Kuva&nbsp;5.2: Työn löytymisen prosessit – Työvoimapalveluiden viitearkkitehtuuri työvoimaviranomaisille"><img src="kuviot/tem-viite.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tem-viite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.2: Työn löytymisen prosessit – Työvoimapalveluiden viitearkkitehtuuri työvoimaviranomaisille
+</figcaption>
+</figure>
+</div>
+<p>Toimintolähtöisessä lähestymistavassa (<em>Function-based</em>) hyödynnetään toimintahierarkiaa, jolla liiketoiminnot jaetaan yksityiskohtaisempiin alatoimintoihin. Tämän jälkeen toimintohierarkiasta tunnistetaan prosessikandidaatit (<a href="#fig-toim-hier" class="quarto-xref">kuva&nbsp;<span>5.3</span></a>). Toimintolähtöisen tavan hyödyksi voidaan mainita se, että sen avulla ajatukset on helpompi keskittää <em>mitä</em>-kysymyksiin, kun taas prosesseista puhumisella on taipumus johdattaa ajattelu suoraan <em>miten</em>-kysymyksiin. Prosessikulkujen suunnittelu ei vielä prosesseja tunnistettaessa ole ajankohtaista.</p>
+<div id="fig-toim-hier" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-toim-hier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/toim-hier.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Kuva&nbsp;5.3: Toimintohierarkian jalostaminen prosesseiksi ja aliprosesseiksi"><img src="kuviot/toim-hier.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-toim-hier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.3: Toimintohierarkian jalostaminen prosesseiksi ja aliprosesseiksi
+</figcaption>
+</figure>
+</div>
+<p>Prosessien tunnistamisen ja prosessikartan laadinnan lisäksi prosessiarkkitehtuurin muodostamiseen liittyvä tehtävä on prosessin omistajien tunnistaminen sekä prosessijohtamisen mallista sopiminen. Ennen prosessiarkkitehtuurin kuvaamisen aloittamista tulee myös sopia kuvaustavoista: millä notaatiolla tai notaation osajoukolla ja välineillä prosessit dokumentoidaan, kuka ne dokumentoi, missä kuvauksia säilytetään, kuinka niitä versioidaan ja miten niiden ajantasaisuus varmistetaan.</p>
+</section>
+<section id="liiketoimintaprosessit-osana-kokonaisarkkitehtuuria" class="level2 page-columns page-full" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="liiketoimintaprosessit-osana-kokonaisarkkitehtuuria"><span class="header-section-number">5.2</span> Liiketoimintaprosessit osana kokonaisarkkitehtuuria</h2>
+<p>Kokonaisarkkitehtuurimenetelmät (<em>Enterprise Architecture</em>), kuten hallitseva kansainvälinen standardi TOGAF<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> (<em>The Open Group Architecture Framework</em>) tai Suomen julkishallinnon käyttöön kehitetty Suomi.fi -kokonaisarkkitehtuurikehys<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, ohjaavat tarkastelemaan laajoja ja monimutkaisia organisaatioita helpommin hallittavina osakokonaisuuksina ja kokonaisuuksien välisinä suhteina. Molemmat mainituista menetelmistä esittävät organisaation tarkastelun näkökulmiksi liiketoiminnan, tiedon (datan ja informaation), tietojärjestelmät sekä teknologiat. Oleellista KA-menetelmissä on, että eri näkökulmiin tai arkkitehtuureihin kuuluvien kohteiden väliset suhteet ja riippuvuudet tehdään näkyviksi.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;https://www.opengroup.org/togaf</p></div><div id="fn5"><p><sup>5</sup>&nbsp;https://kehittajille.suomi.fi/palvelut/kokonaisarkkitehtuuri/kokonaisarkkitehtuurikehys</p></div></div><p>Kokonaisarkkitehtuurissa voitaisiin olla kiinnostuneita esimerkiksi yrityksen arvolupauksesta ja siihen liittyvinä kohteina niistä liiketoimintaprosesseista, joilla tätä lupausta pyritään toteuttamaan. Näiden prosessien suorittaminen on todennäköisesti riippuvaista joistain tietojärjestelmistä, jotka tuottavat, käsittelevät ja tallentavat prosessissa liikkuvaa tietoa. Tietojärjestelmät tarvitsevat toimiakseen teknologia-alustoja. Näiden kokonaisarkkitehtuurin komponenttien (arvolupaus, prosessit, tiedot, tietojärjestelmät, teknologia-alustat) ja niiden välisten suhteiden kautta voidaan hahmottaa organisaation rakennetta ja toimintaa kokonaisuutena, eli toisin sanoen muodostaa käsitys kokonaisarkkitehtuurista.</p>
+<p>Tarkastelemalla organisaation strategisia tavoitteita tai niihin liittyviä arvolupauksia, liiketoimintaprosesseja tai niiden virtausnopeuksia, tietojärjestelmiä, niiden vasteaikoja tai käytettävyyttä toisistaan irrallaan, ei ole mahdollista ymmärtää ja arvioida organisaatiota ja sen toimintaa kokonaisuutena, saati tunnistaa siitä täsmällisiä kehittämiskohteita. Yksittäisen kohteen muuttaminen ilman ymmärrystä muutoksen heijastus- ja kokonaisvaikutuksista johtaa harvoin hyvään lopputulemaan.</p>
+<p>Vaikka prosessien hallintaa ja kehittämistä voidaan tietysti tehdä ilman kokonaisarkkitehtuurimenetelmien tukeakin, tarjoavat ne prosessityölle kontekstin, joka puolestaan mahdollistaa valistuneemman päätöksenteon ja kehittämisresurssien kohdentamisen. Kokonaisarkkitehtuurin kannalta edellä käsitelty prosessiarkkitehtuuri on yksi sen osa-alueista tai oikeastaan yksi, joskin varsin oleellinen, liiketoiminta-arkkitehtuurin osa-alue.</p>
+<p>BPMN-mallinnuskieltä myöhemmin käsiteltäessä tarkastellaan, kuinka sen avulla voidaan kuvata viestivirtoja, -varastoja ja -järjestelmiä osana prosessimalleja. Prosessimallien pääasiallinen tarkoitus on kuitenkin esittää prosessin kulku. Vaikka automatisoitavissa prosessikuluissa tietovirrat täytyykin mallintaa yksityiskohtaisesti – muuttujien ja tietotyyppien tasolla – ja prosessien tulee pystyä teknisesti kytkeytymään tietojärjestelmien rajapintoihin, eivät prosesseja ympäröivät tietovarastot ja järjestelmät ole varsinaisesti prosessiasiantuntijoiden työmaata. Niitä, kuten myös esimerkiksi prosessiin liittyviä tietoturvallisuusvaatimuksia, koskevan informaation tulee kuitenkin olla prosessikehittäjien saatavilla silloin, kun sitä tarvitaan. Tällaista tietoa kokonaisarkkitehdit voivat tarjota prosessityön tueksi.</p>
+<section id="prosessit-togaf-menetelmässä-ja-archimate-mallinnuskielellä" class="level3 page-columns page-full" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="prosessit-togaf-menetelmässä-ja-archimate-mallinnuskielellä"><span class="header-section-number">5.2.1</span> Prosessit TOGAF-menetelmässä ja ArchiMate-mallinnuskielellä</h3>
+<p>TOGAF-menetelmän kattamien tietosisältöjen metamalli (<em>Enterprise Metamodel</em><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>) esittää käsitteet, joista organisaation kokonaisarkkitehtuuri muodostuu. Mallissa liiketoimintaprosessi liittyy välittömillä suhteilla seuraaviin käsitteisiin: organisaatioyksikkö (<em>Organization Unit</em>), rooli (<em>Role</em>), liiketoimintakyvykkyys (<em>Business Capability</em>), arvovirta (<em>Value Stream</em>), toiminto (<em>Function</em>), tapahtuma (<em>Event</em>), kontrolli (<em>Control</em>), liiketoimintatieto (<em>Business Information</em>) sekä liiketoimintapalvelu (<em>Business Service</em>). Data, sovellukset ja teknologiat kytkeytyvät metamallissa prosessiin edellisten kautta.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;https://pubs.opengroup.org/togaf-standard/architecture-content/chap02.html#tag_02_03</p></div></div><p>Liiketoimintaprosesseilla on siis KA-malleissa kirjaimellisestikin keskeinen asema – ja miksipä ei olisi. Prosessien avulla toteutetaan asiakkaille tarjottavat tuotteet ja palvelut. Prosessien toteuttamisen tukena käytetään tietojärjestelmiä ja sovelluksia, joten prosessit myös määrittävät IT-ratkaisuja koskevat vaatimukset. Prosesseissa käsitellään tietoa, joka tapauksesta riippuen voi pitää sisällään esimerkiksi henkilötietoja tai liiketoiminnan kannalta kriittistä tai salassa pidettävää tietoa, ja niin edelleen. Voidaan ajatella, että kaikki organisaatioiden kokonaisvaltaisen kehittämisen kysymykset lähtevät liikkeelle prosesseista tai ne ainakin jossain vaiheessa päätyvät prosesseihin.</p>
+<p>TOGAF:iin kuuluva arkkitehtuurin kehittämismenetelmä (<em>Architecture Development Method</em><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>) ohjaakin arkkitehtuurimuutoksia tehtäessä kiinnittämään ensimmäisenä huomion liiketoimintanäkökulman (<em>Business Architecture</em>) sisältöihin, niiden vaatimuksiin ja niille asetettavaan tavoitetilaan.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;https://pubs.opengroup.org/togaf-standard/adm/</p></div></div><p>Edellä todettiin, että BPMN-mallit on tarkoitettu kuvaamaan prosessin yksityiskohtaista työnkulkua, mutta niiden mahdollisuudet esittää prosessin kontekstia ja toimintaympäristöä ovat rajalliset. KA-kuvaukset pystyvät sen sijaan esittämään organisaation loogisen rakenteen ja ympäristön kokonaisuudessaan, mutta tyypillisesti varsin karkealla tarkkuustasolla.</p>
+<p>Monet ammattilaisten suosimat mallinnusvälineet tukevat useiden mallinnuskielten käyttöä rinnakkain, kuten ArchiMatea<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> varsinaisten KA-kuvausten tuottamiseen, UML-kieltä tarkempien ohjelmistoarkkitehtuurien suunnitteluun ja BPMN-kieltä prosessikulkujen kuvaamiseen. Tällaisten välineiden avulla voidaan tarkastella esimerkiksi ArchiMatella tuotettua prosessi- (<a href="#fig-am-esim7" class="quarto-xref">kuva&nbsp;<span>5.11</span></a>) tai kyvykkyyskarttaa (vrt. <a href="prosessitiedon_keraaminen.html#fig-kyvykkyyskartta" class="quarto-xref">kuva&nbsp;<span>3.1</span></a>) ensin yleisellä tasolla, jotta nähdään vaikkapa prosessien suhde liiketoiminnan strategisiin tavoitteisiin tai järjestelmärajapintoihin kokonaisuudessaan. Tämän jälkeen voidaan porautua tutkimaan tarkemmin haluttuja prosessikulkuja BPMN-mallien muodossa.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;https://www.opengroup.org/archimate-forum/archimate-overview</p></div></div><p>ArchiMate 3.2 -kielen sallimat suhteet liiketoimintaprosessin ja muiden kohteiden välille on koottu seuraavaan kuvioon (<a href="#fig-am-bp-suhteet" class="quarto-xref">kuva&nbsp;<span>5.4</span></a>). Kohteet on värikoodattu näkökulmittain: keltainen esittää liiketoiminta-arkkitehtuurin (<em>Business</em>) elementtejä, vaaleansininen sovelluksiin (<em>Application</em>) liittyviä elementtejä, vihreä teknologiaa (<em>Technology</em>) ja niin edelleen.</p>
+<div id="fig-am-bp-suhteet" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-bp-suhteet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-bp-suhteet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Kuva&nbsp;5.4: ArchiMate-mallinnuskielen sallimat suhteet prosessin (Business Process) ja muiden elementtien välille"><img src="kuviot/am-bp-suhteet.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-bp-suhteet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.4: ArchiMate-mallinnuskielen sallimat suhteet prosessin (Business Process) ja muiden elementtien välille
+</figcaption>
+</figure>
+</div>
+<p>Esimerkiksi <em>Business Role</em> (käytännössä siis tehtävänimike ja muu henkilöön tai organisaatioyksikköön liittyvä toiminnallinen rooli) voi liittyä prosessiin seuraavilla suhteilla: <em>Flow</em>, <em>Assignment</em>, <em>Association</em>, <em>Triggering</em> tai <em>Serving</em>. Flow ilmaisee jonkin hyödykkeen tai resurssin, kuten informaation, materiaalin tai rahan, siirtymistä kohteiden välillä. Assignment esittää vastuun tai suoritusvelvollisuuden allokointia. Esimerkiksi siis niin, että jokin rooli on osoitettu tietyn prosessin toteuttajaksi ja toinen rooli prosessin omistajaksi. Triggering kuvaa kohteiden välistä ajallista tai kausaalista suhdetta; tässä yhteydessä esimerkiksi sitä, että rooli käynnistää prosessin suorittamisen. Serving nimensä mukaisesti ilmaisee, että prosessi palvelee jotain roolia tai rooli palvelee prosessia, riippuen suhteen esityssuunnasta.</p>
+<p>Prosessin ja sovelluksen (<em>Application Component</em>) välille ArchiMate sallii muuten samat suhteet kuin rooliin, mutta järjestelmää ei voida liittää liiketoimintaprosessiin Assignment-suhteella. Sen sijaan voidaan käyttää <em>Realization</em>-suhdetta, jolla ilmaistaan, että sovellus toteuttaa prosessin tai osallistuu sen toteuttamiseen. Sovellus voidaan kuitenkin liittää Assignment-suhteella <em>Application Process</em> -tyyppiseen elementtiin, jolla kuvataan sovelluksen sisäisen toimintalogiikan prosesseja tai automatisoituja prosesseja.</p>
+<p>Kokonaisarkkitehtuurissa ollaan siis erityisesti kiinnostuneita siitä, kuinka asiat liittyvät toisiinsa ja millaisen kokonaisuuden ne muodostavat. Sen sijaan prosessikulkujen yksityiskohtaiseen esittämiseen ArchiMate ei juuri sovellu, eikä sitä ole siihen tehtävään tarkoitettukaan.</p>
+<p>Kokonaisarkkitehtuurimalleissa prosessit esitetään tavallisesti ainoastaan prosessin nimen tarkkuudella – ei työnkulkuina. Seuraavassa esimerkissä (<a href="#fig-am-esim1" class="quarto-xref">kuva&nbsp;<span>5.5</span></a>) on kolme kohdetta ja niiden väliset suhteet. Application Component -elementillä kuvattu <em>Järjestelmä</em> tukee Serving-suhteen kautta <em>Prosessin</em> suorittamista. Realization-suhde ilmaisee, että tämä prosessi toteuttaa liiketoimintapalvelun <em>Palvelu</em>.</p>
+<div id="fig-am-esim1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Kuva&nbsp;5.5: ArchiMaten prosessi-, palvelu- ja sovelluselementit"><img src="kuviot/am-esim1.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.5: ArchiMaten prosessi-, palvelu- ja sovelluselementit
+</figcaption>
+</figure>
+</div>
+<p>Seuraava kuvio (<a href="#fig-am-esim2" class="quarto-xref">kuva&nbsp;<span>5.6</span></a>) esittää laskunkäsittelyn prosessin vaiheittain. Prosessikulun käynnistää <em>Lasku saapuu</em>, joka on Business Event -tyyppinen tapahtuma. Sillä voidaan ilmaista liiketoiminnan kannalta relevanttia tilan muutosta, jollaisena laskun vastaanottamista voidaan toki pitää. Vastaava prosessikulku BPMN:llä esitettynä käynnistyisi <em>Message Start Event</em> -tapahtumalla, johon palataan myöhemmin. Toinen merkittävämpi ero, ja ilmeinen puute ArchiMaten mahdollisuuksissa kuvata prosessikulkuja, on se, että siinä ei ole tehtävätyyppistä (<em>Task</em> tai <em>Activity</em>) elementtiä. Siksi laskunkäsittelyprosessin jokainen vaihe täytyy mallintaa omaksi prosessikseen. Näin tietysti voidaan tehdä ja ehkä vaikkapa <em>Hyväksy lasku</em> -tehtävä voi joskus olla hyödyllistäkin hahmottaa ja kuvata omana prosessinaan tai aliprosessinaan.</p>
+<p>Käytettäessä ArchiMatea prosessien kuvaamisen tekniikkana ajaudutaan kuitenkin nopeasti tilanteeseen, jossa prosesseina esitettyjä tehtäviä kertyy mallikantaan valtava määrä, ja prosessisalkun hallinta on vaarassa ruuhkautua. Tästäkin syystä prosessikulut on järkevämpää kuvata siihen nimenomaisesti tarkoitetuilla mallinnuskielillä, kuten BPMN:lla.</p>
+<p>Yksi esimerkkikuviosta huomattava ArchiMaten etu liittyy mahdollisuuteen liittää tietojärjestelmiä ja järjestelmäpalveluja suorittamisen vaiheisiin tarkemmalla tasolla kuin BPMN-malleissa.</p>
+<div id="fig-am-esim2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Kuva&nbsp;5.6: Laskunkäsittelyn prosessi ArchiMatella esitettynä"><img src="kuviot/am-esim2.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.6: Laskunkäsittelyn prosessi ArchiMatella esitettynä
+</figcaption>
+</figure>
+</div>
+<p>ArchiMaten <em>Business Actor</em>- ja <em>Business Role</em> -elementtejä voidaan käyttää esitettäessä prosessiin liittyviä toimijoita ja sidosryhmiä. Seuraavassa esimerkissä (<a href="#fig-am-esim3" class="quarto-xref">kuva&nbsp;<span>5.7</span></a>) prosessiin on liitetty kaksi aktoria (<em>Omistaja</em> ja <em>Asiakas</em>) ja yksi rooli (<em>Toteuttaja</em>). Tällaiseen informaatioon tukeutuen voitaisiin helposti löytää esimerkiksi prosessit, joilla ei ole nimettyä omistajaa tai tarkastella sitä, millä prosesseilla tiettyä kriittistä asiakasryhmää palvellaan.</p>
+<div id="fig-am-esim3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Kuva&nbsp;5.7: Business Actor- ja Business Role -elementtejä liitettynä prosessiin Assignment-suhteella"><img src="kuviot/am-esim3.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.7: Business Actor- ja Business Role -elementtejä liitettynä prosessiin Assignment-suhteella
+</figcaption>
+</figure>
+</div>
+<p>ArchiMate-malleissa voidaan aktoreiden ja roolien avulla myös jäljitellä BPMN:n uima-altaita ja -ratoja. Näin toimittaessa malli voi olla helpommin luettava, eikä se menetä mitään informaatiosisällöstään (<a href="#fig-am-esim4" class="quarto-xref">kuva&nbsp;<span>5.8</span></a>).</p>
+<div id="fig-am-esim4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Kuva&nbsp;5.8: Organisaatio- ja rooliuimaratoja ArchiMatella"><img src="kuviot/am-esim4.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.8: Organisaatio- ja rooliuimaratoja ArchiMatella
+</figcaption>
+</figure>
+</div>
+<p>ArchiMaten <em>Junction</em>-elementillä on mahdollista kuvata hieman tarkemmin prosessikulun logiikkaa. Junction voi olla tyypiltään AND (täytetty musta ympyrä) tai OR (täyttämätön ympyrä). Niitä voidaan käyttää kuten BPMN:n Parallel Gateway- tai Exclusive Gateway -portteja (<a href="#fig-am-esim5" class="quarto-xref">kuva&nbsp;<span>5.9</span></a>).</p>
+<div id="fig-am-esim5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Kuva&nbsp;5.9: ArchiMaten OR Junction"><img src="kuviot/am-esim5.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.9: ArchiMaten OR Junction
+</figcaption>
+</figure>
+</div>
+<p>Prosessiin kuuluvat aliprosessit voidaan esittää koostumista ilmaisevan suhteen (<em>Composition</em> ja <em>Aggregation</em>) avulla (<a href="#fig-am-esim6" class="quarto-xref">kuva&nbsp;<span>5.10</span></a>).</p>
+<div id="fig-am-esim6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Kuva&nbsp;5.10: Prosessi ja sen aliprosessit nested-rakenteella (ylempi) ja Composition-suhteella (alempi) esitettyinä"><img src="kuviot/am-esim6.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.10: Prosessi ja sen aliprosessit nested-rakenteella (ylempi) ja Composition-suhteella (alempi) esitettyinä
+</figcaption>
+</figure>
+</div>
+<p>Liiketoimintaprosessien hallinnan kannalta kokonaisarkkitehtuuri-informaation merkittävin hyöty perustuu sen kattamien kohteiden ja näkökulmien monipuolisuuteen sekä kykyyn esittää niiden välisiä suhteita ja riippuvuuksia. Esimerkiksi prosessikarttaa voitaisiin rikastaa riippuvuussuhteiden kautta muodostuvalla informaatiolla (<a href="#fig-am-esim7" class="quarto-xref">kuva&nbsp;<span>5.11</span></a>): Mihin strategisiin tavoitteisiin prosessit liittyvät? Mitkä ovat kriittisten prosessien käyttämien järjestelmien elinkaarien tilat? Mitkä prosesseista käyttävät pilvipalvelujen resursseja? Sijaitsevatko jotkin palveluista Euroopan talousalueen ulkopuolella?</p>
+<div id="fig-am-esim7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-am-esim7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="kuviot/am-esim7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Kuva&nbsp;5.11: Prosessien palvelevuuden liikennevaloanalyysi KA-informaation avulla tuotettuna"><img src="kuviot/am-esim7.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-am-esim7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Kuva&nbsp;5.11: Prosessien palvelevuuden liikennevaloanalyysi KA-informaation avulla tuotettuna
+</figcaption>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-dijkman2011road" class="csl-entry" role="listitem">
+Dijkman, RM, ITP Vanderfeesten, ja Hajo A Reijers. 2011. <em>The road to a business process architecture: an overview of approaches and their use</em>.
+</div>
+<div id="ref-eid2012business" class="csl-entry" role="listitem">
+Eid-Sabbagh, Rami-Habib, Remco Dijkman, ja Mathias Weske. 2012. <span>”Business process architecture: use and correctness”</span>. <em>International Conference on Business Process Management</em>, 65–81.
+</div>
+<div id="ref-gonzalez2019business" class="csl-entry" role="listitem">
+Gonzalez-Lopez, Fernanda, ja Guillermo Bustos. 2019. <span>”Business process architecture design methodologies–a literature review”</span>. <em>Business Process Management Journal</em> 25 (6): 1317–34.
+</div>
+</div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopioitu!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopioitu!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./prosessiorganisaatio_ja_prosessien_kehittaminen.html" class="pagination-link" aria-label="Prosessiorganisaatio ja prosessien kehittäminen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prosessiorganisaatio ja prosessien kehittäminen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./bpmn_ja_prosessien_kuvaaminen.html" class="pagination-link" aria-label="Mallit, mallintaminen ja Business Process Model and Notation">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Mallit, mallintaminen ja Business Process Model and Notation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
