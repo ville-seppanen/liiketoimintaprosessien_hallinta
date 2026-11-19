@@ -117,23 +117,17 @@ Mieti, millaisia mittareita voitaisiin käyttää erilaisia tietotyön asiantunt
 
 ## Tehtävä 9
 
-Mitä muutoksia pizzerian prosessi (@fig-pizzatilaus-teht) tarvitsisi, jotta raaka-aineiden loppuminen ei pääsisi aiheuttamaan suurempia ongelmia?
+Mitä muutoksia tekstissa useampaankin kertaan esiintynyt pizzerian prosessi tarvitsisi, jotta raaka-aineiden loppuminen ei pääsisi aiheuttamaan suurempia ongelmia?
 
 Entä olisiko tilanne korjattavissa jollain IT-ratkaisulla ja miten sellainen vaikuttaisi prosessikulkuun?
 
-![Pizzatilauksen prosessi](kuviot/pizzatilaus.svg){#fig-pizzatilaus-teht}
-
-## Tehtävä 10
-
-Jo useamman kerran esiintynyt prosessimalli pizzan tilaamisesta on vakiinnuttanut asemansa osana BPMN:n ohje- ja koulutusmateriaaleja. Kuinka ymmärrettävä malli sinusta tässä vaiheessa on? Onko siinä joitain vähemmän ilmeisiä osia?
-
 ## Tehtävä 11
 
-Mieti jotain omaan arkeesi liittyvää prosessia, johon kuuluu vähintään kaksi uima-allasta ja joissa molemmissa on vähintään kaksi uimarataa. Mallinna prosessi BPMN:llä.
+Mieti jotain omaan arkeesi liittyvää prosessia, liittyy kuuluu vähintään kaksi uima-allasta, joissa molemmissa on vähintään kaksi uimarataa. Mallinna prosessi BPMN:llä.
 
 ## Tehtävä 12
 
-Päivitä edellistä pizzan tilaamisen prosessikulkua niin, että tilauksen toimittaa Wolt tai vastaava lähettipalvelu.
+Päivitä edellistä pizzerian prosessikulkua niin, että tilauksen toimittaa Wolt tai vastaava lähettipalvelu.
 
 ## Tehtävä 13
 
@@ -157,7 +151,7 @@ Toteuta kuvan @fig-dmn-hakemus-teht päätöstaulu porttien avulla.
 
 ## Tehtävä 17
 
-Piirrä seuraava tapahtumasarja prosessiksi ja käytä mallissa myös Service Task-, Script Task- ja Business Rule Task -tehtäviä.
+Piirrä seuraava tapahtumasarja prosessiksi ja käytä mallissa sopivissa kohdissa Service Task-, Script Task- ja Business Rule Task -tehtäviä.
 
 1. Vastaanota tilaus.
 2. Arvioi kampanja-alennus.
@@ -267,9 +261,9 @@ Miten seuraavat prosessimallit tulkitaan?
 
 1. Ilmaise vuoden 2026 viikon 42 maanantai ISO 8601 -standardin mukaisena päivämääränä käyttäen viikkonumerointia.
 2. Muunna tapahtuma, joka alkaa 2025-12-06 klo 09:00 Europe/Helsinki, ISO 8601 -muotoon sisältäen aikavyöhykkeen poikkeaman (offset) sekä UTC-vastineen.
-3. Esitä 2 tuntia 30 minuuttia ISO 8601 -keston merkintänä ja lisää siihen 15 minuutin tauko erillisenä kesto-osana.
-4. Kirjoita jakso maanantaista torstaihin klo 09:00-16:00 yhtenä ISO 8601 -aikavälinä, joka sisältää päivämäärät ja kellonajat.
-5. Esitä viikoittainen luento, joka pidetään joka keskiviikko klo 12:15-13:45 tammi-maaliskuussa 2026, ISO 8601 -aikavälinä ja liitä mukaan toistuvuutta kuvaava sääntö käyttäen standardin mukaisia rakenteita.
+3. Esitä 2 tuntia 30 minuuttia ISO 8601 -keston merkintänä ja lisää siihen 15 minuutin tauko.
+4. Kirjoita jakso maanantaista torstaihin klo 09:00-16:00 ISO 8601 -muodossa päivämäärät ja kellonajat sisältäen.
+5. Esitä viikoittainen palaveri, joka pidetään keskiviikkoisin klo 12:00-12:45 tammi-maaliskuussa 2027, ISO 8601 -aikavälinä ja liitä mukaan toistuvuutta kuvaava sääntö käyttäen standardin mukaisia rakenteita.
 
 ## Tehtävä 30
 
@@ -359,27 +353,27 @@ Keksi muutama hyödyllinen prosessien hallintaa tai analysointia tukeva näkymä
 
 ## Tehtävä 40
 
-Anna tehtävän 3 haastattelutranskriptio jollekin kielimallille (esimerkiksi ChatGPT, Claude tai Copilot) ja pyydä sitä tunnistamaan prosessin vaiheet, roolit, päätöskohdat sekä virhe- ja poikkeustilanteet. Vertaa tulosta omaan ratkaisuusi. Mitä kielimalli tunnisti oikein, mitä se jätti huomiotta ja mitä se keksi, vaikka sitä ei aineistossa ollut? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa niiden tuloksia keskenään.
+Anna tehtävän XXX haastattelutranskriptio jollekin kielimallille ja pyydä sitä tunnistamaan prosessin vaiheet, roolit, päätöskohdat sekä virhe- ja poikkeustilanteet. Vertaa tulosta omaan ratkaisuusi. Mitä kielimalli tunnisti oikein, mitä se jätti huomiotta ja mitä se keksi, vaikka sitä ei aineistossa ollut? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa niiden tuloksia keskenään.
 
 ## Tehtävä 41
 
-Anna jokin tekemäsi BPMN-malli kielimallille joko kuvana tai .bpmn-tiedostona (BPMN XML) ja pyydä sitä arvioimaan mallin oikeellisuutta ja ymmärrettävyyttä luvussa 7 esiteltyjen Mendlingin ym. seitsemän mallinnusohjeen (7PMG) valossa. Tarkista arvio itse: mitkä kielimallin huomioista pitivät paikkansa ja mitkä olivat virheellisiä? Kuinka paljon työtä arvion tarkistaminen vaati verrattuna siihen, että olisit arvioinut mallin itse? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa tuloksia.
+Anna jokin tekemäsi monimutkaisempi BPMN-malli kielimallille joko kuvana tai .bpmn-tiedostona (BPMN XML) ja pyydä sitä arvioimaan mallin oikeellisuutta ja ymmärrettävyyttä Mendlingin ym. [-@mendling2010seven] seitsemän mallinnusohjeen (7PMG) valossa. Tarkista arvio itse: mitkä kielimallin huomioista pitivät paikkansa ja mitkä olivat virheellisiä? Kuinka paljon työtä arvion tarkistaminen vaati verrattuna siihen, että olisit arvioinut mallin itse? Jos mahdollista, tee sama kahdella eri kielimallilla ja vertaa tuloksia.
 
 ## Tehtävä 42 (essee)
 
-Organisaation toimintaa voidaan tarkastella funktioina (osastot ja yksiköt), projekteina tai prosesseina. Valitse jokin tuntemasi organisaatio, esimerkiksi oma työpaikkasi, oppilaitoksesi tai harrastusseurasi, ja pohdi, mitä etuja ja haittoja sen toiminnan tarkastelusta prosessien kautta olisi. Mitkä organisaation toiminnoista ovat luontevimmin prosesseja, mitkä projekteja ja mitkä funktioita? Mitä muuttuisi, jos organisaatioon nimettäisiin prosessinomistajat?
+Organisaation toimintaa voidaan tarkastella esimerkiksi funktioina (osastot ja yksiköt), projekteina tai prosesseina. Valitse jokin tuntemasi organisaatio, esimerkiksi oma työpaikkasi, oppilaitoksesi tai harrastusseurasi, ja pohdi, mitä etuja ja haittoja sen toiminnan tarkastelusta prosessien kautta olisi. Mitkä organisaation toiminnoista ovat luontevimmin prosesseja, mitkä projekteja ja mitkä funktioita? Mitä muuttuisi, jos organisaatioon nimettäisiin prosessinomistajat?
 
 Laajuus 2–3 sivua. Käytä vähintään kolmea lähdettä, joista ainakin yksi on kirjan lähdeluettelon ulkopuolelta.
 
 ## Tehtävä 43 (essee)
 
-”*You get what you measure.*” Kirjoita essee prosessimittareiden haitallisista sivuvaikutuksista. Kuvaa vähintään kaksi esimerkkiä, joissa mittari ohjaa toimintaa ei-toivottuun suuntaan. Esimerkit voivat olla omasta kokemuksestasi, uutisista tai tutkimuskirjallisuudesta. Selvitä, mitä tarkoittaa Goodhartin laki, ja pohdi, miten mittaristo voidaan suunnitella niin, että sen ”pelaaminen” on mahdollisimman vaikeaa. Miten mittaamiseen kohdistuvaan muutosvastarintaan kannattaa suhtautua?
+”*You get what you measure.*” Kirjoita essee prosessimittareiden haitallisista sivuvaikutuksista. Kuvaa vähintään kaksi esimerkkiä, joissa mittari ohjaa toimintaa ei-toivottuun suuntaan. Esimerkit voivat olla omasta kokemuksestasi, uutisista tai tutkimuskirjallisuudesta. Selvitä, mitä tarkoittaa Goodhartin laki, ja pohdi, miten mittaristo voidaan suunnitella niin, että sen 'väärinkäyttö' on mahdollisimman vaikeaa.
 
 Laajuus 2–3 sivua.
 
 ## Tehtävä 44 (essee)
 
-Vertaa prosessien jatkuvaa parantamista (BPI, PDCA, kaizen) ja radikaalia uudistamista (BPR). Millaisissa tilanteissa kumpikin lähestymistapa soveltuu paremmin? Pohdi erityisesti toiminnanohjausjärjestelmän (ERP) käyttöönottoa: onko se luonteeltaan jatkuvaa parantamista, radikaalia uudistamista vai jotain muuta? Kumpaa tulisi muuttaa, prosesseja vai järjestelmää, kun ne eivät sovi yhteen?
+Vertaa prosessien jatkuvaa parantamista (BPI, PDCA, kaizen) ja radikaalia uudistamista (BPR). Millaisissa tilanteissa toinen lähestymistapa on toista parempi? Pohdi erityisesti toiminnanohjausjärjestelmän (ERP) käyttöönottoa: onko se luonteeltaan jatkuvaa parantamista, radikaalia uudistamista vai jotain muuta? Kumpaa tulisi muuttaa, prosesseja vai järjestelmää, kun ne eivät sovi yhteen?
 
 Laajuus 2–3 sivua.
 
@@ -397,9 +391,9 @@ Laajuus 2–3 sivua.
 
 ## Tehtävä 47 (essee)
 
-Ohjelmistorobotiikka (RPA) automatisoi tarkasti määriteltyjä työnkulkuja, kun taas tekoälyagentit voivat päättää itse, mitä tehtäviä ne suorittavat ja missä järjestyksessä. Pohdi, millaisiin prosesseihin kumpikin soveltuu. Missä kohdissa prosessia ihmisen tulisi olla mukana päätöksenteossa (*human in the loop*)? Kuka vastaa virheestä, jonka agentti tekee? Käsittele myös sitä, millaisia erityisvaatimuksia julkisen sektorin automaattiseen päätöksentekoon liittyy.
+Ohjelmistorobotiikka (RPA) automatisoi tarkasti määriteltyjä työnkulkuja, kun taas tekoälyagentit voivat päättää itse, mitä tehtäviä ne suorittavat ja missä järjestyksessä. Pohdi, millaisiin prosesseihin kumpikin soveltuu. Missä kohdissa prosessia ihmisen tulisi olla mukana päätöksenteossa (*human in the loop*)? Kuka vastaa virheestä, jonka agentti tekee?
 
-Laajuus 3–4 sivua.
+Laajuus 2-3 sivua.
 
 ## Pieniä BPMN-mallinnustehtäviä
 
